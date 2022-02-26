@@ -1,0 +1,1359 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="2"><meta name="tps_group" content="06"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Brake System &#8212; General Information"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P1840Q0"><meta name="tps_procsgmlid" content="n928889"><meta name="tps_packetinfo" content="481870"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 206-00:  Brake System &#8212; General Information
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  05/03/2006
+</div></TD></TR></TABLE><hr><h4>Brake System
+</h4><meta name="tps_proctitle" content="Brake System"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=060&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >60
+</a> for schematic and connector information.
+</p><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=127&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >127
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st2032a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">On-Car Brake Lathe
+
+<br>201-00002 or equivalent
+</td></tr></table><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Material
+</caption><tr valign="top"><th>Item
+</th><th>Specification
+</th></tr><tr valign="top"><td>High Performance DOT 3 Motor Vehicle Brake Fluid
+<br>PM-1 (Canada CPM-1)
+</td><td align="center">ESA-M6C25-A 
+</td></tr><tr valign="top"><td>Silicone Brake Caliper Grease and Dielectric Compound
+<br>XG-3-A
+</td><td align="center">ESE-M1C171-A
+</td></tr><tr valign="top"><td>Metal Brake Parts Cleaner
+<br>PM-4 (Canada CPM-4)
+</td><td align="center">&#8212;
+</td></tr></table>
+
+<div><a name="extract_211">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><h5>Adjustable Pedals Integrity
+</h5><p>The integrity of the adjustable pedals and their associated transmissions can be verified by removing the drive cables from the individual adjustable pedal transmission. A firm tug on the cable allows the cable to be released from the
+adjustable pedal transmission. At this time, the adjustable pedal motor can be operated to determine if the concern may be due to a jammed adjustable pedal transmission or incorrectly timed adjustable pedal. Timing the pedals involves installing one
+cable into the respective transmission and operating the adjustable pedal switch until the particular pedal involved is bottomed out to the same position as the other pedal.
+</p><h5>Driver Seat Module
+</h5><p>The driver seat module (DSM) controls the memory adjustable pedals. It constantly monitors the systems under its control and reports a concern in the form of diagnostic trouble codes (DTCs). A DTC can be retrieved with a diagnostic tool through
+the data link connector (DLC).
+</p><h5>Programming Adjustable Pedal Positions
+</h5><p>Programming adjustable pedal positions can be accomplished by doing the following:
+</p><ul type="disc"><li>An adjustable pedal position can be stored at any time. To store the adjustable pedal position to memory, the driver must move the pedals to the preferred position using the adjustable pedal switch. The driver must then press the memory SET
+switch, activating the memory SET switch light emitting diode (LED). Press any button on a valid remote keyless entry (RKE) transmitter which is associated with the required settings, then within 5 seconds (before the LED goes out) the driver must
+select memory position 1 or 2.
+</li><li>If no memory switch input is received within the 5 second time limit, the operation is aborted and the memory SET switch LED is turned OFF. If one of the following inputs is received during the 5 second programming limit, the operation is
+aborted and the memory SET switch LED is turned OFF:
+
+<ul type="square"><li>Adjustable pedal switch
+</li><li>Power driver seat switch
+</li><li>Memory SET switch
+</li></ul></li></ul><h5>Recalling a Stored Adjustable Pedal Position
+</h5><p>Once the driver has stored a preferred adjustable pedal position, the driver can recall the setting. Recalling a stored adjustable pedal position can be accomplished by doing the following:
+</p><ul type="disc"><li>The driver can recall a preferred adjustable pedal position by pressing the memory recall switch. Pressing memory switch 1 initiates a recall of the adjustable pedal position stored in Memory No. 1. Pressing memory switch 2 initiates a recall
+of the adjustable pedal position stored in Memory No. 2.
+</li><li>An RKE transmitter can be used to recall previously set memory positions. The RKE transmitters are manufactured with an assigned personality number and are so designated on the back of the RKE transmitter case. The RKE transmitter assigned with
+personality No. 1 is capable of recalling only memory position No. 1. Similarly, the RKE transmitter assigned with personality No. 2 can recall only memory position No. 2.
+</li><li>Memory recall occurs when the UNLOCK switch is pressed on the RKE transmitters. A second press of the UNLOCK switch, which unlocks the passenger doors, does not initiate a memory recall.
+</li><li>A memory recall in progress does not prohibit the initiation of another memory recall; the most recently requested memory recall is executed.
+</li></ul><div><a name="extract_212">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Use of any brake fluid other than the approved DOT 3 will cause permanent damage to brake components and will render the brakes inoperative. Failure to follow these instructions may result in personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Carefully read cautionary information on product label. For EMERGENCY MEDICAL INFORMATION seek medical advice. In the USA or Canada on Ford/Motorcraft products call: 1-800-959-3673. For additional information, consult the product Material
+Safety Data Sheet (MSDS) if available. Failure to follow these instructions may result in personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not spill brake fluid onto painted or plastic surfaces. If spilled, wipe up immediately before damage to the plastic or painted surfaces occurs.
+</b></p><p><b>NOTE:
+</b>  Always check the fluid level in the brake master cylinder reservoir before carrying out the test procedures. If the fluid level is not at the correct level, clean the reservoir cap before removing, then add DOT 3 brake fluid.
+</p><p><b>NOTE:
+</b>  Prior to carrying out any diagnosis, make sure the red brake warning indicator is functional. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</p><p>The first indication that something may be wrong in the brake system is a change in the feeling through the brake pedal. The brake warning indicator in the instrument cluster and the brake fluid level in the brake master cylinder reservoir are
+also indicators of system concerns.
+</p><p>If a wheel is locked and the vehicle must be moved, open a bleeder screw at the locked wheel to let out enough fluid to relieve the pressure. Close the bleeder screw. This bleeding operation may release the brakes but does not correct the
+concern. If this does not relieve the locked wheel condition, repair the locked components before proceeding.
+</p><p>Inspect all hoses and connections. All unused vacuum connectors should be capped. Make sure hoses and their connections are correctly secured and in good condition with no holes, soft or collapsed areas.
+</p><p><b>Road Test
+</b></p><p>The technician should have a thorough knowledge of the brake system operation and accepted general braking guidelines in order to detect any problems.
+</p><p>Select a road that is reasonably smooth and level. Gravel or bumpy roads are not suitable because the surface does not allow the tires to grip the road equally. Avoid crowned roads.
+</p><p>A key factor in evaluating brake concerns is the deceleration rate. This varies from vehicle to vehicle and with changes in operating conditions. It is evident how well the brakes are working after just a few applications.
+</p><p>For low or spongy brake pedal concerns:
+</p><ul type="disc"><li>check and, if necessary, refill the brake master cylinder reservoir.
+</li><li>bleed the brake system and retest the brake pedal feel.
+</li><li>check the brake pedal mounting for looseness and correct installation. Check the brake booster and the brake master cylinder for loose mounting. Correct as necessary and retest the system for normal operation.
+</li></ul><p>For a slow or incomplete brake pedal return concern:
+</p><ul type="disc"><li>inspect for binding, damage, correct installation or interference at the brake pedal.
+</li><li>check the brake booster for binding, damage and correct installation.
+</li></ul><p><b>Brake Pads
+</b></p><p><b>NOTE:
+</b>  It is not required to install new brake pads if friction material properties are within guidelines. It is also not required to install new brake pads when the brake discs are machined.
+</p><ul type="disc"><li>Remove the brake pads. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or 
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc
+brakes.
+</li><li>Inspect and measure the thickness of the brake pad friction material.
+
+<ul type="square"><li>Install new brake pads if the thickness of the friction material is less than 3.0&#160;mm (0.118 inch). Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li><li>Compare all 4 front or rear pads for uneven wear. Install new brake pads if the thickness of the friction material varies from pad to pad by more than 2.0&#160;mm (0.079 inch). Refer to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or 
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li><li>Install new brake pads if there are missing chunks or cracks in the lining through to the backing plate. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li><li>If the friction material shows taper wear (i.e. the thickness varies by more than 3.0&#160;mm [0.118 inch] in any direction) verify the caliper guide pins are functioning correctly. Refer to Brake Caliper Guide Pins in this section.
+</li></ul></li></ul><p><b>Brake Discs
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Using an impact tool without a torque socket will lead to unevenly tightened lug nuts. This causes brake disc on-vehicle lateral runout and brake roughness.
+</b></p><p><b>NOTE:
+</b>  It is generally not required to install new brake discs to address brake noise concerns.
+</p><ul type="disc"><li>Remove the brake disc. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or 
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc
+brakes.
+</li><li>Inspect the brake discs and measure the brake disc thickness in a minimum of 4 places around the circumference of the brake disc. Record the measurements.
+
+<ul type="square"><li>Install new brake discs if any thickness measurement is less than the minimum specification. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li><li>Install new brake discs if cracked. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or 
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the
+rear disc brakes.
+</li><li>Machine the brake discs if the diagnosis has revealed vibration in the steering wheel, seat, or pedal while braking. Heavily scored brake discs, similar to that caused by pads worn down to the backing plate, should also be machined. In order to
+machine, discs must be above the minimum thickness to machine specification. Refer to Specifications and 
+<a href="s6260004.htm"                                                                                                                                                                                                                                                       >Brake Disc Machining
+</a> in this section.
+</li></ul></li></ul><p><b>Brake Caliper
+</b></p><p>Inspect the brake calipers for the following:
+</p><ul type="disc"><li>Brake fluid leaks
+</li><li>Boots and seals for tears or cracks
+</li><li>Caliper piston for binding and corrosion
+</li><li>Guide pins for correct operation. Refer to Brake Caliper Guide Pins in this section
+</li></ul><p><b>Brake Caliper Guide Pins
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not use power tools for caliper guide pin bore cleaning.
+</b></p><p>The guide pins should slide with a reasonable amount of hand force. If the brake pads show taper wear or the guide pins are difficult to move, then carry out the following steps.
+</p><p><b>NOTE:
+</b>  If a guide pin kit is not available, install a new brake caliper assembly.
+</p><ul type="disc"><li>Disassemble the guide pins. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or 
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear
+disc brakes.
+</li><li>Use a wire brush, rolled-up sandpaper or emery cloth to remove all corrosion and foreign material from the caliper guide pin bores. Clean remaining foreign material from the bores with brake parts cleaner and compressed air.
+</li><li>Install new brake pads if the lining is not within specifications. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li><li>Assemble the caliper guide pins using new caliper seals, boots and guide pins. Use an ample amount of grease to lubricate the bores and guide pins.
+</li></ul><p><b>Brake Lines and Tubes
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Never use copper tubing. It is subject to fatigue, cracking and corrosion, which could result in brake tube failure.
+</b></p><ul type="disc"><li>Double-wall steel tubing is used throughout the brake hydraulic system. All brake tube fittings must be correctly double flared to provide strong, leakproof connections. When bending tubing to fit the underbody or rear axle contours, be careful
+not to kink or crack the tube.
+</li><li>If a section of the brake tube is damaged, the entire section must be installed with a new tube of the same type, size, shape and length.
+</li><li>When installing the hydraulic brake tubing, hoses or connectors, tighten all connections to specifications. After installation, bleed the brake system. Refer to 
+<a href="s6260005.htm"                                                                                                                                                                                                                                                       >Brake System Bleeding
+</a> in this section.
+</li><li>The wet appearance on the outer cover of rubber brake hoses is called sweating. This is a normal condition for rayon-braided neoprene hose and is not a sign of leakage or cause to install a new hose.
+</li></ul><p>Install a new flexible brake hose if the hose shows signs of softening, cracking or other damage.
+</p><p>When installing a new brake hose, position the hose to avoid contact with other vehicle components.
+</p><p><b>Non-Pressure Leaks
+</b></p><p><b>NOTE:
+</b>  The wet appearance on the outer cover of rubber brake hoses is called "sweating." This is a normal condition for rayon-braided neoprene hose. The sweating condition is not evidence of a brake fluid leak and does not result in a loss of pressure
+in the system.
+</p><p>The only part of the brake system that could have a brake fluid loss that does not appear when the system is under pressure is the brake master cylinder reservoir under the following conditions:
+</p><ul type="disc"><li>Missing or poorly-fitted brake master cylinder filler cap
+</li><li>Punctured or otherwise damaged brake master cylinder reservoir
+</li><li>Missing or damaged brake master cylinder filler cap gasket
+</li><li>Missing, damaged or poorly-fitted sealing grommets between the brake master cylinder and the brake master cylinder reservoir
+</li></ul><p>The brake master cylinder reservoir grommets are not repairable and must be installed new as part of a new brake master cylinder reservoir.
+</p><p><b>Brake Master Cylinder &#8212; Normal Conditions
+</b></p><p>The following conditions are considered normal and are not indications that the brake master cylinder is in need of service.
+</p><p><b>Condition 1:
+</b> During normal operation of the brake master cylinder, the fluid level in the brake master cylinder reservoir rises during brake application and fall during release. The net fluid level (such as after brake application
+and release) remains unchanged.
+</p><p><b>Condition 2:
+</b> A trace of brake fluid may exist on the booster shell below the master cylinder mounting flange. This results from the normal lubricating action of the master cylinder bore and seal.
+</p><p><b>Condition 3:
+</b> Fluid level decreases with pad wear.
+</p><p><b>Brake Master Cylinder &#8212; Abnormal Conditions
+</b></p><p>Changes in the brake pedal feel or travel are indicators that something could be wrong in the brake system. GO to 
+<a href="s6260003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a> for abnormal condition diagnosis.
+</p><p><b>Brake Booster
+</b></p><p>Inspect the brake booster for the following:
+</p><ul type="disc"><li>Excessive corrosion or damage
+</li><li>Vacuum connections for leakage
+</li><li>Vacuum hoses for kinks or leakage
+</li><li>Brake booster check valve for correct operation
+</li></ul><p>Changes in the brake pedal feel or travel are indicators that something could be wrong in the brake system. GO to 
+<a href="s6260003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a> for abnormal condition diagnosis.
+</p><p><b>Parking Brake
+</b></p><p>Check the operation of the parking brake system with the vehicle on a hoist and the parking brake control fully released. Check for any damaged cables and install new components as necessary. Check the rear brake adjustment or carry out the
+brake system diagnosis. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s650l.htm&rightside=s62s650r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-05
+</a>.
+</p><div><a name="extract_213">&nbsp;
+</a></div>
+
+<p><b>Adjustable Pedal With or Without Memory Feature
+</b></p><ol start="1"><li>Verify the customer concern by operating the adjustable pedal.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Adjustable pedal assembly
+</LI><LI>Adjustable pedal switch
+</LI><LI>Memory set switch
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Circuitry
+</LI><LI>Central junction box (CJB) fuse 109 (30A)
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident (only adjustable pedal with memory, all others GO to 
+<a href="s6260003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>), connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the
+diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+</li></ol><ul type="disc"><li>check that the program card is correctly installed.
+</li><li>check the connections to the vehicle.
+</li><li>check the ignition switch position.
+</li></ul><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN, UBP or ISO circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for the driver seat module (DSM), refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs) and carry out the self-test diagnostics for the DSM.
+</li></ul></li></ol><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the Driver Seat Module (DSM) Diagnostic Trouble Code (DTC) Index listed in this section.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s6260003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Driver Seat Module (DSM) Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="LEFT">ECU is Defective
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1530
+</TD><TD valign="top" align="LEFT">Memory Set Switch Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1534
+</TD><TD valign="top" align="LEFT">Memory 1 Switch Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1538
+</TD><TD valign="top" align="LEFT">Memory 2 Switch Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1987
+</TD><TD valign="top" align="LEFT">Pedal Forward/Rearward Motor Stalled
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1988
+</TD><TD valign="top" align="LEFT">Pedal Position Forward Switch Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1989
+</TD><TD valign="top" align="LEFT">Pedal Position Rearward Switch Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1990
+</TD><TD valign="top" align="LEFT">Pedal Forward/Rearward Feedback Potentiometer Circuit Failure
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1991
+</TD><TD valign="top" align="LEFT">Pedal Forward/Rearward Feedback Potentiometer Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT"><A href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2477
+</TD><TD valign="top" align="LEFT">Module Configuration Failure
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1950
+</TD><TD valign="top" align="LEFT">UBP Communication Bus Fault
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2306
+</TD><TD valign="top" align="LEFT">UBP Invalid Data From Node ID $60
+</TD><TD valign="top" align="CENTER">DSM
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR></TABLE><br><p>For a complete list of DSM DTCs, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</p><div><a name="extract_214">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The red brake warning indicator is always on
+</li></ul></td><td><ul type="disc"><li>Brake fluid level
+</li></ul></td><td><ul type="disc"><li>FILL the brake fluid reservoir to the MAX line.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Parking brake
+</li></ul></td><td><ul type="disc"><li>CHECK that the parking brake is fully released.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Circuitry
+</li><li>Parking brake switch
+</li><li>Brake fluid level switch
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s6260003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The brakes pull or drift
+</li></ul></td><td><ul type="disc"><li>Tire air pressure
+</li></ul></td><td><ul type="disc"><li>CHECK the tires for uneven or excessive wear and correct inflation.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake pads
+</li><li>Brake components
+</li></ul></td><td><ul type="disc"><li>CHECK the brake pads for uneven taper or excessive wear. REPAIR as necessary.
+</li><li>CHECK the brake discs and the hubs for damage. REPAIR as necessary.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Suspension component
+</li><li>Wheel alignment
+</li></ul></td><td><ul type="disc"><li>CHECK the wheel alignment. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s400l.htm&rightside=s62s400r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-00
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Brake pedal goes down fast
+</li></ul></td><td><ul type="disc"><li>Brake fluid level
+</li></ul></td><td><ul type="disc"><li>INSPECT the system for leaks. FILL the brake master cylinder reservoir. BLEED the system. REFER to 
+<a href="s6260005.htm"                                                                                                                                                                                                                                                       >Brake System Bleeding
+</a> in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Air in system
+</li></ul></td><td><ul type="disc"><li>INSPECT the system for leaks. BLEED the system. REFER to 
+<a href="s6260005.htm"                                                                                                                                                                                                                                                       >Brake System Bleeding
+</a> in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake master cylinder
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Brake Master Cylinder Component Test in this section.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The brake pedal eases down slowly
+</li></ul></td><td><ul type="disc"><li>Air in system
+</li></ul></td><td><ul type="disc"><li>INSPECT the system for leaks. BLEED the system. REFER to 
+<a href="s6260005.htm"                                                                                                                                                                                                                                                       >Brake System Bleeding
+</a> in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake master cylinder
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Brake Master Cylinder Component Test in this section.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Brake lockup under light brake pedal force
+</li></ul></td><td><ul type="disc"><li>Brake pads
+</li></ul></td><td><ul type="disc"><li>CHECK the brake pads for uneven taper or excessive wear. REPAIR as necessary.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake component
+</li></ul></td><td><ul type="disc"><li>CHECK the brake components for correct operation. REPAIR as necessary.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Parking brake component
+</li></ul></td><td><ul type="disc"><li>REPAIR or INSTALL new components as necessary. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s650l.htm&rightside=s62s650r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-05
+</a></li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Anti-lock brake control system
+</li></ul></td><td><ul type="disc"><li>CHECK the anti-lock brake control system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Excessive/erratic brake pedal travel
+</li></ul></td><td><ul type="disc"><li>Leak in hydraulic system
+</li><li>Air in system
+</li><li>Disc brake caliper
+</li></ul></td><td><ul type="disc"><li>INSPECT the system for leaks. BLEED the system. REFER to 
+<a href="s6260005.htm"                                                                                                                                                                                                                                                       >Brake System Bleeding
+</a> in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake master cylinder
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Brake Master Cylinder Component Test in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake pads
+</li></ul></td><td><ul type="disc"><li>CHECK the brake pads for excessive wear.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake pedal
+</li></ul></td><td><ul type="disc"><li>CHECK the brake pedal for binding or obstructions. REPAIR as necessary.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Brakes drag
+</li></ul></td><td><ul type="disc"><li>Parking brake component
+</li></ul></td><td><ul type="disc"><li>REPAIR or INSTALL new components as necessary. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s650l.htm&rightside=s62s650r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-05
+</a>.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake caliper guide pins
+</li></ul></td><td><ul type="disc"><li>REPAIR or INSTALL new caliper guide pins, seals and boots. REFER to Brake Caliper Guide Pins in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Disc brake caliper
+</li></ul></td><td><ul type="disc"><li>REPAIR or INSTALL new brake calipers as necessary. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake booster
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Brake Booster Component Test in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake master cylinder
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Brake Master Cylinder Component Test in this section.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Excessive brake pedal effort
+</li></ul></td><td><ul type="disc"><li>Brake booster
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Brake Booster Component Test in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake booster check valve
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Check Valve Component Test in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake booster manifold vacuum hose
+</li></ul></td><td><ul type="disc"><li>REROUTE, REPAIR or INSTALL new components as necessary.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Rattling noise
+</li></ul></td><td><ul type="disc"><li>Caliper mounting bolts loose
+</li></ul></td><td><ul type="disc"><li>CHECK the caliper bolts. TIGHTEN to specifications. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Damaged or worn caliper guide pins or retainers
+</li></ul></td><td><ul type="disc"><li>CHECK the caliper guide pins and retainers for lubrication and correct operation. LUBRICATE or INSTALL new components as necessary. REFER to Brake Caliper Guide Pins in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Missing or damaged anti-rattle clips or springs
+</li></ul></td><td><ul type="disc"><li>CHECK the brake pads for missing clips or broken springs. INSTALL new components as necessary. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Loose brake disc shield
+</li></ul></td><td><ul type="disc"><li>TIGHTEN the brake disc shield to specification. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Clicking noise &#8212; with brakes applied with anti-lock brake system (ABS)
+</li></ul></td><td><ul type="disc"><li>ABS hydraulic control unit
+</li></ul></td><td><ul type="disc"><li>Acceptable condition.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Squealing noise &#8212; occurs on first (morning) brake application
+</li></ul></td><td><ul type="disc"><li>Brake pads
+</li></ul></td><td><ul type="disc"><li>Acceptable condition. Caused by humidity and low brake pad temperature.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Squealing noise &#8212; a continuous squeal
+</li></ul></td><td><ul type="disc"><li>Brake pads or linings worn below minimum thickness
+</li></ul></td><td><ul type="disc"><li>INSPECT brake pads for excessive wear, taper wear or uneven wear. VERIFY brake pads are within minimum specifications. REFER to Brake Pads in this section.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Squealing noise &#8212; an intermittent squeal brought on by cold, heat, water, mud or snow
+</li></ul></td><td><ul type="disc"><li>Brake pads
+</li></ul></td><td><ul type="disc"><li>Acceptable condition.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Groaning noise &#8212; occurs at low speeds with brake lightly applied (creeping)
+</li></ul></td><td><ul type="disc"><li>Brake pads
+</li></ul></td><td><ul type="disc"><li>Acceptable condition.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Grinding noise &#8212; continuous
+</li></ul></td><td><ul type="disc"><li>Brake pads or linings worn below minimum thickness
+</li></ul></td><td><ul type="disc"><li>INSPECT the brake pads, brake discs and attaching hardware for damage. VERIFY brake pads are within minimum specifications. REFER to Brake Pads in this section.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Moaning noise
+</li></ul></td><td><ul type="disc"><li>Brake linings contaminated with grease or oil
+</li></ul></td><td><ul type="disc"><li>INSPECT the brake pads for contamination. REPAIR or INSTALL new components as necessary. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Adjustable brake pedal is inoperative/does not operate correctly &#8212; non-memory
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Adjustable pedal switch
+</li><li>Adjustable pedal motor
+</li></ul></td><td><ul type="disc"><li><a href="s6260003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Adjustable brake pedal is inoperative/does not operate correctly &#8212; memory
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Memory set switch
+</li><li>Adjustable pedal switch
+</li><li>Adjustable pedal potentiometer
+</li><li>Adjustable pedal motor
+</li><li>Driver seat module (DSM)
+</li></ul></td><td><ul type="disc"><li><a href="s6260003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Vibration when the brakes are applied
+</li></ul></td><td><ul type="disc"><li>Uneven brake pad wear
+</li><li>Brake disc pad transfer
+</li><li>Brake disc
+</li><li>Suspension components
+</li></ul></td><td><ul type="disc"><li>COMPLETE the brake system inspection described in Inspection and Verification in this section.
+</li><li><a href="s6260003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Brake vibration/shudder &#8212; occurs when the brake pedal is released
+</li></ul></td><td><ul type="disc"><li>Brake caliper guide pins
+</li></ul></td><td><ul type="disc"><li>INSPECT the brake caliper guide pins for correct operation. REFER to Brake Caliper Guide Pins in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Brake drag
+</li></ul></td><td><ul type="disc"><li>INSPECT the brake pads for premature wear. REPAIR or INSTALL a new caliper as necessary. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s630l.htm&rightside=s62s630r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-03
+</a> for the front disc brakes or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s640l.htm&rightside=s62s640r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-04
+</a> for the rear disc brakes.
+</li></ul></td></tr></table><div><a name="extract_215">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Red Brake Warning Indicator Is Always On
+</b></p><h5>Normal operation
+</h5><p>The red brake warning indicator is located in the instrument cluster and illuminates during prove out, when the brake fluid in the brake master cylinder reservoir is below a specific level, when the parking brake is engaged or when the brake
+fluid level switch is disconnected. The instrument cluster receives a ground input on circuit 162 (LG/RD) when the parking brake has been applied through circuit 57 (BK), turning on the brake warning indicator. The instrument cluster provides a
+voltage reference signal to the brake master cylinder fluid level switch through circuit 531 (DG/YE) and through the switch and back to the instrument cluster on circuit 512 (TN/LG). The circuit then grounds in the cluster through an 820 ohm
+resistor, dropping the voltage reference signal (the instrument cluster is monitoring) approximately in half. When the brake fluid level is low, the brake fluid level switch closes to ground through circuit 57 (BK). The voltage reference signal the
+instrument cluster is sending to the brake fluid level switch drops to zero, which signals the cluster to turn on the brake warning indicator. If circuit 531 (DG/YE), circuit 512 (TN/LG) or the brake fluid level switch opens, the voltage reference
+signal the instrument cluster is sending out on circuit 531 (DG/YE) goes to the full voltage reference (12 volts), which also signals the instrument cluster to turn on the brake warning indicator.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Low brake fluid level
+</li><li>Parking brake engaged
+</li><li>Circuit 512 (TN/LG) open, short to ground
+</li><li>Circuit 531 (DG/YE) open, short to ground
+</li><li>Circuit 162 (LG/RD) short to ground
+</li><li>Parking brake switch
+</li><li>Low brake fluid level switch
+</li><li>Instrument cluster
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE RED BRAKE WARNING INDICATOR IS ALWAYS ON
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE PARKING BRAKE SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Parking Brake Switch C2015.
+</li><li>Key in ON position.
+</li><li><b>Is the red brake warning indicator illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>If the parking brake is fully released, INSTALL a new parking brake switch. TEST the system for normal operation.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUIT 162 (LG/RD) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the resistance between parking brake switch C2015-1, circuit 162 (LG/RD), harness side and ground.
+</li><br><IMG src="a0078723.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 ISOLATE THE BRAKE MASTER CYLINDER FLUID LEVEL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Instrument Cluster C220a.
+</li><li>Disconnect:  Brake Fluid Level Switch C124.
+</li><li>Key in ON position.
+</li><li>Connect a fused (5A) jumper wire between brake fluid level switch C124-2, circuit 512 (TN/LG), harness side and brake fluid level indicator switch C124-3, circuit 531 (DG/YE), harness
+side.
+</li><br><IMG src="a0078724.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the red brake warning indicator on?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new brake fluid level switch. TEST the system for normal operation.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK CIRCUIT 512 (TN/LG) AND CIRCUIT 531 (DG/YE) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the resistance between instrument cluster C220a-3, circuit 512 (TN/LG), harness side and ground; and between instrument cluster C220a-2, circuit 531 (DG/YE), harness side and
+ground.
+</li><br><IMG src="a0078907.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the short to ground in circuit 512 (TN/LG) or 531 (DG/YE). TEST the system for normal operation.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK CIRCUIT 512 (TN/LG) AND CIRCUIT 531 (DG/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between brake fluid level indicator switch C124-2, circuit 512 (TN/LG), harness side and instrument cluster C220a-3, circuit 512 (TN/LG), harness side.
+</li><br><IMG src="a0078908.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between brake fluid level indicator switch C124-3, circuit 531 (DG/YE), harness side and instrument cluster C220a-2, circuit 531 (DG/YE), harness side.
+</li><br><IMG src="a0078909.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms on both circuits?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: Adjustable Brake Pedal Is Inoperative/Does Not Operate Correctly &#8212; Non-Memory
+</b></p><h5>Normal Operation
+</h5><p>The switch for the non-memory adjustable pedal receives voltage from the central junction box (CJB) at all times through circuit 566 (DG). The switch is grounded through circuit 57 (BK). Pressing the switch upward closes circuit 1495 (WH) to
+voltage and circuit 1494 (RD) to ground with the adjustable pedal motor moving the pedal away from the driver. Pressing the switch downward closes circuit 1494 (RD) to voltage and circuit 1495 (WH) to ground with the adjustable pedal motor moving
+the pedal toward the driver.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 1567 (RD/LB) open
+</li><li>Circuit 1494 (RD) open or short to ground
+</li><li>Circuit 1495 (WH) open or short to ground
+</li><li>Circuit 57 (BK) open
+</li><li>Adjustable pedal switch
+</li><li>Adjustable pedal motor assembly
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B:  ADJUSTABLE BRAKE PEDAL IS INOPERATIVE/DOES NOT OPERATE CORRECTLY &#8212; NON-MEMORY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK CIRCUIT 566 (DG) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  The integrity of the adjustable pedal and their associated transmission integrity can be verified by removing the drive cables from the individual adjustable pedal transmission. A firm tug on the cable allows the cable to be released from the
+adjustable pedal transmission. At this time, the adjustable pedal motor can be operated to determine if the concern may be due to a jammed adjustable pedal transmission or incorrectly timed adjustable pedal. Timing the pedal involves installing one
+cable into the respective transmission and operating the adjustable pedal switch until the particular pedal involved is bottomed out to the same position as the other pedal.
+
+<li>Key in OFF position.
+</li><li>Disconnect:  Adjustable Pedal Switch C2235.
+</li><li>Measure the voltage between adjustable pedal switch C2235-2, circuit 1567 (RD/LB), harness side and ground.
+</li><br><IMG src="a0078728.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY that central junction (CJB) fuse 109 (30A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between adjustable pedal switch C2235-3, circuit 57 (BK), harness side and ground; and between adjustable pedal switch C2235-6, circuit 57 (BK), harness side and
+ground.
+</li><br><IMG src="a0078729.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE ADJUSTABLE PEDAL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the adjustable pedal switch. Remove the switch and measure the resistance between the adjustable pedal switch pins while activating the adjustable pedal switch to the indicated positions.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Adjustable Pedal Switch Pin
+</TH><TH valign="bottom" align="CENTER">Adjustable Pedal Switch Position
+</TH><TH valign="bottom" align="CENTER">Resistance Value
+</TH></TR><TR><TD valign="top" align="CENTER">1 and 2
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">6 and 7
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">1 and 3
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 7
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">1 and 3, 6 or 7
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">3 and 1, 2, 6 or 7
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">6 and 1, 2 or 3
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">1 and 2, 6 or 7
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 1, 3 or 6
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">6 and 1, 2, 3 or 7
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0078733.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Did the adjustable pedal switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new adjustable pedal switch. TEST the system for normal operation.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK CIRCUIT 1494 (RD) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Adjustable Pedal Motor C2003.
+</li><li>Measure the resistance between adjustable pedal switch C2235-7, circuit 1494 (RD), harness side and adjustable pedal motor C2003-2, circuit 1494 (RD), harness side; and between
+adjustable pedal switch C2235-7, circuit 1494 (RD), harness side and ground.
+</li><br><IMG src="a0078895.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the switch and the motor, and greater than 10,000 ohms between the switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK CIRCUIT 1495 (WH) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between adjustable pedal switch C2235-1, circuit 1495 (WH), harness side and adjustable pedal motor C2003-1, circuit 1495 (WH), harness side; and between
+adjustable pedal switch C2235-1, circuit 1495 (WH), harness side and ground.
+</li><br><IMG src="a0078731.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the switch and the motor, and greater than 10,000 ohms between the switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new adjustable pedal motor assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s660l.htm&rightside=s62s660r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-06
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: Adjustable Brake Pedal Is Inoperative/Does Not Operate Correctly &#8212; Memory
+</b></p><h5>Normal Operation
+</h5><p>The adjustable pedal memory function utilizes an adjustable pedal potentiometer located in the adjustable pedal motor. The driver seat module (DSM) supplies a reference voltage to the potentiometer and a signal return. The signal voltage from
+the adjustable pedal potentiometer to the DSM provides an indication to the DSM of whether or not the adjustable pedal motor is stalled. When the driver sets a pedal position in the DSM, it stores the value of where the adjustable pedals are located
+using a time frame of motor operation. When the driver requests a return to a pedal position in memory, the DSM operates the adjustable pedal motor until the adjustable pedal potentiometer output matches the time frame stored in memory. If the
+memory function is not utilized, the adjustable pedal switch can also be used for normal operation of the adjustable pedal system. The DSM sends out a voltage reference on circuits 1492 (LB/RD) (rearward) and 1493 (PK/BK) (forward) to the adjustable
+pedal switch. When the switch is operated to the forward/rearward position, the voltage reference from the DSM is grounded on circuit 57 (BK). Depending on which circuit is grounded, the DSM interprets this and powers one of the circuits 1490
+(LB/OG) or 1489 (LB/BK) and grounds the opposite circuit. The adjustable pedals then operate in the commanded direction.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 57 (BK) open
+</li><li>Circuit 1492 (LB/RD) open or short to ground
+</li><li>Circuit 1493 (PK/BK) open or short to ground
+</li><li>Circuit 1490 (LB/OG) open or short to ground
+</li><li>Circuit 1489 (LB/BK) open or short to ground
+</li><li>Circuit 446 (OG/WH) open or short to ground
+</li><li>Circuit 447 (OG/RD) open or short to ground
+</li><li>Circuit 1491 (LB/YE) open, short to ground or short to voltage
+</li><li>Circuit 875 (BK/LB) open
+</li><li>Circuit 270 (BN/OG) open or short to ground
+</li><li>Circuit 267 (BN/LG) open or short to ground
+</li><li>Circuit 268 (BK/OG) open or short to ground
+</li><li>DTC B1530 &#8212; Memory set switch circuit short to ground
+</li><li>DTC B1534 &#8212; Memory 1 switch circuit short to ground
+</li><li>DTC B1538 &#8212; Memory 2 switch circuit short to ground
+</li><li>DTC B1987 &#8212; Pedal forward/rearward motor stalled
+</li><li>DTC B1988 &#8212; Pedal position forward switch circuit short to battery
+</li><li>DTC B1989 &#8212; Pedal position rearward switch circuit short to battery
+</li><li>DTC B1990 &#8212; Pedal forward/rearward potentiometer feedback circuit failure
+</li><li>DTC B1991 &#8212; Pedal forward/rearward potentiometer feedback circuit short to battery
+</li><li>Memory set switch
+</li><li>Adjustable pedal switch
+</li><li>Adjustable pedal potentiometer
+</li><li>Adjustable pedal motor
+</li><li>Driver seat module (DSM)
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: ADJUSTABLE BRAKE PEDAL IS INOPERATIVE/DOES NOT OPERATE CORRECTLY &#8212; MEMORY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK FOR DTCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Use the recorded DSM DTCs from the continuous and on-demand self tests.
+</li><li><b>Are any DSM DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC(s) B1530, B1534, B1538 was retrieved, GO to 
+<a href="s6260003.htm#C15"                                                                                                                                                                                                                                                       >C15
+</a>. If DTC B1987 was retrieved, GO to 
+<a href="s6260003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>. If DTC(s) B1988, B1989 was retrieved, GO to 
+<a href="s6260003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>. If DTC B1990 was retrieved GO to 
+<a href="s6260003.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a>. If DTC B1991 was retrieved, GO to 
+<a href="s6260003.htm#C13"                                                                                                                                                                                                                                                       >C13
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6260003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE MANUAL OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  The integrity of the adjustable pedals and their associated transmission integrity can be verified by removing the drive cables from the individual adjustable pedal transmission. A firm tug on the cable allows the cable to be released from the
+adjustable pedal transmission. At this time, the adjustable pedal motor can be operated to determine if the concern may be due to a jammed adjustable pedal transmission or incorrectly timed adjustable pedal. Timing the pedal involves installing one
+cable into the respective transmission and operating the adjustable pedal switch until the particular pedal involved is bottomed out to the same position as the other pedal.
+
+<li>Manually operate the adjustable pedal using the adjustable pedal switch on the instrument panel in both directions.
+</li><li><b>Does the adjustable pedal operate in BOTH directions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6260003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK THE ADJUSTABLE PEDAL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Adjustable Pedal Switch C2235.
+</li><li>Check the adjustable pedal switch. Remove the switch and measure the resistance between the adjustable pedal switch pins while activating the adjustable pedal switch to the indicated positions.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Adjustable Pedal Switch Pin
+</TH><TH valign="bottom" align="CENTER">Adjustable Pedal Switch Position
+</TH><TH valign="bottom" align="CENTER">Resistance Value
+</TH></TR><TR><TD valign="top" align="CENTER">1 and 2
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">1 and 7
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 7
+</TD><TD valign="top" align="CENTER">Forward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 7
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 1
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">1 and 7
+</TD><TD valign="top" align="CENTER">Rearward
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0078913.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Did the adjustable pedal switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new adjustable pedal switch. TEST the system for normal operation.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between adjustable pedal switch C2235-2, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0078691.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK CIRCUIT 1492 (LB/RD) FOR AND OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Driver Seat Module C341c.
+</li><li>Measure the resistance between adjustable pedal switch C2235-7, circuit 1492 (LB/RD), harness side and DSM C341c-9, circuit 1492 (LB/RD), harness side; and between adjustable pedal
+switch C2235-7, circuit 1492 (LB/RD), harness side and ground.
+</li><br><IMG src="a0078896.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the switch and the DSM, and greater than 10,000 ohms between the switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK CIRCUIT 1493 (PK/BK) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between adjustable pedal switch C2235-1, circuit 1493 (PK/BK), harness side and DSM C341c-8, circuit 1493 (PK/BK), harness side; and between adjustable pedal
+switch C2235-1, circuit 1493 (PK/BK), harness side and ground.
+</li><br><IMG src="n0013370.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the switch and the DSM, and greater than 10,000 ohms between the switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK CIRCUIT 1490 (LB/OG) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Driver Seat Module C341a.
+</li><li>Disconnect:  Adjustable Pedal Motor C2003.
+</li><li>Measure the resistance between DSM C341a-10, circuit 1490 (LB/OG), harness side and adjustable pedal motor C2003-2, circuit 1490 (LB/OG), harness side; and between DSM
+C341a-10, circuit 1490 (LB/OG), harness side and ground.
+</li><br><IMG src="a0078898.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the DSM and the motor and greater than 10,000 ohms between the DSM and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK CIRCUIT 1489 (LB/BK) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between DSM C341a-12, circuit 1489 (LB/BK), harness side and adjustable pedal motor C2003-1, circuit 1489 (LB/BK), harness side; and between DSM
+C341a-12, circuit 1489 (LB/BK), harness side and ground.
+</li><br><IMG src="a0078899.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the DSM and the motor, and greater than 10,000 ohms between the DSM and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK THE ADJUSTABLE PEDAL MOTOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a 12 volt source to adjustable pedal motor C2003-1, component side and ground adjustable pedal motor C2003-2, component side. Reverse the connections to verify the motor
+operates in both directions.
+</li><br><IMG src="a0078696.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Does the adjustable pedal motor operate in BOTH directions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C20"                                                                                                                                                                                                                                                       >C20
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new adjustable pedal motor assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s660l.htm&rightside=s62s660r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-06
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK CIRCUIT 446 (OG/WH) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Driver Seat Module C341a.
+</li><li>Disconnect:  Adjustable Pedal Potentiometer C2090.
+</li><li><b>NOTE:
+</b>  The adjustable pedal potentiometer is attached to the adjustable pedal motor.
+</li><li>Measure the resistance between DSM C341a-19, circuit 446 (OG/WH), harness side and adjustable pedal potentiometer C2090-1, circuit 446 (OG/WH), harness side; and between DSM
+C341a-19, circuit 446 (OG/WH), harness side and ground.
+</li><br><IMG src="a0078900.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the DSM and the potentiometer, and greater than 10,000 ohms between the DSM and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C11"                                                                                                                                                                                                                                                       >C11
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C11">&nbsp;
+</a><b>C11 CHECK CIRCUIT 447 (OG/RD)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between DSM C341a-13, circuit 447 (OG/RD), harness side and adjustable pedal potentiometer C2090-3, circuit 447 (OG/RD), harness side; and between DSM
+C341a-13, circuit 447 (OG/RD), harness side and ground.
+</li><br><IMG src="a0078901.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the DSM and the potentiometer, and greater than 10,000 ohms between the DSM and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C12"                                                                                                                                                                                                                                                       >C12
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C12">&nbsp;
+</a><b>C12 CHECK CIRCUIT 1491 (LB/YE) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Driver Seat Module C341c.
+</li><li>Measure the resistance between DSM C341c-7, circuit 1491 (LB/YE), harness side and adjustable pedal potentiometer C2090-2, circuit 1491 (LB/YE), harness side; and between DSM
+C341c-7, circuit 1491 (LB/YE), harness side and ground.
+</li><br><IMG src="a0078902.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the DSM and the potentiometer, and greater than 10,000 ohms between the DSM and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C13"                                                                                                                                                                                                                                                       >C13
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C13">&nbsp;
+</a><b>C13 CHECK CIRCUIT 1491 (LB/YE) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between DSM C341c-7, circuit 1491 (LB/YE), harness side and ground.
+</li><br><IMG src="a0078903.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6260003.htm#C14"                                                                                                                                                                                                                                                       >C14
+</a>.
+</td></tr><tr><td><a name="C14">&nbsp;
+</a><b>C14 MONITOR THE ADJUSTABLE PEDAL PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Driver Seat Module C341a.
+</li><li>Connect:  Driver Seat Module C341c.
+</li><li>Connect:  Adjustable Pedal Potentiometer C2090.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  DSM PID.
+</li><li>Monitor the DSM PID Driver Seat Pedal Position while operating the adjustable pedal (using the manual switch) in both directions.
+</li><li><b>Does the PID read approximately the same as the adjustable pedal position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C15"                                                                                                                                                                                                                                                       >C15
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new adjustable pedal motor assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s660l.htm&rightside=s62s660r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-06
+</a>. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C15">&nbsp;
+</a><b>C15 CHECK THE MEMORY SET SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Memory Set Switch C3246.
+</li><li>Check the memory set switch. Remove the memory set switch and measure resistance between the memory set switch pins while activating the memory set switch to the indicated positions.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Memory Set Switch Pin
+</TH><TH valign="bottom" align="CENTER">Memory Set Switch Position
+</TH><TH valign="bottom" align="CENTER">Resistance Value
+</TH></TR><TR><TD valign="top" align="CENTER">2 and 7
+</TD><TD valign="top" align="CENTER">Memory Switch 1
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 5
+</TD><TD valign="top" align="CENTER">Memory Switch 1
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">2 and 6
+</TD><TD valign="top" align="CENTER">Memory Switch 1
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">6 and 7
+</TD><TD valign="top" align="CENTER">Memory Switch 2
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">6 and 2
+</TD><TD valign="top" align="CENTER">Memory Switch 2
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">6 and 5
+</TD><TD valign="top" align="CENTER">Memory Switch 2
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">5 and 7
+</TD><TD valign="top" align="CENTER">Memory Set Switch
+</TD><TD valign="top" align="CENTER">0 Ohms
+</TD></TR><TR><TD valign="top" align="CENTER">5 and 2
+</TD><TD valign="top" align="CENTER">Memory Set Switch
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR><TR><TD valign="top" align="CENTER">5 and 6
+</TD><TD valign="top" align="CENTER">Memory Set Switch
+</TD><TD valign="top" align="CENTER">Open
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0078914.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Did the memory set switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C16"                                                                                                                                                                                                                                                       >C16
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new memory set switch. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C16">&nbsp;
+</a><b>C16 CHECK CIRCUIT 875 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between memory set switch C3246-7, circuit 875 (BK/LB), harness side and ground.
+</li><br><IMG src="a0078703.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C17"                                                                                                                                                                                                                                                       >C17
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C17">&nbsp;
+</a><b>C17 CHECK CIRCUIT 270 (BN/OG) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Driver Seat Module C341c.
+</li><li>Measure the resistance between memory set switch C3246-5 circuit 270 (BN/OG), harness side and DSM C341c-5 circuit 270 (BN/OG), harness side; and between memory set switch
+C3246-5 circuit 270 (BN/OG), harness side and ground.
+</li><br><IMG src="a0078904.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the memory set switch and the DSM and greater than 10,000 ohms between the memory set switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C18"                                                                                                                                                                                                                                                       >C18
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C18">&nbsp;
+</a><b>C18 CHECK CIRCUIT 267 (BN/LG) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between memory set switch C3246-2, circuit 267 (BN/LG), harness side and DSM C341c-4, circuit 267 (BN/LG), harness side; and between memory set switch
+C3246-2, circuit 267 (BN/LG), harness side and ground.
+</li><br><IMG src="a0078905.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the memory set switch and the DSM, and greater than 10,000 ohms between the memory set switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C19"                                                                                                                                                                                                                                                       >C19
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C19">&nbsp;
+</a><b>C19 CHECK CIRCUIT 268 (BK/OG) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between memory set switch C3246-6, circuit 268 (BK/OG), harness side and DSM C341c-3, circuit 268 (BK/OG), harness side; and between memory set switch
+C3246-6, circuit 268 (BK/OG), harness side and ground.
+</li><br><IMG src="a0078906.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the memory set switch and the DSM, and greater than 10,000 ohms between the memory set switch and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#C20"                                                                                                                                                                                                                                                       >C20
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr><tr><td><a name="C20">&nbsp;
+</a><b>C20 CHECK FOR CORRECT DSM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the DSM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all the DSM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new DSM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a> for the removal and installation procedure. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: Vibration When The Brakes Are Applied
+</b></p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Uneven brake pad wear
+</li><li>Brake pad transfer
+</li><li>Brake disc
+</li><li>Suspension components
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: VIBRATION WHEN THE BRAKES ARE APPLIED 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK FOR OASIS AND TSBs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check On-Line Automotive Service Information System (OASIS) and Technical Service Bulletins (TSBs) for applicable brake concerns.
+</li><li><b>Is there applicable information available on OASIS or in a TSB?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to OASIS or the TSB. CARRY OUT any necessary repairs that are indicated by OASIS or the TSB. If the concern is still present, GO to 
+<a href="s6260003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6260003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 ROAD TEST THE VEHICLE &#8212; LIGHT BRAKING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the wheels and tires. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s440l.htm&rightside=s62s440r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-04
+</a>.
+</li><li>Road test the vehicle. Warm the brakes by slowing the vehicle from 80 to 32 km/h (50 to 20 mph) using light brake force. At highway speeds of 89-97 km/h (55-60 mph), apply the brake using light pedal force.
+</li><li><b>Is there a vibration/shudder felt in the steering wheel, seat or brake pedal?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6260003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 ROAD TEST THE VEHICLE &#8212; MODERATE TO HEAVY BRAKING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Road test the vehicle. At highway speeds of 89-97 km/h (55-60 mph), apply the brake using a moderate to heavy pedal force.
+</li><li><b>Is there a vibration/shudder?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>The concern is not present at this time.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 NORMAL ACTUATION OF THE ABS SYSTEM DIAGNOSIS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>During moderate to heavy braking, noise from the hydraulic control unit (HCU) and pulsation in the brake pedal can be observed. Pedal pulsation coupled with noise during heavy braking or on loose gravel, bumps, wet or snowy surfaces is
+acceptable and indicates correct functioning of the ABS system. Pedal pulsation or steering wheel nibble (frequency is proportioned to the vehicle speed) indicates a concern with a brake or suspension component.
+</li><li><b>Is the vibration/shudder vehicle speed sensitive?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>The concern is not present at this time.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 APPLICATION OF THE PARKING BRAKE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>This test is not applicable to vehicles with drum-in-hat type parking brakes. For vehicles with drum-in-hat parking brakes, proceed to the next test step. For all other vehicles, apply the parking brake to identify if the problem is in the
+front or rear brake. At highway speeds of 89-97 km/h (55-60 mph), lightly apply the parking brake until the vehicle slows down. Release the parking brake immediately after the test.
+</li><li><b>Is there a vibration/shudder?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D8"                                                                                                                                                                                                                                                       >D8
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6260003.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK THE FRONT SUSPENSION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the front suspension. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s400l.htm&rightside=s62s400r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-00
+</a>.
+</li><li><b>Are all the suspension components in satisfactory condition?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D7"                                                                                                                                                                                                                                                       >D7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR or INSTALL new components as necessary. TEST the system for normal operation.
+</td></tr><tr><td><a name="D7">&nbsp;
+</a><b>D7 RESURFACE THE FRONT BRAKE DISCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not use a bench lathe to machine the brake discs.
+</b></li><li><b>NOTE:
+</b>  Follow the manufacturer's instructions to machine the brake discs. After machining, make sure the brake disc meets the thickness specification.
+</li><li>Resurface the front brake discs. Refer to 
+<a href="s6260004.htm"                                                                                                                                                                                                                                                       >Brake Disc Machining
+</a> in this section.
+</li><li>Road test the vehicle.
+</li><li><b>Is the vibration/shudder present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D8"                                                                                                                                                                                                                                                       >D8
+</a>.
+
+<br><br><b>No
+</b><br>The concern is not present at this time.
+</td></tr><tr><td><a name="D8">&nbsp;
+</a><b>D8 CHECK THE REAR SUSPENSION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the rear suspension. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s400l.htm&rightside=s62s400r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-00
+</a>.
+</li><li><b>Are all the suspension components in satisfactory condition?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6260003.htm#D9"                                                                                                                                                                                                                                                       >D9
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR or INSTALL new components as necessary. TEST the system for normal operation.
+</td></tr><tr><td><a name="D9">&nbsp;
+</a><b>D9 RESURFACE THE REAR BRAKE DISC
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not use a bench lathe to machine the brake discs.
+</b></li><li><b>NOTE:
+</b>  Follow the manufacturer's instructions to machine the brake discs. After machining, make sure the brake disc meets the thickness specification.
+</li><li>Resurface the rear brake discs. Refer to 
+<a href="s6260004.htm"                                                                                                                                                                                                                                                       >Brake Disc Machining
+</a> in this section.
+</li><li>Road test the vehicle.
+</li><li><b>Is the vibration/shudder present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s040l.htm&rightside=s62s040r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-04
+</a> to continue diagnosis of the vibration.
+
+<br><br><b>No
+</b><br>The concern is not present at this time.
+</td></tr></table><div><a name="extract_216">&nbsp;
+</a></div>
+
+<p><b>Component Tests
+</b></p><p><b>Brake Booster
+</b></p><ol start="1"><li>Check the hydraulic brake system for leaks or insufficient fluid.
+</li></ol><ol start="2"><li>With the transmission in NEUTRAL, stop the engine and apply the parking brake control. Apply the brake pedal several times to exhaust all vacuum in the system.
+</li></ol><ol start="3"><li>Apply the brake pedal and hold it in the applied position. Start the engine. If the vacuum system is operating, the brake pedal tends to move downward under constant foot pressure. If no motion is felt, the brake booster system is not
+functioning. Continue with the following steps.
+</li></ol><ol start="4"><li>Remove the vacuum booster hose from the check valve connection. Manifold vacuum must be available at the check valve end of the vacuum booster hose with the engine at idle speed and the transmission in NEUTRAL. Connect the vacuum booster hose
+to the brake booster check valve and verify that the manifold vacuum is available to the brake booster.
+</li></ol><ol start="5"><li>Operate the engine a minimum of 10 seconds at fast idle. Stop the engine, and let the vehicle stand for 10 minutes. Then apply the brake pedal with approximately 89 N (20 lb) of force. The brake pedal feel should be the same as that noted with
+the engine operating. If the brake pedal feels hard or no downward movement is felt (indicating no power assist), install a new brake booster check valve and retest. If the concern is still present, install a new brake booster. Refer to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s670l.htm&rightside=s62s670r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-07
+</a>. If the brake pedal feels spongy, bleed the hydraulic system to remove air. Refer to 
+<a href="s6260005.htm"                                                                                                                                                                                                                                                       >Brake System Bleeding
+</a> in this section.
+</li></ol><p><b>Check Valve
+</b></p><p>The function of the brake booster check valve is to allow manifold vacuum to enter the brake booster and prevent the escape of vacuum in case manifold vacuum is lost during sustained full throttle operation.
+</p><p>To test the function of the brake booster check valve:
+</p><ul type="disc"><li>Start and run the engine for at least 10 seconds.
+</li><li>Operate the brake pedal to check for power assist.
+</li><li>Disconnect the vacuum booster hose from the brake booster check valve. Do not remove the brake booster check valve from the brake booster.
+</li><li>There should be enough vacuum retained in the brake booster for at least one more power-assisted brake operation.
+</li></ul><p><b>Brake Master Cylinder &#8212; Bypass Condition Test
+</b></p><ol start="1"><li>Disconnect the brake lines at the brake master cylinder.
+</li></ol><ol start="2"><li>Plug the outlet ports of the brake master cylinder.
+</li></ol><ol start="3"><li>Apply the brakes. If brake pedal height cannot be maintained, the brake master cylinder has an internal leak and a new brake master cylinder must be installed.
+</li></ol><p><b>Compensator Port Check
+</b></p><p>The purpose of the compensator ports in the brake master cylinder is to supply any additional brake fluid required by the system due to brake pad wear and to allow brake fluid returning from the brake lines to the brake master cylinder to enter
+the brake master cylinder reservoir.
+</p><p>The returning brake fluid causes a slight turbulence in the brake master cylinder reservoir. Turbulence seen in the brake master cylinder reservoir upon application or release of the brake pedal is normal and shows that the compensating ports
+are not plugged.
+</p><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

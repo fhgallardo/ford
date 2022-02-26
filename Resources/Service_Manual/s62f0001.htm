@@ -1,0 +1,2076 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="15"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Entertainment System &#8212; General Information"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P2307Q0"><meta name="tps_procsgmlid" content="n914981"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 415-00:  Entertainment System &#8212; General Information
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Audio System
+</h4><meta name="tps_proctitle" content="Audio System"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=130&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >130
+</a> for schematic and connector information.
+</p><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=132&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >132
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+</td></tr></table><div><a name="extract_327">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The audio unit can be powered up when the ignition is in the RUN or ACC position. The audio unit provides audio signals to the speakers, thus producing sound.
+</p><p>The audio unit directs the audio signals to the speakers through separate positive and negative circuits for each of the 4 audio channels: LH front, RH front, LH rear, and RH rear. The audio unit provides internal circuit protection for shorts
+to ground, shorts to voltage or shorts between any output circuits.
+</p><p>The subwoofer speaker is powered from a separate subwoofer amplifier. The enable/clip circuit carries out 2 functions: to turn the subwoofer amplifier on, and to indicate to the audio unit when the subwoofer output distortion signal reaches a
+damaging level. The audio unit then reduces the audio output signal to the subwoofer amplifier.
+</p><p>The digital versatile disc (DVD) player receives a wake up signal from the audio unit through the controller area network (CAN). When a video disc is inserted into the DVD player and PLAY is pressed, an image is displayed on the screen and a
+stereo signal is transmitted to the audio unit.
+</p><p>The satellite digital audio radio system (SDARS) (also referred to as the satellite radio receiver) receives digital satellite broadcasts through a separate antenna. The signals are sent to the satellite radio receiver, which then sends audio
+signals to the audio receiver. The audio unit sends a wake up signal to the satellite radio receiver through the CAN.
+</p><p>The radio suppression equipment reduces interference transmitted through the speakers by the engine ignition and electrical systems.
+</p><p>The steering wheel controls consists of a specific resistor value for each button function creating a voltage divider. When a button is pressed, a specific reference voltage is sent to the audio unit. The audio unit then uses this reference
+voltage to determine which control input function has been selected.
+</p><div><a name="extract_328">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect the following for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Audio unit
+</LI><LI>Digital versatile disc (DVD) player
+</LI><LI>Antenna or antenna cable
+</LI><LI>Satellite antenna or antenna cable
+</LI><LI>Speaker mounting/speaker cones
+</LI><LI>Radio ignition interference capacitor, radio frequency interference suppression bond or radio receiver hood bonding strap
+</LI><LI>Wireless headphone batteries
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) fuse(s):
+
+<UL type="square"><LI>1 (10A)
+</LI><LI>4 (10A)
+</LI><LI>7 (5A)
+</LI><LI>22 (10A)
+</LI><LI>31 (20A)
+</LI><LI>38 (25A)
+</LI></UL></LI><LI>Circuitry
+</LI><LI>Audio unit
+</LI><LI>DVD player
+</LI><LI>Satellite radio receiver
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If the concern is visually evident, GO to 
+<a href="s62f0001.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><ol start="4"><li>If the concern is not visually evident, proceed to the Speaker Walk-Around Test, Audio Unit Self-Diagnostic Test, and (if necessary) the Satellite Audio Bezel Diagnostic Test.
+</li></ol><div><a name="extract_329">&nbsp;
+</a></div>
+
+<p><b>Speaker Walk-Around Test
+</b></p><p><b>NOTE:
+</b>  To enter the speaker walk-around test or audio unit self-diagnostic mode, the audio unit must be turned on and in radio tuner mode (AM/FM).
+</p><ol start="1"><li>To enter the speaker walk-around test, simultaneously press the audio unit preset buttons 3 and 6.
+</li></ol><ol start="2"><li>The speaker walk-around test applies sound to each speaker for approximately 1-2 seconds. Each speaker is tested and displayed on the audio unit in the following sequence: RF, LF, LR and RR.
+</li></ol><ol start="3"><li>To exit the speaker walk-around test, turn the ignition switch off, turn the audio unit off, or press preset button 1-6 or the CD button to initiate the diagnostic mode before the self-test completes (CDX6).
+</li></ol><ol start="4"><li><p><b>NOTE:
+</b>  Turning the ignition switch off and back on may not re-enable the DVD player buttons.
+</p>The speaker walk-around test disables the DVD player buttons. To re-enable the DVD player buttons, turn the audio unit off and back on or simultaneously press the audio unit preset buttons 3 and 5 until the headphone symbol lights up on the
+audio unit display. Simultaneously pressing the audio unit preset buttons 2 and 4 also re-enables the DVD player buttons and changes the system between single play and dual play. In dual play, the rear speakers and subwoofer turn off and the
+headphone outputs turn on.
+</li></ol><div><a name="extract_330">&nbsp;
+</a></div>
+
+<p><b>Audio Unit Self-Diagnostic Test
+</b></p><p><b>NOTE:
+</b>  To enter the speaker walk-around test or audio unit self-diagnostic test, the audio unit must be turned on and in radio tuner mode (AM/FM).
+</p><ol start="1"><li>To enter the following tests, press the desired preset button while in the speaker walk-around test or while in the audio unit self-diagnostic test.
+</li></ol><ol start="2"><li>To exit the audio unit self-diagnostic test, turn the ignition switch or the audio unit off.
+</li></ol><ol start="3"><li><p><b>NOTE:
+</b>  Turning the ignition switch off and back on may not re-enable the DVD player buttons.
+</p>The audio unit self-diagnostic test disables the DVD player buttons. To re-enable the DVD player buttons, turn the audio unit off and back on. The headphone symbol lights up on the audio unit display to indicate the DVD player buttons are
+re-enabled.
+</li></ol><ol start="4"><li>If the concern remains and the fault is not detected, GO to 
+<a href="s62f0001.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><ol start="5"><li>The self-diagnostic test has 7 manual tests available:
+
+<ul type="disc"><li>Preset button 1 = Audio internal/external tests. This test verifies the communication to devices internal and external to the audio system. While the tests are carried out, the display flashes SELF TEST. When the tests are completed, the
+display stops flashing and shows either SELF PASS or SELF FAIL. Failures can be viewed by pressing the tune up button to start the scroll through the list of faults. Each fault is displayed for 2 seconds. After the last fault is displayed, SELF FAIL
+is returned to the display.
+
+<br>Internal/external self-test can be exited anytime by entering another diagnostic test.
+</li></ul><ul type="disc"><li>Preset button 2 = VIEW/CLEAR DTCS. This test displays and allows the diagnostic trouble codes (DTCs) to be cleared. If no DTCs are found, the display shows NO DTCS. If any DTCs are present, the display shows DTCS FOUND and can be viewed by
+pressing the tune up button to start scrolling through the list of faults.
+
+<br>To clear all DTCs, press the EJECT key. The display shows DTCS CLEAR.
+</li></ul><ul type="disc"><li>Preset button 3 = SIGNAL STRENGTH TEST. This test displays the average signal strength of the currently tuned frequency.
+</li></ul><ul type="disc"><li>Preset button 4 = Software version information. This test queries each radio system controller for its software version information. The software levels can be viewed by pressing the tune up button to start scrolling the various
+microcontrollers. After the last software level is displayed, the SOFT LEVELS message is returned to the display.
+</li></ul><ul type="disc"><li>Preset button 5 = DISPLAY TEST. This test lights all the display segments for 5 seconds and then turns all segments off.
+</li></ul><ul type="disc"><li>Preset button 6 = MODULE CONFIGURATION. This tests the audio unit configuration. The configuration can be viewed by pressing the tune up button.
+</li></ul><ul type="disc"><li>CD button = CDX6 diagnostic mode. This test displays the last modes and errors that are saved in the memory. While these tests are being carried out, the audio unit displays CD DIAG. The modes and errors can be viewed by pressing the tune up
+button.
+</li></ul></li></ol><ol start="6"><li>To exit the self-diagnostic test, turn the ignition switch off or the audio unit off.
+</li></ol><ol start="7"><li><p><b>NOTE:
+</b>  Turning the ignition switch off and back on may not re-enable the DVD player buttons.
+</p>The audio unit self-diagnostic test disables the DVD player buttons. To re-enable the DVD player buttons, turn the audio unit off and back on. The headphone symbol lights up on the audio unit display to indicate the DVD player buttons are
+re-enabled.
+</li></ol><ol start="8"><li>If the concern remains and the fault is not detected, GO to 
+<a href="s62f0001.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_331">&nbsp;
+</a></div>
+
+<p><b>Satellite Audio Bezel Diagnostic Test
+</b></p><p><b>NOTE:
+</b>  To enter the test, the audio unit must be turned on and in SAT mode.
+</p><ol start="1"><li>To enter the satellite audio bezel diagnostic test, simultaneously press the AUX button and preset button 2 at the same time.
+</li></ol><ol start="2"><li>Upon entering the self-test, the audio unit produces 2 continuously alternating tones of different pitch, one for the right channel, then one for the left.
+</li></ol><ol start="3"><li>The test continues by displaying any DTCs currently present. If no DTCs are present, NO DTCS will be displayed. If there are DTCs present, the audio unit will auto-scroll through the list of active DTCs.
+</li></ol><ol start="4"><li>Historical DTCs can be viewed by pressing the AUX button and preset button 2 simultaneously while in the active DTC mode.
+
+<ul type="disc"><li>If any DTCs are present, pressing the AUX button and present button 2 will prompt CLEAR DTCS? on the audio unit display.
+</li></ul><ul type="disc"><li>To clear historical DTCs, press preset buttons 1, 2, and 3 consecutively within 4 seconds.
+</li></ul><ul type="disc"><li>To exit historical DTCs (with or without clearing DTCs), press the AUX button and preset button 2 simultaneously.
+</li></ul></li></ol><ol start="5"><li>If no historical DTCs are present, pressing the AUX button and preset button 2 simultaneously while in active DTC mode will display the DLP software version.
+</li></ol><ol start="6"><li>To exit the satellite audio bezel diagnostic test, press the AUX button and preset button 2 simultaneously while the DLP software version is displayed, or turn the audio unit off.
+</li></ol><ol start="7"><li>If the concern remains and the fault is not detected, GO to 
+<a href="s62f0001.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Audio Unit Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1031 SAT
+</TD><TD valign="top" align="LEFT">SDARS Antenna Open
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT"><A href="s62f0001.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1032 SAT
+</TD><TD valign="top" align="LEFT">SDARS Antenna Short
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT"><A href="s62f0001.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1317
+</TD><TD valign="top" align="LEFT">Battery Voltage High
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1317 is retrieved again, REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A> to continue diagnosis of the charging system. CLEAR all DTCs.
+REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B1318
+</TD><TD valign="top" align="LEFT">Battery Voltage Low
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1318 is retrieved again, REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A> to continue diagnosis of the charging system. CLEAR all DTCs.
+REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B1318 SAT
+</TD><TD valign="top" align="LEFT">Battery Voltage Low
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1318 is retrieved again, REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A> to continue diagnosis of the charging system. CLEAR all DTCs.
+REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342 ECU
+</TD><TD valign="top" align="LEFT">ECU Is Defective
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1342 ECU is retrieved again, REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to
+
+<A href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 415-01
+</A>. TEST the system for normal operation after the repair.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342 TAPE
+</TD><TD valign="top" align="LEFT">Tape Deck Mechanism Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1342 TAPE is retrieved again, REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to
+
+<A href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 415-01
+</A>. TEST the system for normal operation after the repair.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342 CD
+</TD><TD valign="top" align="LEFT">CDDJ Mechanism Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1342 CD is retrieved again, REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to
+
+<A href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 415-01
+</A>. TEST the system for normal operation after the repair.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342 SAT
+</TD><TD valign="top" align="LEFT">ECU Faulted
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B1342 SAT is retrieved again, INSTALL a new SDARS receiver. REFER to 
+<A href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 415-01
+</A>. TEST the system for normal
+operation.
+</TD></TR><TR><TD valign="top" align="CENTER">B2401 Tape
+</TD><TD valign="top" align="LEFT">Audio Tape Deck Mechanism Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">VERIFY that no cassette is inserted in the audio unit. DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B2401 TAPE is retrieved again, REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to
+
+<A href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 415-01
+</A>. TEST the system for normal operation after the repair.
+</TD></TR><TR><TD valign="top" align="CENTER">B2405
+</TD><TD valign="top" align="LEFT">Audio Disc CD Player Thermal Shutdown Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">ALLOW the audio unit to cool. DISREGARD the DTC. CLEAR the DTCs.
+</TD></TR><TR><TD valign="top" align="CENTER">B2406 CD
+</TD><TD valign="top" align="LEFT">Audio Single-Disc CD Player Internal Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">DOCUMENT and CLEAR the DTCs. CARRY OUT the self-test. If DTC B2406 CD is retrieved again, REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to
+
+<A href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 415-01
+</A>. TEST the system for normal operation after the repair.
+</TD></TR><TR><TD valign="top" align="CENTER">B2477
+</TD><TD valign="top" align="LEFT">ECU Configuration Failure
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2965
+</TD><TD valign="top" align="LEFT">Audio System Speaker Circuit Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT"><A href="s62f0001.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U0073
+</TD><TD valign="top" align="LEFT">Control Module Communication Bus Off
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="LEFT">CAN Communication Bus Fault &#8212; Receive Error
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900 SAT
+</TD><TD valign="top" align="LEFT">CAN Bus Fault
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT"><A href="s62f0001.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2005 RICP
+</TD><TD valign="top" align="LEFT">Rear Seat Entertainment (RSE) Is Not Responding
+</TD><TD valign="top" align="CENTER">Audio Unit
+</TD><TD valign="top" align="LEFT">If the vehicle is equipped with a DVD player,
+
+<A href="s62f0001.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</A>.
+
+<BR>If the vehicle is not equipped with a DVD player, DISREGARD the DTC.
+</TD></TR></TABLE><br><div><a name="extract_332">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the satellite radio receiver
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Satellite radio receiver
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The audio unit is inoperative/does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The audio unit is inoperative/does not operate correctly &#8212; satellite audio
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Satellite radio receiver
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The audio unit display is blank &#8212; audio unit operates
+</li></ul></td><td><ul type="disc"><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The audio unit/tape player display is blank &#8212; the audio unit/tape player operates
+</li></ul></td><td><ul type="disc"><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The cassette player only is inoperative
+</li></ul></td><td><ul type="disc"><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>During CD mode, the audio unit display shows: NO CD
+</li></ul></td><td><ul type="disc"><li>No CD found
+</li></ul></td><td><ul type="disc"><li><b>NOTE:
+</b>  NO CD is displayed when a CD is not found in a slot.
+</li><p>REFER to the Owner's Literature for more information on CD operation.
+</p></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>During SAT mode, the audio unit display shows: NO AUX AUDIO
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Satellite radio receiver
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>One or more audio control buttons (such as VOLUME, SEEK, TUNE and SCAN) is not functional in either radio, tape mode or all modes &#8212; audio unit display functions correctly
+</li></ul></td><td><ul type="disc"><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Poor reception
+</li></ul></td><td><ul type="disc"><li>Antenna
+</li><li>Antenna cable(s)
+</li><li>Radio frequency interference suppression equipment
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Poor reception &#8212; satellite audio
+</li></ul></td><td><ul type="disc"><li>Obstructions to the line of sight
+</li></ul></td><td><ul type="disc"><li>DRIVE the vehicle to an open area and TEST the reception.
+</li><ul type="square" class="singlespace"><li>If the reception is OK, INFORM the customer of the normal condition.
+</li></ul><ul type="square" class="singlespace"><li>If the reception is not OK,
+
+<a href="s62f0001.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</a>.
+</li></ul></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Satellite antenna cable
+</li><li>Satellite antenna
+</li><li>Satellite radio receiver
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Continuous SEEK/SCAN in AM/FM
+</li></ul></td><td><ul type="disc"><li>Antenna
+</li><li>Antenna cable(s)
+</li><li>Radio frequency interference suppression equipment
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No sound from one or more of the speakers (not all speakers)
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Speaker(s)
+</li><li>Digital versatile disc (DVD) player
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No sound from all speakers
+</li></ul></td><td><ul type="disc"><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Poor quality/distorted sound from one or more speakers (not all speakers)
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Speaker(s)
+</li><li>DVD player
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Poor quality/distorted sound from all speakers
+</li></ul></td><td><ul type="disc"><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The subwoofer is inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>Subwoofer amplifier
+</li><li>Subwoofer enclosure
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Loud popping sound when cycling the ignition switch
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>Subwoofer amplifier
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The auxiliary audio control is inoperative &#8212; steering wheel controls
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Steering wheel controls
+</li><li>Clockspring
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The video system is inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>DVD player
+</li><li>DVD or compact disc (CD)
+</li></ul></td><td><ul type="disc"><li><a href="s62f0001.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The video system does not operate correctly &#8212; no sound from one or more speakers (not all speakers)
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>DVD player
+</li><li>DVD or CD
+</li><li>Audio unit
+</li></ul></td><td><ul type="disc"><li>If the speakers operate normally in tuner mode,
+
+<a href="s62f0001.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>. If the speakers are inoperative when in tuner mode and when using the DVD player,
+
+<a href="s62f0001.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No sound from the wireless headphones
+</li></ul></td><td><ul type="disc"><li>DUAL PLAY not selected
+</li><li>Headphone batteries
+</li><li>Headphones
+</li><li>DVD player
+</li></ul></td><td><ul type="disc"><li>SIMULTANEOUSLY PRESS the audio unit preset buttons 2 and 4 until the audio unit displays DUAL PLAY. REPEATEDLY PRESS the SRC/PWR button on the DVD player and ADJUST the headphone volume until a source can be heard.
+</li><ul type="square" class="singlespace"><li>If no source can be heard, SUBSTITUTE a known good pair of batteries and then the wireless headphones. REPEAT the above action.
+</li></ul><ul type="square" class="singlespace"><li>If a source can be heard, NOTIFY the customer. The system is operating correctly.
+</li></ul><ul type="square" class="singlespace"><li><b>NOTE:
+</b>  When the DVD player is unplugged and not replaced, the rear speakers are not connected.
+</li><p>If there is still no sound, REMOVE the DVD player. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf70l.htm&rightside=s62sf70r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-07
+</a>. SEND the DVD player to an authorized audio system repair facility. TEST the system for normal
+operation after the repair.
+</p></ul></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Intermittent sound from the wireless headphones
+</li></ul></td><td><ul type="disc"><li>Obstructions between the DVD player transmitter and the headphones
+</li><li>Sunlight washout
+</li></ul></td><td><ul type="disc"><li>Infrared technology is line-of-sight dependant. CLEAR all possible obstructions. TEST the system for normal operation.
+</li><ul type="square" class="singlespace"><li>Infrared technology is subject to a reduction in effectiveness given extreme exposure to sunlight. If excessive sunlight exposure is suspected, MOVE the vehicle to a shaded or darkened area. TEST the system for normal operation. To verify the
+condition, RETURN the vehicle to sunlit conditions and RETEST.
+</li></ul></ul></td></tr></table><div><a name="extract_333">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Audio Unit is Inoperative/Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>The audio unit is functional with the key in RUN or ACC. The audio unit receives voltage at all times through circuit 797 (LG/VT), power in RUN/ACC through circuit 54 (LG/YE) (with accessory delay) or circuit 489 (PK/BK) (without accessory
+delay), and ground through circuits 57 (BK) and 694 (BK/LG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit 54 (LG/YE) open
+</li><li>Circuit 57 (BK) open
+</li><li>Circuit 489 (PK/BK) open
+</li><li>Circuit 694 (BK/LG) open
+</li><li>Circuit 797 (LG/VT) open
+</li><li>Audio unit
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE AUDIO UNIT IS INOPERATIVE/DOES NOT OPERATE CORRECTLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK CIRCUITS 797 (LG/VT) AND 54 (LG/YE) OR 489 (PK/BK) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290a.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the audio unit C290a-1, circuit 797 (LG/VT), harness side and ground; and between the audio unit C290a-2, circuit 54 (LG/YE), or circuit 489 (PK/BK),
+harness side and ground.
+</li><br><IMG src="a0072232.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the voltages greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 1 (10A), fuse 22 (10A), or fuse 31 (30A) is OK. If OK, REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUITS 57 (BK) AND 694 (BK/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the audio unit C290a-13, circuit 694 (BK/LG), harness side and ground; and between the audio unit C290a-4, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0072233.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: Poor Reception
+</b></p><h5>Normal Operation
+</h5><p>The audio unit antenna receives AM and FM radio signals. The radio signals are sent to the audio unit through the audio unit antenna lead-in cable.
+</p><p>The audio unit suppression equipment reduces interference transmitted through the speakers by the engine ignition and electrical systems. When installing any new audio unit suppression equipment components, make sure that a good contact is made
+at all connections. Remove any paint or dirt from between a component and its ground. Tighten all connectors and screws securely according to torque specifications.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Antenna
+</li><li>Antenna cable(s)
+</li><li>Radio frequency interference suppression equipment
+</li><li>Audio unit
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: POOR RECEPTION
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE ANTENNA GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the antenna base and the battery ground cable.
+</li><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE ANTENNA CABLE CONNECTIONS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check the antenna connections, including the extension cable.
+</li><li>Check to make sure the antenna is securely mounted to the vehicle body at ground points.
+</li><li><b>Are the connections clean, secure and in metal-to-metal contact?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>CLEAN and SECURE the antenna connections as needed. TEST the system for normal operation.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE SUPPRESSION EQUIPMENT/MOUNTING AND CONNECTING CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check all necessary suppression equipment and the radio frequency interference suppression bond.
+</li><li>Check the audio unit receiver bonding strap for integrity, cleanliness and metal-to-metal contact.
+</li><li><b>NOTE:
+</b>  The capacitor mounting points are used to complete the electrical circuit and must be mounted securely to clean surfaces.
+</li><li>Check the mounting and connecting circuits of the audio unit ignition interference capacitor for integrity, cleanliness, and metal-to-metal contact.
+</li><li><b>Are the connections clean, secure, and in metal-to-metal contact?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br>CLEAN, SECURE or INSTALL new suppression equipment as necessary. TEST the system for normal operation.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK THE AUDIO UNIT IGNITION INTERFERENCE CAPACITOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check the operation of the audio unit ignition interference capacitor by installing a known good component.
+</li><li>Start the vehicle.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new audio unit ignition interference capacitor. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK THE GENERATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check the generator by disconnecting the voltage regulator.
+</li><li>Start the engine.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>CONNECT the voltage regulator. GO to 
+<a href="s62f0001.htm#B6"                                                                                                                                                                                                                                                       >B6
+</a>.
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK THE IGNITION CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check the ignition circuits for correct routing, grounding and integrity of connections.
+</li><li>Check the spark plugs and the ignition coils.
+</li><li><b>Are the ignition components OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#B7"                                                                                                                                                                                                                                                       >B7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the ignition system as necessary. TEST the system for normal operation.
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 SUBSTITUTE THE ANTENNA
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Substitute a known good antenna. Ground the antenna base to an unpainted metal surface on the vehicle.
+</li><li>Start the vehicle.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new antenna. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf20l.htm&rightside=s62sf20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-02
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL the original antenna. GO to 
+<a href="s62f0001.htm#B8"                                                                                                                                                                                                                                                       >B8
+</a>.
+</td></tr><tr><td><a name="B8">&nbsp;
+</a><b>B8 SUBSTITUTE THE ANTENNA EXTENSION CABLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Substitute a known good antenna extension cable.
+</li><li>Start the vehicle.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new antenna extension cable. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf20l.htm&rightside=s62sf20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-02
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL the original antenna extension cable. GO to 
+<a href="s62f0001.htm#B9"                                                                                                                                                                                                                                                       >B9
+</a>.
+</td></tr><tr><td><a name="B9">&nbsp;
+</a><b>B9 SUBSTITUTE THE AUDIO UNIT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Substitute a known good audio unit.
+</li><li>Start the vehicle.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the original audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>INSTALL the original audio unit. GO to 
+<a href="s62f0001.htm#B10"                                                                                                                                                                                                                                                       >B10
+</a>.
+</td></tr><tr><td><a name="B10">&nbsp;
+</a><b>B10 REPOSITION THE COMPONENTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Determine if the noise can be corrected by repositioning the antenna extension cable, speaker circuits or audio unit power feed circuits away from other circuits and brackets.
+</li><li>Start the vehicle.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Permanently REPOSITION the components as needed. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GROUND various parts of the vehicle to the frame using a jumper cable (for example: engine, fenders, quarter panels, stone deflectors, body sheet metal). When the noise is corrected, PROVIDE a permanent ground where necessary. TEST the system
+for normal operation.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: Poor Quality/Distorted/No Sound From One or More Speakers (Not All Speakers)
+</b></p><h5>Normal Operation
+</h5><p>The audio unit directs the audio signals to the speakers through separate positive and negative circuits for each speaker. The audio unit provides internal circuit protection for shorts to ground, shorts to voltage, and shorts between any
+output circuits.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Speaker(s)
+</li><li>Circuit 800 (GY/LB) open, short to ground or voltage
+</li><li>Circuit 801 (TN/YE) open, short to ground or voltage
+</li><li>Circuit 802 (OG/RD) open, short to ground or voltage
+</li><li>Circuit 803 (BN/PK) open, short to ground or voltage
+</li><li>Circuit 804 (OG/LG) open, short to ground or voltage
+</li><li>Circuit 805 (WH/LG) open, short to ground or voltage
+</li><li>Circuit 811 (DG/OG) open, short to ground or voltage
+</li><li>Circuit 813 (LB/WH) open, short to ground or voltage
+</li><li>Circuit 1733 (WH) open, short to ground or voltage
+</li><li>Circuit 1734 (LG/BK) open, short to ground or voltage
+</li><li>Circuit 1789 (VT/WH) open, short to ground or voltage
+</li><li>Circuit 1788 (YE/RD) open, short to ground or voltage
+</li><li>Digital versatile disc (DVD) player
+</li><li>Audio unit
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: POOR QUALITY/DISTORTED/NO SOUND FROM ONE OR MORE SPEAKERS (NOT ALL SPEAKERS)
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK FOR POOR SOUND/NO SOUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li>Carry out the speaker walk-around test.
+</li><li><b>Are all the speakers inoperative?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+
+<br><br><b>No
+</b><br>If a rear speaker is inoperative and the vehicle is equipped with a DVD player, GO to 
+<a href="s62f0001.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+
+<br><br>For all others, GO to 
+<a href="s62f0001.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE SPEAKER CIRCUITS FOR AC VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Suspect Speaker.
+</li><li>Key in ON position.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li>Measure the AC voltage between the suspect speaker pins, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">Speaker Connector-Pin, Circuit
+</TH><TH valign="bottom" align="CENTER">Speaker Connector-Pin, Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C523-1
+
+<BR>804 (OG/LG)
+</TD><TD valign="top" align="CENTER">C523-2
+
+<BR>813 (LB/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C612-1
+
+<BR>805 (WH/LG)
+</TD><TD valign="top" align="CENTER">C612-2
+
+<BR>811 (DG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C702-1
+
+<BR>800 (GY/LB)
+</TD><TD valign="top" align="CENTER">C702-2
+
+<BR>801 (TN/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C802-1
+
+<BR>802 (OG/RD)
+</TD><TD valign="top" align="CENTER">C802-2
+
+<BR>803 (BN/PK)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0093932.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is a fluctuating AC voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new speaker. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf30l.htm&rightside=s62sf30r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-03
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK THE SPEAKER CIRCUITS FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290a.
+</li><li>Measure the resistance between the audio unit, harness side and the suspect speaker, harness side; and between the audio unit, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector- Pin
+</TH><TH valign="bottom" align="CENTER">Speaker Connector- Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C290a-8
+</TD><TD valign="top" align="CENTER">C523-1
+</TD><TD valign="top" align="CENTER">804 (OG/LG)
+</TD></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C290a-21
+</TD><TD valign="top" align="CENTER">C523-2
+</TD><TD valign="top" align="CENTER">813 (LB/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C290a-11
+</TD><TD valign="top" align="CENTER">C612-1
+</TD><TD valign="top" align="CENTER">805 (WH/LG)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C290a-12
+</TD><TD valign="top" align="CENTER">C612-2
+</TD><TD valign="top" align="CENTER">811 (DG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C290a-9
+</TD><TD valign="top" align="CENTER">C702-1
+</TD><TD valign="top" align="CENTER">800 (GY/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C290a-22
+</TD><TD valign="top" align="CENTER">C702-2
+</TD><TD valign="top" align="CENTER">801 (TN/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C290a-10
+</TD><TD valign="top" align="CENTER">C802-1
+</TD><TD valign="top" align="CENTER">802 (OG/RD)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C290a-23
+</TD><TD valign="top" align="CENTER">C802-2
+</TD><TD valign="top" align="CENTER">803 (BN/PK)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms between the audio unit and the suspect speaker, and greater than 10,000 ohms between the audio unit and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK THE SPEAKER CIRCUITS FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the audio unit, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector-Pin, Circuit
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector-Pin, Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C290a-8
+
+<BR>804 (OG/LG)
+</TD><TD valign="top" align="CENTER">C290a-21
+
+<BR>813 (LB/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C290a-11
+
+<BR>805 (WH/LG)
+</TD><TD valign="top" align="CENTER">C290a-12
+
+<BR>811 (DG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C290a-9
+
+<BR>800 (GY/LB)
+</TD><TD valign="top" align="CENTER">C290a-22
+
+<BR>801 (TN/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C290a-10
+
+<BR>802 (OG/RD)
+</TD><TD valign="top" align="CENTER">C290a-23
+
+<BR>803 (BN/PK)
+</TD></TR></TABLE><br>
+
+<li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 BYPASS THE DVD PLAYER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  DVD Player C949.
+</li><li>Connect fused (10A) jumper wires at the DVD player, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C949-7
+
+<BR>802 (OG/RD)
+</TD><TD valign="top" align="CENTER">C949-20
+
+<BR>1789 (VT/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">C949-8
+
+<BR>803 (BN/PK)
+</TD><TD valign="top" align="CENTER">C949-21
+
+<BR>1788 (YE/RD)
+</TD></TR><TR><TD valign="top" align="CENTER">C949-9
+
+<BR>800 (GY/LB)
+</TD><TD valign="top" align="CENTER">C949-18
+
+<BR>1734 (LG/BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C949-10
+
+<BR>801 (TN/YE)
+</TD><TD valign="top" align="CENTER">C949-19
+
+<BR>1733 (WH)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0072234.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Key in ON position.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li><b>Does the speaker operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the DVD player and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf70l.htm&rightside=s62sf70r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-07
+</a>. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>REMOVE the jumper wires. GO to 
+<a href="s62f0001.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK THE SPEAKER CIRCUITS FROM THE DVD PLAYER TO THE REAR SPEAKERS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the DVD player connector pins, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C949-18
+
+<BR>1734 (LG/BK)
+</TD><TD valign="top" align="CENTER">C949-19
+
+<BR>1733 (WH)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C949-20
+
+<BR>1789 (VT/WH)
+</TD><TD valign="top" align="CENTER">C949-21
+
+<BR>1788 (YE/RD)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances approximately 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK THE CIRCUITS TO THE REAR SPEAKERS FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Suspect Speaker.
+</li><li>Measure the resistance between the DVD player, harness side and the suspect speaker, harness side; and between the DVD player, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector- Pin
+</TH><TH valign="bottom" align="CENTER">Speaker Connector- Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C949-19
+</TD><TD valign="top" align="CENTER">C702-2
+</TD><TD valign="top" align="CENTER">1733 (WH)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C949-18
+</TD><TD valign="top" align="CENTER">C702-1
+</TD><TD valign="top" align="CENTER">1734 (LG/BK)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C949-21
+</TD><TD valign="top" align="CENTER">C802-2
+</TD><TD valign="top" align="CENTER">1788 (YE/RD)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C949-20
+</TD><TD valign="top" align="CENTER">C802-1
+</TD><TD valign="top" align="CENTER">1789 (VT/WH)
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance less than 5 ohms between the DVD player and the audio unit, and greater than 10,000 ohms between the DVD player and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK THE CIRCUITS TO THE REAR SPEAKERS FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the DVD player, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C949-19
+
+<BR>1733 (WH)
+</TD><TD valign="top" align="CENTER">C949-18
+
+<BR>1734 (LG/BK)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C949-21
+
+<BR>1788 (YE/RD)
+</TD><TD valign="top" align="CENTER">C949-20
+
+<BR>1789 (VT/WH)
+</TD></TR></TABLE><br>
+
+<li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new speaker. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf30l.htm&rightside=s62sf30r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-03
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK THE SPEAKER OUTPUT CIRCUITS FROM THE AUDIO UNIT TO THE DVD PLAYER FOR AC VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  When the DVD player is disconnected, and not replaced, the rear speakers are not connected.
+
+<li>Key in ON position.
+</li><li>Turn the audio unit on.
+</li><li>Measure the AC voltage between the DVD player, harness side and the DVD player, harness side as follows.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin, Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C949-9
+
+<BR>800 (GY/LB)
+</TD><TD valign="top" align="CENTER">C949-10
+
+<BR>801 (TN/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C949-7
+
+<BR>802 (OG/RD)
+</TD><TD valign="top" align="CENTER">C949-8
+
+<BR>803 (BN/PK)
+</TD></TR></TABLE><br>
+
+<li><b>Is a fluctuating AC voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the DVD player. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf70l.htm&rightside=s62sf70r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-07
+</a>. SEND the DVD player to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a>.
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK THE AUDIO CIRCUITS TO THE DVD PLAYER FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290a.
+</li><li>Measure the resistance between the audio unit, harness side and the DVD player, harness side; and between the audio unit, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Speaker
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector- Pin
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector- Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C290a-9
+</TD><TD valign="top" align="CENTER">C949-9
+</TD><TD valign="top" align="CENTER">800 (GY/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C290a-22
+</TD><TD valign="top" align="CENTER">C949-10
+</TD><TD valign="top" align="CENTER">801 (TN/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C290a-10
+</TD><TD valign="top" align="CENTER">C949-7
+</TD><TD valign="top" align="CENTER">802 (OG/RD)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C290a-23
+</TD><TD valign="top" align="CENTER">C949-8
+</TD><TD valign="top" align="CENTER">803 (BN/PK)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms between the audio unit and the DVD player, and greater than 10,000 ohms between the audio unit and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Subwoofer is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The subwoofer speakers are powered from a separate subwoofer amplifier. The enable input circuit 173 (DG/VT) powers up the subwoofer amplifier, while the subwoofer amplifier receives voltage through circuit 828 (VT/LB) and ground through
+circuit 1204 (BK/OG). The audio unit sends an output signal to the subwoofer amplifier on circuit 167 (BN/OG) and 168 (RD/BK).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit 167 (BN/OG) open or short to ground
+</li><li>Circuit 168 (RD/BK) open or short to ground
+</li><li>Circuit 173 (DG/VT) open or short to ground
+</li><li>Circuit 828 (VT/LB) open or short to ground
+</li><li>Circuit 1204 (BK/OG) open
+</li><li>Subwoofer amplifier
+</li><li>Subwoofer enclosure
+</li><li>Audio unit
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE SUBWOOFER IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK CIRCUIT 173 (DG/VT) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Subwoofer Amplifier C3020.
+</li><li>Key in ON position.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li>Measure the voltage between the subwoofer amplifier C3020-1, circuit 173 (DG/VT), harness side and ground.
+</li><br><IMG src="gk4985a.gif"                                                                                                                                                                                                                                                        height="167" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#D7"                                                                                                                                                                                                                                                       >D7
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK CIRCUIT 828 (VT/LB) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the voltage between the subwoofer amplifier C3020-5, circuit 828 (VT/LB), harness side and ground.
+</li><br><IMG src="a0021366.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 38 (25A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK CIRCUIT 1204 (BK/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the subwoofer amplifier C3020-2, circuit 1204 (BK/OG), harness side and ground.
+</li><br><IMG src="gk8801a.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE SIGNAL CIRCUITS FOR AC VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li>Measure the AC voltage between the subwoofer amplifier C3020-7, circuit 167 (BN/OG), harness side and the subwoofer amplifier C3020-8, circuit 168 (RD/BK), harness side.
+</li><br><IMG src="a0093931.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage approximately 2 volts AC?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SUBSTITUTE a known good subwoofer amplifier.
+
+<br><br>If the subwoofer still has no sound, INSTALL a new speaker enclosure. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf30l.htm&rightside=s62sf30r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-03
+</a>.
+
+<br><br>If the subwoofer operates correctly, REMOVE the subwoofer amplifier and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal
+operation after the repair.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK CIRCUITS 167 (BN/OG) AND 168 (RD/BK) FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290c.
+</li><li>Measure the resistance between the subwoofer amplifier, harness side and the audio unit, harness side; and between the subwoofer amplifier, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Subwoofer Amplifier Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C3020-7
+</TD><TD valign="top" align="CENTER">C290c-1
+</TD><TD valign="top" align="CENTER">167 (BN/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">C3020-8
+</TD><TD valign="top" align="CENTER">C290c-2
+</TD><TD valign="top" align="CENTER">168 (RD/BK)
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance less than 5 ohms between the subwoofer amplifier and the audio unit, and greater than 10,000 ohms between the subwoofer amplifier and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK CIRCUITS 167 (BN/OG) AND 168 (RD/BK) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the subwoofer amplifier C3020-7, circuit 167 (BN/OG), harness side and ground; and between the subwoofer amplifier C3020-8, circuit 168 (RD/BK), harness
+side and ground.
+</li><br><IMG src="n0033855.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="D7">&nbsp;
+</a><b>D7 CHECK CIRCUIT 173 (DG/VT) FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290c.
+</li><li>Measure the resistance between the subwoofer amplifier C3020-1, circuit 173 (DG/VT), harness side and the audio unit C290c-4, circuit 173 (DG/VT), harness side; and between the
+subwoofer amplifier C3020-1, circuit 173 (DG/VT), harness side and ground.
+</li><br><IMG src="a0072794.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the subwoofer amplifier and the audio unit, and greater than 10,000 ohms between the subwoofer amplifier and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: Loud Popping Sound When Cycling The Ignition Switch
+</b></p><h5>Normal Operation
+</h5><p>The start input circuit 1000 (RD/BK) is sent to the audio unit when the key is turned to START. The audio unit then immediately mutes all speaker amplifier outputs and the subwoofer amplifier enable circuit 173 (DG/VT) to eliminate the
+possibility of speaker pops during key cycling.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit 173 (DG/VT) short to voltage
+</li><li>Circuit 1000 (RD/BK) open
+</li><li>Subwoofer amplifier
+</li><li>Audio unit
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: LOUD POPPING SOUND WHEN CYCLING THE IGNITION SWITCH
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK CIRCUIT 173 (DG/VT) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Subwoofer Amplifier C3020.
+</li><li>Disconnect:  Starter Relay C2163.
+</li><li>Key in START position.
+</li><li>Measure the voltage between the subwoofer amplifier C3020-1, circuit 173 (DG/VT), harness side and ground.
+</li><br><IMG src="gk5296a.gif"                                                                                                                                                                                                                                                        height="167" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>REMOVE the subwoofer amplifier and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK CIRCUIT 173 (DG/VT) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290b.
+</li><li>Key in START position.
+</li><li>Measure the voltage between the subwoofer amplifier C3020-1, circuit 173 (DG/VT), harness side and ground.
+</li><br><IMG src="gk5296a.gif"                                                                                                                                                                                                                                                        height="167" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK CIRCUIT 1000 (RD/BK) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290a.
+</li><li>Key in START position.
+</li><li>Measure the voltage between the audio unit C290a-15, circuit 1000 (RD/BK), harness side and ground.
+</li><br><IMG src="a0072795.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 7 (5A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The Auxiliary Audio Control is Inoperative &#8212; Steering Wheel Controls
+</b></p><h5>Normal Operation
+</h5><p>The steering wheel controls internal switches consist of a specific resistor value for each button function creating a voltage drop. When a button is pressed, a specific voltage is sent to the audio unit. The audio unit then uses this voltage
+to determine which control input function has been selected. Circuit 595 (LB/RD) is the reference voltage circuit between the steering wheel controls and the audio unit. The ground circuit for the steering wheel controls is through the audio unit,
+circuit 848 (DG/OG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 595 (LB/RD) open or short to ground
+</li><li>Circuit 848 (DG/OG) open or short to ground
+</li><li>Steering wheel controls
+</li><li>Steering wheel controls harness
+</li><li>Clockspring
+</li><li>Audio unit
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE AUXILIARY AUDIO CONTROL IS INOPERATIVE &#8212; STEERING WHEEL CONTROLS
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE STEERING WHEEL CONTROLS CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290a.
+</li><li>Measure the resistance between the audio unit C290a-18, circuit 595 (LB/RD), harness side and the audio unit C290a-19, circuit 848 (DG/OG), harness side while pressing the steering
+wheel controls as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Position
+</TH><TH valign="bottom" align="CENTER">Resistance Range
+</TH></TR><TR><TD valign="top" align="CENTER">VOL down
+</TD><TD valign="top" align="CENTER">50.1-56.3 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">VOL up
+</TD><TD valign="top" align="CENTER">139.4-154.0 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">MEM
+</TD><TD valign="top" align="CENTER">285.7-315.7 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">MEDIA
+</TD><TD valign="top" align="CENTER">984.9-1,088.5 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">None
+</TD><TD valign="top" align="CENTER">4,794.4-5,299.0 ohms
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0072796.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances within specification?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK CIRCUIT 595 (LB/RD) FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Clockspring C218b.
+</li><li>Measure the resistances between the audio unit C290a-18, circuit 595 (LB/RD), harness side and the clockspring C218b-3, circuit 595 (LB/RD), harness side; and between the audio unit
+C290a-18, circuit 595 (LB/RD), harness side and ground.
+</li><br><IMG src="a0072797.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the audio unit and the clockspring, and greater than 10,000 ohms between the audio unit and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK CIRCUIT 848 (DG/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the clockspring C218b-5, circuit 848 (DG/OG), harness side and the audio unit C290a-19, circuit 848 (DG/OG), harness side.
+</li><br><IMG src="a0072798.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK THE STEERING WHEEL CONTROLS HARNESS FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the driver air bag module. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Disconnect:  Upper Clockspring Connector.
+</li><li>Examine the steering wheel controls harness for opens and shorts to ground.
+</li><li><b>Is the steering wheel controls harness OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR or INSTALL a new steering wheel controls harness. INSTALL the driver air bag module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 ISOLATE AND CHECK THE STEERING WHEEL CONTROLS 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the upper clockspring connector pin 4, harness side and the upper clockspring connector pin 2, harness side while pressing the steering wheel controls as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Position
+</TH><TH valign="bottom" align="CENTER">Resistance Range
+</TH></TR><TR><TD valign="top" align="CENTER">VOL down
+</TD><TD valign="top" align="CENTER">50.1-56.3 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">VOL up
+</TD><TD valign="top" align="CENTER">139.4-154.0 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">MEM
+</TD><TD valign="top" align="CENTER">285.7-315.7 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">MEDIA
+</TD><TD valign="top" align="CENTER">984.9-1,088.5 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">None
+</TD><TD valign="top" align="CENTER">4,794.4-5,299.0 ohms
+</TD></TR></TABLE><br>
+
+<br><IMG src="n0009535.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances within specification?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new clockspring. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL new steering wheel controls. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. TEST the system for normal operation.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: The Video System Does Not Operate Correctly &#8212; No Sound From One or More Speakers (Not All Speakers)
+</b></p><h5>Normal Operation
+</h5><p>When a digital versatile disc (DVD) is being played using the DVD player, sound should be heard through all 4 speakers and the subwoofer.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>DUAL PLAY selected
+</li><li>DVD or compact disc (CD)
+</li><li>DVD player
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: THE VIDEO SYSTEM DOES NOT OPERATE CORRECTLY &#8212; NO SOUND FROM ONE OR MORE SPEAKERS (NOT ALL SPEAKERS)
+</h5>
+
+<p><b>NOTE:
+</b>  In Dual Play Mode, the rear speakers and subwoofer turn off and the headphone outputs turn on. The system returns to Single Play Mode when the audio unit or ignition switch is turned off and back on, the engine is started, the DVD
+headphone/speaker button is pressed, or by simultaneously pressing the audio unit preset buttons (2 and 4), (3 and 5), or (3 and 6). In Single Play Mode, the rear speakers and subwoofer turn on and the headphone outputs turn off.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK FOR SPEAKER OPERATION IN TUNER MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Operate the audio unit in radio tuner mode.
+</li><li>Press the power button twice on the audio unit to turn it off and back on.
+</li><li><b>Does the suspect speaker have sound now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br><a href="s62f0001.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK FOR SPEAKER OPERATION IN DVD MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Press the AUX button on the audio unit until DVD/CD PLAY or NO DVD/CD is displayed on the audio unit.
+</li><li>If NO DVD/CD is displayed, press the DVD player STOP/EJECT button 2 times (1/2 second apart or more). If there is a disc present, it ejects.
+</li><li>Remove the disc if one was ejected. (If not removed after 10 seconds, the disc is pulled back in but does not start playing.)
+</li><li>Insert the customer's disc into the DVD player.
+</li><li>Wait until the video screen displays the DVD or CD menu or audio is heard.
+</li><li>Select Play Movie, if needed, and SEEK UP/NEXT (right arrow) until the DVD or CD is playing where audio is known to exist.
+</li><li><b>Does the suspect speaker have sound now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>DUAL PLAY had been selected or the original disc has very quiet audio. NOTIFY the customer. The system is operating correctly.
+
+<br><br><b>No
+</b><br>EJECT and REMOVE the DVD. GO to 
+<a href="s62f0001.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK THE DVD OPERATION WITH A KNOWN GOOD DISC
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Insert a known good DVD or CD into the DVD player.
+</li><li>Wait until the video screen displays the DVD or CD menu or audio is heard.
+</li><li>Select Play Movie, if needed, and SEEK UP/NEXT (right arrow) until the DVD or CD is playing where audio is known to exist.
+</li><li><b>Does the suspect speaker have sound now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The original disc is not compatible with this DVD player or has no audio. NOTIFY the customer. The system is operating correctly.
+
+<br><br><b>No
+</b><br>EJECT and REMOVE the disc. REMOVE the DVD player and send it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf70l.htm&rightside=s62sf70r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-07
+</a>. TEST the system for normal operation after
+the repair.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: The Video System is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>Power is supplied to the digital versatile disc (DVD) player through circuit 720 (RD/YE). Once the DVD player is powered up, a signal is sent to the audio unit through circuits 832 (LB/PK) and 833 (TN) so that communication between the audio
+unit and DVD player can begin. When a video disc is inserted into the DVD player and the PLAY button is pressed, an image should be displayed on the screen.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>DVD play buttons disabled
+</li><li>Circuit 720 (RD/YE) open
+</li><li>Circuit 1204 (BK/OG) open
+</li><li>Circuit 2180 (LB/PK) open or short to ground
+</li><li>Circuit 2181 (TN) open or short to ground
+</li><li>DVD or compact disc (CD)
+</li><li>DVD player
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: THE VIDEO SYSTEM IS INOPERATIVE
+</h5>
+
+<p><b>NOTE:
+</b>  The DVD player buttons can be disabled at the audio unit by simultaneously pressing the audio unit preset buttons (3 and 5) or (3 and 6). To re-enable the DVD player buttons, turn the audio unit off and back on. The headphone symbol lights up
+on the audio unit display to indicate that the DVD player buttons are re-enabled.
+</p><p><b>NOTE:
+</b>  Turning the ignition switch off and back on may not re-enable the DVD player buttons.
+</p><p><b>NOTE:
+</b>  For most conditions, except after carrying out the audio unit self-diagnostic test, the DVD player buttons can also be re-enabled by simultaneously pressing buttons 3 and 5 until the headphone symbol appears on the audio unit display or by
+simultaneously pressing buttons 2 and 4. Pressing buttons 2 and 4 also changes the system between Single Play Mode and Dual Play Mode. In Dual Play Mode, the rear speakers and subwoofer turn off and the headphone outputs turn on.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK THE AUDIO UNIT AUX BUTTON
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Press the audio unit AUX button several times.
+</li><li><b>Does the audio unit display one or more of the following: NO AUX AUDIO, AUX, NO DVD/CD, or DVD/CD PLAY, PAUSE or STOP?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the audio unit displays NO AUX AUDIO for 5 seconds, GO to 
+<a href="s62f0001.htm#H8"                                                                                                                                                                                                                                                       >H8
+</a>.
+
+<br><br>Otherwise, GO to 
+<a href="s62f0001.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+
+<br><br><b>No
+</b><br>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK IF THE DVD PLAYER BUTTONS ARE DISABLED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the audio unit off, then back on.
+</li><li>Observe the audio unit display on the left side of the clock.
+</li><li><b>Is the headphone symbol lit on the audio unit display?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+
+<br><br><b>No
+</b><br>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK FOR A DISC
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Press the audio unit AUX button several times.
+</li><li><b>Does the audio unit display NO DVD/CD and AUX?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H5"                                                                                                                                                                                                                                                       >H5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H4"                                                                                                                                                                                                                                                       >H4
+</a>.
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK THE DVD PLAYER BUTTONS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  MENU only functions with DVDs. It has no function for audio, video and MP3 CDs or other sources.
+
+<b>NOTE:
+</b>  MEM only functions while in a DVD MENU or any disc type DISPLAY menu. It also selects the next tuner preset and the next CD for a 6-disc audio unit.
+
+<b>NOTE:
+</b>  The volume + button does not increase the volume past the volume set with the audio unit volume knob in single play mode.
+
+<li>Press the DVD player PLAY button and then the other buttons.
+</li><li><b>Does the system operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The DVD PLAY buttons had been disabled at the audio unit, or the disc the customer was using is not compatible with this DVD player or has no or very quiet audio. NOTIFY the customer. The system is operating correctly.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H5"                                                                                                                                                                                                                                                       >H5
+</a>.
+</td></tr><tr><td><a name="H5">&nbsp;
+</a><b>H5 CHECK THE DVD PLAYER WITH A KNOWN GOOD DISC
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Press the DVD player STOP/EJECT button 2 times (1/2 second apart or more).
+</li><li>Remove the disc if one was ejected. (If not removed, after 10 seconds, the disc is pulled back in, but does not start playing.)
+</li><li>Place a known good disc in the DVD player.
+</li><li><b>Is the disc pulled into the DVD player?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H6"                                                                                                                                                                                                                                                       >H6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H8"                                                                                                                                                                                                                                                       >H8
+</a>.
+</td></tr><tr><td><a name="H6">&nbsp;
+</a><b>H6 CHECK THE DVD PLAYER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  MENU only functions with DVDs. It has no function for audio, video and MP3 CDs or other sources.
+
+<b>NOTE:
+</b>  MEM only functions while in a DVD MENU or any disc type DISPLAY menu. It also selects the next tuner preset and the next CD for a 6-disc audio unit.
+
+<b>NOTE:
+</b>  The volume + button does not increase the volume past the volume set with the audio unit volume knob in single play mode.
+
+<li>Press the DVD player PLAY button and then the other buttons.
+</li><li><b>Does the system operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The original disc is not compatible with this DVD player or has no or very quiet audio. NOTIFY the customer. The system is operating correctly.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H7"                                                                                                                                                                                                                                                       >H7
+</a>.
+</td></tr><tr><td><a name="H7">&nbsp;
+</a><b>H7 CHECK THE DVD PLAYER DISPLAY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  MENU only functions with DVDs. It has no function for audio, video and MP3 CDs or other sources.
+
+<b>NOTE:
+</b>  MEM only functions while in a DVD MENU or any disc type DISPLAY menu. It also selects the next tuner preset and the next CD for a 6-disc audio unit.
+
+<b>NOTE:
+</b>  The volume + button does not increase the volume past the volume set with the audio unit volume knob in Single Play Mode.
+
+<b>NOTE:
+</b>  When the DVD player is unplugged and not replaced, the rear speakers are not connected.
+
+<li>If one or more of the DVD buttons do not respond, try them with an alternate type of disc and other sources.
+</li><li><b>Are only some of the buttons inoperative?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the DVD player and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf70l.htm&rightside=s62sf70r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-07
+</a>. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H14"                                                                                                                                                                                                                                                       >H14
+</a>.
+</td></tr><tr><td><a name="H8">&nbsp;
+</a><b>H8 CHECK CIRCUIT 720 (RD/YE) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  DVD Player C949.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the DVD player C949-1, circuit 720 (RD/YE), harness side and ground.
+</li><br><IMG src="a0072246.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H9"                                                                                                                                                                                                                                                       >H9
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 4 (10A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="H9">&nbsp;
+</a><b>H9 CHECK CIRCUIT 1204 (BK/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the DVD player C949-3, circuit 1204 (BK/OG), harness side and ground.
+</li><br><IMG src="a0072247.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H10"                                                                                                                                                                                                                                                       >H10
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="H10">&nbsp;
+</a><b>H10 CHECK CIRCUITS 2180 (LB/PK) AND 2181 (TN) FOR VOLTAGE AT THE DVD PLAYER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the DVD player, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">DVD Player Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH><TH valign="bottom" align="CENTER">Expected Value
+</TH></TR><TR><TD valign="top" align="CENTER">C949-4
+</TD><TD valign="top" align="CENTER">2180 (LB/PK)
+</TD><TD valign="top" align="CENTER">Approximately 3.2 volts
+</TD></TR><TR><TD valign="top" align="CENTER">C949-5
+</TD><TD valign="top" align="CENTER">2181 (TN)
+</TD><TD valign="top" align="CENTER">Approximately 1.9 volts
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0093527.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the voltages as expected?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H13"                                                                                                                                                                                                                                                       >H13
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H11"                                                                                                                                                                                                                                                       >H11
+</a>.
+</td></tr><tr><td><a name="H11">&nbsp;
+</a><b>H11 CHECK CIRCUITS 2180 (LB/PK) AND 2181 (TN) FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290b.
+</li><li>Measure the resistance between the audio unit, harness side and the DVD player, harness side; and between the audio unit, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Audio Unit Connector-Pin
+</TH><TH valign="bottom" align="CENTER">DVD Player Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C290b-15
+</TD><TD valign="top" align="CENTER">C949-4
+</TD><TD valign="top" align="CENTER">2180 (LB/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C290b-16
+</TD><TD valign="top" align="CENTER">C949-5
+</TD><TD valign="top" align="CENTER">2181 (TN)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms between the audio unit and the DVD player; and greater than 10,000 ohms between the audio unit and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. GO to 
+<a href="s62f0001.htm#H12"                                                                                                                                                                                                                                                       >H12
+</a>.
+</td></tr><tr><td><a name="H12">&nbsp;
+</a><b>H12 RECHECK THE VOLTAGE OF CIRCUITS 2180 (LB/PK) AND 2181 (TN) AT THE DVD PLAYER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Audio Unit C290b.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the DVD player, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">DVD Player Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH><TH valign="bottom" align="CENTER">Expected Value
+</TH></TR><TR><TD valign="top" align="CENTER">C949-4
+</TD><TD valign="top" align="CENTER">2180 (LB/PK)
+</TD><TD valign="top" align="CENTER">Approximately 3.2 volts
+</TD></TR><TR><TD valign="top" align="CENTER">C949-5
+</TD><TD valign="top" align="CENTER">2181 (TN)
+</TD><TD valign="top" align="CENTER">Approximately 1.9 volts
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0093527.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the voltages as expected?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#H13"                                                                                                                                                                                                                                                       >H13
+</a>.
+
+<br><br><b>No
+</b><br>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</td></tr><tr><td><a name="H13">&nbsp;
+</a><b>H13 RECHECK THE DVD PLAYER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect:  DVD Player C949.
+</li><li>Key in ON position.
+</li><li>Test the DVD player for normal operation.
+</li><li><b>Does the DVD player function correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#H14"                                                                                                                                                                                                                                                       >H14
+</a>.
+</td></tr><tr><td><a name="H14">&nbsp;
+</a><b>H14 CHECK WITH A KNOWN GOOD DVD PLAYER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  When the DVD player is unplugged and not replaced, the rear speakers are not connected.
+
+<li>Key in OFF position.
+</li><li>Install a known good DVD player.
+</li><li>Key in ON position.
+</li><li>Test the DVD player for normal operation.
+</li><li><b>Does the DVD player function correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the original DVD player to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>REMOVE the audio unit and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: The Audio Unit Is Inoperative/Does Not Operate Correctly &#8212; Satellite Audio
+</b></p><h5>Normal Operation
+</h5><p>The satellite radio receiver receives voltage through circuit 797 (LG/VT), and ground through circuit 694 (BK/LG). Digital signals are received by the satellite antenna and sent to the satellite radio receiver, which then provides audio signals
+to the audio unit. The satellite radio receiver and the audio unit communicate using the controller area network (CAN) through circuits 832 (LB/PK) and 833 (TN).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 690 (GY) open
+</li><li>Circuit 798 (LG/RD) open
+</li><li>Circuit 799 (OG/BK) open
+</li><li>Circuit 856 (VT) open
+</li><li>Satellite radio receiver
+</li><li>Audio unit
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: THE AUDIO UNIT IS INOPERATIVE/DOES NOT OPERATE CORRECTLY &#8212; SATELLITE AUDIO
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 VERIFY AN ACTIVE SUBSCRIPTION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter satellite mode on the audio unit and observe the display.
+</li><li><b>Does the display read CALL SIRIUS?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The subscription has expired. INFORM the customer to contact Sirius to re-activate the subscription.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#I2"                                                                                                                                                                                                                                                       >I2
+</a>.
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK SATELLITE RADIO RECEIVER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Perform the satellite bezel diagnostic self-test.
+</li><li><b>Are alternating LH/RH tones audible?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#I6"                                                                                                                                                                                                                                                       >I6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#I3"                                                                                                                                                                                                                                                       >I3
+</a>.
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Record the DTCs from the satellite bezel diagnostic self-test.
+</li><li><b>Are any DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC B1031 SAT or DTC B1032 SAT is present,
+
+<a href="s62f0001.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</a>.
+
+<br><br>If DTC U1900 SAT is present,
+
+<a href="s62f0001.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</a>.
+
+<br><br>For all other DTCs, REFER to the Audio Unit Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#I4"                                                                                                                                                                                                                                                       >I4
+</a>.
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK THE AUDIO CIRCUITS FROM THE SATELLITE RADIO RECEIVER FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Audio Unit C290a.
+</li><li>Disconnect:  Satellite Radio Receiver C2358.
+</li><li>Measure the resistance between the satellite radio receiver, harness side and the audio unit, harness side; and between the satellite radio receiver, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Satellite Radio Receiver Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C2358-5
+</TD><TD valign="top" align="CENTER">C290a-1
+</TD><TD valign="top" align="CENTER">856 (VT)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-6
+</TD><TD valign="top" align="CENTER">C290a-9
+</TD><TD valign="top" align="CENTER">690 (GY)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-11
+</TD><TD valign="top" align="CENTER">C290a-2
+</TD><TD valign="top" align="CENTER">798 (LG/RD)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-12
+</TD><TD valign="top" align="CENTER">C290a-10
+</TD><TD valign="top" align="CENTER">799 (OG/BK)
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance less than 5 ohms between the satellite radio receiver and the audio unit, and greater than 10,000 ohms between the satellite radio receiver and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#I5"                                                                                                                                                                                                                                                       >I5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="I5">&nbsp;
+</a><b>I5 CHECK THE AUDIO CIRCUITS FROM THE SATELLITE RADIO RECEIVER FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the satellite radio receiver and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Satellite Radio Receiver Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C2358-5
+</TD><TD valign="top" align="CENTER">856 (VT)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-6
+</TD><TD valign="top" align="CENTER">690 (GY)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-11
+</TD><TD valign="top" align="CENTER">798 (LG/RD)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-12
+</TD><TD valign="top" align="CENTER">799 (OG/BK)
+</TD></TR></TABLE><br>
+
+<li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#I6"                                                                                                                                                                                                                                                       >I6
+</a>.
+</td></tr><tr><td><a name="I6">&nbsp;
+</a><b>I6 SUBSTITUTE A KNOWN GOOD AUDIO UNIT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Substitute a known good audio unit.
+</li><li>Operate the audio unit in satellite audio mode.
+</li><li><b>Does the system operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SEND the original audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+
+<br><br><b>No
+</b><br>INSTALL a new satellite radio receiver. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. TEST the system for normal operation after the repair.
+</td></tr></table><a name="PS2-J">&nbsp;
+</a><p><b>Pinpoint Test J: Poor Reception &#8212; Satellite Audio
+</b></p><h5>Normal Operation
+</h5><p>Digital signals are received by the satellite antenna and sent to the satellite radio receiver, which then converts the signals and provides audio signals to the audio unit.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Satellite antenna cable
+</li><li>Satellite antenna
+</li><li>Satellite radio receiver
+</li></ul><a name="J">&nbsp;
+</a><h5>PINPOINT TEST J: POOR RECEPTION &#8212; SATELLITE AUDIO
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="J1">&nbsp;
+</a><b>J1 CHECK THE OPERATION OF THE SATELLITE AUDIO
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle to an open location, free of obstacles.
+</li><li>Operate the audio unit in satellite audio mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is OK at this time. ADVISE the customer of the condition.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#J2"                                                                                                                                                                                                                                                       >J2
+</a>.
+</td></tr><tr><td><a name="J2">&nbsp;
+</a><b>J2 CHECK THE SATELLITE ANTENNA CABLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Satellite Antenna Connection.
+</li><li>Measure the resistance of the satellite radio antenna cable between the satellite radio receiver and the satellite antenna connection.
+</li><li><b>Is the resistance less than 1 ohm?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#J4"                                                                                                                                                                                                                                                       >J4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#J3"                                                                                                                                                                                                                                                       >J3
+</a>.
+</td></tr><tr><td><a name="J3">&nbsp;
+</a><b>J3 SUBSTITUTE THE UPPER SATELLITE ANTENNA CABLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Install a known good upper satellite antenna cable.
+</li><li>Operate the audio unit in satellite audio mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new upper satellite antenna cable. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf20l.htm&rightside=s62sf20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-02
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>INSTALL the original upper satellite antenna cable. INSTALL a new lower satellite antenna cable. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf20l.htm&rightside=s62sf20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-02
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="J4">&nbsp;
+</a><b>J4 SUBSTITUTE THE SATELLITE ANTENNA
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Install a known good satellite antenna.
+</li><li>Operate the audio unit in satellite audio mode.
+</li><li><b>Is the reception OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new satellite antenna. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf20l.htm&rightside=s62sf20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-02
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>INSTALL the original satellite antenna. REMOVE the satellite radio receiver and SEND it to an authorized audio system repair facility. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. CLEAR the DTCs.
+REPEAT the self-test.
+</td></tr></table><a name="PS2-K">&nbsp;
+</a><p><b>Pinpoint Test K: U1900 &#8212; CAN Bus Fault
+</b></p><h5>Normal Operation
+</h5><p>The satellite radio receiver receives voltage through circuit 797 (LG/VT), and ground through circuit 694 (BK/LG). The satellite radio receiver communicates with the audio unit through the controller area network (CAN) on circuits 832 (LB/PK)
+and 833 (TN).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 797 (LG/VT) open
+</li><li>Circuit 694 (BK/LG) open
+</li><li>Circuit 832 (LB/PK) open, short to ground or voltage
+</li><li>Circuit 833 (TN) open, short to ground or voltage
+</li><li>Satellite radio receiver
+</li><li>Audio unit
+</li></ul><a name="K">&nbsp;
+</a><h5>PINPOINT TEST K: U1900 &#8212; CAN BUS FAULT
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="K1">&nbsp;
+</a><b>K1 CHECK CIRCUIT 797 (LG/VT) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Satellite Radio Receiver C2358.
+</li><li>Measure the voltage between the satellite radio receiver C2358-9, circuit 797 (LG/VT), harness side and ground.
+</li><br><IMG src="n0002159.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#K2"                                                                                                                                                                                                                                                       >K2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="K2">&nbsp;
+</a><b>K2 CHECK CIRCUIT 694 (BK/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the satellite radio receiver C2358-3, circuit 694 (BK/LG), harness side and ground.
+</li><br><IMG src="n0002160.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#K3"                                                                                                                                                                                                                                                       >K3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="K3">&nbsp;
+</a><b>K3 CHECK CIRCUITS 832 (LB/PK) AND 833 (TN) FOR AN OPEN OR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Audio Unit C290d.
+</li><li>Measure the resistance between the satellite radio receiver, harness side and the audio unit, harness side; and between the satellite radio receiver, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Satellite Radio Receiver Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Audio Unit Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C2358-1
+</TD><TD valign="top" align="CENTER">C290d-15
+</TD><TD valign="top" align="CENTER">832 (LB/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C2358-7
+</TD><TD valign="top" align="CENTER">C290d-16
+</TD><TD valign="top" align="CENTER">833 (TN)
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance less than 5 ohms between the satellite radio receiver and the audio unit, and greater than 10,000 ohms between the satellite radio receiver and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62f0001.htm#K4"                                                                                                                                                                                                                                                       >K4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="K4">&nbsp;
+</a><b>K4 CHECK CIRCUITS 832 (LB/PK) AND 833 (TN) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the satellite radio receiver C2358-1, circuit 832 (LB/PK), harness side and ground; and between the satellite radio receiver C2358-7, circuit 833 (TN),
+harness side and ground.
+</li><br><IMG src="n0035296.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62f0001.htm#K5"                                                                                                                                                                                                                                                       >K5
+</a>.
+</td></tr><tr><td><a name="K5">&nbsp;
+</a><b>K5 SUBSTITUTE A KNOWN GOOD AUDIO UNIT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect:  Satellite Radio Receiver C2358.
+</li><li>Substitute a known good audio unit.
+</li><li>Perform the satellite audio bezel diagnostic test.
+</li><li><b>Is DTC U1900 SAT present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new satellite radio receiver. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf10l.htm&rightside=s62sf10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-01
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>SEND the original audio unit to an authorized audio system repair facility. TEST the system for normal operation after the repair.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

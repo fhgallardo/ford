@@ -1,0 +1,2405 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="08"><meta name="tps_section" content="07A"><meta name="tps_section_title" content="Four Wheel Drive (4WD) Systems"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P9301Q6991"><meta name="tps_procsgmlid" content="n936726"><meta name="tps_packetinfo" content="476402"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 308-07A:  Four Wheel Drive (4WD) Systems
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  03/21/2006
+</div></TD></TR></TABLE><hr><h4>Four Wheel Drive (4WD) Systems &#8212; Mechanical Shift
+</h4><meta name="tps_proctitle" content="Four Wheel Drive (4WD) Systems &#8212; Mechanical Shift"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=034&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >34
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st1177a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">88 Digital Multimeter or equivalent
+
+<br>105-R0053
+
+</td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B
+</td></tr></table><div><a name="extract_243">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The mechanical shift on the fly (MSOF) system is a manual shift 4WD system that allows the operator to chose between 2 different 4x4 modes as well as 2-wheel drive and NEUTRAL. The operator can switch between 2WD and 4H mode at speeds up to 88
+km/h (55 mph). To engage or disengage 4L range, the vehicle speed must be less than 5 km/h (3 mph), the brake pedal pressed and the transmission must be in NEUTRAL (or the clutch pedal pressed in manual transmission vehicles).
+</p><p>The transfer case is equipped with an electromagnetic clutch which is located inside the case. This clutch is used to synchronize the front driveline. When the manual shift lever is moved, this activates the mode indicator switch, triggering
+the 4WD control module (PCM) to energize the electromagnetic clutch. When the transfer case front and rear output shafts are synchronized, the spring loaded lockup collar mechanically engages the mainshaft hub to the drive sprocket. Finally, the
+front axle integrated wheel ends (IWEs) are engaged and the electromagnetic clutch is deactivated.
+</p><ul type="disc"><b>Feature Inputs:
+</b>
+
+<li>Mode indicator switch
+</li><li>Wheel speeds (via CAN communication)
+</li></ul><ul type="disc"><b>Feature Outputs:
+</b>
+
+<li>Transfer case synchronization clutch
+</li><li>Integrated wheel end (IWE) vacuum solenoid
+</li><li>4WD mode (via CAN input to PCM)
+</li><li>Cluster Indicators (via CAN communication)
+</li></ul><div><a name="extract_244">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Halfshafts
+</LI><LI>Integrated wheel-ends (IWEs)
+</LI><LI>Shift lever and/or linkage
+</LI><LI>Driveshaft and universal joints
+</LI><LI>Vacuum leaks
+</LI><LI>Fluid leaks
+</LI><LI>Matching tire sizes
+</LI><LI>Transfer case
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) mini fuses:
+
+<UL type="square"><LI>11 (10A) (IWE vacuum solenoid)
+</LI><LI>28 (5A)
+</LI><LI>29 (15A)
+</LI><LI>30 (15A)
+</LI></UL></LI><LI>CJB fuse 111 (20A)
+</LI><LI>Wiring harness
+</LI><LI>Mode indication switch (MIS)
+</LI><LI>Synchronization clutch
+</LI><LI>Connector(s)
+</LI><LI>Integrated wheel-end (IWE) vacuum solenoid
+</LI><LI>Circuitry
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle
+</li></ol><ul type="disc"><li>check that the program card is correctly installed (if using NGS+).
+</li><li>check the connections to the vehicle.
+</li><li>check the ignition switch position.
+</li></ul><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the data link diagnostics test. If the diagnostic tool responds with:
+</li></ol><ul type="disc"><li>SCP+, SCP-, UBP, CAN or ISO circuits fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li><li>No response/not equipped for powertrain control module (PCM). Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose module communication problems.
+</li><li>No response/not equipped for 4WD control module, 
+<a href="s6287a03.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs and carry out the self-test diagnostics for the 4WD control module.
+</li></ul><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the 4WD control module (PCM) DTC Index to continue diagnostics.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s6287a03.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_245">&nbsp;
+</a></div>
+
+<p><b>4WD Control Module (PCM) Diagnostic Trouble Code (DTC) Index
+</b></p><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1317
+</TD><TD valign="top" align="LEFT">Battery Voltage High
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">CHECK the battery and charging system. REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1318
+</TD><TD valign="top" align="LEFT">Battery Voltage Low
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">CHECK the battery and charging system. REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="LEFT">ECU Is Defective
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">CLEAR the DTCs. REPEAT the self-test. If DTC B1342 is retrieved, INSTALL a new 4WD control module (integral to the PCM). REFER to 
+<A href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 303-14
+</A>. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">C1979
+</TD><TD valign="top" align="LEFT">Integrated Wheel-Ends (IWE) Solenoid Circuit Failure
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1980
+</TD><TD valign="top" align="LEFT">IWE Solenoid Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1824
+</TD><TD valign="top" align="LEFT">4-Wheel Drive Clutch Relay Circuit Failure
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a03.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1826
+</TD><TD valign="top" align="LEFT">4-Wheel Drive Low Clutch Relay Short Circuit to Battery
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a03.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1827
+</TD><TD valign="top" align="LEFT">4-Wheel Drive Low Clutch Relay Short Circuit to Ground
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a03.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="LEFT">CAN Communication Bus Fault &#8212; Receive Error
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">Missing CAN network message. REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2023
+</TD><TD valign="top" align="LEFT">Fault Received From External Node
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">Invalid/faulted CAN wheel speed message data. REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2051
+</TD><TD valign="top" align="LEFT">One or More Calibration Files Missing/Corrupt
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">This DTC is cleared when reprogramming. REFLASH the 4WD control module (PCM) after the vehicle as-built data is successfully uploaded; this DTC cannot be cleared by the diagnostic tool.
+</TD></TR></TABLE><br><div><a name="extract_246">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the 4WD control module (PCM)
+</li></ul></td><td><ul type="disc"><li>Diagnostic tool
+</li><li>Data link connector (DLC)
+</li><li>4WD control module (PCM)
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The instrument cluster 4L and 4H indicators do not operate correctly/do not operate
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li><li>Circuitry
+</li><li>4WD control module (PCM)
+</li><li>Ignition switch
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The vehicle does not shift between 2WD and 4WD modes correctly
+</li></ul></td><td><ul type="disc"><li>Transfer case shift lever
+</li><li>Mode indication switch
+</li><li>Integrated wheel ends (IWE)
+</li><li>4WD control module (PCM)
+</li><li>Transfer case
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The vehicle does not shift between 4H and 4L modes correctly
+</li></ul></td><td><ul type="disc"><li>Transfer case
+</li><li>Mode indication switch
+</li><li>Transfer case shift lever
+</li><li>4WD control module (PCM)
+</li><li>Transmission drag torque
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The 4WD does not engage at speed correctly
+</li></ul></td><td><ul type="disc"><li>Transfer case clutch coil
+</li><li>4WD control module (PCM)
+</li><li>Integrated wheel ends (IWE)
+</li><li>Ignition switch
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The front axle does not engage/disengage correctly/makes noise in 2H under heavy throttle
+</li></ul></td><td><ul type="disc"><li>Mode indication switch
+</li><li>Integrated wheel ends (IWE)
+</li><li>IWE solenoid
+</li><li>Vacuum leaks
+</li><li>4WD control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Front halfshaft
+</li><li>Ignition switch
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The 4WD system jumps out of gear
+</li></ul></td><td><ul type="disc"><li>Transfer case
+</li><li>Transfer case shift lever
+</li><li>IWE vent
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Straightline driveline wind-up
+</li></ul></td><td><ul type="disc"><li>Tire inflation pressure
+</li><li>Tire and wheel size
+</li><li>Tire wear
+</li><li>Axle ratio
+</li></ul></td><td><ul type="disc"><li><a href="s6287a03.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Grinding noise during 4WD engagement, especially at high speeds
+</li></ul></td><td><ul type="disc"><li>Front halfshafts not turning at the same speed
+</li></ul></td><td><ul type="disc"><li>INSTALL the S-spring in the front differential. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s530l.htm&rightside=s62s530r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-03
+</a> for S-spring installation.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Flashing 4L and 4H indicators 3 times every 2 minutes
+</li></ul></td><td><ul type="disc"><li>Loss of CAN communication between 4WD control module (PCM) and instrument cluster
+</li></ul></td><td><ul type="disc"><li>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>No communication with the 4WD control module (PCM)
+</li><li>Ignition switch
+</li></ul></td><td><ul type="disc"><li>CHECK 4WD control module (PCM) communication. 
+<a href="s6287a03.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The transfer case makes noise
+</li></ul></td><td><ul type="disc"><li>Tire inflation pressure
+</li><li>Tire and wheel size
+</li></ul></td><td><ul type="disc"><li>MAKE SURE that all tires and wheels are the same size and that the inflation pressures are correct.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Tire tread wear
+</li></ul></td><td><ul type="disc"><li>CHECK tire tread wear to see if there is more than 0.15 mm (0.06 in) difference in tread wear between front and rear. INTERCHANGE one front wheel and one rear wheel. ROAD TEST again.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Internal components
+</li></ul></td><td><ul type="disc"><li>OPERATE the vehicle in all transmission gears. If there is noise in the transmission in NEUTRAL, or in some gears and not in others, REMOVE and REPAIR the transmission. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a>. If there is noise in all gears, DISASSEMBLE the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CHECK the
+planetary gears, the bearings, the upper and lower drive sprockets and drive chain for damage. INSTALL new parts as necessary. TEST the system for normal operation.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Fluid level
+</li></ul></td><td><ul type="disc"><li>FILL with automatic transmission fluid. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Unable to duplicate customer concern
+</li></ul></td><td><ul type="disc"><li>4WD system and/or related components
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the Mechanical Shift on the Fly (MSOF) Functional Test. 
+<a href="s6287a03.htm#H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+</li></ul></td></tr></table><div><a name="extract_247">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: No Communication With the 4WD Control Module (PCM)
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=034&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >34
+</a> for schematic and connector information.
+</p></p><h5>Normal Operation
+</h5><p>In order for the 4WD control module (PCM) to communicate with the diagnostic tool, the operating voltage required to supply the 4WD control module (PCM) is in a range between 9 and 16 volts. Hot-at-all times voltage is supplied by circuit 1861
+(RD) and circuit 1865 (WH/OG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Power supply:
+
+<ul type="square"><li>circuit 1861 (RD)
+</li><li>circuit 1865 (WH/OG)
+</li></ul></li><li>Central junction box (CJB) mini-fuses:
+
+<ul type="square"><li>29 (15A)
+</li><li>30 (15A)
+</li></ul></li><li>Charging system
+</li><li>Battery
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: NO COMMUNICATION WITH THE 4WD CONTROL MODULE (PCM)
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multimeter probes.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 VERIFY DIAGNOSTIC TOOL COMMUNICATION WITH THE VEHICLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify diagnostic tool communication with the vehicle.
+</li><ul type="square"><li>If using the WDS, follow the directions and carry out the network test.
+</li></ul><ul type="square"><li>If using the NGS+, verify that the correct cable is used and that the vehicle and engine selection information is correct.
+</li></ul><li><b>WDS: Does the network test pass for the PCM?
+
+<br><br>NGS+: Does the diagnostic tool communicate with the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to the diagnostic tool manual for further diagnosis.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK FOR VOLTAGE INPUT TO THE 4WD CONTROL MODULE (PCM)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  4WD Control Module C175b.
+</li><li>Measure the voltage between C175b-12, circuit 1861 (RD), harness side and ground; and between C175b-13, circuit 1865 (WH/OG) and ground.
+</li><br><IMG src="n0042423.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the voltages greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE CENTRAL JUNCTION BOX (CJB) MINI-FUSES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check central junction box (CJB) mini-fuses 29 (15A) and 30 (15A).
+</li><li><b>Are the fuses OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>CHECK circuit 1861 (RD) and/or circuit 1865 (WH/OG) for a short to ground. REPAIR as necessary. REPEAT the self-test.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK FOR BATTERY VOLTAGE FROM THE CENTRAL JUNCTION BOX (CJB)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between central junction box (CJB) input side fuse cavity 29 and ground; between CJB input side fuse cavity 30 and ground.
+</li><li><b>Are the voltages greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL new components as necessary. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE BATTERY VOLTAGE WITH THE ENGINE RUNNING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start the engine. Measure the battery voltage at the positive battery terminal.
+</li><li><b>Is the voltage greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 1861 (RD) or 1865 (WH/OG) at the central junction box (CJB). REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CHECK the charging system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-00
+</a>.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE GROUND CIRCUITS FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the battery ground cable. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se10l.htm&rightside=s62se10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li>Disconnect:  4WD Control Module (PCM) C175b.
+</li><li>Measure the resistance between C175b-66, circuit 567 (LB/YE) and ground; and between C175b-67, circuits 570a C175b-68, circuit 570b
+C175b-69, circuits 570c C175b-70, circuit 570d (BK/WH) and ground.
+</li><br><IMG src="n0044897.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit(s). REPEAT the self-test.
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK FOR VOLTAGE ON THE GROUND CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between 4WD control module (PCM) C175b-66, circuit 567 (LB/YE) and ground; and between C175b-67, circuit 570a C175b-68, circuit 567
+C175b-69, circuit 570c C175b-70, circuit 570d (BK/WH) and ground.
+</li><br><IMG src="n0044898.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the affected circuit(s). REPEAT the self-test.
+
+<br><br><b>No
+</b><br>DISCONNECT all 4WD control module (PCM) connectors. CHECK for corrosion and/or pushed-out pins. The condition may have been caused by a loose or corroded connector. REPAIR or CLEAN as necessary.
+
+<br><br>If unable to communicate with the 4WD control module, INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Front Axle Does Not Engage/Disengage Correctly/Makes Noise In 2H Under Heavy Throttle
+</b></p><h5>Normal Operation
+</h5><p>In 2H, the 4WD control module (PCM) supplies a ground path to the IWE solenoid to apply vacuum to the integrated wheel ends (disengaging the front hubs from the front axle). In 4WD, the 4WD control module (PCM) does not supply the ground path
+to the IWE solenoid, vacuum is not applied to the integrated wheel ends and an internal spring keeps the hubs engaged. Systematically check the necessary inputs and outputs at the 4WD control module (PCM), internal components of the transfer case
+and shift lever, IWE components and drive axles.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Mode indication switch
+</li><li>Integrated wheel end (IWE)
+</li><li>IWE solenoid
+</li><li>Transfer case
+</li><li>Vacuum leaks
+</li><li>Front axle assembly
+</li><li>4WD control module (PCM)
+</li><li>Circuit 605 (RD)
+</li><li>Circuit 883 (BK/LB)
+</li><li>Central junction box (CJB) fuse 11 (10A)
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE FRONT AXLE DOES NOT ENGAGE/DISENGAGE CORRECTLY/MAKES NOISE IN 2H UNDER HEAVY THROTTLE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs C1979 or C1980 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC C1979 is retrieved, GO to 
+<a href="s6287a03.htm#B16"                                                                                                                                                                                                                                                       >B16
+</a>.
+
+<br><br>If DTC C1980 is retrieved, GO to 
+<a href="s6287a03.htm#B15"                                                                                                                                                                                                                                                       >B15
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK FOR GRINDING NOISES AT SPEEDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case from 2WD to 4WD at rest. Drive the vehicle.
+</li><li>Shift the transfer case from 2WD to 4WD while driving the vehicle at low speed 16 km/h (10 mph).
+</li><li>Shift the transfer case from 2WD to 4WD while driving the vehicle at high speed 64 km/h (40 mph).
+</li><li><b>Is the axle system fully functional at rest, but there is a grinding noise during engagement, especially at high speed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the concern is excessive front axle noise during 4WD engagement (especially at high speeds), INSTALL the S-spring in the front differential. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE TRANSFER CASE SHIFT TO 2H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Monitor the 4WD control module (PCM) PID for the 4WD mechanical shift position 1 and 2 while shifting the transfer case into 2-wheel drive.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Mode
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 1
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 2
+</TH></TR><TR><TD valign="top" align="CENTER">2H
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4H
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">N
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4L
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD></TR></TABLE><br>
+
+<li><b>Does the 4WD control module (PCM) PID and instrument cluster indicator lamp indicate that vehicle shifted into 2H?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK THE IWE DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Lift and support the vehicle off the ground until the front wheels can be spun freely. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine and allow to idle.
+</li><li>Shift the transfer case to 2H.
+</li><li>Rotate the LH front tire one revolution forward and one revolution backward while observing the LH front halfshaft.
+</li><li>Rotate the RH front tire one revolution forward and one revolution backward while observing the RH front halfshaft.
+</li><li><b>Did either front halfshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B10"                                                                                                                                                                                                                                                       >B10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK THE TRANSFER CASE SHIFT INTO 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the 4WD control module (PCM) PID for the 4WD mechanical position 1 and 2 while shifting the transfer case to the 4H position.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Mode
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 1
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 2
+</TH></TR><TR><TD valign="top" align="CENTER">2H
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4H
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">N
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4L
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD></TR></TABLE><br>
+
+<li><b>Does the 4WD control module (PCM) PID and instrument cluster indicator lamp indicate that the transfer case shifted into 4H?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B6"                                                                                                                                                                                                                                                       >B6
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK THE IWE ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Lift and support the vehicle off the ground until the front wheels can be spun freely. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine and allow to idle.
+</li><li>Shift the transfer case to the 4H position.
+</li><li>Rotate the LH front tire one revolution forward and one revolution backward while observing the LH front halfshaft.
+</li><li>Rotate the RH front tire one revolution forward and one revolution backward while observing the RH front halfshaft.
+</li><li><b>Did both front halfshafts rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK that all driveline fasteners are present and tightened to specification. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a> for further diagnosis of the front axle.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B7"                                                                                                                                                                                                                                                       >B7
+</a>.
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 CHECK THE IWE SOLENOID OUTPUT IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine.
+</li><li>Disconnect the output vacuum line at the IWE solenoid.
+</li><li>Shift the transfer case to the 4H position.
+</li><li>Measure the vacuum at the output port of the IWE solenoid.
+</li><li><b>Is the vacuum less than 25 mm (1 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Key in OFF position. GO to 
+<a href="s6287a03.htm#B24"                                                                                                                                                                                                                                                       >B24
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B8"                                                                                                                                                                                                                                                       >B8
+</a>.
+</td></tr><tr><td><a name="B8">&nbsp;
+</a><b>B8 CHECK THE IWE SOLENOID OUTPUT IN 4H WITH THE DIAGNOSTIC TOOL
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine.
+</li><li>Enter the following diagnostic mode on the diagnostic tool: Active Command.
+</li><li>Using the diagnostic tool, command the IWE solenoid to engage the IWEs (solenoid OFF).
+</li><li>Measure the vacuum at the output port of the IWE solenoid.
+</li><li><b>Is the vacuum less than 25 mm (1 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End active command. GO to 
+<a href="s6287a03.htm#B18"                                                                                                                                                                                                                                                       >B18
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B9"                                                                                                                                                                                                                                                       >B9
+</a>.
+</td></tr><tr><td><a name="B9">&nbsp;
+</a><b>B9 CHECK THE IWE SOLENOID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  IWE Solenoid C1290.
+</li><li>Measure the vacuum at the output port of the IWE solenoid.
+</li><li><b>Is the vacuum less than 25 mm (1 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End active command. GO to 
+<a href="s6287a03.htm#B17"                                                                                                                                                                                                                                                       >B17
+</a>.
+
+<br><br><b>No
+</b><br>End active command. INSTALL a new IWE solenoid. REPEAT the self-test.
+</td></tr><tr><td><a name="B10">&nbsp;
+</a><b>B10 CHECK THE IWE SOLENOID OUTPUT VACUUM IN 2WD
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine.
+</li><li>Disconnect the output vacuum line at the IWE solenoid.
+</li><li>Shift the transfer case to the 2H position.
+</li><li>Measure the vacuum at the output port of the IWE solenoid.
+</li><li><b>Is the vacuum greater than 254 mm (10 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B19"                                                                                                                                                                                                                                                       >B19
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B11"                                                                                                                                                                                                                                                       >B11
+</a>.
+</td></tr><tr><td><a name="B11">&nbsp;
+</a><b>B11 CHECK THE IWE SOLENOID INPUT VACUUM
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the vacuum at the input port of the IWE solenoid.
+</li><li><b>Is the vacuum greater than 254 mm (10 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B12"                                                                                                                                                                                                                                                       >B12
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the vacuum leak. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B12">&nbsp;
+</a><b>B12 CHECK THE IWE SOLENOID OUTPUT IN 2WD WITH THE DIAGNOSTIC TOOL
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine.
+</li><li>Enter the following diagnostic mode on the diagnostic tool: Active Command.
+</li><li>Using the diagnostic tool, command the IWE solenoid to disengage the IWEs.
+</li><li>Measure the vacuum at the output port of the IWE solenoid.
+</li><li><b>Is the vacuum greater than 254 mm (10 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End active command. GO to 
+<a href="s6287a03.htm#B18"                                                                                                                                                                                                                                                       >B18
+</a>.
+
+<br><br><b>No
+</b><br>End active command. GO to 
+<a href="s6287a03.htm#B13"                                                                                                                                                                                                                                                       >B13
+</a>.
+</td></tr><tr><td><a name="B13">&nbsp;
+</a><b>B13 CHECK CIRCUIT 883 (BK/LB) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  IWE Solenoid C1290.
+</li><li>Measure the voltage between IWE solenoid C1290-2, circuit 883 (BK/LB) and ground.
+</li><br><IMG src="a0069239.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B14"                                                                                                                                                                                                                                                       >B14
+</a>.
+
+<br><br><b>No
+</b><br>CHECK central junction box (CJB) fuse 11 (10A). VERIFY if the fuse blows when the air conditioning (A/C) system compressor cycles. If this occurs, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sc00l.htm&rightside=s62sc00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 412-00
+</a>. REPAIR
+the circuit as necessary. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B14">&nbsp;
+</a><b>B14 CHECK THE IWE SOLENOID OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  IWE Solenoid C1290.
+</li><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply the vacuum required for the IWEs to engage and disengage.
+</li><li>Start the engine.
+</li><li>Connect a 10-amp fused jumper wire between the IWE solenoid C1290-1, circuit 605 (RD), component side and ground.
+</li><li>Measure the vacuum at the IWE solenoid output vacuum port.
+</li><li><b>Is the IWE solenoid output port vacuum greater than 254 mm (10 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>DISCONNECT the fused jumper. GO to 
+<a href="s6287a03.htm#B15"                                                                                                                                                                                                                                                       >B15
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new IWE solenoid. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B15">&nbsp;
+</a><b>B15 CHECK CIRCUIT 605 (RD) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  IWE Solenoid C1290.
+</li><li>Disconnect:  4WD Control Module (PCM) C175b.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between IWE solenoid C1290-1, circuit 605 (RD), harness side and ground.
+</li><br><IMG src="a0069238.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B16"                                                                                                                                                                                                                                                       >B16
+</a>.
+</td></tr><tr><td><a name="B16">&nbsp;
+</a><b>B16 CHECK CIRCUIT 605 (RD) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between IWE solenoid C1290-1, circuit 605 (RD), harness side and 4WD control module (PCM) C175b-16, circuit 605 (RD), harness side.
+</li><br><IMG src="a0079783.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B17"                                                                                                                                                                                                                                                       >B17
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B17">&nbsp;
+</a><b>B17 CHECK CIRCUIT 605 (RD) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  4WD Control Module (PCM) C175b.
+</li><li>Measure the resistance between IWE solenoid C1290-1, circuit 605 (RD), harness side and ground.
+</li><br><IMG src="a0079780.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B18"                                                                                                                                                                                                                                                       >B18
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B18">&nbsp;
+</a><b>B18 CHECK THE IWE SOLENOID RESISTANCE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between IWE solenoid C1290-1 and C1290-2 component side.
+</li><br><IMG src="n0050537.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance between 68 and 78 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B19"                                                                                                                                                                                                                                                       >B19
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new IWE solenoid. CLEAR the DTC(s). REPEAT the self-test.
+</td></tr><tr><td><a name="B19">&nbsp;
+</a><b>B19 CHECK THE 4WD CONTROL MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all 4WD control module (PCM) connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all 4WD control module (PCM) connectors and make sure they are seated correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B20">&nbsp;
+</a><b>B20 CHECK THE IWE VACUUM SYSTEM
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect both vacuum lines from the IWE solenoid.
+</li><li>Using a vacuum pump, apply 508 mm (20 in) Hg of vacuum to the IWE system through the apply vacuum circuit.
+</li><li>Observe the vacuum reading.
+</li><li><b>Did the vacuum drop more than 25 mm (1 in) Hg per minute?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B21"                                                                                                                                                                                                                                                       >B21
+</a>.
+
+<br><br><b>No
+</b><br>CONNECT the vacuum lines to the IWE solenoid. GO to 
+<a href="s6287a03.htm#B24"                                                                                                                                                                                                                                                       >B24
+</a>.
+</td></tr><tr><td><a name="B21">&nbsp;
+</a><b>B21 CHECK THE RH IWE LEAK RATE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Disconnect the vacuum line from the larger port on the RH IWE.
+</li><li>Apply 508 mm (20 in) Hg of vacuum to the RH IWE port and observe vacuum reading.
+</li><li><b>Did the vacuum drop more than 25 mm (1 in) Hg per minute?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new IWE. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s41bl.htm&rightside=s62s41br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-01B
+</a>. GO to 
+<a href="s6287a03.htm#B20"                                                                                                                                                                                                                                                       >B20
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B22"                                                                                                                                                                                                                                                       >B22
+</a>.
+</td></tr><tr><td><a name="B22">&nbsp;
+</a><b>B22 CHECK THE LH IWE LEAK RATE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the vacuum line from the larger port at the LH IWE.
+</li><li>Apply 205 mm (20 in) Hg of vacuum to the LH IWE port and observe vacuum reading.
+</li><li><b>Did the vacuum drop more than 25 mm (1 in) Hg per minute?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new IWE. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s41bl.htm&rightside=s62s41br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-01B
+</a>. GO to 
+<a href="s6287a03.htm#B20"                                                                                                                                                                                                                                                       >B20
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B23"                                                                                                                                                                                                                                                       >B23
+</a>.
+</td></tr><tr><td><a name="B23">&nbsp;
+</a><b>B23 CHECK THE IWE VACUUM SUPPLY TUBE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect both vacuum lines from the IWE solenoid.
+</li><li>Plug both LH and RH IWE vacuum lines. Apply 508 mm (20 in) Hg of vacuum to the IWE apply vacuum circuit and observe the vacuum reading.
+</li><li><b>Did the vacuum drop more than 25 mm (1 in) Hg per minute?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL new vacuum lines as necessary. GO to 
+<a href="s6287a03.htm#B20"                                                                                                                                                                                                                                                       >B20
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#B24"                                                                                                                                                                                                                                                       >B24
+</a>.
+</td></tr><tr><td><a name="B24">&nbsp;
+</a><b>B24 CHECK THE IWE VACUUM SUPPLY AT EACH IWE IN 2H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a hand-held vacuum gauge to the LH IWE vacuum supply tube.
+</li><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply the vacuum required for the IWEs to engage and disengage.
+</li><li>Start the engine.
+</li><li>Shift the transfer case to 2H while observing the vacuum gauge.
+</li><li>Repeat these steps for the RH IWE.
+</li><li><b>Are the vacuum readings greater than 254 mm (10 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B27"                                                                                                                                                                                                                                                       >B27
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL new vacuum lines as necessary. GO to 
+<a href="s6287a03.htm#B20"                                                                                                                                                                                                                                                       >B20
+</a>.
+</td></tr><tr><td><a name="B25">&nbsp;
+</a><b>B25 CHECK THE LH IWE VACUUM LINE FOR AN OBSTRUCTION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect both vacuum lines from the IWE solenoid.
+</li><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Disconnect the vacuum line at the LH IWE.
+</li><li>Connect a hand vacuum pump to the LH IWE vacuum line and attempt to draw a vacuum on the line.
+</li><li><b>Did the vacuum pump draw a vacuum on the LH IWE vacuum line?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vacuum line. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CONNECT the vacuum line to the LH IWE. GO to 
+<a href="s6287a03.htm#B26"                                                                                                                                                                                                                                                       >B26
+</a>.
+</td></tr><tr><td><a name="B26">&nbsp;
+</a><b>B26 CHECK THE RH IWE VACUUM LINE FOR AN OBSTRUCTION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the larger vacuum line at the RH IWE.
+</li><li>Connect a vacuum pump to the RH IWE vacuum line and attempt to draw a vacuum on the line.
+</li><li><b>Did the vacuum pump draw a vacuum on the RH IWE vacuum line?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vacuum line. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CONNECT the vacuum line to the RH IWE. GO to 
+<a href="s6287a03.htm#B27"                                                                                                                                                                                                                                                       >B27
+</a>.
+</td></tr><tr><td><a name="B27">&nbsp;
+</a><b>B27 CHECK THE LH IWE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Connect a vacuum pump to the larger IWE vacuum port.
+</li><li>Observe the LH halfshaft while rotating the LH front tire. Apply and release vacuum to manually engage and disengage the LH IWE.
+</li><li><b>Did the LH IWE disengage between 152 and 203 mm (6 to 8 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#B28"                                                                                                                                                                                                                                                       >B28
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new LH IWE. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B28">&nbsp;
+</a><b>B28 CHECK THE RH IWE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a vacuum pump to the larger RH IWE vacuum port.
+</li><li>Observe the RH halfshaft while rotating the RH front tire. Apply and release vacuum to manually engage and disengage the LH IWE.
+</li><li><b>Did the RH IWE disengage between 152 and 203 mm (6 to 8 in) Hg?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR the DTC(s). REPEAT the self-test. 
+<a href="s6287a03.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new RH IWE. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Vehicle Does Not Shift Between 2WD and 4WD Modes Correctly
+</b></p><h5>Normal Operation
+</h5><p>The mode indication switch communicates the transfer case shift lever position to the 4WD control module (PCM). The 4WD control module (PCM) then controls the transfer case clutch and integrated wheel ends (IWE) as necessary. If the vehicle is
+not responding to the operator's intentions, systematically check the necessary inputs and outputs at the 4WD control module (PCM), internal components of the transfer case and shift lever, IWE components and halfshafts. Check all circuits for opens
+and shorts to power or ground.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Mode indication switch
+</li><li>Shift lever assembly
+</li><li>Transfer case internal components
+</li><li>Integrated wheel ends (IWE)
+</li><li>Front axle assembly
+</li><li>Circuit 762 (WH/YE)
+</li><li>Circuit 763 (OG/WH)
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE VEHICLE DOES NOT SHIFT BETWEEN 2WD AND 4WD MODES CORRECTLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE MODE SWITCH POSITIONS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Monitor the mode switch PIDs while shifting the transfer case between 2H, 4H and 4L. Refer to the following chart:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Mode
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 1
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 2
+</TH></TR><TR><TD valign="top" align="CENTER">2H
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4H
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">N
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4L
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD></TR></TABLE><br>
+
+<li><b>Do the 4WD control module (PCM) PIDs agree with the shift lever position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE MODE SWITCH FUNCTIONALITY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Mode Indication Switch C1177.
+</li><li>Measure the resistance between mode indication switch C1177-1, circuit 762 (WH/YE), component side and ground; and between mode indication switch C1177-2, circuit 763 (OG/WH), switch
+side and ground. (OPEN = greater than 10,000 ohms/CLOSED = less than 5 ohms.)
+</li><br><IMG src="a0092322.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Monitor the mode indication switch pin resistance to ground while shifting the transfer case between 2H, 4H and 4L. Refer to the following chart:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Mode
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 1
+</TH><TH valign="bottom" align="CENTER">4WD Mechanical Position 2
+</TH></TR><TR><TD valign="top" align="CENTER">2H
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4H
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">N
+</TD><TD valign="top" align="CENTER">OPEN
+</TD><TD valign="top" align="CENTER">OPEN
+</TD></TR><TR><TD valign="top" align="CENTER">4L
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD><TD valign="top" align="CENTER">CLOSED
+</TD></TR></TABLE><br>
+
+<li><b>Does the mode switch function per the table?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new mode indication switch. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK CIRCUIT 762 (WH/YE) AND 763 (OG/WH) FOR A SHORT TO POWER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  4WD Control Module (PCM) C175t.
+</li><li>Measure the voltage between mode indication switch C1177-1, circuit 762 (WH/YE), harness side and ground; and between mode indication switch C1177-2, circuit 763 (OG/WH), harness side
+and ground.
+</li><br><IMG src="a0069956.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK CIRCUIT 762 (WH/YE) AND CIRCUIT 763 (OG/WH) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between mode indication switch C1177-1, circuit 762 (WH/YE), harness side and ground; and between mode indication switch C1177-2, circuit 763 (OG/WH), harness
+side and ground.
+</li><br><IMG src="a0069957.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK CIRCUIT 762 (WH/YE) AND CIRCUIT 763 (OG/WH) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between mode indication switch C1177-1, circuit 762 (WH/YE), harness side and 4WD control module (PCM) C175t-7, circuit 762 (WH/YE), harness side; and between
+mode indication switch C1177-2, circuit 763 (OG/WH), and the 4WD control module (PCM) C175t-8, circuit 763 (OG/WH), harness side.
+</li><br><IMG src="a0069958.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C20"                                                                                                                                                                                                                                                       >C20
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK THE SHIFT TO 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case shift lever to 4H.
+</li><li>Execute tight turns on a hard surface.
+</li><li>Check for presence of driveline wind-up and tire scuff.
+</li><li><b>Are driveline wind-up and tire scuff present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK FOR 4H WHILE IN 1st GEAR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle with the transmission in 1st gear.
+</li><li>Observe the vehicle speed and engine rpm.
+</li><li><b>Is the vehicle in 4H?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C11"                                                                                                                                                                                                                                                       >C11
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK THE TRANSFER CASE 4H ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK THE TRANSFER CASE INTERNAL 4H ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the transfer case shift linkage.
+</li><li>Manually shift the transfer case sector shaft to the full clockwise direction, then rotate counterclockwise one position while turning the rear driveshaft.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate and 4H shift occur?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new shift lever assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK FOR IWE ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+
+<li>Start the engine and allow to idle.
+</li><li>Rotate the LH front tire one revolution forward and one revolution backward while observing the LH front halfshaft and universal joint.
+</li><li>Rotate the RH front tire one revolution forward and one revolution backward while observing the RH front halfshaft and universal joint.
+</li><li><b>Did both halfshafts rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK that all driveline fasteners are present and tightened to the correct specification. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a> for further diagnosis of the front axle.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="C11">&nbsp;
+</a><b>C11 CHECK SHIFT TO 4L
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case shift lever to 4L.
+</li><li>Execute tight turns on a hard surface.
+</li><li>Check for presence of driveline wind-up and tire scuff.
+</li><li><b>Are driveline wind-up and tire scuff present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C12"                                                                                                                                                                                                                                                       >C12
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C13"                                                                                                                                                                                                                                                       >C13
+</a>.
+</td></tr><tr><td><a name="C12">&nbsp;
+</a><b>C12 CHECK FOR 4L WHILE IN 1st GEAR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle with the transmission in 1st gear.
+</li><li>Observe the vehicle speed and engine rpm.
+</li><li><b>Is the vehicle in 4L?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C16"                                                                                                                                                                                                                                                       >C16
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C14"                                                                                                                                                                                                                                                       >C14
+</a>.
+</td></tr><tr><td><a name="C13">&nbsp;
+</a><b>C13 CHECK TRANSFER CASE 4L ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C15"                                                                                                                                                                                                                                                       >C15
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C14"                                                                                                                                                                                                                                                       >C14
+</a>.
+</td></tr><tr><td><a name="C14">&nbsp;
+</a><b>C14 CHECK THE TRANSFER CASE INTERNAL 4L ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the transfer case shift linkage.
+</li><li>Manually shift the transfer case sector shaft to the full counterclockwise direction while turning the rear driveshaft.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate and 4L shift occur?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new shift lever assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C15">&nbsp;
+</a><b>C15 CHECK FOR IWE ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+
+<li>Start the engine and allow to idle.
+</li><li>Rotate the LH front tire one revolution forward and one revolution backward while observing the LH front halfshaft and universal joint.
+</li><li>Rotate the RH front tire one revolution forward and one revolution backward while observing the RH front halfshaft and universal joint.
+</li><li><b>Did both halfshafts rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK that all driveline fasteners are present and tightened to the correct specification. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a> for further diagnosis of the front axle.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="C16">&nbsp;
+</a><b>C16 CHECK FOR 2H DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case shift lever to 2H.
+</li><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Rotate the rear driveshaft.
+</li><li><b>Did the front driveshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C17"                                                                                                                                                                                                                                                       >C17
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C18"                                                                                                                                                                                                                                                       >C18
+</a>.
+</td></tr><tr><td><a name="C17">&nbsp;
+</a><b>C17 CHECK THE TRANSFER CASE INTERNAL 2H ENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the transfer case shift linkage.
+</li><li>Manually shift the transfer case sector shaft to the full clockwise direction while turning the rear driveshaft.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Did the front driveshaft remain stationary and 2H shift occur?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new transfer case shift lever assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C18">&nbsp;
+</a><b>C18 CHECK FOR HIGH RANGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle with the transmission in 1st gear.
+</li><li>Observe the vehicle speed and engine rpm.
+</li><li><b>Is the transfer case in HIGH range?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#C19"                                                                                                                                                                                                                                                       >C19
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#C17"                                                                                                                                                                                                                                                       >C17
+</a>.
+</td></tr><tr><td><a name="C19">&nbsp;
+</a><b>C19 CHECK FOR FRONT AXLE DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  The engine must be idling during the following steps to supply vacuum to the IWE solenoid.
+</li><li>Start the engine.
+</li><li>Rotate the LH front tire one revolution forward and one revolution backward while observing the LH front halfshaft and universal joint.
+</li><li>Rotate the RH front tire one revolution forward and one revolution backward while observing the RH front halfshaft and universal joint.
+</li><li><b>Do either of the front halfshafts rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</td></tr><tr><td><a name="C20">&nbsp;
+</a><b>C20 CHECK FOR CORRECT 4WD CONTROL MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all 4WD control module (PCM) connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all 4WD control module (PCM) connectors and make sure they are seated correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Vehicle Does Not Shift Between 4H and 4L Modes Correctly
+</b></p><h5>Normal Operation
+</h5><p>The high-low shift occurs when the reduction shift fork moves the high-low collar to lock the planetary gear set to the output shaft. The torque transmitted through the sun gear from the input shaft turns the front planetary gear set assembly.
+The front planetary gear set assembly, now engaged, provides transfer case speed reduction. Certain criteria, such as vehicle speed and transmission range selection must be met before this shift can occur. Systematically check all inputs, related
+circuits and components.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Transmission neutral drag
+</li><li>Mode indication switch
+</li><li>Shift lever assembly
+</li><li>Transfer case internal components
+</li><li>Integrated wheel ends (IWE)
+</li><li>Front axle assembly
+</li><li>Circuit 762 (WH/YE)
+</li><li>Circuit 763 (OG/WH)
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE VEHICLE DOES NOT SHIFT BETWEEN 4H AND 4L MODES CORRECTLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE SHIFT BETWEEN 2WD AND 4WD
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify that the transfer case shifts between 2WD and 4WD correctly.
+</li><li><b>Does the transfer case shift between 2WD and 4WD correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK SHIFTING CONDITIONS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the conditions of concern.
+</li><li><b>Is concern related to a clunk or grinding when shifting?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>SHIFT quickly through neutral, do not pause while shifting. If the shift improves with the engine off, diagnose the transmission for neutral drag too high. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK THE TRANSFER CASE SHIFT EFFORT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the customer complaint.
+</li><li><b>Is the complaint related to excessive effort when shifting?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE TRANSFER CASE SHIFT WITH THE ENGINE RUNNING AND VEHICLE IN MOTION (LESS THAN 8KM/H [5 MPH])
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start the engine.
+</li><li>Make the vehicle coast with the transmission in NEUTRAL while going less than 8 km/h (5 mph).
+</li><li>Shift the transfer case lever between 4H and 4L.
+</li><li><b>Does the transfer case require less effort to shift?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Spline block inside the transfer case can cause higher shift efforts between 4H and 4L. ADVISE the customer that range shifts may be easier to complete with the vehicle rolling at 8 km/h (5 mph) than at a complete stop.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK THE TRANSFER CASE SHIFT WITH THE ENGINE OFF AND VEHICLE IN MOTION (LESS THAN 8KM/H [5 MPH])
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Make the vehicle coast with the transmission in NEUTRAL while going less than 8 km/h (5 mph).
+</li><li>Turn the engine OFF.
+</li><li>Shift the transfer case lever between 4H and 4L.
+</li><li><b>Does the transfer case require less effort to shift?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Transmission neutral drag excessive. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a> for transmission diagnosis.
+
+<br><br><b>No
+</b><br>CHECK the transfer case and shift lever. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: 4WD Does Not Engage At Speed Correctly
+</b></p><h5>Normal Operation
+</h5><p>When the operator selects 4WD, the 4WD control module (PCM) engages a clutch for approximately 5 seconds to synchronize the front and rear driveshafts allowing a further mechanical engagement of the transfer case. The 4WD control module (PCM)
+also removes the ground path from the IWE solenoid, which removes vacuum from the IWEs, allowing them to engage. Systematically check the necessary inputs and outputs at the 4WD control module (PCM), internal components of the transfer case and
+shift lever, IWE components and drive axles.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Transfer case clutch coil
+</li><li>Transfer case internal components
+</li><li>4WD control module (PCM)
+</li><li>Circuit 779 (BN)
+</li><li>Circuit 92 (LB/YE)
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE 4WD HIGH DOES NOT ENGAGE AT SPEED CORRECTLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 RETRIEVE THE RECORDED DTCs FROM BOTH CONTINUOUS AND ON-DEMAND SELF TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Retrieve the Continuous and On-Demand DTCs.
+</li><li><b>Are P1824, P1826 or P1827 DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC P1824 or P1827, GO to 
+<a href="s6287a03.htm#E10"                                                                                                                                                                                                                                                       >E10
+</a>. If DTC P1826, GO to 
+<a href="s6287a03.htm#E15"                                                                                                                                                                                                                                                       >E15
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK THE 4WD SYSTEM ENGAGEMENT AT REST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle at rest, shift to 4H.
+</li><li>Drive the vehicle and check for wind-up.
+</li><li><b>Does the 4WD engage at rest correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK THE TRANSFER CASE ENGAGEMENT AT SPEED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle and carry out a 2H to 4H shift while driving at 16 km/h (10 mph) and at 64 km/h (40 mph).
+</li><li><b>Does the 4H shift occur better at low speed than at high speed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK THE TRANSFER CASE CLUTCH COIL LOCK-UP
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>While in the vehicle, shift the transfer case to the 4H position.
+</li><li>Using the diagnostic tool, command the transfer case clutch to 98%.
+</li><li>Shift the transfer case to 2H.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate when the rear driveshaft is rotated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E8"                                                                                                                                                                                                                                                       >E8
+</a>.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 CHECK THE TRANSFER CASE CLUTCH COIL RELEASE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Using the diagnostic tool, command the transfer case clutch to 0%.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate when the rear driveshaft is rotated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E14"                                                                                                                                                                                                                                                       >E14
+</a>.
+
+<br><br><b>No
+</b><br>End active command. GO to 
+<a href="s6287a03.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+</td></tr><tr><td><a name="E6">&nbsp;
+</a><b>E6 CHECK THE TRANSFER CASE SYNCHRONIZATION (ON A HOIST)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start the engine.
+</li><li>Shift the transmission to drive and increase speed to between 16 km/h (10 mph) and 24 km/h (15 mph).
+</li><li>While an assistant observes the front driveshaft, shift the transfer case to 4H.
+</li><li><b>Does the front driveshaft start to rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E7"                                                                                                                                                                                                                                                       >E7
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E16"                                                                                                                                                                                                                                                       >E16
+</a>.
+</td></tr><tr><td><a name="E7">&nbsp;
+</a><b>E7 CHECK THE FRONT DRIVESHAFT DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Apply the brakes to stop the wheels.
+</li><li>Shift to 2H.
+</li><li>Shift the transmission to NEUTRAL.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate when the rear driveshaft is rotated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E16"                                                                                                                                                                                                                                                       >E16
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="E8">&nbsp;
+</a><b>E8 CHECK CIRCUIT 779 (BN) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While still in active command, measure the voltage between transfer case C3146-2, circuit 779 (BN), harness side and the transfer case housing.
+</li><br><IMG src="a0069964.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End active command. INSTALL a new transfer case synchronization clutch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E9"                                                                                                                                                                                                                                                       >E9
+</a>.
+</td></tr><tr><td><a name="E9">&nbsp;
+</a><b>E9 CHECK CIRCUIT 779 (BN) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While still in active command, measure the voltage between transfer case C3146-2, circuit 779 (BN), harness side and chassis ground.
+</li><br><IMG src="a0069964.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End active command. REPAIR the transfer case ground connection between the transfer case and the chassis. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>End active command. GO to 
+<a href="s6287a03.htm#E10"                                                                                                                                                                                                                                                       >E10
+</a>.
+</td></tr><tr><td><a name="E10">&nbsp;
+</a><b>E10 CHECK CIRCUIT 779 (BN) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  4WD Control Module (PCM) C175t.
+</li><li>Measure the resistance between transfer case C3146-2, circuit 779 (BN) and ground.
+</li><br><IMG src="a0069965.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E11"                                                                                                                                                                                                                                                       >E11
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E11">&nbsp;
+</a><b>E11 CHECK CIRCUIT 779 (BN) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between transfer case C3146-2, circuit 779 (BN), harness side and the 4WD control module (PCM) C175t-49, circuit 779 (BN), harness side.
+</li><br><IMG src="a0070013.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E12"                                                                                                                                                                                                                                                       >E12
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E12">&nbsp;
+</a><b>E12 CHECK CIRCUIT 92 (LB/YE) FOR A SHORT TO POWER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between transfer case C3146-3, circuit 92 (LB/YE), harness side and ground.
+</li><br><IMG src="a0070014.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E13"                                                                                                                                                                                                                                                       >E13
+</a>.
+</td></tr><tr><td><a name="E13">&nbsp;
+</a><b>E13 CHECK CIRCUIT 92 (LB/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between transfer case C3146-3, circuit 92 (LB/YE), harness side and 4WD control module (PCM) C175t-48, circuit 92 (LB/YE), harness side.
+</li><br><IMG src="a0070015.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E16"                                                                                                                                                                                                                                                       >E16
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E14">&nbsp;
+</a><b>E14 CHECK FOR CORRECT TRANSFER CASE SYNCHRONIZATION CLUTCH RELEASE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While in active command, measure the voltage between transfer case C3146-2, circuit 779 (BN), harness side and ground.
+</li><br><IMG src="a0069964.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#E15"                                                                                                                                                                                                                                                       >E15
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the transfer case for a mechanical fault condition. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E15">&nbsp;
+</a><b>E15 CHECK CIRCUIT 779 (BN) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  4WD Control Module (PCM) C175t.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between transfer case C3146-2, circuit 779 (BN), harness side and ground.
+</li><br><IMG src="a0069964.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#E16"                                                                                                                                                                                                                                                       >E16
+</a>.
+</td></tr><tr><td><a name="E16">&nbsp;
+</a><b>E16 CHECK THE 4WD CONTROL MODULE (PCM)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all 4WD control module (PCM) connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all 4WD control module (PCM) connectors and make sure they are seated correctly.
+</li><li>Operate the system and verify the concern is still present, carry out the 4WD system functional test. 
+<a href="s6287a03.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The 4WD System Jumps Out Of Gear
+</b></p><h5>Normal Operation
+</h5><p>Once the operator selects a gear position, the detents in the shift lever and transfer case should maintain the selection. If the transfer case does not stay in the selected position, systematically check the shift linkage and internal
+components of the transfer case.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Shift lever detent
+</li><li>Mode indication switch
+</li><li>Shift lever
+</li><li>IWE vent line(s)
+</li><li>Transfer case shift lever/linkage
+</li><li>Transfer case
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE 4WD SYSTEM JUMPS OUT OF GEAR
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE TRANSFER CASE SHIFT LEVER DETENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the transfer case shift lever assembly and detent for damage.
+</li><li><b>Are the components damaged?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL new component(s) as necessary. TEST the vehicle for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE SHIFT LEVER ASSEMBLY-TO-TRANSMISSION BOLT TORQUE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Using a torque wrench, check the shift lever assembly-to-transmission bolt torque.
+</li><li><b>Is the bolt torque approximately 117 Nm (86 lb-ft) &#177; 9 Nm (80 lb-in)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK THE SHIFT LEVER RESIDUAL TORQUE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Tighten the shift lever assembly-to-transmission bolt to 117 Nm (86 lb-ft).
+</li><li>Cycle the shift lever several times.
+</li><li>Using a torque wrench, check the shift lever assembly-to-transmission bolt torque.
+</li><li><b>Is the bolt torque greater than 108 Nm (80 lb-ft)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new transfer case shift lever assembly and/or shift lever assembly-to-transmission bolt. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 VERIFY THAT THE CONCERN IS STILL PRESENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Monitor the MSS PIDs.
+</li><li>Drive the vehicle to verify if the 4WD system jumps out of gear (attempt to duplicate the customer's concern).
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>CARRY OUT the Mechanical Shift on the Fly (MSOF) Functional Test. 
+<a href="s6287a03.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 ATTEMPT TO DUPLICATE THE CONCERN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Determine whether the transfer case pops in/out of gear intermittently (possibly over bumps) or if the concern is related to high torque maneuvers.
+</li><li>Determine if the 4WD indicators and MSOF position PIDs change when the concern is present.
+</li><li><b>Does the concern occur intermittently and is it accompanied by an indicator/position PID change?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#F7"                                                                                                                                                                                                                                                       >F7
+</a>.
+</td></tr><tr><td><a name="F6">&nbsp;
+</a><b>F6 CHECK THE TRANSFER CASE MODE (4H OR 4L) WHERE THE CONCERN IS PRESENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the transfer case shift lever from the transfer case.
+</li><li>Shift the transfer case into the suspect mode (4H or 4L), using the transfer case external control lever.
+</li><li>Drive the vehicle to verify if the 4WD system jumps out of gear (attempt to duplicate the customer's concern).
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>. CHECK specifically for intermittent mode indication switch (MIS) and/or associated wiring problems.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#F9"                                                                                                                                                                                                                                                       >F9
+</a>.
+</td></tr><tr><td><a name="F7">&nbsp;
+</a><b>F7 CHECK THE IWE VENT LINES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the LH IWE lines from the vent ports. The IWE vent port is the smaller of the 2 vacuum ports.
+</li><li>Attach a vacuum pump to the IWE vent line.
+</li><li>Attempt to draw and hold a vacuum.
+</li><li>Repeat Steps 1-3 for the RH side of the vehicle.
+</li><li><b>Were the vent lines obstructed (can a vacuum be held)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL new IWE vent lines as necessary. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#F8"                                                                                                                                                                                                                                                       >F8
+</a>.
+</td></tr><tr><td><a name="F8">&nbsp;
+</a><b>F8 ATTEMPT TO DUPLICATE THE CONCERN WITH THE SHIFT LEVER DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the transfer case shift lever and linkage from the transfer case.
+</li><li>Shift the transfer case into the suspect mode (4H or 4L), using the transfer case external control lever.
+</li><li>Drive the vehicle to verify if the 4WD system jumps out of gear (attempt to duplicate the customer's concern).
+</li><li><b>Can concern be duplicated with the transfer case shift lever and linkage disconnected?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK for internal transfer case damage. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#F9"                                                                                                                                                                                                                                                       >F9
+</a>.
+</td></tr><tr><td><a name="F9">&nbsp;
+</a><b>F9 CHECK FOR SHIFT LEVER AND SURROUNDING COMPONENT INTERFERENCE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for interference between the shift lever and the inner boot, the console and floor pan while shifting through each lever position.
+</li><li><b>Is there interference between the shift lever and any of these components?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL new components as necessary to eliminate the interference(s). TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new transfer case shift lever assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. TEST the system for normal operation.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: Straightline Driveline Wind-up
+</b></p><h5>Normal Operation
+</h5><p>In order for the 4WD system to function correctly, tires and wheels must be the same size, be in good condition, and the front and rear axle ratios must match.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Unmatched tire sizes
+</li><li>Unequal amounts of tire wear
+</li><li>Unequal tire inflation pressures
+</li><li>Unmatched front and rear axle ratios
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: STRAIGHTLINE DRIVELINE WIND-UP
+</h5>
+
+<p><b>NOTE:
+</b>  4x4 high/low (4H/4L) is not intended for driving on hard/dry surfaces.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 VERIFY THE CONCERN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle and shift from 2H to 4H. There should be minimal wind-up in 4H mode during straight line maneuvers (wind-up in turns is normal; 4x4 high/low is not intended for driving on hard/dry surfaces).
+</li><li><b>Is excessive wind-up present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br>RETURN the vehicle to the customer. ADVISE about correct 4WD system operation and normal vehicle behavior.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK FOR MATCHING WHEEL AND TIRE SIZES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the wheel and tire sizes.
+</li><li><b>Do the 4 wheel and tire sizes match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>ADVISE the customer that 4WD systems require 4 matched, correctly inflated, correctly maintained tires to operate correctly.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK TIRE WEAR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check each of the 4 tires for wear.
+</li><li><b>Are the 4 tires worn evenly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#G4"                                                                                                                                                                                                                                                       >G4
+</a>.
+
+<br><br><b>No
+</b><br>ADVISE the customer that 4WD systems require 4 matched, correctly inflated, correctly rotated tires to operate correctly.
+</td></tr><tr><td><a name="G4">&nbsp;
+</a><b>G4 CHECK TIRE INFLATION PRESSURE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the inflation pressure in each tire. Refer to vehicle certification label.
+</li><li><b>Are the tire inflation pressures correct?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#G5"                                                                                                                                                                                                                                                       >G5
+</a>.
+
+<br><br><b>No
+</b><br>ADJUST the tire pressure as necessary. TEST the vehicle for normal operation. ADVISE the customer that 4WD systems require 4 matched, correctly inflated, correctly maintained tires to operate correctly.
+</td></tr><tr><td><a name="G5">&nbsp;
+</a><b>G5 CHECK THE FRONT AND REAR AXLE RATIOS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check that front and rear axle ratios match. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a>.
+</li><li><b>Do the front and rear axle ratios match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>RETURN the vehicle to the customer and ADVISE about correct 4WD usage and normal vehicle behavior.
+
+<br><br><b>No
+</b><br>CHECK the vehicle identification label. INSTALL the correct axle(s). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a>.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: Mechanical Shift On The Fly (MSOF) Functional Test
+</b></p><h5>Normal Operation
+</h5><p>When operating in 4H or 4L, the transfer case and both IWEs are locked. When in 4x4 low (4L), the transfer case low range gear set provides an additional 2.64 gear reduction. When operating in 2H, the transfer case and both IWEs are unlocked.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Transfer case and related components
+</li><li>IWE and related components
+</li><li>Wheel/tire assemblies
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: MECHANICAL SHIFT ON THE FLY (MSOF) FUNCTIONAL TEST
+</h5>
+
+<p><b>NOTE:
+</b>  4x4 high/low (4H/4L) is not intended for driving on hard/dry surfaces.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK FOR 4WD INDICATOR PROVE-OUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li><b>Do the 4WD indicators illuminate at prove-out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK 2WD OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case to 2H.
+</li><li><b>Do the 4WD indicators turn OFF?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H5"                                                                                                                                                                                                                                                       >H5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H4"                                                                                                                                                                                                                                                       >H4
+</a>.
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK FOR WIND-UP IN 2WD
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</td></tr><tr><td><a name="H5">&nbsp;
+</a><b>H5 CHECK FOR WIND-UP IN 2WD
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H6"                                                                                                                                                                                                                                                       >H6
+</a>.
+</td></tr><tr><td><a name="H6">&nbsp;
+</a><b>H6 CHECK 4H OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case to 4H.
+</li><li><b>Does the 4H indicator illuminate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H9"                                                                                                                                                                                                                                                       >H9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H7"                                                                                                                                                                                                                                                       >H7
+</a>.
+</td></tr><tr><td><a name="H7">&nbsp;
+</a><b>H7 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H8"                                                                                                                                                                                                                                                       >H8
+</a>.
+</td></tr><tr><td><a name="H8">&nbsp;
+</a><b>H8 CHECK FOR WIND-UP IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="H9">&nbsp;
+</a><b>H9 CHECK FOR 4H STRAIGHT LINE WIND-UP
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface.
+</li><li><b>Is straightline wind-up present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H10"                                                                                                                                                                                                                                                       >H10
+</a>.
+</td></tr><tr><td><a name="H10">&nbsp;
+</a><b>H10 CHECK FOR WIND-UP IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H11"                                                                                                                                                                                                                                                       >H11
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="H11">&nbsp;
+</a><b>H11 CHECK 4L OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift to 4L with the brake applied, vehicle at rest, transmission in NEUTRAL.
+</li><li><b>Can the shift lever be put in 4L?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H12"                                                                                                                                                                                                                                                       >H12
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</td></tr><tr><td><a name="H12">&nbsp;
+</a><b>H12 CHECK 4L INDICATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Observe the instrument cluster.
+</li><li><b>Does the 4L indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H13"                                                                                                                                                                                                                                                       >H13
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H14"                                                                                                                                                                                                                                                       >H14
+</a>.
+</td></tr><tr><td><a name="H13">&nbsp;
+</a><b>H13 CHECK WIND-UP IN 4L
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface.
+</li><li><b>Is wind-up present and 4L functioning?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H17"                                                                                                                                                                                                                                                       >H17
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H16"                                                                                                                                                                                                                                                       >H16
+</a>.
+</td></tr><tr><td><a name="H14">&nbsp;
+</a><b>H14 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H15"                                                                                                                                                                                                                                                       >H15
+</a>.
+</td></tr><tr><td><a name="H15">&nbsp;
+</a><b>H15 CHECK WIND-UP IN 4L
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="H16">&nbsp;
+</a><b>H16 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC index.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="H17">&nbsp;
+</a><b>H17 CHECK 4L TO 2H SHIFT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift from 4L to 2H with the brake applied, vehicle at rest, transmission in NEUTRAL.
+</li><li><b>Do the 4WD indicators turn OFF?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H20"                                                                                                                                                                                                                                                       >H20
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H18"                                                                                                                                                                                                                                                       >H18
+</a>.
+</td></tr><tr><td><a name="H18">&nbsp;
+</a><b>H18 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H19"                                                                                                                                                                                                                                                       >H19
+</a>.
+</td></tr><tr><td><a name="H19">&nbsp;
+</a><b>H19 CHECK WIND-UP IN 2H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</td></tr><tr><td><a name="H20">&nbsp;
+</a><b>H20 CHECK FOR TRANSFER CASE DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start the engine.
+</li><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#H22"                                                                                                                                                                                                                                                       >H22
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H21"                                                                                                                                                                                                                                                       >H21
+</a>.
+</td></tr><tr><td><a name="H21">&nbsp;
+</a><b>H21 CHECK FOR LH AND RH IWE DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the engine running, rotate the LH front tire one revolution forward and one revolution backward while observing the LH front halfshaft and universal joint.
+</li><li>Rotate the RH front tire one revolution forward and one revolution backward while observing the RH front halfshaft and universal joint.
+</li><li><b>Does the LH or RH front halfshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H23"                                                                                                                                                                                                                                                       >H23
+</a>.
+</td></tr><tr><td><a name="H22">&nbsp;
+</a><b>H22 CHECK FOR TRANSFER CASE DISENGAGEMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the shift lever from the transfer case. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+</li><li>Shift the transfer case external control lever fully clockwise into 2H.
+</li><li>Rotate the rear driveshaft while observing the front driveshaft.
+</li><li><b>Does the front driveshaft rotate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new transfer case shift lever. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="H23">&nbsp;
+</a><b>H23 CHECK FOR IWE VACUUM LEAKS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect both vacuum lines from the IWE solenoid.
+</li><li>Using a vacuum pump, apply 508 mm (20 in) Hg of vacuum to the IWE apply vacuum circuit.
+</li><li>Observe the vacuum reading.
+</li><li><b>Did the vacuum drop more than 25 mm (1 in) Hg per minute?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the IWE and related components for leaks. 
+<a href="s6287a03.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#H24"                                                                                                                                                                                                                                                       >H24
+</a>.
+</td></tr><tr><td><a name="H24">&nbsp;
+</a><b>H24 CHECK 2H TO 4H SHIFT AT SPEED ABOVE 32 KM/H (20 MPH)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Lower the vehicle and take it off of the hoist.
+</li><li>Shift the transfer case to 2H.
+</li><li>Drive the vehicle on the road and carry out a 2H to 4H shift while driving above 32 km/h (20 mph).
+</li><li><b>Does the transfer case shift to 4H satisfactorily?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The 4WD system is functioning correctly.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: The Instrument Cluster 4L And 4H Indicators Do Not Operate Correctly/Do Not Operate
+</b></p><h5>Normal Operation
+</h5><p>The 4H indicator status is transmitted to the instrument cluster from the 4WD control module (PCM) through the controller area network (CAN), circuits 1827 (WH/LG) and 1828 (PK/LG). A steady indicator displays whether the vehicle is in 4L or
+4H, according to the driver selection. Flashing 4H and 4L indicators is an indication that the instrument cluster has lost communication with the 4WD control module (PCM). For information about CAN, refer to
+
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>4WD system fault
+</li><li>CAN circuits:
+
+<ul type="square"><li>1827 (WH/LG)
+</li><li>1828 (PK/LG)
+</li></ul></li><li>4WD control module (PCM)
+</li><li>Instrument cluster
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: THE INSTRUMENT CLUSTER 4L AND 4H INDICATORS DO NOT OPERATE CORRECTLY/DO NOT OPERATE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 CHECK THE 4WD INDICATOR PROVE-OUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li><b>Do the 4WD indicators prove-out correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#I2"                                                                                                                                                                                                                                                       >I2
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD Control Module (PCM) DTC index for diagnosis.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#I3"                                                                                                                                                                                                                                                       >I3
+</a>.
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 CHECK THE IGNITION SWITCH STATUS PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Monitor the ignition switch status PID.
+</li><li><b>Do the ignition switch PIDs match the ignition switch positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#I4"                                                                                                                                                                                                                                                       >I4
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the ignition switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>. After the fault is repaired, CLEAR the DTC. REPEAT the self test.
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK THE 4WD INDICATORS IN 2H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case to 2H.
+</li><li><b>Do any of the 4WD indicator(s) illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#I6"                                                                                                                                                                                                                                                       >I6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#I5"                                                                                                                                                                                                                                                       >I5
+</a>.
+</td></tr><tr><td><a name="I5">&nbsp;
+</a><b>I5 CHECK THE 4WD INDICATORS IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case to 4H.
+</li><li>Monitor the 4H instrument cluster indicator.
+</li><li><b>Does only the 4H instrument cluster indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a03.htm#I7"                                                                                                                                                                                                                                                       >I7
+</a><br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#I8"                                                                                                                                                                                                                                                       >I8
+</a>.
+</td></tr><tr><td><a name="I6">&nbsp;
+</a><b>I6 CHECK IWE SOLENOID STATE IN 2H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the IWE solenoid state PID with the transfer case in 2H.
+</li><li><b>Does the PID indicate that IWE solenoid is energized (or ON)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="I7">&nbsp;
+</a><b>I7 CHECK THE 4WD INDICATORS IN 4L
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Shift the transfer case to 4L.
+</li><li>Monitor the 4L instrument cluster indicator.
+</li><li><b>Does only the 4L instrument cluster indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The 4WD indicators are operating correctly. CARRY OUT the Mechanical Shift on the Fly (MSOF) Functional Test. REFER to 
+<a href="s6287a03.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a03.htm#I9"                                                                                                                                                                                                                                                       >I9
+</a>.
+</td></tr><tr><td><a name="I8">&nbsp;
+</a><b>I8 CHECK IWE SOLENOID STATE IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the IWE solenoid state PID with the transfer case in 4H.
+</li><li><b>Does the PID indicate that IWE solenoid is de-energized (or OFF)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr><tr><td><a name="I9">&nbsp;
+</a><b>I9 CHECK IWE SOLENOID STATE IN 4L
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the IWE solenoid state PID with the transfer case in 4L.
+</li><li><b>Does the PID indicate that IWE solenoid is de-energized (or OFF)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a03.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

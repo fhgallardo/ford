@@ -1,0 +1,876 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Anti-Theft"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P701481Q701311"><meta name="tps_procsgmlid" content="n873913"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-01:  Anti-Theft
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Passive Anti-Theft System (PATS) &#8212; Pinpoint Tests
+</h4><meta name="tps_proctitle" content="Passive Anti-Theft System (PATS) &#8212; Pinpoint Tests">
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Anti-Theft Indicator Is Always/Never On &#8212; Engine Cranks, But No 3-Second Theft Indicator Prove-out
+</b></p><h5>Normal Operation
+</h5><p>The passive anti-theft system (PATS) uses an anti-theft indicator. This anti-theft indicator proves out for 3 seconds when the key is turned to ON or START under normal operation. If there is a PATS problem, this indicator either flashes
+rapidly or glows steadily (for more than 3 seconds) when the key is turned to ON or START. PATS also "flashes" the anti-theft indicator every 2 seconds at key OFF to act as a visual theft deterrent.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>fuse
+</li><li>circuit 729 (RD/WH) open
+</li><li>circuit 1269 (OG/RD) open or short to ground
+</li><li>anti-theft indicator (part of the light sensor)
+</li><li>PCM
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE ANTI-THEFT INDICATOR IS ALWAYS/NEVER ON &#8212; ENGINE CRANKS, BUT NO 3 SECOND THEFT INDICATOR PROVE-OUT
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct adaptor(s) may damage the connector.
+</b></p><p><b>NOTE:
+</b>  Large metallic objects, electronic devices on the keychain that can be used to purchase gasoline or similar items, or a second key on the same key ring as the PATS key may cause vehicle starting problems and record DTCs under certain
+conditions. If a fault cannot be identified, examine the customer's key ring for such objects or devices. If present, inform the customer that they need to keep these objects from touching the PATS key while starting the engine. These objects and
+devices cannot damage the PATS key, but can cause a momentary concern if they are too close to the key during engine start. If a concern occurs, turn the key OFF and restart the engine with all other objects on the key ring held away from the PATS
+key. Check to make sure the key used by the customer is a Ford-approved PATS key. (PATS keys from Rotunda or Strattec are approved Ford PATS keys.)
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK FOR THE CORRECT ANTI-THEFT SYSTEM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li><b>Is the anti-theft indicator always on and the vehicle starts as normal?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUIT 1269 (OG/RD) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Light Sensor C286.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between light sensor C286-4, circuit 1269 (OG/RD), harness side and ground.
+</li><br><IMG src="a0071679.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE ANTI-THEFT INDICATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  When a new PCM is installed, the PATS keys must be programmed.
+
+<li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Connect a fused (5A) jumper wire between the PCM C175b-35, circuit 1269 (OG/RD), harness side and ground.
+</li><br><IMG src="a0079250.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Does the anti-theft indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the fused jumper wire. GO to 
+<a href="s62j1008.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>REMOVE the fused jumper wire. GO to 
+<a href="s62j1008.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK THE ANTI-THEFT INDICATOR CIRCUIT 729 (RD/WH) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Disconnect:  Light Sensor C286.
+</li><li>Measure the voltage between the light sensor C286-3, circuit 729 (RD/WH), harness side and ground.
+</li><br><IMG src="a0075916.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 5 (7.5A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK CIRCUIT 1269 (OG/RD) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the PCM C175b-35, circuit 1269 (OG/RD), harness side and the light sensor C286-4, circuit 1269 (OG/RD), harness side.
+</li><br><IMG src="a0079243.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new light sensor. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK FOR THE CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+REPROGRAM the PATS keys. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: DTC1213 &#8212; Anti-Theft Number Of Programmed Keys Is Below Minimum
+</b></p><h5>Normal Operation
+</h5><p>The passive anti-theft system (PATS) transceiver communicates with the passive anti-theft system (PATS) key. During each vehicle start sequence, the PATS transceiver reads the PATS key identification code and sends the data to the powertrain
+control module (PCM). The control functions are contained in the PCM. The PCM carries out all of the PATS functions such as receiving the identification code from the PATS key and controlling engine enable. The PCM initiates the key interrogation
+sequence when the key is turned to the ON or START position.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>less than 2 keys programmed to the system
+</li><li>PCM
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE ANTI-THEFT SYSTEM DOES NOT OPERATE CORRECTLY &#8212; ANTI-THEFT NUMBER OF PROGRAMMED KEYS IS BELOW MINIMUM 
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK FOR THE RECORDED DTCS FROM PCM SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded results from the PCM continuous and on-demand self-tests.
+</li><li><b>Is DTC B1213 the only DTC retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE NUMBER OF KEYS ENCODED 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the PCM PID NUMKEYS.
+</li><li><b>Does the PCM PID NUMKEYS display less than 2 PATS keys programmed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>The PATS is OK. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 PROGRAM THE PATS KEYS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  Two programmed PATS keys must be available to start the vehicle.
+</li><li>Cut a new encoded PATS key.
+</li><li>Program the new PATS key. Refer to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</li><li><b>Does the anti-theft indicator illuminate for 3 seconds and then go out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR the DTCs. REPEAT the self-test. If any additional DTCs are received REFER to the Powertrain Control Module (PCM) Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK FOR A REPAIR MODULE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the PCM PID SERV_MOD.
+</li><li><b>Does the PCM PID SERV_MOD indicate YES?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>PROGRAM the PATS keys. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>If the anti-theft indicator is illuminated continuously, REPEAT Step B3 using a new PATS key.
+
+<br><br>If the anti-theft indicator is flashing, RETRIEVE the PCM DTC stored for the PATS fault.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTC B2103 &#8212; Internal Transceiver Antenna Damaged
+</b></p><h5>Normal Operation
+</h5><p>During each vehicle start sequence, the passive anti-theft system (PATS) transceiver reads the PATS key identification code and sends the data to the powertrain control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>PATS transceiver
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DTC B2103 &#8212; INTERNAL TRANSCEIVER ANTENNA DAMAGED
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 INSPECT THE ANTENNA FOR CORRECT INSTALLATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Verify the PATS transceiver is correctly installed. Refer to 
+<a href="s62j1013.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section.
+</li><li>Check the recorded results from the PCM continuous and on-demand self-tests.
+</li><li><b>Is DTC B2103 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PATS transceiver. REFER to 
+<a href="s62j1013.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The PATS is OK.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: DTC B1600 &#8212; Passive Anti-Theft System (PATS) Key Transponder Signal Is Not Received (Damaged Key or Non-PATS Key)
+</b></p><h5>Normal Operation
+</h5><p>During each vehicle start sequence, the passive anti-theft system (PATS) transceiver reads the passive PATS key identification code and sends the data to the powertrain control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>PATS transceiver
+</li><li>PCM
+</li><li>PATS key
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: DTC B1600 &#8212; PASSIVE ANTI-THEFT SYSTEM (PATS) KEY TRANSPONDER SIGNAL IS NOT RECEIVED (DAMAGED KEY OR NON-PATS KEY)
+</h5>
+
+<p><b>NOTE:
+</b>  Large metallic objects, electronic devices on the keychain that can be used to purchase gasoline or similar items or a second key on the same key ring as the PATS key may cause vehicle starting problems and record DTCs under certain conditions.
+If a fault cannot be identified, examine the customer's key ring for such objects or devices. If present, inform the customer that they need to keep these objects from touching the PATS key while starting the engine. These objects and devices cannot
+damage the PATS key, but can cause a momentary problem if they are too close to the PATS key during engine start. If a concern occurs, turn the key OFF and restart the engine with all other objects on the key ring held away from the PATS key. Check
+to make sure the key used by the customer is an approved Ford PATS key. (PATS keys from Rotunda or Strattec are approved Ford PATS keys.)
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 RETRIEVE THE DTCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1600 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 INSTALL A NEW PATS KEY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Check to make sure the customer is using new PATS keys that are approved Ford PATS keys. Unapproved PATS keys do not always operate correctly over different temperature ranges. (PATS keys from Rotunda or Strattec are approved Ford PATS keys.)
+
+<li>Cut a new PATS key.
+</li><li>Program the new PATS key. Refer to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</li><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1600 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 INSTALL A NEW PATS TRANSCEIVER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  When a new PCM is installed, the PATS keys must be programmed.
+
+<li>Install a new PATS transceiver. Refer to 
+<a href="s62j1013.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section.
+</li><li>Key in ON position.
+</li><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li><b>NOTE:
+</b>  Do not use the PATS key that was programmed in Step D2.
+</li><li>Key ON using an existing customer PATS key.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1600 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK FOR THE CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify that the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+
+<br><br>PROGRAM the PATS keys. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: DTC B1601 &#8212; Passive Anti-Theft System (PATS) Received Incorrect Key-Code From Key Transponder (Unprogrammed PATS Key)
+</b></p><h5>Normal Operation
+</h5><p>During each vehicle start sequence, the passive anti-theft system (PATS) transceiver reads the passive PATS key identification code and sends the data to the powertrain control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>PATS transceiver
+</li><li>PCM
+</li><li>PATS key
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: DTC B1601 &#8212; PASSIVE ANTI-THEFT SYSTEM (PATS) RECEIVED INCORRECT KEY-CODE FROM KEY TRANSPONDER (UNPROGRAMMED PATS KEY)
+</h5>
+
+<p><b>NOTE:
+</b>  Large metallic objects, electronic devices on the keychain that can be used to purchase gasoline or similar items or a second key on the same key ring as the PATS key may cause vehicle starting problems and record DTCs under certain conditions.
+If a fault cannot be identified, examine the customer's key ring for such objects or devices. If present, inform the customer that they need to keep these objects from touching the PATS key while starting the engine. These objects and devices cannot
+damage the PATS key, but can cause a momentary problem if they are too close to the PATS key during engine start. If a concern occurs, turn key OFF and restart the engine with all other objects on the key ring held away from the PATS key. Check to
+make sure the key used by the customer is an approved Ford PATS key. (PATS keys from Rotunda or Strattec are approved Ford PATS keys.)
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK FOR THE RECORDED DTCS FROM THE PCM SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1601 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>The PATS is OK. CHECK all customer PATS keys by attempting to start the vehicle with each key to verify all other PATS keys are programmed.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2  MONITOR THE PCM PID NUMKEYS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the PCM PID NUMKEYS.
+</li><li><b>Does the PCM PID NUMKEYS display 8?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>ERASE and PROGRAM the key codes. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK THE NUMBER OF PROGRAMMED PATS KEYS AVAILABLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify there are at least 2 currently programmed PATS keys available with the vehicle.
+</li><li><b>Are at least 2 currently programmed PATS keys available with the vehicle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+
+<br><br><b>No
+</b><br>CUT a new PATS key(s) so that at least 2 PATS keys are available. PROGRAM the PATS key(s). REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. GO to 
+<a href="s62j1008.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 VERIFY THE PCM PID SPARE_KY INDICATES ENABLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the PCM PIDSPARE_KY.
+</li><li><b>Does the PCM PID SPARE_KY indicate ENABLE?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Spare key programming is enabled. REFER to 
+<a href="s62j1009.htm"                                                                                                                                                                                                                                                       >Key Programming Using Two Programmed Keys
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>ENABLE the PCM PID SPARE_KY. REFER to 
+<a href="s62j1011.htm"                                                                                                                                                                                                                                                       >Key Programming Switch State Control
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 CHECK THE PATS KEYS FOR CORRECT OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Key in ON position for 3 seconds using the first PATS key.
+</li><li>Key in OFF position.
+</li><li>Key in ON position for 3 seconds using the second PATS key.
+</li><li>Start the vehicle using the second PATS key.
+</li><li><b>Does the vehicle start?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is OK. If there are additional keys that need to be programmed, REFER to 
+<a href="s62j1009.htm"                                                                                                                                                                                                                                                       >Key Programming Using Two Programmed Keys
+</a> in this section.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+</td></tr><tr><td><a name="E6">&nbsp;
+</a><b>E6  CHECK FOR DTC B1601
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1601 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#E7"                                                                                                                                                                                                                                                       >E7
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="E7">&nbsp;
+</a><b>E7 CHECK FOR THE CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+
+<br><br>PROGRAM the PATS keys. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: DTCs B1602 &#8212; PATS Received Invalid Format of Key-Code From Key Transponder (Partial Key Read) or B2431 &#8212; Key Program Failure
+</b></p><h5>Normal Operation
+</h5><p>During each vehicle start sequence, the passive anti-theft system (PATS) transceiver reads the passive PATS key identification code and sends the data to the powertrain control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>PATS transceiver
+</li><li>PCM
+</li><li>PATS key
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: DTCS B1602 &#8212; PATS RECEIVED INVALID FORMAT OF KEY-CODE FROM KEY TRANSPONDER (PARTIAL KEY READ) OR B2431 &#8212; KEY PROGRAM FAILURE
+</h5>
+
+<p><b>NOTE:
+</b>  Large metallic objects, electronic devices on the keychain that can be used to purchase gasoline or similar items or a second key on the same key ring as the PATS key may cause vehicle starting problems and record DTCs under certain conditions.
+If a fault cannot be identified, examine the customer's key ring for such objects or devices. If present, inform the customer that they need to keep these objects from touching the PATS key while starting the engine. These objects and devices cannot
+damage the PATS key, but can cause a momentary problem if they are too close to the PATS key during engine start. If a concern occurs, turn key OFF and restart the engine with all other objects on the key ring held away from the PATS key. Check to
+make sure the key used by the customer is an approved Ford PATS key. (PATS keys from Rotunda or Strattec are approved Ford PATS keys.)
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 RETRIEVE THE PCM DTCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Are DTCs B1602 or B2431 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br><b>No
+</b><br>The PATS is OK. CHECK all customer PATS keys by cycling them in the ignition switch and determining if the vehicle starts.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 PROGRAM A NEW PATS KEY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Check to make sure the customer keys and new PATS keys are approved PATS keys. Unapproved PATS keys do not always operate correctly over different temperature ranges.
+
+<li>Cut a new PATS key.
+</li><li>Program the new PATS key. Refer to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1602 or B2431 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 INSTALL A NEW PATS TRANSCEIVER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the PCM DTCs.
+</li><li>Install a new PATS transceiver. Refer to 
+<a href="s62j1013.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Are any PATS DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 
+<a href="s62j1005.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) &#8212; Diagnostic Trouble Codes (DTC) Index
+</a> to continue diagnosis of the other DTCs.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: DTC 1681 &#8212; Passive Anti-Theft System (PATS) Transceiver Signal Is Not Received (Not Connected, Damaged Or Wiring)
+</b></p><h5>Normal Operation
+</h5><p>During each vehicle start sequence, the transceiver module reads the PATS key identification code and circuit 1216 (GY/OG) sends the data to the powertrain control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>fuse
+</li><li>circuit 875 (BK/LB) open
+</li><li>circuit 1215 (WH/LG) open, short to voltage or short to ground
+</li><li>circuit 1216 (GY/OG) open, short to voltage or short to ground
+</li><li>circuit 1266 (RD/YE) open
+</li><li>PATS transceiver
+</li><li>PCM
+</li><li>PATS key
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: DTC 1681 &#8212; PASSIVE ANTI-THEFT SYSTEM (PATS) TRANSCEIVER SIGNAL IS NOT RECEIVED (NOT CONNECTED, DAMAGED OR WIRING)
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 USE THE RECORDED DTCS FROM PCM SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Clear the PCM DTCs.
+</li><li>Key in OFF position.
+</li><li>Key in ON position.
+</li><li>Retrieve the PCM DTCs.
+</li><li><b>Is DTC B1681 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br>If any PXXX DTCs are retrieved, REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of PXXX DTCs.
+
+<br><br>If no PATS DTCs are retrieved, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK THE PATS TRANSCEIVER CIRCUIT 1266 (RD/YE) FOR VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PATS Transceiver C252.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between PATS transceiver C252-1, circuit 1266 (RD/YE), harness side and ground.
+</li><br><IMG src="a0074636.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 28 (5A) is OK. If OK, REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK THE PATS TRANSCEIVER GROUND CIRCUIT 875 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the PATS transceiver C252-2, circuit 875 (BK/LB), harness side and ground.
+</li><br><IMG src="a0074637.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G4"                                                                                                                                                                                                                                                       >G4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G4">&nbsp;
+</a><b>G4 CHECK THE PATS TRANSCEIVER RECEIVE CIRCUIT 1215 (WH/LG) FOR VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  PATS Transceiver C252.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between PATS transceiver C252-3, circuit 1215 (WH/LG), harness side and ground.
+</li><br><IMG src="a0074638.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G6"                                                                                                                                                                                                                                                       >G6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#G5"                                                                                                                                                                                                                                                       >G5
+</a>.
+</td></tr><tr><td><a name="G5">&nbsp;
+</a><b>G5 CHECK THE PATS TRANSCEIVER RECEIVE CIRCUIT 1215 (WH/LG) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PATS Transceiver C252.
+</li><li>Measure the resistance between the PATS transceiver C252-3, circuit 1215 (WH/LG), harness side and ground.
+</li><br><IMG src="a0074640.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G6"                                                                                                                                                                                                                                                       >G6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test. If the system fails again, GO to 
+<a href="s62j1008.htm#G13"                                                                                                                                                                                                                                                       >G13
+</a>.
+</td></tr><tr><td><a name="G6">&nbsp;
+</a><b>G6 CHECK CIRCUIT 1215 (WH/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Disconnect:  PATS Transceiver C252.
+</li><li>Measure the resistance between PATS transceiver C252-3, circuit 1215 (WH/LG), harness side and PCM C175b-36, circuit 1215 (WH/LG), harness side.
+</li><br><IMG src="a0079242.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G7"                                                                                                                                                                                                                                                       >G7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G7">&nbsp;
+</a><b>G7 CHECK THE PATS TRANSCEIVER TRANSMIT CIRCUIT 1216 (GY/OG) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  PATS Transceiver C252.
+</li><li>Connect:  PCM C175b.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between PATS transceiver C252-4, circuit 1216 (GY/OG), harness side and ground.
+</li><br><IMG src="a0074641.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G11"                                                                                                                                                                                                                                                       >G11
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#G8"                                                                                                                                                                                                                                                       >G8
+</a>.
+</td></tr><tr><td><a name="G8">&nbsp;
+</a><b>G8 CHECK THE PATS TRANSCEIVER TRANSMIT CIRCUIT 1216 (GY/OG) FOR A SHORT TO GROUND WITH THE TRANSCEIVER CONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between PATS transceiver C252-4, circuit 1216 (GY/OG), harness side and ground.
+</li><br><IMG src="a0074642.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G10"                                                                                                                                                                                                                                                       >G10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#G9"                                                                                                                                                                                                                                                       >G9
+</a>.
+</td></tr><tr><td><a name="G9">&nbsp;
+</a><b>G9 CHECK THE PATS TRANSMIT CIRCUIT 1216 (GY/OG) FOR A SHORT TO GROUND WITH THE TRANSCEIVER DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PATS Transceiver C252.
+</li><li>Measure the resistance between the PATS transceiver C252-4, circuit 1216 (GY/OG), harness side and ground.
+</li><br><IMG src="a0074643.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PATS transceiver. REFER to 
+<a href="s62j1013.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G10">&nbsp;
+</a><b>G10 CHECK CIRCUIT 1216 (GY/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PATS Transceiver C252.
+</li><li>Measure the resistance between the PATS transceiver C252-4, circuit 1216 (GY/OG), harness side and the PCM C175b-37, circuit 1216 (GY/OG), harness side.
+</li><br><IMG src="a0079241.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62j1008.htm#G13"                                                                                                                                                                                                                                                       >G13
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G11">&nbsp;
+</a><b>G11 CHECK THE TRANSCEIVER TRANSMIT CIRCUIT 1216 (GY/OG) FOR VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM Active Command.
+</li><li>Select the PCM active command TRANSMIT SIGNAL COMMAND.
+</li><li>Trigger TRANSMIT to ON.
+</li><li>Measure the voltage between the PATS transceiver C252-4, circuit 1216 (GY/OG), harness side and ground.
+</li><br><IMG src="a0074645.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage less than 5 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PATS transceiver. REFER to 
+<a href="s62j1013.htm"                                                                                                                                                                                                                                                       >Passive Anti-Theft System (PATS) Transceiver
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#G12"                                                                                                                                                                                                                                                       >G12
+</a>.
+</td></tr><tr><td><a name="G12">&nbsp;
+</a><b>G12 CHECK THE PATS TRANSCEIVER TRANSMIT CIRCUIT 1216 (GY/OG) FOR A SHORT TO BATTERY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  When a new PCM is installed, the PATS keys must be reprogrammed.
+
+<li>Key in OFF position.
+</li><li>Disconnect:  PCM C175e.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the PATS transceiver C252-4, circuit 1216 (GY/OG), harness side and ground.
+</li><br><IMG src="a0074645.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#G13"                                                                                                                                                                                                                                                       >G13
+</a>.
+</td></tr><tr><td><a name="G13">&nbsp;
+</a><b>G13 CHECK FOR THE CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+
+<br><br>REPROGRAM the PATS keys. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: The Vehicle Does Not Start &#8212; Anti-Theft Indicator Proves Out For 3 Seconds As Normal
+</b></p><h5>Normal Operation
+</h5><p>During each vehicle start sequence, the transceiver module reads the PATS key identification code and sends the data to the powertrain control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>starter relay
+</li><li>PCM
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: THE VEHICLE DOES NOT START &#8212; ANTI-THEFT INDICATOR PROVES OUT FOR 3 SECONDS AS NORMAL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK THE STARTING SYSTEM FOR THE CORRECT VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between PCM C175b-34, circuit 1785 (LG/VT), harness side and ground.
+</li><br><IMG src="a0079244.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage less than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the starting system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s34al.htm&rightside=s62s34ar.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04A
+</a> or 
+<a target="leftside" href="s62~tr~en~leftside=s62s34bl.htm&rightside=s62s34br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62j1008.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK FOR CORRECT THE PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>.
+
+<br><br>PROGRAM the PATS keys. REFER to 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

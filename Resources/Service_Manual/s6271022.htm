@@ -1,0 +1,177 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="07"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Automatic Transmission &#8212; 4R70E/4R75E"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P9000Q0"><meta name="tps_procsgmlid" content="n729538"><meta name="tps_packetinfo" content="453534"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 307-01:  Automatic Transmission &#8212; 4R70E/4R75E
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  09/23/2005
+</div></TD></TR></TABLE><hr><h4>Output State Control (OSC) Mode
+</h4><meta name="tps_proctitle" content="Output State Control (OSC) Mode">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr></table><p>Output State Control (OSC) using the NGS or WDS diagnostic tool allows the technician to easily and quickly control the main functions and components of this transmission. OSC is used to help test the electrical, hydraulic or mechanical
+concerns related to the transmission. The NGS or WDS also provides PID information, along with the OSC functions, to accurately diagnose the transmission. For example, OSC allows the technician to shift the transmission or engage the converter
+clutch or command line pressure or turn a solenoid off and on.
+</p><p><b>Output State Control (OSC) Procedures
+</b></p><p>Retrieve the continuous codes, carry out a KOEO and KOER On-Demand Self Test before using OSC. Any Diagnostic Trouble Codes (DTCs) related to the transmission range (TR) sensor or the output shaft speed (OSS) sensor must be fixed or the PCM
+will not allow OSC to operate.
+</p><p>Using the NGS, OSC has 2 menus for operation, the BENCH MODE and the DRIVE MODE.
+</p><p><b>OSC &#8212; BENCH MODE
+</b></p><p>The BENCH MODE is functional only when the vehicle range selector is in PARK or NEUTRAL. The BENCH MODE may be used when the engine is either ON (running) or OFF (not running). The BENCH MODE allows the technician to function the following
+components:
+</p><ul type="disc"><li>SSA - Directs PCM to command Shift Solenoid 1 OFF or ON
+</li><li>SSB - Directs PCM to command Shift Solenoid 2 OFF or ON
+</li><li>TCC - Directs PCM to command the Torque Converter Solenoid OFF or ON (OFF = 0% duty cycle and ON = 100% duty cycle)
+</li><li>LINEDSD - Directs PCM to command line pressure to either 345, 517, 689, 862, 1,034, 1,207, 1,379 kPa (50, 75, 100, 125, 150, 175, 200 psi). The PCM will command the appropriate EPC current to obtain the commanded line pressure.
+</li></ul><p><b>SSA, SSB and TCC in BENCH MODE
+</b></p><p>These OSC functions are used to command SSA, SSB and TCC solenoids OFF and ON when carrying out an electrical circuit check.
+</p><p>The OSC functions for parameters SSA, SSB and TCC allow the technician to choose the following options:
+</p><ul type="disc"><li>OFF - Directs PCM to command the solenoid OFF
+</li><li>ON - Directs PCM to command the solenoid ON
+</li><li>XXX - Cancels OSC command for that particular solenoid (returns to normal operation)
+</li></ul><p>The requirements for SENDING an OSC value for SSA, SSB or TCC are as follows:
+</p><ul type="disc"><li>Key on and engine not running or key on and engine running at idle
+</li><li>Gear selector in PARK or NEUTRAL
+</li></ul><p>The vehicle requirements must be met when sending the OSC value for SSA, SSB and TCC solenoids. If the vehicle requirements are not met when sending the OSC value, an error message will appear. When the error message is received, OSC is aborted
+and must be restarted. After sending the OSC value, if the vehicle requirements are no longer met, the error message will not appear but the OSC value will be cancelled by the PCM (monitor corresponding PID). The OSC value XXX may be sent anytime to
+cancel OSC.
+</p><p><b>LINEDSD in BENCH MODE
+</b></p><p>The LINEDSD in BENCH MODE may be used when carrying out an electrical check on the EPC solenoid or used to test the functionality of the transmission's electronic control of the line pressure. When testing the EPC for controlling the line
+pressure, the technician is required to run the engine greater than 1,500 rpm. The installation of a hydraulic pressure gauge is required to actually test whether the transmission line pressure is correct. This will test whether the hydraulic pump,
+the pressure regulator and the EPC solenoid and other associated mechanical and hydraulic components are working correctly.
+</p><p>When carrying out an electrical test on the EPC solenoid, set LINEDSD to 1,379 kPa (200 psi) to command the EPC solenoid OFF and 345 kPa (50 psi) to command the EPC solenoid ON. Commanding 1,379 kPa (200 psi) may not electrically turn the
+pressure solenoid completely off and commanding 345 kPa (50 psi) may not electrically turn the pressure solenoid completely on.
+</p><p>The OSC functions for the parameter LINEDSD allow the technician to choose the following options:
+</p><ul type="disc"><li>50 - Directs PCM to command line pressure to 345 kPa (50 psi)
+</li><li>75 - Directs PCM to command line pressure to 517 kPa (75 psi)
+</li><li>100 - Directs PCM to command line pressure to 689 kPa (100 psi)
+</li><li>125 - Directs PCM to command line pressure to 862 kPa (125 psi)
+</li><li>150 - Directs PCM to command line pressure to 1,034 kPa (150 psi)
+</li><li>175 - Directs PCM to command line pressure to 1,207 kPa (175 psi)
+</li><li>200 - Directs PCM to command line pressure to 1,379 kPa (200 psi)
+</li><li>XXX - Cancels OSC command for line pressure (returns to normal operation)
+</li></ul><p>The vehicle requirements for sending an OSC value for LINEDSD in BENCH MODE is as follows:
+</p><ul type="disc"><li>Key on and engine off or key on engine running (engine speed greater than 1,500 rpm)
+</li><li>Range selector in PARK or NEUTRAL
+</li></ul><p>The vehicle requirements must be met when sending the OSC value for EPC. If the vehicle requirements are not met when sending the OSC value, an error message will appear. When the error message is received, OSC is aborted and must be restarted.
+After the OSC value for EPC is sent, if the vehicle requirements are no longer met, the error message will not appear but the OSC value will be cancelled by the PCM (monitor corresponding PID). The OSC value XXX may be sent anytime to cancel OSC.
+</p><p><b>OSC &#8212; DRIVE MODE
+</b></p><p>The DRIVE MODE allows control of 2 transmission functions. Each OSC function has a unique set of vehicle operating requirements that the technician is required to meet before being allowed to operate OSC. The recommended procedure, when using
+the DRIVE MODE, is to command one parameter at a time. The DRIVE MODE allows the technician to control the following OSC functions on the transmission:
+</p><ul type="disc"><li>OSCGEAR - Directs the PCM to upshift or downshift
+</li><li>OSCTCC - Directs the PCM to lock or unlock the torque converter clutch
+</li></ul><p><b>OSCGEAR in DRIVE MODE
+</b></p><p>The OSC function is used to test the transmission gear changes. The advantage of using OSC for changing gears is to allow the technician to easily test a specific gear and/or upshift or downshift that has been identified as the customer
+complaint. When using OSC to command a shift change, the PCM should command the correct or normal pressure for that shift. The transmission will remain in the gear that OSC has commanded until OSC commands another gear or OSC is cancelled.
+</p><p>The OSC functions for the OSCGEAR parameter allow the technician to choose the following options:
+</p><ul type="disc"><li>1 - Directs PCM to command 1st gear
+</li><li>2 - Directs PCM to command 2nd gear
+</li><li>3 - Directs PCM to command 3rd gear
+</li><li>4 - Directs PCM to command 4th gear
+</li><li>XXX - Cancels OSC command for GEAR (returns to normal operation)
+</li></ul><p>The vehicle requirements must be met when sending the OSC value for GEAR. If the vehicle requirements are not met when sending the OSC value, an error message will appear. When the error message is received, OSC is aborted and must be
+restarted. After the OSC value for GEAR is sent, if the vehicle requirements are no longer met, the error message will not appear but the OSC value will be cancelled by the PCM (monitor corresponding PID). The OSC value XXX may be sent anytime to
+cancel OSC.
+</p><p>It is recommended to use the OSCTCC parameter in OSC to first turn off the converter clutch when testing the transmission gear changes. This will allow the technician to evaluate just the gear changes. If the torque converter clutch is not
+turned off, then the PCM may command the torque converter clutch to lock during a shift. This could make it more difficult for the technician to determine whether a bad shift is the result of the torque converter engaging or the actual gear change.
+</p><p>The vehicle requirements for sending a OSCGEAR value is as follows:
+</p><ul type="disc"><li>Engine is running
+</li><li>Gear selector is in OVERDRIVE
+</li><li>Vehicle speed is greater than 3 km/h (2 mph)
+</li><li>Vehicle speed must be lower than 48 km/h (30 mph) to command a downshift to 1st gear
+</li><li>Vehicle speed must be lower than 97 km/h (60 mph) to command a downshift to 2nd gear
+</li><li>Vehicle speed must be lower than 145 km/h (90 mph) to command a downshift to 3rd gear
+</li><li>Vehicle speed must be greater than 48 km/h (30 mph) to command an upshift to 4th gear
+</li></ul><p><b>TCC in DRIVE MODE
+</b></p><p>The OSC function is used to test whether the torque converter clutch (TCC) is locking and unlocking correctly.
+</p><p>The OSC functions for the TCC parameter allows the technician to choose the following:
+</p><ul type="disc"><li>ON - Commands TCC solenoid ON (100% duty cycle) to lock the TCC
+</li><li>OFF - Commands TCC solenoid OFF (0% duty cycle) to unlock the TCC
+</li><li>XXX - Cancels OSC for TCC (returns to normal operation)
+</li></ul><p>The vehicle requirements must be met when sending the OSC value for TCC. If the vehicle requirements are not met when sending the OSC value, an error message will appear. When the error message is received, OSC is aborted and must be restarted.
+After the OSC value for TCC is sent, if the vehicle requirements are no longer met, the error message will not appear but the OSC value will be cancelled by the PCM (monitor corresponding PID). The OSC value XXX may be sent anytime to cancel OSC.
+</p><p>The vehicle requirements for sending the TCC value OFF are as follows:
+</p><ul type="disc"><li>Engine is running
+</li><li>Gear selector is in OVERDRIVE
+</li><li>Vehicle speed is greater than 3 km/h (2 mph)
+</li></ul><p>The vehicle requirements for sending the TCC value ON are as follows:
+</p><ul type="disc"><li>Engine is running
+</li><li>Gear selector is in OVERDRIVE
+</li><li>Vehicle speed is greater than 3 km/h (2 mph)
+</li><li>Transmission fluid temperature (TFT) is between 16-116&#176;C (60-240&#176;F)
+</li><li>Brake is off when vehicle speed is below 32 km/h (20 mph)
+</li><li>Not an excessive load on the engine
+</li><li>Not during an upshift or downshift
+</li><li>Engine speed is greater than 1,500 rpm
+</li></ul><p><b>Using Output State Control (OSC) and Monitoring PIDs
+</b></p><p>To confirm that the OSC value was sent by the NGS and the PCM has accepted the OSC command, a corresponding PID for each OSC parameter must be monitored. After sending the OSC value, the corresponding PID value should be the same as the OSC
+value. Additional PIDs should be monitored to help the technician accurately diagnose the transmission. The following is a list of PIDs to monitor while using OSC.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">OSC Parameter
+</TH><TH valign="bottom" align="CENTER">Corresponding PID
+</TH><TH valign="bottom" align="CENTER">Additional PIDs
+</TH></TR><TR><TD valign="top" align="CENTER">SSA
+</TD><TD valign="top" align="CENTER">SS1
+</TD><TD valign="top" align="CENTER">SS1F
+</TD></TR><TR><TD valign="top" align="CENTER">SSB
+</TD><TD valign="top" align="CENTER">SS2
+</TD><TD valign="top" align="CENTER">SS2F
+</TD></TR><TR><TD valign="top" align="CENTER">LINEDSD
+</TD><TD valign="top" align="CENTER">LINEDSD
+</TD><TD valign="top" align="CENTER">EPC
+</TD></TR><TR><TD valign="top" align="CENTER">OSCTCC
+</TD><TD valign="top" align="CENTER">OSCTCC
+</TD><TD valign="top" align="CENTER">TCC, TCCF, TCCCMD, TCCACT
+</TD></TR><TR><TD valign="top" align="CENTER">OSCGEAR
+</TD><TD valign="top" align="CENTER">OSCGEAR
+</TD><TD valign="top" align="CENTER">GEAR, TP, RPM, TSS, OSS, TR, TFT, TRANRAT and VS
+</TD></TR></TABLE><br><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">PID Name
+</TH><TH valign="bottom" align="CENTER">PID Description
+</TH></TR><TR><TD valign="top" align="CENTER">EPC
+</TD><TD valign="top" align="LEFT">Electronic Pressure Control commanded pressure (not actual) &#8212; psi
+</TD></TR><TR><TD valign="top" align="CENTER">GEAR
+</TD><TD valign="top" align="LEFT">Gear commanded state (not actual) &#8212; 1st, 2nd, 3rd or 4th
+</TD></TR><TR><TD valign="top" align="CENTER">LINEDSD
+</TD><TD valign="top" align="LEFT">Line Pressure commanded (not actual)
+</TD></TR><TR><TD valign="top" align="CENTER">OSS
+</TD><TD valign="top" align="LEFT">Output Shaft Speed Sensor Input &#8212; rpm
+</TD></TR><TR><TD valign="top" align="CENTER">RPM
+</TD><TD valign="top" align="LEFT">Engine Speed Sensor Input &#8212; rpm
+</TD></TR><TR><TD valign="top" align="CENTER">SSA
+</TD><TD valign="top" align="LEFT">Shift Solenoid No. 1 commanded state (not actual) &#8212; ON or OFF
+</TD></TR><TR><TD valign="top" align="CENTER">SSB
+</TD><TD valign="top" align="LEFT">Shift Solenoid No. 2 commanded state (not actual) &#8212; ON or OFF
+</TD></TR><TR><TD valign="top" align="CENTER">SS1F
+</TD><TD valign="top" align="LEFT">Shift Solenoid No. 1 circuit fault &#8212; YES or NO
+</TD></TR><TR><TD valign="top" align="CENTER">SS2F
+</TD><TD valign="top" align="LEFT">Shift Solenoid No. 2 circuit fault &#8212; YES or NO
+</TD></TR><TR><TD valign="top" align="CENTER">TCCACT
+</TD><TD valign="top" align="LEFT">Torque Converter Clutch slippage (engine speed minus turbine speed) &#8212; rpm
+</TD></TR><TR><TD valign="top" align="CENTER">TCCCMD
+</TD><TD valign="top" align="LEFT">Torque Converter Clutch Solenoid commanded state &#8212; duty cycle
+</TD></TR><TR><TD valign="top" align="CENTER">TCCF
+</TD><TD valign="top" align="LEFT">Torque Converter Clutch Solenoid circuit fault &#8212; YES or NO
+</TD></TR><TR><TD valign="top" align="CENTER">TFT
+</TD><TD valign="top" align="LEFT">Transmission Fluid Temperature &#8212; degrees F or voltage
+</TD></TR><TR><TD valign="top" align="CENTER">TP
+</TD><TD valign="top" align="LEFT">Throttle Position &#8212; voltage
+</TD></TR><TR><TD valign="top" align="CENTER">TR
+</TD><TD valign="top" align="LEFT">Transmission Range Sensor &#8212; Park, Reverse, Neutral, OD, etc.
+</TD></TR><TR><TD valign="top" align="CENTER">TRANRAT
+</TD><TD valign="top" align="LEFT">Actual Transmission Gear ratio
+</TD></TR><TR><TD valign="top" align="CENTER">TSS
+</TD><TD valign="top" align="LEFT">Turbine Shaft Speed Sensor input &#8212; rpm
+</TD></TR></TABLE><br><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

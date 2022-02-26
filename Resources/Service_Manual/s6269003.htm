@@ -1,0 +1,1224 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="2"><meta name="tps_group" content="06"><meta name="tps_section" content="09"><meta name="tps_section_title" content="Vehicle Dynamic Systems"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P4314Q0"><meta name="tps_procsgmlid" content="n928893"><meta name="tps_packetinfo" content="476424"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 206-09:  Vehicle Dynamic Systems
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  03/21/2006
+</div></TD></TR></TABLE><hr><h4>Anti-Lock Control
+</h4><meta name="tps_proctitle" content="Anti-Lock Control"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=042&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >42
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool 
+
+<br></td></tr><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B or equivalent
+</td></tr></table><div><a name="extract_229">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The anti-lock brake system (ABS) prevents wheel lockup by automatically modulating the brake pressure during an emergency stop. By not locking the wheels, the driver can improve steering control during hard braking and stop the vehicle in the
+shortest possible distance under most conditions.
+</p><p>The ABS controls both front and rear brakes separately. The brake pedal force required to engage the ABS function may vary with the road surface condition. A dry surface requires greater force than a slippery surface.
+</p><p>During the ABS operation, the driver may feel a pulsation in the brake pedal, accompanied by a slight up and down movement in the pedal height. In addition, a mechanical noise from the engine compartment may be heard. The pedal effort and pedal
+feel during normal braking are similar to that of a conventional power brake system.
+</p><p>When the brakes are applied, brake fluid is forced from the brake master cylinder outlet ports to the hydraulic control unit (HCU) inlet ports. The fluid pressure is transmitted through 3 normally open solenoid valves inside the HCU, through
+the outlet ports of the HCU to the brakes. One circuit of the brake master cylinder feeds the front brakes while the other circuit feeds the rear brakes. If the ABS module senses that a wheel is about to lock, based on wheel speed sensor data, the
+solenoid valve will pulse closed, preventing more fluid from entering that circuit. The ABS module then reads the sensor signal from the affected wheel again. If the wheel is still decelerating, the normally closed solenoid valve for that circuit is
+opened. A controlled amount of hydraulic pressure between the normally open valve and the brake is relieved into the HCU accumulator. Once the affected wheel returns to vehicle speed, the ABS module returns the solenoid valves to their normal
+condition, allowing fluid flow to the affected brake.
+</p><p>The ABS module monitors the electromechanical components of the system. Malfunction of the ABS will cause the ABS module to shut off or inhibit the system. However, normal power-assisted braking remains. Malfunctions are indicated by the yellow
+ABS warning indicator in the instrument cluster.
+</p><p>The ABS is self-monitoring. When the ignition switch is placed in the RUN position, the ABS module carries out a preliminary self-check on the anti-lock electrical system indicated by a 3-second illumination of the yellow ABS warning indicator
+in the instrument cluster.
+</p><p>A self-test of the solenoid valve coils and the pump motor is carried out when the vehicle is started. During starting, the brake pedal must be released to run the self-test. If the brake pedal is applied or a failed brake switch occurs, the
+self-test is run at 6 km/h (4 mph) regardless of brake pedal position.
+</p><p>When installing a new ABS module, the following items must be configured into the new module:
+</p><ul type="disc"><li>Transfer case (if equipped)
+
+<ul type="square"><li>4x2
+</li><li>manual shift on the fly
+</li><li>torque on demand
+</li><li>electronic shift on the fly
+</li></ul></li><li>Rear axle
+
+<ul type="square"><li>light duty
+</li><li>heavy duty
+</li></ul></li></ul><p><b>Engine Only Traction Control
+</b></p><p>Some vehicles may be equipped with an engine only traction control (EOTC) system. The EOTC system is designed to limit wheel spin by modulating engine torque, in order to achieve maximum traction, when driving on slippery or loose surfaces.
+Engine torque modulation is achieved by regulating fuel and spark to the cylinders. This means that the traction control system is controlled by the powertrain control module (PCM) and not the ABS module. The only function of the ABS module in an
+EOTC system is to provide wheel speed information to the PCM along the high speed communication area network (HS-CAN) bus. The PCM uses the wheel speed information to determine when traction control is needed.
+</p><p>The traction assist system can be disabled by pressing the traction assist switch and is indicated by the traction assist light on the switch. The traction assist system will reset and return to normal operation when the ignition switch is
+cycled or when the traction assist switch is pressed and released a second time during the same ignition cycle.
+</p><p>The traction assist system is contained in the powertrain control module (PCM) and is configured when the PCM is configured. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</p><div><a name="extract_230">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><p><b>NOTE:
+</b>  If a new ABS module is installed, it must be configured. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Verify the stoplamps operate correctly by applying and releasing the brake pedal. If the stoplamps do not operate correctly, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>. If the stoplamps operate
+correctly, proceed to the next step.
+</li></ol><ol start="3"><li>Verify that the PRNDL operates correctly on the instrument cluster. If the PRNDL does not operate correctly, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. If the PRNDL operates correctly, proceed to
+the next step.
+</li></ol><ol start="4"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Wheel speed sensor ring
+</LI><LI>Hydraulic control unit (HCU)
+</LI><LI>Tire pressure
+</LI><LI>Mismatched wheels or tires on vehicle
+</LI><LI>Base brake system
+</LI><LI>Brake booster vacuum hose
+</LI><LI>Steering components, suspension components and tire size
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) fuse(s):
+
+<UL type="square"><LI>14 (10A)
+</LI><LI>103 (20A)
+</LI><LI>112 (40A)
+</LI></UL></LI><LI>Anti-lock brake system (ABS) module
+</LI><LI>Wheel speed sensors
+</LI><LI>Stoplamp switch
+</LI><LI>Brake fluid level switch
+</LI><LI>Circuitry
+</LI></UL></TD></TR></TABLE><br><ol start="5"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="6"><li>If the concern remains after the inspection, connect the diagnostic tool to the data link connector (DLC) located beneath the instrument panel, and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not
+communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check the connection of the data link connector to the vehicle.
+</li></ul><ul type="disc"><li>check that the ignition switch is in the RUN position.
+</li></ul></li></ol><ol start="7"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="8"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN or ISO circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for the ABS module, 
+<a href="s6269003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the ABS module.
+</li></ul></li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to the Anti-Lock Brake System (ABS) Module Diagnostic Trouble Code (DTC) Index.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s6269003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><p><b>Anti-Lock Brake System (ABS) Module Diagnostic Trouble Code (DTC) Index
+</b></p><p><b>NOTE:
+</b>  The need to recalibrate the module is indicated by the active/fail lamp flashing. There are other service actions that can require recalibration when there is no flashing lamp. The lamp will flash after clearing the DTCs that are indicated in
+the module calibration list.
+</p><p><b>NOTE:
+</b>  Always retrieve the continuous DTCs after running the self-test.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Anti-Lock Brake System (ABS) Module Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="LEFT">ECU Is Defective
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><P><B>NOTE:
+</B>  If other DTCs are present, repair them before installing a new component.
+</P>Clear the DTCs. Retrieve the DTCs. If DTC B1342 is retrieved, install a new ABS module. Refer to 
+<A href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</A> in this section. Repeat the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B1484
+</TD><TD valign="top" align="LEFT">Brake Pedal Input Open Circuit Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1676
+</TD><TD valign="top" align="LEFT">Battery Pack Voltage Out of Range
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2477
+</TD><TD valign="top" align="LEFT">Module Configuration Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT">Follow the diagnostic tool directions for the calibration procedure. Refer to 
+<A href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2900
+</TD><TD valign="top" align="LEFT">VIN Mismatched
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT">Verify that the module has the correct as-built data.
+</TD></TR><TR><TD valign="top" align="CENTER">C1145
+</TD><TD valign="top" align="LEFT">Wheel Speed Sensor RF Input Circuit Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1155
+</TD><TD valign="top" align="LEFT">Wheel Speed Sensor LF Input Circuit Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1222
+</TD><TD valign="top" align="LEFT">Wheel Speed Mismatch
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1230
+</TD><TD valign="top" align="LEFT">Wheel Speed Sensor Rear Center Input Circuit Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1237
+</TD><TD valign="top" align="LEFT">Wheel Speed Sensor Rear Center Input Signal Missing
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1266
+</TD><TD valign="top" align="LEFT">ABS Valve Power Relay Circuit Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1296
+</TD><TD valign="top" align="LEFT">Wheel Speed Sensor LF Input Signal Missing
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1297
+</TD><TD valign="top" align="LEFT">Wheel Speed Sensor RF Input Signal Missing
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1300
+</TD><TD valign="top" align="LEFT">ABS Hydraulic Pump Motor Circuit Failure
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="LEFT"><A href="s6269003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U0073
+</TD><TD valign="top" align="LEFT">Control Module Communication Bus Off Fault
+</TD><TD valign="top" align="CENTER">Network Fault
+</TD><TD valign="top" align="LEFT">Refer to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="LEFT">CAN Communication Bus Fault-Receive Error
+</TD><TD valign="top" align="CENTER">Network Fault
+</TD><TD valign="top" align="LEFT">Refer to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2023
+</TD><TD valign="top" align="LEFT">Fault-Receive From External Node
+</TD><TD valign="top" align="CENTER">Network Fault
+</TD><TD valign="top" align="LEFT">Refer to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR></TABLE><br><div><a name="extract_231">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the anti-lock brake system (ABS) module
+</li></ul></td><td><ul type="disc"><li>Central junction box (CJB) fuse(s):
+</li><ul type="square"><li>14 (10A)
+</li><li>103 (20A)
+</li><li>112 (40A)
+</li></ul><li>Circuitry
+</li><li>ABS module
+</li></ul></td><td><ul type="disc"><li><a href="s6269003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The yellow anti-lock brake system (ABS) warning indicator is always on
+</li></ul></td><td><ul type="disc"><li>ABS module
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s6269003.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Spongy brake pedal with no warning indicator
+</li></ul></td><td><ul type="disc"><li>Air in brake hydraulic system
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s600l.htm&rightside=s62s600r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-00
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Unintended anti-lock brake system (ABS) activation
+</li></ul></td><td><ul type="disc"><li>Wheel speed sensor ring(s)
+</li></ul></td><td><ul type="disc"><li>INSPECT the sensor ring. INSTALL a new ring if damaged. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s41al.htm&rightside=s62s41ar.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-01A
+</a> or 
+<a target="leftside" href="s62~tr~en~leftside=s62s41bl.htm&rightside=s62s41br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 204-01B
+</a> for a front
+speed sensor ring. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s52al.htm&rightside=s62s52ar.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-02A
+</a>, 
+<a target="leftside" href="s62~tr~en~leftside=s62s52bl.htm&rightside=s62s52br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-02B
+</a> or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s52cl.htm&rightside=s62s52cr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-02C
+</a> for a rear sensor ring.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Wheel speed sensor(s)
+</li><li>ABS module
+</li></ul></td><td><ul type="disc"><li><a href="s6269003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The traction assist system is inoperative
+</li></ul></td><td><ul type="disc"><li>Traction assist system is turned off
+</li><li>Traction assist system is not configured
+</li><li>ABS wheel speed sensor fault
+</li><li>CAN communications bus fault
+</li></ul></td><td><ul type="disc"><li><a href="s6269003.htm#I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The traction assist warning indicator is always on
+</li></ul></td><td><ul type="disc"><li>Traction assist system is turned off
+</li><li>Traction assist system is not configured
+</li><li>ABS wheel speed sensor fault
+</li><li>Powertrain control module (PCM)
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s6269003.htm#I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The traction system cannot be disabled/enabled
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Traction control switch
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s6269003.htm#I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr></table><div><a name="extract_232">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: No Communication With the Anti-lock Brake System (ABS) Module
+</b></p><h5>Normal Operation
+</h5><p>Fused ignition voltage is supplied to the anti-lock brake system (ABS) module from central junction box (CJB) 14 (10A) along circuit 295 (LB/PK), ground is provided along circuit 530 (LG/YE). The ABS module communicates interactively with the
+other electronic modules using the controller area network (CAN) bus. For information about the communication network, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</p><p>The operating voltage required to supply the ABS module, hydraulic pump and isolation valves is between 10 and 17 volts.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit open
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: NO COMMUNICATION WITH THE ANTI-LOCK BRAKE SYSTEM (ABS) MODULE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK CIRCUIT 295 (LB/PK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  ABS Module C135.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between ABS module C135-8, circuit 295 (LB/PK), harness side and ground.
+</li><br><IMG src="a0075618.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY CJB fuse 14 (10A) is OK. If OK, REPAIR circuit 295 (LB/PK) for an open. TEST the system for normal operation.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUIT 530 (LG/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between ABS module C135-15, circuit 530 (LG/YE), harness side, and ground.
+</li><br><IMG src="a0075619.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to continue diagnosis of the communications network.
+
+<br><br><b>No
+</b><br>REPAIR circuit 530 (LG/YE) for an open. TEST the system for normal operation.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: DTC B1484 &#8212; Brake Pedal Input Open Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>Fused battery voltage is supplied to the brake pedal position switch from central junction box (CJB) fuse 2 (20A) along circuit 10 (LG/RD). When the brake pedal is pressed, voltage is sent to the anti-lock brake system (ABS) module through
+circuit 511 (LG). If an open occurs in the circuit between the ABS module and the stoplamp, DTC B1484 sets.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit open
+</li><li>Brake pedal position switch
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: DTC B1484 &#8212; BRAKE PEDAL INPUT OPEN CIRCUIT FAILURE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK FOR CORRECT STOPLAMPS OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Apply the brake pedal and observe the stoplamps.
+</li><li><b>Do the stoplamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a> to continue diagnosis of the stoplamps. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUIT 511 (LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  ABS Module C135.
+</li><li>Measure the voltage between ABS module C135-6, circuit 511 (LG), harness side and ground, while pressing the brake pedal.
+</li><br><IMG src="a0075202.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR circuit 511 (LG) for an open. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTC B1676 &#8212; Battery Pack Voltage Out Of Range
+</b></p><h5>Normal Operation
+</h5><p>Fused ignition voltage is supplied to the anti-lock brake system (ABS) module from central junction box (CJB) fuse 14 (10A) along circuit 295 (LB/PK), fused battery voltage is supplied to the ABS module from CJB fuses 103 (20A) and 112 (40A)
+along circuits 532 (OG/YE) and 534 (YE/LG) respectively. Ground is provided along circuits 530 (LG/YE) and 57 (BK).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse(s)
+</li><li>Circuit open
+</li><li>Circuit shorted
+</li><li>Hydraulic pump motor (part of HCU)
+</li><li>ABS module
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DTC B1676 &#8212; BATTERY PACK VOLTAGE OUT OF RANGE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE BATTERY VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the battery voltage between the positive and negative battery terminals with the key on and the engine off (KOEO) and with the engine running.
+</li><li><b>Is the battery voltage between 10 and 13 volts with KOEO, and between 13 and 17 volts with the engine running?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-00
+</a> to continue diagnosis of the charging system.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE VOLTAGE TO THE ANTI-LOCK BRAKE SYSTEM (ABS) MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  ABS Module C135.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between ground and:
+</li><ul type="square"><li>ABS module C135-8, circuit 295 (LB/PK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-14, circuit 532 (OG/YE), harness side.
+</li></ul><ul type="square"><li>ABS module C135-13, circuit 534 (YE/LG), harness side.
+</li></ul><br><IMG src="a0075620.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the voltages greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY CJB fuses 14 (10A), 103 (20A) and 112 (40A) are OK. If OK, REPAIR the affected circuit(s) for an open. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK THE ANTI-LOCK BRAKE SYSTEM (ABS) MODULE GROUND CIRCUITS FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between ground and:
+</li><ul type="square"><li>ABS module C135-15, circuit 530 (LG/YE), harness side.
+</li></ul><ul type="square"><li>ABS module C135-12, circuit 57 (BK), harness side.
+</li></ul><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit(s) for an open. CLEAR the DTCs. REPEAT the self-test
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: DTC C1300 &#8212; Anti-lock Brake System (ABS) Hydraulic Pump Motor Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>The operating voltage required to run the hydraulic pump motor is between 10 and 17 volts. Fused battery voltage is supplied to the anti-lock brake system (ABS) module from central junction box (CJB) fuse 112 (40A) along circuit 534 (YE/LG).
+Ground is provided along circuit 57 (BK).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit open
+</li><li>Circuit shorted
+</li><li>Hydraulic pump motor (part of HCU)
+</li><li>ABS module
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: DTC C1300 &#8212; ABS HYDRAULIC PUMP MOTOR CIRCUIT FAILURE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE ANTI-LOCK BRAKE SYSTEM (ABS) PUMP MOTOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li><b>Is the ABS pump motor running all the time?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE PUMP MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Using the diagnostic tool, trigger the ABS module pump motor ON active command.
+</li><li><b>Does the ABS pump motor run for approximately 3 seconds?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>TRIGGER the ABS module pump motor OFF active command.
+
+<br><br>CLEAR the DTCs. CHECK the yellow ABS warning indicator while driving the vehicle (the brakes must not be applied) above 32 km/h (20 mph).
+
+<br><br>If the yellow ABS warning indicator illuminates, RETRIEVE the DTCs. If DTC C1300 is retrieved again, GO to 
+<a href="s6269003.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br>If the yellow ABS warning indicator does not illuminate, the system is OK.
+
+<br><br><b>No
+</b><br>TRIGGER the ABS module pump motor OFF active command. GO to 
+<a href="s6269003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK THE PUMP MOTOR CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Hydraulic Control Unit (HCU) Connector.
+</li><li>Connect a fused (20A) jumper wire to HCU connector pin 1, component side and momentarily connect the other end of the jumper wire to HCU connector pin 2, component side.
+</li><li><b>Does the pump motor run when the jumper wire is connect to pin 2?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new hydraulic control unit (HCU). REFER to 
+<a href="s6269005.htm"                                                                                                                                                                                                                                                       >Hydraulic Control Unit (HCU)
+</a> in this section.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK CIRCUIT 534 (YE/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between ABS module C135-13, circuit 534 (YE/LG), harness side and ground.
+</li><br><IMG src="n0043062.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY CJB fuse 112 (40A) is OK. If OK, REPAIR circuit 534 (YE/LG) for an open. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between ABS module C135-12, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0079827.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new anti-lock brake system (ABS) module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR circuit 57 (BK) for an open. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: DTC C1145, DTC C1155, DTC C1230 &#8212; Wheel Speed Sensor Input Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>The active wheel speed sensors generate a square wave signal that is sent to the anti-lock brake system (ABS) module. The wheel speed sensor circuitry connects to the ABS module through 2 wires and a connector at each wheel speed sensor. When
+the ignition is turned to the RUN position, the ABS module carries out a self-test by sending a reference voltage to all of the wheel speed sensors and their circuitry to determine if they are functional.
+</p><p>Voltage and a ground signal are supplied to the wheel speed sensors from the ABS module.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit open
+</li><li>Circuit shorted
+</li><li>Wheel speed sensor
+</li><li>ABS module
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: DTC C1145 (RF), DTC C1155 (LF), DTC C1230 (REAR) &#8212; WHEEL SPEED SENSOR INPUT CIRCUIT FAILURE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK FOR A SHORT TO VOLTAGE 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Both circuits must be checked for each DTC.
+
+<li>Key in OFF position.
+</li><li>Disconnect:  ABS Module C135.
+</li><li>Disconnect:  Suspect Wheel Speed Sensor.
+</li><li>Key in ON position.
+</li><li><b>For DTC C1145 (RF)
+</b>, measure the voltage between ground and:
+</li><ul type="square"><li>ABS module C135-3, circuit 516 (YE/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-4, circuit 514 (YE/RD), harness side.
+</li></ul><li><b>For DTC C1155 (LF)
+</b>, measure the voltage between ground and:
+</li><ul type="square"><li>ABS module C135-20, circuit 522 (TN/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-21, circuit 521 (TN/OG), harness side.
+</li></ul><li><b>For DTC C1230 (Rear)
+</b>, measure the voltage between ground and:
+</li><ul type="square"><li>ABS module C135-22, circuit 519 (LG/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-23, circuit 518 (LG/RD), harness side.
+</li></ul><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the affected circuit(s) for a short to voltage. CLEAR the DTCs. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Both circuits must be checked for each DTC.
+
+<li>Key in OFF position.
+</li><li><b>For DTC C1145 (RF)
+</b>, measure the resistance between ground and:
+</li><ul type="square"><li>ABS module C135-3, circuit 516 (YE/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-4, circuit 514 (YE/RD), harness side.
+</li></ul><li><b>For DTC C1155 (LF)
+</b>, measure the resistance between ground and:
+</li><ul type="square"><li>ABS module C135-20, circuit 522 (TN/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-21, circuit 521 (TN/OG), harness side.
+</li></ul><li><b>For DTC C1230 (Rear)
+</b>, measure the resistance between ground and:
+</li><ul type="square"><li>ABS module C135-22, circuit 519 (LG/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-23, circuit 518 (LG/RD), harness side.
+</li></ul><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit(s) for a short to ground. CLEAR the DTCs. TEST the system for normal operation.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Both circuits must be checked for each DTC.
+
+<li><b>For DTC C1145 (RF)
+</b>, measure the resistance between:
+</li><ul type="square"><li>ABS module C135-3, circuit 516 (YE/BK), harness side and RF wheel speed sensor C160-1, circuit 516 (YE/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-4, circuit 514 (YE/RD), harness side and RF wheel speed sensor C160-2, circuit 514 (YE/RD), harness side.
+</li></ul><li><b>For DTC C1155 (LF)
+</b>, measure the resistance between:
+</li><ul type="square"><li>ABS module C135-20, circuit 522 (TN/BK), harness side and LF wheel speed sensor C150-1, circuit 522 (TN/BK), harness side.
+</li></ul><ul type="square"><li>ABS module C135-21, circuit 521 (TN/OG), harness side and LF wheel speed sensor C150-2, circuit 521 (TN/OG), harness side.
+</li></ul><li><b>For DTC C1230 (Rear)
+</b>, measure the resistance between:
+</li><ul type="square"><li>ABS module C135-23, circuit 518 (LG/RD), harness side and rear wheel speed sensor C455-1, circuit 518 (LG/RD), harness side.
+</li></ul><ul type="square"><li>ABS module C135-22, circuit 519 (LG/BK), harness side and rear wheel speed sensor C455-2, circuit 519 (LG/BK), harness side.
+</li></ul><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit(s) for an open. CLEAR the DTCs. TEST the system for normal operation.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK THE WHEEL SPEED SENSOR OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Suspect Wheel Speed Sensor.
+</li><li>Connect:  ABS Module C135.
+</li><li><b>For DTC C1155:
+</b></li><ul type="square"><li>connect a fused (5A) jumper wire between LF wheel speed sensor C150-2, circuit 521 (TN/OG), harness side and component side.
+</li></ul><ul type="square"><li>connect the automotive meter between LF wheel speed sensor C150-1, circuit 522 (TN/BK), harness side and component side.
+</li></ul><br><IMG src="a0080198.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>For DTC C1145:
+</b></li><ul type="square"><li>connect a fused (5A) jumper wire between LF wheel speed sensor C160-2, circuit 514 (YE/RD), harness side and component side.
+</li></ul><ul type="square"><li>connect the automotive meter between LF wheel speed sensor C160-1, circuit 516 (YE/BK), harness side and component side.
+</li></ul><li><b>For DTC C1230:
+</b> connect a fused (5A) jumper wire between LF wheel speed sensor C455-1, circuit 518 (LG/RD), harness side and component side. Connect the automotive meter between LF wheel speed sensor
+C455-2, circuit 519 (LG/BK), harness side and component side.
+</li><br><IMG src="a0080199.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Key in ON position.
+</li><li>Measure the current while slowly spinning the wheel.
+</li><li><b>Does the automotive meter switch between 6.3mA and 15.4mA?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 CHECK THE ABS MODULE OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Suspect Wheel Speed Sensor.
+</li><li>Key in ON position.
+</li><li><b>For DTCs C1145 or C1155
+</b>, measure the voltage between the suspect front wheel speed sensor pins, harness side.
+</li><br><IMG src="a0057374.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>For DTC 1230
+</b>, measure the voltage between rear wheel speed sensor C455-1, harness side and C455-2, harness side.
+</li><br><IMG src="a0075884.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the voltages less than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new wheel speed sensor. REFER to 
+<a href="s6269006.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Front, Rear Wheel Drive (RWD)
+</a>,
+
+<a href="s6269007.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Front, Four Wheel Drive (4WD)
+</a> or 
+<a href="s6269008.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Rear
+</a> in this section. CLEAR the DTC. TEST the system for normal operation.
+</td></tr><tr><td><a name="E6">&nbsp;
+</a><b>E6 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all ABS module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: DTC C1222 &#8212; Wheel Speed Mismatch, DTC C1237, DTC C1296, DTC C1297&#8212; Wheel Speed Sensor Signal Fault
+</b></p><h5>Normal Operation
+</h5><p>The wheel speed sensor and sensor ring generate a square wave signal to the anti-lock brake system (ABS) module that is proportional to wheel speed. The ABS module compares wheel speed inputs from all wheel speed sensors to determine an
+impending wheel lockup.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Wheel speed sensor ring
+</li><li>Wheel speed sensor
+</li><li>ABS module
+</li><li>Mismatched tire sizes
+</li><li>Incorrect axle ratio configuration in ABS module
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: DTC C1222 &#8212; WHEEL SPEED MISMATCH, DTC C1237, DTC C1296, DTC C1297 &#8212; WHEEL SPEED SENSOR SIGNAL FAULT
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Using the diagnostic tool, retrieve the ABS module DTCs.
+</li><li><b>Are DTCs C1145, C1155 or C1230 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6269003.htm#E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+
+<br><br><b>No
+</b><br>For DTC C1222, GO to 
+<a href="s6269003.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br>For DTC C1296 or C1297, GO to 
+<a href="s6269003.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br>For DTC C1237, GO to 
+<a href="s6269003.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br>If no DTCs are present, GO to 
+<a href="s6269003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE FRONT WHEEL SPEED SENSOR OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Wheel Speed Sensor C150 (LF) or C160 (RF).
+</li><li>If DTC C1296, connect a fused (5A) jumper wire between LF wheel speed sensor, C150 -2, circuit 521 (TN/OG), harness side and component side. Connect the automotive meter between the
+C150-1, circuit 522 (TN/BK), harness side and component side.
+</li><br><IMG src="a0080198.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>If DTC C1297, connect a fused (5A) jumper wire between the RF wheel speed sensor, C160 -2, circuit 514 (YE/RD), harness side and component side. Connect the automotive meter between the
+C160-1, circuit 516 (YE/BK), harness side and component side.
+</li><li>Key in ON position.
+</li><li>Measure the current while slowly spinning the wheel.
+</li><li><b>Does the automotive meter switch back and forth from approximately 6.3 mA to 15.4 mA?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new wheel speed sensor. REFER to 
+<a href="s6269006.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Front, Rear Wheel Drive (RWD)
+</a>, or
+
+<a href="s6269007.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Front, Four Wheel Drive (4WD)
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK THE REAR WHEEL SPEED SENSOR OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Rear Wheel Speed Sensor C455.
+</li><li>If DTC C1297, connect a fused (5A) jumper wire between rear wheel speed sensor, C455 -1, circuit 518 (LG/RD), harness side and component side. Connect the automotive meter between
+C455-2, circuit 519 (LG/BK), harness side and component side.
+</li><br><IMG src="a0080199.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Key in ON position.
+</li><li>Measure the current while slowly spinning the wheel.
+</li><li><b>Does the automotive meter switch back and forth from approximately 6.3 mA to 15.4 mA?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new wheel speed sensor. REFER to 
+<a href="s6269008.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Rear
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK FOR CORRECT ABS MODULE CONFIGURATION OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  DTC C1222 indicates that there is a problem with the axle configuration in the ABS module. Verify that the tires are the correct size for the vehicle as indicated on the vehicle certification label.
+
+<li>Carry out the ABS module configuration. Verify that the vehicle data matches the vehicle options. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</li><li>CLEAR the DTCs. Carry out the self-test.
+</li><li><b>Is DTC 1222 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a mis-configured ABS module.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 MONITOR THE WHEEL SPEED SENSOR PIDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  ABS Module Wheel Speed Sensor PIDs.
+</li><li>Drive the vehicle at various speeds above 10 km/h (6 mph) while monitoring the PIDs.
+</li><li><b>Do all of the PIDs match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br><b>No
+</b><br>INSPECT the wheel speed sensor tone ring. If OK, INSTALL a new wheel speed sensor in question. REFER to 
+<a href="s6269006.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Front, Rear Wheel Drive (RWD)
+</a>,
+
+<a href="s6269007.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Front, Four Wheel Drive (4WD)
+</a> or 
+<a href="s6269008.htm"                                                                                                                                                                                                                                                       >Wheel Speed Sensor &#8212; Rear
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F6">&nbsp;
+</a><b>F6 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: DTC C1266 Anti-Lock Brake System (ABS) Power Valve Relay Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>Fused battery voltage is supplied to the anti-lock brake system (ABS) module from central junction box (CJB) fuse 103 (20A) along circuit 532 (OG/YE) to activate the valve assembly. Ground is provided along circuit 530 (LG/YE).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit open
+</li><li>Circuit shorted
+</li><li>ABS module
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: DTC C1266 ANTI-LOCK BRAKE SYSTEM (ABS) POWER VALVE RELAY CIRCUIT FAILURE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK CIRCUIT 532 (OG/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  ABS Module C135.
+</li><li>Measure the voltage between ABS module C135-14, circuit 532 (OG/YE), harness side and ground.
+</li><br><IMG src="a0075887.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY CJB fuse 103 (20A) is OK. If OK, REPAIR circuit 532 (OG/YE) for an open. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK CIRCUIT 530 (LG/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between ABS module C135-15, circuit 530 (LG/YE), harness side and ground.
+</li><br><IMG src="a0075619.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR circuit 530 (LG/YE) for an open. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: The Yellow Anti-lock Brake System (ABS) Module Warning Indicator Is Always On
+</b></p><h5>Normal Operation
+</h5><p>The ABS lamp indicates to the operator when there is a fault in the ABS. The ABS warning lamp proves out for a period of 3 seconds when the ignition switch is turned from the OFF/ACC position to the RUN/START position.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>ABS module
+</li><li>Instrument cluster
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: THE YELLOW ANTI-LOCK BRAKE SYSTEM (ABS) MODULE WARNING INDICATOR IS ALWAYS ON
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Using the diagnostic tool, retrieve the ABS module DTCs.
+</li><li><b>Are any DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the Anti-Lock Brake System (ABS) Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CARRY OUT THE INSTRUMENT CLUSTER ABS WARNING INDICATOR ACTIVE COMMAND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Instrument Cluster Active Command.
+</li><li>Using the diagnostic tool, select the instrument cluster indicator lamp control active command. Command all warning lamps ON then OFF.
+</li><li><b>Does the yellow ABS warning indicator continue to illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#H4"                                                                                                                                                                                                                                                       >H4
+</a>.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK FOR CORRECT INSTRUMENT CLUSTER MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect ABS module C135.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminals.
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a href="s6269004.htm"                                                                                                                                                                                                                                                       >Anti-Lock Brake System (ABS) Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: The Traction Assist System Cannot Be Disabled/Enabled Or The Traction Assist Warning Indicator Is Always On
+</b></p><h5>Normal Operation
+</h5><p>The anti-lock brake system (ABS) module sends wheel speed sensor information to the powertrain control module (PCM) along the high speed communication area network (HS-CAN) bus. The PCM compares the front wheel speed sensor information to the
+rear wheel speed sensor information to determine if traction assist is necessary. If traction assist is necessary, the PCM limits engine torque, by regulating fuel and spark to the cylinders, to control the wheel slip. At the same time, the PCM
+sends the instrument cluster a message over the HS-CAN bus to illuminate the traction assist indicator. The traction assist indicator informs the driver that a traction assist event is taking place.
+</p><p>The traction assist system can be disabled by pressing the traction control switch located on the instrument panel. When the system is disabled, the traction assist system indicator on the traction control switch will illuminate and the message
+center (if equipped) will display Traction Control Off.
+</p><p>Fused ignition voltage is supplied to the traction control switch from central junction box (CJB) fuse 15 (5A) along circuit 640 (RD/YE). When the traction control switch is pressed, the voltage is supplied to the PCM along circuit 640 (BK).
+The PCM then grounds circuit 640 (RD/YE) which illuminates the traction control switch and sends a stability assist disable command over the HS-CAN bus.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit open
+</li><li>Circuit shorted
+</li><li>Wheel speed sensor(s)
+</li><li>PCM
+</li><li>ABS module
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: THE TRACTION ASSIST SYSTEM CANNOT BE DISABLED/ENABLED OR THE TRACTION ASSIST WARNING INDICATOR IS ALWAYS ON
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multi-meter probes.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 CHECK THE POWERTRAIN CONTROL MODULE (PCM) CONFIGURATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Verify that the PCM is configured for traction control.
+</li><li><b>Is the PCM configured for traction control?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#I2"                                                                                                                                                                                                                                                       >I2
+</a>.
+
+<br><br><b>No
+</b><br>RECONFIGURE the PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-01
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK FOR DTCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for any ABS module, PCM or communication DTCs.
+</li><li><b>Are any DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For ABS module DTCs, REFER to the Anti-Lock Brake System (ABS) Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br>For PCM DTCs, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+
+<br><br>For any communication DTCs, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#I3"                                                                                                                                                                                                                                                       >I3
+</a>.
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 CHECK FOR VOLTAGE AT THE TRACTION CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Traction Control Switch C280.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between ground and:
+</li><ul type="square"><li>traction control switch C280-1, circuit 640 (BK), harness side.
+</li></ul><ul type="square"><li>traction control switch C280-6, circuit 640 (RD/YE), harness side.
+</li></ul><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#I4"                                                                                                                                                                                                                                                       >I4
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY CJB fuse 15 (5A) is OK. If OK, REPAIR the affected circuit(s). TEST the system for normal operation.
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK THE TRACTION CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between traction control switch C280-1, component side, and traction control switch C280-2, component side while pressing and releasing the switch.
+</li><li><b>Is the resistance greater than 10,000 ohms with the switch released and less than 5 ohms with the switch pressed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6269003.htm#I5"                                                                                                                                                                                                                                                       >I5
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new traction control switch. TEST the system for normal operation.
+</td></tr><tr><td><a name="I5">&nbsp;
+</a><b>I5 CHECK CIRCUIT 959 (GY) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Powertrain Control Module (PCM) C175b.
+</li><li>Measure the resistance between PCM C175b-64, circuit 959 (GY), harness side and traction control switch C280-2, circuit 959 (GY), harness side.
+</li><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 959 (GY). TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#I6"                                                                                                                                                                                                                                                       >I6
+</a>.
+</td></tr><tr><td><a name="I6">&nbsp;
+</a><b>I6 CHECK CIRCUIT 959 (GY) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between PCM C175b-64, circuit 959 (GY), harness side and ground.
+</li><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 959 (GY). TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#I7"                                                                                                                                                                                                                                                       >I7
+</a>.
+</td></tr><tr><td><a name="I7">&nbsp;
+</a><b>I7 CHECK CIRCUIT 959 (GY) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between PCM C175b-64, circuit 959 (GY), harness side and ground.
+</li><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 959 (GY). TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6269003.htm#I8"                                                                                                                                                                                                                                                       >I8
+</a>.
+</td></tr><tr><td><a name="I8">&nbsp;
+</a><b>I8 CHECK THE PCM CONNECTORS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check PCM C175b for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li><li>spread terminal.
+</li></ul><li>Connect:  Powertrain Control Module (PCM) C175b.
+</li><li>Make sure the connector is seated correctly then operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

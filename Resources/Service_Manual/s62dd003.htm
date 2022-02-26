@@ -1,0 +1,1308 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="13"><meta name="tps_section" content="13"><meta name="tps_section_title" content="Parking Aid"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P7127Q0"><meta name="tps_procsgmlid" content="n917170"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 413-13:  Parking Aid
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Parking Aid
+</h4><meta name="tps_proctitle" content="Parking Aid"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=131&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >131
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B or equivalent
+</td></tr></table><p><b>Principles of Operation
+</b></p><p>The parking aid system detects objects behind the vehicle when the vehicle is in REVERSE. The parking aid module does this by calculating the distance to an object by using 4 ultrasonic sensors mounted in the rear bumper. The ultrasonic field
+is emitted in a semicircular area around the rear of the vehicle. The sensors can detect objects approximately 1.8 m (5.9 ft) to the rear of the vehicle, or 50 cm (1.6 ft) to the rear side of the vehicle. A 750 kHz variable warning tone is generated
+from a speaker located on the parking aid module. The speaker increases its warning tone rate as the vehicle gets closer to an obstacle. When an object is detected within 25 cm (10 in) of the sensors, the warning tone becomes continuous.
+</p><p><b>NOTE:
+</b>  The tailgate must be closed for correct operation of the parking aid system.
+</p><p>The parking aid system is enabled when the ignition switch is in the RUN position and REVERSE is selected. The parking aid disabled indicator illuminates for 3 seconds when the ignition switch is turned to the RUN position. The system is
+disabled by pressing the parking aid switch on the instrument panel. The parking aid system indicates the system is disabled by illuminating the parking aid disabled indicator (in the parking aid switch). The system enables when the ignition is
+turned to the RUN position, or when the vehicle is put into REVERSE.
+</p><p>The parking aid system is disabled if a fault is detected in 1 of the 4 sensors, the parking aid speaker or the parking aid module. This is indicated by the parking aid disabled indicator illuminating when the vehicle is put into REVERSE.
+</p><div><a name="extract_316">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+
+<br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) fuse 18 (10A)
+</LI><LI>Circuitry
+</LI><LI>Parking aid module
+</LI><LI>Parking aid sensors
+</LI><LI>Parking aid switch
+</LI><LI>Parking aid switch indicator LED
+</LI><LI>Parking aid speaker
+</LI><LI>Reversing lamps
+</LI></UL></TD></TR></TABLE><br></li></ol><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="5"><li>If the diagnostic tools still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN, UBP or ISO circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for the parking aid module,
+
+<a href="s62dd003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the parking aid module.
+</li></ul></li></ol><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s62dd003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Parking Aid Module Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1299
+</TD><TD valign="top" align="CENTER">Power Supply Sensor Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="CENTER">ECU is Defective
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER">CLEAR the DTCs. REPEAT the parking aid module self-test. If DTC B1342 is retrieved again, INSTALL a new parking aid module. REFER to 
+<A href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</A> in this section. CLEAR all DTCs. REPEAT the
+self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B2373
+</TD><TD valign="top" align="CENTER">LED No. 1 Circuit Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2477
+</TD><TD valign="top" align="CENTER">Module Configuration Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER">REFER to 
+<A href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1699
+</TD><TD valign="top" align="CENTER">Left Rear Outer Sensor Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1700
+</TD><TD valign="top" align="CENTER">Left Rear Outer Sensor Circuit Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1701
+</TD><TD valign="top" align="CENTER">Left Rear Outer Sensor Circuit Fault
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1702
+</TD><TD valign="top" align="CENTER">Right Rear Outer Sensor Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1703
+</TD><TD valign="top" align="CENTER">Right Rear Outer Sensor Circuit Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1704
+</TD><TD valign="top" align="CENTER">Right Rear Outer Sensor Circuit Fault
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1705
+</TD><TD valign="top" align="CENTER">Left Rear Inner Sensor Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1706
+</TD><TD valign="top" align="CENTER">Left Rear Inner Sensor Circuit Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1707
+</TD><TD valign="top" align="CENTER">Left Rear Inner Sensor Fault
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1708
+</TD><TD valign="top" align="CENTER">Right Rear Inner Sensor Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1709
+</TD><TD valign="top" align="CENTER">Right Rear Inner Sensor Circuit Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1710
+</TD><TD valign="top" align="CENTER">Right Rear Inner Sensor Fault
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1742
+</TD><TD valign="top" align="CENTER">Rear Sounder Circuit Failure
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1743
+</TD><TD valign="top" align="CENTER">Rear Sounder Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1748
+</TD><TD valign="top" align="CENTER">Switch Input Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1920
+</TD><TD valign="top" align="CENTER">Status LED No. 1 Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER"><A href="s62dd003.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All Other DTCs
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER">Parking Aid Module
+</TD><TD valign="top" align="CENTER">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR></TABLE><br><p><b>Parameter Identification (PID) Index
+</b></p><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">PID
+</TH><TH valign="bottom" align="CENTER">Description
+</TH></TR><TR><TD valign="top" align="CENTER">LR_CTRD
+
+<BR>LRI_DIST
+</TD><TD valign="top" align="CENTER">Left rear inner sensor distance to object
+</TD></TR><TR><TD valign="top" align="CENTER">LR_CNRD
+
+<BR>LRO_DIST
+</TD><TD valign="top" align="CENTER">Left rear outer sensor distance to object
+</TD></TR><TR><TD valign="top" align="CENTER">RR_CTRD
+
+<BR>RRI_DIST
+</TD><TD valign="top" align="CENTER">Right rear inner sensor distance to object
+</TD></TR><TR><TD valign="top" align="CENTER">RR_CNRD
+
+<BR>RRO_DIST
+</TD><TD valign="top" align="CENTER">Right rear outer sensor distance to object
+</TD></TR><TR><TD valign="top" align="CENTER">LR_CTRT
+
+<BR>LRI_ATTEN
+</TD><TD valign="top" align="CENTER">Left rear inner sensor attenuation
+</TD></TR><TR><TD valign="top" align="CENTER">LR_CNRT
+
+<BR>LRO_ATTEN
+</TD><TD valign="top" align="CENTER">Left rear outer sensor attenuation
+</TD></TR><TR><TD valign="top" align="CENTER">RR_CTRT
+
+<BR>RRI_ATTEN
+</TD><TD valign="top" align="CENTER">Right rear inner sensor attenuation
+</TD></TR><TR><TD valign="top" align="CENTER">RR_CNRT
+
+<BR>RRO_ATTEN
+</TD><TD valign="top" align="CENTER">Right rear outer sensor attenuation
+</TD></TR></TABLE><br><div><a name="extract_317">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the parking aid module
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>Parking aid module
+</li></ul></td><td><ul type="disc"><li><a href="s62dd003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The parking aid is inoperative/does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Parking aid sensor
+</li><li>Parking aid switch
+</li><li>Parking aid module
+</li><li>Rear bumper
+</li></ul></td><td><ul type="disc"><li><a href="s62dd003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Continuous or intermittent tone when no obstacles or fault codes are present (certain obstacles may appear "stealthy" to the system, depending on geometric shape, size and material)
+</li></ul></td><td><ul type="disc"><li>Dirty or iced-over parking aid sensor(s)
+</li></ul></td><td><ul type="disc"><li>CLEAN the rear bumper and sensors with high pressure water.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Parking aid sensor bezel(s) or parking aid sensor(s) locked into the rear bumper incorrectly
+</li><li>Parking aid sensors are not aligned correctly
+</li></ul></td><td><ul type="disc"><li>REMOVE and correctly INSTALL the parking aid sensor(s) and or bezel(s) as necessary.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Parking aid sensor
+</li><li>Parking aid module
+</li></ul></td><td><ul type="disc"><li><a href="s62dd003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr></table><div><a name="extract_318">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: No Communication With The Parking Aid Module
+</b></p><h5>Normal Operation
+</h5><p>Voltage is supplied to the parking aid module on circuit 294 (WH/LB). The parking aid module is grounded through circuit 875 (BK/LB). The parking aid module communicates with the diagnostic tool through the international standards organization
+(ISO) communications network.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>fuse
+</li><li>parking aid module
+</li><li>circuit 294 (WH/LB) open
+</li><li>circuit 875 (BK/LB) open
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: NO COMMUNICATION WITH THE PARKING AID MODULE
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="AQ1">&nbsp;
+</a><b>A1 CHECK THE PARKING AID MODULE CIRCUIT 294 (WH/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the parking aid module C2023-1, circuit 294 (WH/LB), harness side and ground.
+</li><br><IMG src="a0072266.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 18 (10A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUIT 875 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the parking aid module C2023-4, circuit 875 (BK/LB), harness side and ground.
+</li><br><IMG src="a0072267.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to continue diagnosis of the communication network.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Parking Aid Is Inoperative / Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>The parking aid system is enabled when the ignition switch is in the RUN position and REVERSE gear is selected. When REVERSE is selected, voltage is supplied from the reversing lamps to the parking aid module through circuit 1043 (DG/YE). The
+parking aid module supplies voltage to the parking aid sensors on circuit 1439 (BN/PK). The parking aid module supplies ground to the parking aid sensors on circuit 1440 (DG/YE). The parking aid module receives a signal from the parking aid sensors
+on circuits 1444 (DB/YE), 1443 (WH/LB), 1442 (DG/WH) and 1441 (WH/LG). The system can be disabled through the parking aid switch. A 750 Hz variable warning tone is generated from a parking aid speaker. The parking aid speaker increases the warning
+tone rate as the vehicle gets closer to an obstacle.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1043 (DG/YE) open or short to ground
+</li><li>circuit 1435 (DG/VT) open or short to ground
+</li><li>circuit 57 (BK) open
+</li><li>parking aid sensor
+</li><li>parking aid module
+</li><li>parking aid switch
+</li><li>rear bumper
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE PARKING AID IS INOPERATIVE / DOES NOT OPERATE CORRECTLY
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND PARKING AID MODULE SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any parking aid module DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE PARKING AID SENSORS FOR CORRECT ALIGNMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  If the vehicle was in an accident, the parking aid sensors may not be aligned correctly.
+
+<li>Check the bumper for correct alignment. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1j0l.htm&rightside=s62s1j0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-19
+</a>.
+</li><li>Check the parking aid sensors and holders for correct adjustment. Refer to 
+<a href="s62dd004.htm"                                                                                                                                                                                                                                                       >Azimuth System Check
+</a> and 
+<a href="s62dd005.htm"                                                                                                                                                                                                                                                       >Elevation System Check
+</a> in this section.
+</li><li><b>Are the bumper and parking aid sensors correctly aligned?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REALIGN or INSTALL a new bumper cover. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1j0l.htm&rightside=s62s1j0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-19
+</a>. If the vehicle was in an accident, further body work may be required to bring the parking aid sensors into correct
+alignment.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE REVERSING LAMPS OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Apply the parking brake.
+</li><li>Key in ON position.
+</li><li>Select REVERSE.
+</li><li>Check the reversing lamps operation.
+</li><li><b>Do the reversing lamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a> to continue diagnosis of the reversing lamps.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK CIRCUIT 1043 (DG/YE) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Key in ON position.
+</li><li>Apply the parking brake.
+</li><li>Select REVERSE.
+</li><li>Measure the voltage between the parking aid module C2023-3, circuit 1043 (DG/YE), harness side and ground.
+</li><br><IMG src="a0087705.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK CIRCUIT 1435 (DG/VT) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Switch C2035.
+</li><li>Measure the resistance between the parking aid module C2023-11, circuit 1435 (DG/VT), harness side and ground.
+</li><br><IMG src="a0072289.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#B6"                                                                                                                                                                                                                                                       >B6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the parking aid switch C2035-1, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0072290.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#B7"                                                                                                                                                                                                                                                       >B7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 CHECK CIRCUIT 1435 (DG/VT) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Parking Aid Switch C2035.
+</li><li>While pressing the parking aid switch, measure the resistance between the parking aid module C2023-11, circuit 1435 (DG/VT), harness side and ground.
+</li><br><IMG src="a0072289.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#B9"                                                                                                                                                                                                                                                       >B9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#B8"                                                                                                                                                                                                                                                       >B8
+</a>.
+</td></tr><tr><td><a name="B8">&nbsp;
+</a><b>B8 CHECK PARKING AID SWITCH FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Parking Aid Switch C2035.
+</li><li>While pressing and releasing the parking aid switch, measure the resistance between the parking aid switch C2035 pin 1, component side and the parking aid switch C2035 pin 2, component side.
+</li><br><IMG src="a0076530.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms with the switch pressed and greater than 10,000 ohms with the switch released?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 1435 (DG/VT). TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new parking aid switch. REFER to 
+<a href="s62dd006.htm"                                                                                                                                                                                                                                                       >Parking Aid Switch
+</a> in this section. TEST the system for normal operation.
+</td></tr><tr><td><a name="B9">&nbsp;
+</a><b>B9 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTCs C1700, C1703, C1706, C1709 Parking Aid Sensor Circuit Failure And B1299 Power Supply Sensor Circuit Short To Ground
+</b></p><h5>Normal Operation
+</h5><p>The parking aid module supplies voltage to the parking aid sensors on circuit 1439 (BN/PK). The parking aid module supplies ground to the parking aid sensors on circuit 1440 (DG/YE). The parking aid module receives a signal from the parking aid
+sensors on circuits 1444 (DB/YE), 1443 (WH/LB), 1442 (DG/WH) and 1441 (WH/LG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1439 (BN/PK) open or short to ground
+</li><li>circuit 1440 (DG/YE) open or short to ground
+</li><li>circuit 1441 (WH/LG) open or short to ground
+</li><li>circuit 1442 (DG/WH) open or short to ground
+</li><li>circuit 1443 (WH/LB) open or short to ground
+</li><li>circuit 1444 (DB/YE) open or short to ground
+</li><li>parking aid sensor(s)
+</li><li>parking aid bumper harness
+</li><li>parking aid module
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DTCs C1700, C1703, C1706, C1709 PARKING AID SENSOR CIRCUIT FAILURE AND B1299 POWER SUPPLY SENSOR CIRCUIT SHORT TO GROUND
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND PARKING AID MODULE SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If multiple DTCs are recorded, GO to 
+<a href="s62dd003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br>For DTCs C1700, C1703, C1706 or C1709, GO to 
+<a href="s62dd003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br>For DTC B1299, GO to 
+<a href="s62dd003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br>All others, REFER to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br><a href="s62dd003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE BUMPER WIRING HARNESS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the bumper wiring harness for opens, shorts, grounds, or corrosion.
+</li><li><b>Is the bumper wiring harness OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR or INSTALL a new bumper wiring harness. REPEAT the self-test.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK THE SENSOR CIRCUITRY FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Suspect Parking Aid Sensor.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Measure the resistance between the parking aid module, harness side and the suspect parking aid sensor, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Rear Sensors
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Sensor
+</TH><TH valign="bottom" align="CENTER">Parking Aid Module Connector - Pin
+</TH><TH valign="bottom" align="CENTER">Sensor Connector - Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C1700
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C2023-9
+</TD><TD valign="top" align="CENTER">C4009-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1700
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C2023-15
+</TD><TD valign="top" align="CENTER">C4009-2
+</TD><TD valign="top" align="CENTER">1441 (WH/LG)
+</TD></TR><TR><TD valign="top" align="CENTER">C1700
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C2023-12
+</TD><TD valign="top" align="CENTER">C4009-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1703
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C2023-9
+</TD><TD valign="top" align="CENTER">C4011-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1703
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C2023-16
+</TD><TD valign="top" align="CENTER">C4011-2
+</TD><TD valign="top" align="CENTER">1444 (DB/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1703
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C2023-12
+</TD><TD valign="top" align="CENTER">C4011-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1706
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C2023-9
+</TD><TD valign="top" align="CENTER">C4010-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1706
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C2023-14
+</TD><TD valign="top" align="CENTER">C4010-2
+</TD><TD valign="top" align="CENTER">1442 (DG/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">C1706
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C2023-12
+</TD><TD valign="top" align="CENTER">C4010-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1709
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C2023-9
+</TD><TD valign="top" align="CENTER">C4012-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1709
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C2023-13
+</TD><TD valign="top" align="CENTER">C4012-2
+</TD><TD valign="top" align="CENTER">1443 (WH/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">C1709
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C2023-12
+</TD><TD valign="top" align="CENTER">C4012-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK THE SENSOR CIRCUITRY FOR SHORTS TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the suspect parking aid sensor harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Rear Sensors
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Sensor
+</TH><TH valign="bottom" align="CENTER">Sensor Connector - Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C1700 or B1299
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C4009-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1700
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C4009-2
+</TD><TD valign="top" align="CENTER">1441 (WH/LG)
+</TD></TR><TR><TD valign="top" align="CENTER">C1700
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C4009-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1703 or B1299
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C4011-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1703
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C4011-2
+</TD><TD valign="top" align="CENTER">1444 (DB/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1703
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C4011-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1706 or B1299
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C4010-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1706
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C4010-2
+</TD><TD valign="top" align="CENTER">1442 (DG/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">C1706
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C4010-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1709 or B1299
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C4012-1
+</TD><TD valign="top" align="CENTER">1439 (BN/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C1709
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C4012-2
+</TD><TD valign="top" align="CENTER">1443 (WH/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">C1709
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C4012-3
+</TD><TD valign="top" align="CENTER">1440 (DG/YE)
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If all of the parking aid sensors recorded DTCs, GO to 
+<a href="s62dd003.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+
+<br><br>If one or more parking aid sensors recorded DTCs, INSTALL a new sensor(s) for the one in question. REFER to 
+<a href="s62dd008.htm"                                                                                                                                                                                                                                                       >Parking Aid Sensor
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: DTCs C1699, C1702, C1705 and C1708 Sensor Circuit Short To Battery
+</b></p><h5>Normal Operation
+</h5><p>The parking aid module supplies voltage to the parking aid sensors on circuit 1439 (BN/PK). The parking aid module supplies ground to the parking aid sensors on circuit 1440 (DG/YE). The parking aid module receives a signal from the parking aid
+sensors on circuits 1444 (DB/YE), 1443 (WH/LB), 1442 (DG/WH) and 1441 (WH/LG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1441 (WH/LG) short to voltage
+</li><li>circuit 1442 (DG/WH) short to voltage
+</li><li>circuit 1443 (WH/LB) short to voltage
+</li><li>circuit 1444 (DB/YE) short to voltage
+</li><li>parking aid sensor
+</li><li>parking aid bumper harness
+</li><li>parking aid module
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: DTCs C1699, C1702, C1705 AND C1708 SENSOR CIRCUIT SHORT TO BATTERY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND PARKING AID MODULE SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If multiple DTCs are recorded, GO to 
+<a href="s62dd003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br>For DTCs, C1699, C1702, C1705 and C1708,GO to 
+<a href="s62dd003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br>All others, REFER to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br><a href="s62dd003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE BUMPER WIRING HARNESS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the bumper wiring harness for opens, shorts, grounds, or corrosion.
+</li><li><b>Is the bumper wiring harness OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR or INSTALL a new bumper wiring harness. REPEAT the self-test.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK THE SENSOR CIRCUITRY FOR SHORTS TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Suspect Parking Aid Sensor.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the suspect parking aid sensor pin 2, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Rear Sensors
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Sensor
+</TH><TH valign="bottom" align="CENTER">Sensor Connector - Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C1699
+</TD><TD valign="top" align="CENTER">LH Outer
+</TD><TD valign="top" align="CENTER">C4009-2
+</TD><TD valign="top" align="CENTER">1441 (WH/LG)
+</TD></TR><TR><TD valign="top" align="CENTER">C1702
+</TD><TD valign="top" align="CENTER">RH Outer
+</TD><TD valign="top" align="CENTER">C4011-2
+</TD><TD valign="top" align="CENTER">1444 (DB/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C1705
+</TD><TD valign="top" align="CENTER">LH Inner
+</TD><TD valign="top" align="CENTER">C4010-2
+</TD><TD valign="top" align="CENTER">1442 (DG/WH)
+</TD></TR><TR><TD valign="top" align="CENTER">C1708
+</TD><TD valign="top" align="CENTER">RH Inner
+</TD><TD valign="top" align="CENTER">C4012-2
+</TD><TD valign="top" align="CENTER">1443 (WH/LB)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0085471.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE PARKING AID SENSORS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Install a known good parking aid sensor(s) for each of the suspect parking aid sensor(s).
+</li><li>Clear all the DTCs.
+</li><li>Test the system for normal operation.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new parking aid sensor. REFER to 
+<a href="s62dd008.htm"                                                                                                                                                                                                                                                       >Parking Aid Sensor
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: DTCs C1701, C1704, C1707 and C1710 Sensor Circuit Fault
+</b></p><h5>Normal Operation
+</h5><p>The parking aid system is enabled when the ignition switch is in the RUN position and REVERSE gear is selected. The parking aid module calculates the distance to an object by the use of 4 ultrasonic sensors mounted in the rear bumper. The
+parking aid sensors can detect obstructions in the path behind the vehicle. A 750 Hz variable warning tone is generated from a parking aid speaker. The parking aid speaker increases the warning tone rate as the vehicle gets closer to an obstacle.
+</p><p>If no objects are present, the parking aid PIDs should read 255 cm (100 in).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>dirty or obstructed parking aid sensor
+</li><li>parking aid sensor
+</li><li>parking aid bumper harness
+</li><li>parking aid module
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: DTCs C1701, C1704, C1707 AND C1710 SENSOR CIRCUIT FAULT
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND PARKING AID MODULE SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are multiple DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK THE BUMPER WIRING HARNESS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the bumper wiring harness for opens, shorts, grounds, or corrosion.
+</li><li><b>Is the bumper wiring harness OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR or INSTALL a new bumper wiring harness. REPEAT the self-test.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 DETERMINE THE CONDITION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Make sure the area around the vehicle is clear of anything that may activate the parking aid system.
+
+<li>Apply the parking brake.
+</li><li>With the brake pedal applied, shift the transmission into REVERSE.
+</li><li><b>Does the parking aid sound a continuous or intermittent tone when no obstacles are present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 VERIFY THE SUSPECTED SENSOR ALIGNMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Make sure the suspect parking aid sensor is the correct sensor.
+</li><li>Make sure the suspect parking aid sensor is flush-mounted in the bezel.
+</li><li>Make sure the suspect parking aid sensor is in alignment. Align the sensor if necessary. Refer to both the 
+<a href="s62dd004.htm"                                                                                                                                                                                                                                                       >Azimuth System Check
+</a> and 
+<a href="s62dd005.htm"                                                                                                                                                                                                                                                       >Elevation System Check
+</a> in this
+section.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Parking Aid PID.
+</li><li>With the brake pedal applied, shift the transmission into REVERSE and monitor the parking aid sensor distance PID. The PID will read 255 cm (100 in) on a correctly functioning sensor.
+</li><li><b>Does the PID read 255 cm (100 in)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating normally at this time. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 INSTALL A KNOWN GOOD SENSOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Install a known good sensor for the suspect parking aid sensor.
+</li><li>Key in ON position.
+</li><li>Monitor the parking aid PIDs.
+</li><li>With the brake pedal applied, shift the transmission into REVERSE and monitor the parking aid sensor distance PIDs. The PIDs read 255 cm (100 in) on correctly functioning sensors.
+</li><li><b>Does the PID read 255 cm (100 in)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid sensor. REFER to 
+<a href="s62dd008.htm"                                                                                                                                                                                                                                                       >Parking Aid Sensor
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#E8"                                                                                                                                                                                                                                                       >E8
+</a>.
+</td></tr><tr><td><a name="E6">&nbsp;
+</a><b>E6 CHECK THE BUMPER FOR DEBRIS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Make sure the area around the vehicle is clear of anything that might activate the parking aid system.
+
+<li>Clean the rear bumper and sensors with high-pressure water.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#E7"                                                                                                                                                                                                                                                       >E7
+</a>.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a dirty or blocked parking aid sensor. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E7">&nbsp;
+</a><b>E7 CHECK THE PARKING AID SENSOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Move the vehicle to an open area, free of obstacles.
+</li><li>Key in ON position.
+</li><li>Check the parking aid sensor distance and attenuation PIDs.
+</li><li><b>Do the parking aid sensor distance PIDs read 255 cm (100 in), and the attenuation PIDs read between 0 and 16?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#E8"                                                                                                                                                                                                                                                       >E8
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new parking aid sensor. REFER to 
+<a href="s62dd008.htm"                                                                                                                                                                                                                                                       >Parking Aid Sensor
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E8">&nbsp;
+</a><b>E8 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the diagnostic tool data link test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: DTCs C1742 Rear Sounder Circuit Failure And C1743 Rear Sounder Circuit Short To Battery
+</b></p><h5>Normal Operation
+</h5><p>The system can be disabled by the parking aid switch. A 750 Hz variable warning tone is generated from a parking aid speaker. The parking aid speaker increases the warning tone rate as the vehicle gets closer to an obstacle.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1437 (BK/PK) open, short to ground, or short to voltage
+</li><li>circuit 1438 (DG) open, short to ground, or short to voltage
+</li><li>parking aid module
+</li><li>parking aid speaker
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: DTCs C1742 REAR SOUNDER CIRCUIT FAILURE AND C1743 SHORT TO BATTERY
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC C1742, GO to 
+<a href="s62dd003.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br>If DTC C1743, GO to 
+<a href="s62dd003.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br>All others DTCs, REFER to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br><a href="s62dd003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK CIRCUIT 1437 (BK/PK) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Measure the resistance between the parking aid module C2023-2, circuit 1437 (BK/PK), harness side and ground.
+</li><br><IMG src="a0087706.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK CIRCUIT 1437 (BK/PK) FOR A SHORT TO GROUND WITH THE PARKING AID SPEAKER DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Parking Aid Speaker C2024.
+</li><li>Measure the resistance between the parking aid module C2023-2, circuit 1437 (BK/PK), harness side and ground.
+</li><br><IMG src="a0087706.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 1438 (DG). CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK CIRCUIT 1437 (BK/PK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Speaker C2024.
+</li><li>Measure the resistance between the parking aid module C2023-2, circuit 1437 (BK/PK), harness side and the parking aid speaker C2024-2, circuit 1437 (BK/PK), harness side.
+</li><br><IMG src="a0087707.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 CHECK CIRCUIT 1438 (DG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the parking aid module C2023-6, circuit 1438 (DG), harness side and the parking aid speaker C2024-1, circuit 1438 (DG), harness side.
+</li><br><IMG src="a0087708.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F6">&nbsp;
+</a><b>F6 CHECK THE PARKING AID SPEAKER CIRCUITRY FOR SHORTS TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the parking aid module C2023-2, circuit 1437 (BK/PK), harness side and ground; and between the parking aid module C2023-6, circuit 1438 (DG), harness side
+and ground.
+</li><br><IMG src="a0087727.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#F7"                                                                                                                                                                                                                                                       >F7
+</a>.
+</td></tr><tr><td><a name="F7">&nbsp;
+</a><b>F7 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the diagnostic tool data link test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: DTC C1748 Switch Input Circuit Short To Ground
+</b></p><h5>Normal Operation
+</h5><p>The parking aid system is enabled when the ignition switch is in the RUN position and the transmission is in REVERSE. The system can be disabled by the parking aid switch.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1435 (DG/VT) short to ground
+</li><li>parking aid switch
+</li><li>parking aid module
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: DTC C1748 SWITCH INPUT CIRCUIT SHORT TO GROUND
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND PARKING AID MODULE SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC C1748, GO to 
+<a href="s62dd003.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br>All other DTCs, REFER to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br><a href="s62dd003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK THE PARKING AID SWITCH OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>While pressing and releasing the parking aid switch, measure the resistance between the parking aid module C2023-11, circuit 1435 (DG/VT), harness side and ground.
+</li><br><IMG src="a0087728.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms with the switch pressed and greater than 10,000 ohms with the switch released?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#G4"                                                                                                                                                                                                                                                       >G4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK CIRCUIT 1435 (DG/VT) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Parking Aid Switch C2035.
+</li><li>Measure the resistance between the parking aid module C2023-11, circuit 1435 (DG/VT), harness side and ground.
+</li><br><IMG src="a0087728.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid switch. REFER to 
+<a href="s62dd006.htm"                                                                                                                                                                                                                                                       >Parking Aid Switch
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G4">&nbsp;
+</a><b>G4 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the diagnostic tool data link test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: DTC C1920 Status LED No. 1 Circuit Short To Ground and B2373 LED No. 1 Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>The parking aid system is enabled when the ignition switch is in the RUN position and the transmission is in REVERSE. The system can be disabled by the parking aid switch. The parking aid module sends a signal to the LED over circuit 1436
+(VT/OG) when the switch is pressed. The switch is grounded through circuit 1205 (BK).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1436 (VT/OG) open, short to ground, or short to voltage
+</li><li>parking aid switch
+</li><li>parking aid module
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H:  DTC C1920 STATUS LED NO. 1 CIRCUIT SHORT TO GROUND AND B2373 LED NO. 1 CIRCUIT FAILURE
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK THE RECORDED DIAGNOSTIC TROUBLE CODES (DTCs) FROM BOTH THE CONTINUOUS AND ON-DEMAND PARKING AID MODULE SELF-TESTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded parking aid module DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For DTC C1920 or B2373, GO to 
+<a href="s62dd003.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+
+<br><br>All others, REFER to the Parking Aid Module Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br><a href="s62dd003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK CIRCUIT 1436 (VT/OG) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Switch C2035.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Measure the resistance between the parking aid module C2023-5, circuit 1436 (VT/OG), harness side and ground.
+</li><br><IMG src="a0087729.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK CIRCUIT 1436 (VT/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the parking aid module C2023-5, circuit 1436 (VT/OG), harness side and the parking aid switch C2035-6, circuit 1436 (VT/OG), harness side.
+</li><br><IMG src="a0072286.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#H4"                                                                                                                                                                                                                                                       >H4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK CIRCUIT 1436 (VT/OG) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the parking aid module C2023-5, circuit 1436 (VT/OG), harness side and ground.
+</li><br><IMG src="a0087731.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62dd003.htm#H5"                                                                                                                                                                                                                                                       >H5
+</a>.
+</td></tr><tr><td><a name="H5">&nbsp;
+</a><b>H5 CHECK THE PARKING AID SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Install a known good parking aid switch.
+</li><li>Test the system for normal operation.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62dd003.htm#H6"                                                                                                                                                                                                                                                       >H6
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new parking aid switch. REFER to 
+<a href="s62dd006.htm"                                                                                                                                                                                                                                                       >Parking Aid Switch
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="H6">&nbsp;
+</a><b>H6 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the parking aid module connector.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect the parking aid module connector and make sure it seats correctly.
+</li><li>Operate the system and determine if the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a href="s62dd007.htm"                                                                                                                                                                                                                                                       >Parking Aid Module
+</a> in this section. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the diagnostic tool data link test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

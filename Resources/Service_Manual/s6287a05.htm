@@ -1,0 +1,1293 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="08"><meta name="tps_section" content="07A"><meta name="tps_section_title" content="Four Wheel Drive (4WD) Systems"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P9301Q703227"><meta name="tps_procsgmlid" content="n936728"><meta name="tps_packetinfo" content="453410"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 308-07A:  Four Wheel Drive (4WD) Systems
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  09/22/2005
+</div></TD></TR></TABLE><hr><h4>Four Wheel Drive (4WD) Systems &#8212; Torque On Demand (TOD)
+</h4><meta name="tps_proctitle" content="Four Wheel Drive (4WD) Systems &#8212; Torque On Demand (TOD)"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=034&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >34
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st1177a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">88 Digital Multimeter or equivalent
+
+<br>105-R0053
+
+</td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B
+</td></tr></table><div><a name="extract_253">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The all-wheel drive (AWD) system is an electronic shift system that allows the operator to choose between 2 different 4-wheel drive modes. The operator can switch the mode select switch (MSS) between AWD and 4H mode at speeds up to 88 km/h (55
+mph).
+</p><p>In AWD mode at rest under cruising conditions, the 4WD control module (PCM) activates the transfer case clutch at a minimum level. This allows for the small difference between the front and rear driveshaft speeds that occur normally when
+negotiating corners on dry pavement.
+</p><p>When wheel slippage occurs, the 4WD control module (PCM) will increase the torque sent to the transfer case clutch to the front wheels in order to prevent or control wheel slip.
+</p><p>In 4H mode with throttle applied, the 4WD control module (PCM) signals the transfer case clutch to lock the front and rear driveshafts for maximum 4-wheel drive traction. The 4H mode is not intended for use when driving on dry or barely wet
+pavement. It should be used only for off-road or in severe winter driving conditions.
+</p><ul type="disc"><b>Feature Inputs:
+</b>
+
+<li>Mode select switch (MSS)
+</li><li>Wheel speeds (via CAN communication)
+</li></ul><ul type="disc"><b>Feature Outputs:
+</b>
+
+<li>Transfer case clutch
+</li><li>Instrument cluster indicators (via CAN communication)
+</li><li>AWD mode (via CAN communication to PCM)
+</li></ul><div><a name="extract_254">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Halfshafts
+</LI><LI>Driveshaft and universal joints
+</LI><LI>Vacuum leaks
+</LI><LI>Fluid leaks
+</LI><LI>Matching tire sizes
+</LI><LI>Transfer case
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) mini fuses:
+
+<UL type="square"><LI>28 (5A)
+</LI><LI>29 (15A)
+</LI><LI>30 (15A)
+</LI></UL></LI><LI>CJB fuse 111 (20A)
+</LI><LI>Wiring harness
+</LI><LI>Mode select switch (MSS)
+</LI><LI>Transfer case clutch
+</LI><LI>Connector(s)
+</LI><LI>Circuitry
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+</li></ol><ul type="disc"><li>check that the program card is correctly installed (if using NGS+).
+</li><li>check the connections to the vehicle.
+</li><li>check the ignition switch position.
+</li></ul><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the data link diagnostics test. If the diagnostic tool responds with:
+</li></ol><ul type="disc"><li>SCP+, SCP-, UBP or CAN or ISO circuits fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li><li>No response/not equipped for powertrain control module (PCM). Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose module communication problems.
+</li><li>No response/not equipped for 4WD control module (PCM), 
+<a href="s6287a05.htm#PS2-S"                                                                                                                                                                                                                                                       >Go To Pinpoint Test S
+</a>.
+</li><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs and carry out the self-test diagnostics for the 4WD control module (PCM).
+</li></ul><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the 4WD Control Module (PCM) DTC Index to continue diagnostics.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s6287a03.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_255">&nbsp;
+</a></div>
+
+<p><b>4WD Control Module Diagnostic Trouble Code (DTC) Index
+</b></p><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1317
+</TD><TD valign="top" align="LEFT">Battery Voltage High
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">CHECK the battery and charging system for faults. REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A>. CLEAR the DTC. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B1318
+</TD><TD valign="top" align="LEFT">Battery Voltage Low
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">CHECK the battery and charging system for faults. REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A>. CLEAR the DTC. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="LEFT">ECU is Defective
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">CLEAR the DTC. REPEAT the self-test. If DTC B1342 is retrieved, INSTALL a 4WD control module (integral to the PCM). REFER to 
+<A href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 303-14
+</A>. REPEAT the self-test.
+</TD></TR><TR><TD valign="top" align="CENTER">P1812
+</TD><TD valign="top" align="LEFT">Transmission 4-Wheel Drive Mode Select Circuit Failure
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1815
+</TD><TD valign="top" align="LEFT">Transmission 4-Wheel Drive Mode Select Short Circuit to Ground
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1824
+</TD><TD valign="top" align="LEFT">Transmission 4-Wheel Drive Clutch Relay Circuit Failure
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1826
+</TD><TD valign="top" align="LEFT">Transmission 4-Wheel Drive Low Clutch Relay Short Circuit to Battery
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1827
+</TD><TD valign="top" align="LEFT">Transmission 4-Wheel Drive Low Clutch Relay Short Circuit to Ground
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT"><A href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="LEFT">CAN Communication BUS Fault &#8212; Received Error
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">DIAGNOSE the module communication network. REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2023
+</TD><TD valign="top" align="LEFT">Fault Received From External Node
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">DIAGNOSE the module communication network. REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2050
+</TD><TD valign="top" align="LEFT">No Application Present
+</TD><TD valign="top" align="CENTER">4WD Control Module
+</TD><TD valign="top" align="LEFT">Method 3 programming fault. REFER to 
+<A href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 418-00
+</A> for 4WD control module (PCM) programming information.
+</TD></TR></TABLE><br><div><a name="extract_256">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC3">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the 4WD control module (PCM)
+</li></ul></td><td><ul type="disc"><li>Diagnostic tool
+</li><li>Data link connector (DLC)
+</li><li>4WD control module (PCM)
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li><a href="s6287a05.htm#PS2-S"                                                                                                                                                                                                                                                       >Go To Pinpoint Test S
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The instrument cluster 4H indicator does not operate correctly/does not operate
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li><li>Circuitry
+</li><li>4WD control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s6287a05.htm#PS2-U"                                                                                                                                                                                                                                                       >Go To Pinpoint Test U
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The vehicle does not shift between AWD and 4H modes correctly
+</li></ul></td><td><ul type="disc"><li>Mode select switch (MSS)
+</li><li>Transfer case
+</li><li>Transfer case clutch
+</li><li>4WD control module (PCM)
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Straightline driveline wind-up
+</li></ul></td><td><ul type="disc"><li>Tire inflation pressure
+</li><li>Tire and wheel size
+</li><li>Tire wear
+</li><li>Axle ratio
+</li></ul></td><td><ul type="disc"><li><a href="s6287a05.htm#PS2-V"                                                                                                                                                                                                                                                       >Go To Pinpoint Test V
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Flashing 4H indicator 3 times every 2 minutes
+</li></ul></td><td><ul type="disc"><li>Loss of CAN communication between 4WD control module (PCM) and instrument cluster
+</li></ul></td><td><ul type="disc"><li>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>No communication with the 4WD control module (PCM)
+</li></ul></td><td><ul type="disc"><li>CHECK 4WD control module (PCM) communication. 
+<a href="s6287a05.htm#PS2-S"                                                                                                                                                                                                                                                       >Go To Pinpoint Test S
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The transfer case makes noise
+</li></ul></td><td><ul type="disc"><li>Tire inflation pressure
+</li><li>Tire and wheel size
+</li></ul></td><td><ul type="disc"><li>MAKE SURE that all tires and wheels are the same size and that the inflation pressures are correct.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Tire tread wear
+</li></ul></td><td><ul type="disc"><li>CHECK tire tread wear to see if there is more than 0.15 mm (0.06 in) difference in tread wear between front and rear. INTERCHANGE one front wheel and one rear wheel. ROAD TEST again.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Internal components
+</li></ul></td><td><ul type="disc"><li>OPERATE the vehicle in all transmission gears. If there is noise in the transmission in NEUTRAL, or in some gears and not in others, REMOVE and REPAIR the transmission. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a>. If there is noise in all gears, DISASSEMBLE the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. CHECK the
+planetary gears, the bearings, the upper and lower drive sprockets and drive chain for damage. INSTALL new parts as necessary.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Fluid level
+</li></ul></td><td><ul type="disc"><li>FILL with automatic transmission fluid. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The vehicle binds in turns/resists turning/pulsates/shudders in a straight line
+</li></ul></td><td><ul type="disc"><li>Unmatched tire sizes
+</li><li>Unequal amounts of tire wear
+</li><li>Unequal tire inflation pressures
+</li><li>Unmatched front and rear axle ratios
+</li></ul></td><td><ul type="disc"><li><a href="s6287a05.htm#W"                                                                                                                                                                                                                                                       >Go To Pinpoint Test W
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Unable to duplicate customer concern
+</li></ul></td><td><ul type="disc"><li>4WD system and/or related components
+</li></ul></td><td><ul type="disc"><li>CARRY OUT the AWD Functional Test. 
+<a href="s6287a05.htm#PS2-X"                                                                                                                                                                                                                                                       >Go To Pinpoint Test X
+</a>.
+</li></ul></td></tr></table><div><a name="extract_257">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-S">&nbsp;
+</a><p><b>Pinpoint Test S: No Communication With the 4WD Control Module (PCM)
+</b></p><p><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=034&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >34
+</a> for schematic and connector information.
+</p></p><h5>Normal Operation
+</h5><p>In order for the 4WD Control Module (PCM) to communicate with the diagnostic tool, the operating voltage required to supply the 4WD control module (PCM) is in a range between 9 and 16 volts. Hot-at-all times voltage is supplied by circuit 1861
+(RD) and circuit 1865 (WH/OG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Power supply:
+
+<ul type="square"><li>circuit 1861 (RD)
+</li><li>circuit 1865 (WH/OG)
+</li></ul></li><li>Central junction box (CJB) mini-fuses:
+
+<ul type="square"><li>29 (15A)
+</li><li>30 (15A)
+</li></ul></li><li>Charging system
+</li><li>Battery
+</li></ul><a name="S">&nbsp;
+</a><h5>PINPOINT TEST S: NO COMMUNICATION WITH THE 4WD CONTROL MODULE (PCM)
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the Flex Probe Kit for all test connections to prevent damage to the wiring terminals. Do not use standard multimeter probes.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="S1">&nbsp;
+</a><b>S1 CHECK FOR DIAGNOSTIC TOOL COMMUNICATION WITH THE VEHICLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify diagnostic tool communication with the vehicle.
+</li><ul type="square"><li>If using the using WDS, follow the directions and carry out the network test.
+</li></ul><ul type="square"><li>If using NGS+, verify that the correct cable is used and the vehicle and engine selection information is correct.
+</li></ul><li><b>WDS: Does the network test pass for the PCM?
+
+<br><br>NGS+: Does the diagnostic tool communicate with the PCM?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#S2"                                                                                                                                                                                                                                                       >S2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to the appropriate diagnostic tool manual for further diagnosis.
+</td></tr><tr><td><a name="S2">&nbsp;
+</a><b>S2 CHECK FOR VOLTAGE INPUT TO THE 4WD CONTROL MODULE (PCM)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  4WD Control Module (PCM) C175b.
+</li><li>Measure the voltage between C175b-12, circuit 1861 (RD), harness side and ground; and between C175b-13, circuit 1865 (WH/OG) and ground.
+</li><br><IMG src="n0042423.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the voltages greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#S6"                                                                                                                                                                                                                                                       >S6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#S3"                                                                                                                                                                                                                                                       >S3
+</a>.
+</td></tr><tr><td><a name="S3">&nbsp;
+</a><b>S3 CHECK THE CENTRAL JUNCTION BOX (CJB) MINI-FUSES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check central junction box (CJB) mini-fuses 29 (15A) and 30 (15A).
+</li><li><b>Are the fuses OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#S4"                                                                                                                                                                                                                                                       >S4
+</a>.
+
+<br><br><b>No
+</b><br>CHECK circuit 1861 (RD) and/or circuit 1865 (WH/OG) for a short to ground. REPAIR as necessary. REPEAT the self-test.
+</td></tr><tr><td><a name="S4">&nbsp;
+</a><b>S4 CHECK FOR BATTERY VOLTAGE FROM THE CENTRAL JUNCTION BOX (CJB)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between central junction box (CJB) input side fuse cavity 29 and ground; between CJB input side fuse cavity 30 and ground.
+</li><li><b>Are the voltages greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL new components as necessary. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#S5"                                                                                                                                                                                                                                                       >S5
+</a>.
+</td></tr><tr><td><a name="S5">&nbsp;
+</a><b>S5 CHECK THE BATTERY VOLTAGE WITH THE ENGINE RUNNING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start the engine.
+</li><li>Measure the battery voltage at the positive battery terminal.
+</li><li><b>Is the voltage greater than 9 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 1861 (RD) or 1865 (WH/OG) at the PDJB. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CHECK the charging system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-00
+</a>.
+</td></tr><tr><td><a name="S6">&nbsp;
+</a><b>S6 CHECK THE GROUND CIRCUITS FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the battery ground cable. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62se10l.htm&rightside=s62se10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li>Disconnect:  4WD Control Module (PCM) C175b.
+</li><li>Measure the resistance between C175b-66, circuit 567 (LB/YE) and ground; and between C175b-67, circuits 570a C175b-68, circuit 570b
+C175b-69, circuits 570c C175b-70 circuit 570d, (BK/WH) and ground.
+</li><br><IMG src="n0044897.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#S7"                                                                                                                                                                                                                                                       >S7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the affected circuit(s). REPEAT the self-test.
+</td></tr><tr><td><a name="S7">&nbsp;
+</a><b>S7 CHECK THE VOLTAGE ON GROUND CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between C175b-66, circuit 567 (LB/YE) and ground; and between C175b-67, circuit 570a, C175b-68, circuit 570b,
+C175b-69, circuit 570c, C175b-70, circuit 570d and ground.
+</li><br><IMG src="n0044898.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the affected circuit(s). REPEAT the self-test.
+
+<br><br><b>No
+</b><br>Disconnect all 4WD control module (PCM) connectors. CHECK for corrosion and/or pushed-out pins. The condition may have been caused by a loose or corroded connector. REPAIR or CLEAN as necessary.
+
+<br><br>If not, INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+</td></tr></table><a name="PS2-T">&nbsp;
+</a><p><b>Pinpoint Test T: The Vehicle Does Not Shift Between AWD And 4H Correctly
+</b></p><h5>Normal Operation
+</h5><p>With the key in the ON position, the 4WD control module (PCM) receives the operator's choice of 4-wheel drive selection from the MSS. The 4WD control module (PCM) then controls the electric clutch. If the transfer case is not responding to the
+operator's intentions, systematically check all inputs and outputs to the 4WD control module (PCM).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>4H indicator
+</li><li>Transfer case
+</li><li>4WD control module (PCM)
+</li><li>Circuits:
+
+<ul type="square"><li>1856 (GY/OG)
+</li><li>92 (LB/YE)
+</li><li>779 (BN)
+</li><li>682 (DB)
+</li><li>780 (DB)
+</li></ul></li><li>Transfer case clutch
+</li><li>Ignition switch and/or circuitry
+</li><li>CAN communication network
+</li><li>Instrument cluster (IC)
+</li><li>Mode select switch (MSS)
+</li></ul><a name="T">&nbsp;
+</a><h5>PINPOINT TEST T:  THE VEHICLE DOES NOT SHIFT BETWEEN AWD AND 4H CORRECTLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="T1">&nbsp;
+</a><b>T1 CHECK INDICATOR PROVE-OUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Start the engine while observing the 4H indicator prove out.
+</li><li><b>Did the 4H indicator prove out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T2"                                                                                                                                                                                                                                                       >T2
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the 4H indicator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</td></tr><tr><td><a name="T2">&nbsp;
+</a><b>T2 CHECK THE 4H INDICATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Observe the 4H indicator while the engine is running.
+</li><li><b>Does the 4H indicator flash in increments of 3?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK for 4WD control module (PCM) network communication faults. 
+<a href="s6287a05.htm#PS2-S"                                                                                                                                                                                                                                                       >Go To Pinpoint Test S
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T3"                                                                                                                                                                                                                                                       >T3
+</a>.
+</td></tr><tr><td><a name="T3">&nbsp;
+</a><b>T3 CHECK FOR 4H INDICATOR ILLUMINATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select 4H.
+</li><li><b>Does the 4H indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T4"                                                                                                                                                                                                                                                       >T4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T16"                                                                                                                                                                                                                                                       >T16
+</a>.
+</td></tr><tr><td><a name="T4">&nbsp;
+</a><b>T4 CHECK FOR WIND-UP IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface in turns whill applying the throttle.
+</li><li>Check for the presence of of driveline windup and tire scuff.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T9"                                                                                                                                                                                                                                                       >T9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T5"                                                                                                                                                                                                                                                       >T5
+</a>.
+</td></tr><tr><td><a name="T5">&nbsp;
+</a><b>T5 CHECK THE TRANSFER CASE CLUTCH DUTY CYCLE PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the transfer case clutch duty cycle (pulse width modulated-(PWM)) PID at WOT, with the transfer case in 4H, engine OFF and ignition ON.
+</li><li><b>Does the clutch duty cycle PID indicate 98% clutch at WOT?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T6"                                                                                                                                                                                                                                                       >T6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T8"                                                                                                                                                                                                                                                       >T8
+</a>.
+</td></tr><tr><td><a name="T6">&nbsp;
+</a><b>T6 CHECK FOR VOLTAGE ON THE CLUTCH POWER CIRCUIT 779 (BN)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Use the diagnostic tool active commands to cycle the transfer case clutch to 98%.
+</li><li>Back-probe the transfer case C3146-2, circuit 779 (BN).
+</li><li>Measure the voltage on circuit 779 (BN) using a digital multimeter.
+</li><li><b>Is the voltage greater than 8.5 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End the active command. CHECK the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T7"                                                                                                                                                                                                                                                       >T7
+</a>.
+</td></tr><tr><td><a name="T7">&nbsp;
+</a><b>T7 CHECK CIRCUIT 779 (BN) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Transfer Case C3146.
+</li><li>Disconnect:  4WD Control Module (PCM) C175t.
+</li><li>Measure the resistance between 4WD control module (PCM) C175t-49 harness side and transfer case C3146-2 harness side, circuit 779 (BN).
+</li><br><IMG src="n0043795.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTC(s). TEST the system for normal operation.
+</td></tr><tr><td><a name="T8">&nbsp;
+</a><b>T8 CHECK THE THROTTLE POSITION OUTPUT PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the throttle position output PID.
+</li><li>Slowly move the throttle from closed throttle to WOT and observe the throttle position output PID.
+</li><li><b>Does the value vary between 0% at closed throttle and 100% at WOT?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T9"                                                                                                                                                                                                                                                       >T9
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the throttle position sensor and/or PCM for faults. Refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</td></tr><tr><td><a name="T9">&nbsp;
+</a><b>T9 CHECK THE 4H INDICATOR IN AWD MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Switch the MSS to AWD.
+</li><li><b>Does the 4H indicator turn off?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T10"                                                                                                                                                                                                                                                       >T10
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-U"                                                                                                                                                                                                                                                       >Go To Pinpoint Test U
+</a>.
+</td></tr><tr><td><a name="T10">&nbsp;
+</a><b>T10 CHECK FOR WIND-UP IN AWD MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface in turns while applying the throttle.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T11"                                                                                                                                                                                                                                                       >T11
+</a>.
+
+<br><br><b>No
+</b><br>The 4WD system is operating correctly.
+</td></tr><tr><td><a name="T11">&nbsp;
+</a><b>T11 CHECK THE TRANSFER CASE CLUTCH DUTY CYCLE PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the transfer case clutch duty cycle (pulse width modulated-(PWM)) PID at closed throttle, engine off and ignition ON.
+</li><li><b>Does the clutch duty cycle PID indicate 2 to 4% clutch application at closed throttle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T12"                                                                                                                                                                                                                                                       >T12
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T14"                                                                                                                                                                                                                                                       >T14
+</a>.
+</td></tr><tr><td><a name="T12">&nbsp;
+</a><b>T12 CHECK FOR VOLTAGE ON THE CLUTCH POWER CIRCUIT 779 (BN)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Use the diagnostic tool active commands to cycle the transfer case clutch to 4%.
+</li><li>Back-probe the transfer case connector C3146-2, circuit 779 (BN).
+</li><li>Measure the voltage on circuit 779 (BN) using a digital multimeter.
+</li><li><b>Is the voltage approximately 0.48 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>End the active command. CHECK the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+
+<br><br><b>No
+</b><br>End the active command. GO to 
+<a href="s6287a05.htm#T13"                                                                                                                                                                                                                                                       >T13
+</a>.
+</td></tr><tr><td><a name="T13">&nbsp;
+</a><b>T13 CHECK CIRCUIT 779 (BN) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Transfer Case C3146.
+</li><li>Disconnect:  4WD Control Module (PCM) C175t.
+</li><li>Measure the resistance between transfer case C3146-2 harness side, and 4WD control module (PCM) C175t-49 harness side, circuit 779 (BN).
+</li><br><IMG src="n0043795.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CHECK the system for normal operation.
+</td></tr><tr><td><a name="T14">&nbsp;
+</a><b>T14 CHECK THE WHEEL SPEED PIDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>While driving the vehicle at 30 km/h (18 mph), monitor the wheel speed PIDs.
+</li><li>COMPARE the speedometer reading to the wheel speed PIDs.
+</li><li><b>Do the wheel speed PIDs and speedometer speeds match within 1.5 km/h (1 mph)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T15"                                                                                                                                                                                                                                                       >T15
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the ABS system for faults. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>.
+</td></tr><tr><td><a name="T15">&nbsp;
+</a><b>T15 CHECK THE THROTTLE POSITION SENSOR PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Slowly move throttle from closed throttle to WOT and observe the throttle position sensor voltage PID.
+</li><li><b>Does the value vary between 0% at closed throttle and 100% at WOT?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CHECK the throttle position sensor and/or PCM for faults. Refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</td></tr><tr><td><a name="T16">&nbsp;
+</a><b>T16 CHECK THE IGNITION SWITCH STATUS PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Key in ON position.
+</li><li>Monitor the ignition switch status PID.
+</li><li><b>Does the ignition switch position correspond with the ignition status PID?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T17"                                                                                                                                                                                                                                                       >T17
+</a>.
+
+<br><br><b>No
+</b><br>CHECK ignition run/start sense circuit, CJB fuse 28 (5A) and circuit 1856 (GY/OG), C175b-17 harness side. If OK, CHECK the CAN communication network. Refer to
+
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</td></tr><tr><td><a name="T17">&nbsp;
+</a><b>T17 CHECK THE MSS PID IN 4H MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the MSS PID while switching the MSS to 4H.
+</li><li><b>Do the MSS PID indicate 4H?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T18"                                                                                                                                                                                                                                                       >T18
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#T19"                                                                                                                                                                                                                                                       >T19
+</a>.
+</td></tr><tr><td><a name="T18">&nbsp;
+</a><b>T18 CHECK THE TRANSFER CASE CLUTCH DUTY CYCLE PID WITH THE MSS IN 4H
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the clutch duty cycle PID.
+</li><li><b>Does the clutch duty cycle value equal 10%?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the instrument cluster. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+</td></tr><tr><td><a name="T19">&nbsp;
+</a><b>T19 CHECK THE MSS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  MSS C284.
+</li><li>Measure the resistance between MSS C284-2, component side and pin 3, component side. Refer to the following chart:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">MSS Position
+</TH><TH valign="bottom" align="CENTER">Resistance (&#177;1%)
+</TH></TR><TR><TD valign="top" align="CENTER">AWD
+</TD><TD valign="top" align="CENTER">619 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">4H
+</TD><TD valign="top" align="CENTER">270 ohms
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0049121.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances within the specified values?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T20"                                                                                                                                                                                                                                                       >T20
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new MSS. REFER to 
+<a href="s6287a06.htm"                                                                                                                                                                                                                                                       >Mode Select Switch (MSS)
+</a> in this section. TEST the system for normal operation.
+</td></tr><tr><td><a name="T20">&nbsp;
+</a><b>T20 CHECK THE MSS CIRCUITS 682 (DB) AND 780 (DB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between MSS C284-2 harness side and 4WD control module (PCM) C175b-31 harness side, circuit 682 (DB); measure the resistance between MSS
+C284-3 harness side and 4WD control module C175b-32 harness side, circuit 780 (DB).
+</li><br><IMG src="n0042477.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T21"                                                                                                                                                                                                                                                       >T21
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s). CLEAR the DTC(s). REPEAT the self-test.
+</td></tr><tr><td><a name="T21">&nbsp;
+</a><b>T21 CHECK THE MSS CIRCUITS 682 (DB) AND 780 (DB) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between MSS C284-2, circuit 682 (DB), harness side and ground; measure the voltage between MSS C284-3 circuit 780 (DB), harness side and ground.
+</li><br><IMG src="a0092316.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#T22"                                                                                                                                                                                                                                                       >T22
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s). CLEAR the DTC(s). REPEAT the self-test.
+</td></tr><tr><td><a name="T22">&nbsp;
+</a><b>T22 CHECK THE MSS CIRCUITS 682 (DB) AND 780 (DB) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between MSS C284-2, circuit 682 (DB) harness side and ground; and between MSS C284-3, circuit 780 (DB) harness side and ground.
+</li><br><IMG src="a0092317.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s). CLEAR the DTC(s). REPEAT the self-test.
+</td></tr></table><a name="PS2-U">&nbsp;
+</a><p><b>Pinpoint Test U: The Instrument Cluster 4H Indicator Does Not Operate Correctly/Does Not Operate
+</b></p><h5>Normal Operation
+</h5><p>The 4H indicator status is transmitted to the instrument cluster from the 4WD control module (PCM) through the controller area network (CAN), circuits 1827 (WH/LG) and 1828 (PK/LG). A steady indicator displays when the vehicle is in 4H,
+according to the driver selection. Depending on the type of failure, the indicator flashes at 2 minute intervals to indicate an 4WD system fault condition. For information about CAN, refer to
+
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Instrument cluster
+</li><li>4WD system fault
+</li><li>CAN circuits:
+
+<ul type="square"><li>1827 (WH/LG)
+</li><li>1828 (PK/LG)
+</li></ul></li><li>4WD control module (PCM)
+</li></ul><a name="U">&nbsp;
+</a><h5>PINPOINT TEST U: THE INSTRUMENT CLUSTER 4H INDICATOR DOES NOT OPERATE CORRECTLY/DOES NOT OPERATE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="U1">&nbsp;
+</a><b>U1 CHECK THE 4H INDICATOR PROVE-OUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Observe the 4H indicator in the instrument cluster.
+</li><li><b>Do the 4H indicator prove out correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#U2"                                                                                                                                                                                                                                                       >U2
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</td></tr><tr><td><a name="U2">&nbsp;
+</a><b>U2 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC index for diagnosis.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#U3"                                                                                                                                                                                                                                                       >U3
+</a>.
+</td></tr><tr><td><a name="U3">&nbsp;
+</a><b>U3 CHECK FOR INCORRECT 4H INDICATOR ILLUMINATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Switch the MSS to AWD.
+</li><li>Observe the instrument cluster.
+</li><li><b>Does the 4H indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#U4"                                                                                                                                                                                                                                                       >U4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#U5"                                                                                                                                                                                                                                                       >U5
+</a>.
+</td></tr><tr><td><a name="U4">&nbsp;
+</a><b>U4 CHECK THE TRANSFER CASE CLUTCH DUTY CYCLE PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the transfer case clutch duty cycle (pulse width modulated-(PWM)) PID at closed throttle.
+</li><li><b>Does the clutch duty cycle PID indicate 2% clutch at closed throttle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</td></tr><tr><td><a name="U5">&nbsp;
+</a><b>U5 CHECK THE 4H INDICATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Switch the MSS to 4H.
+</li><li>Observe the 4H indicator in the instrument cluster.
+</li><li><b>Does the 4H indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the 4WD system. 
+<a href="s6287a05.htm#PS2-X"                                                                                                                                                                                                                                                       >Go To Pinpoint Test X
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</td></tr></table><a name="PS2-V">&nbsp;
+</a><p><b>Pinpoint Test V: Straightline Driveline Wind-up
+</b></p><h5>Normal Operation
+</h5><p>In order for the 4WD system to function correctly, tires and wheels must be the same size, be in good condition, and the front and rear axle ratios must match.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Unmatched tire sizes
+</li><li>Unequal amounts of tire wear
+</li><li>Unequal tire inflation pressures
+</li><li>Unmatched front and rear axle ratios
+</li></ul><a name="V">&nbsp;
+</a><h5>PINPOINT TEST V: STRAIGHTLINE DRIVELINE WIND-UP
+</h5>
+
+<p><b>NOTE:
+</b>  AWD LOCKED mode is not intended for driving on hard/dry surfaces.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="V1">&nbsp;
+</a><b>V1 VERIFY THE CONCERN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle and shift from AWD AUTO to 4H. There should be minimal wind-up in 4H mode during straight line maneuvers, (wind-up in turns is normal; AWD LOCKED is not intended for driving on hard/dry surfaces).
+</li><li><b>Is excessive wind-up present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#V2"                                                                                                                                                                                                                                                       >V2
+</a>.
+
+<br><br><b>No
+</b><br>RETURN the vehicle to the customer. ADVISE about correct 4WD system operation and normal vehicle behavior.
+</td></tr><tr><td><a name="V2">&nbsp;
+</a><b>V2 CHECK FOR MATCHING WHEEL AND TIRE SIZES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the wheel and tire sizes.
+</li><li><b>Do the 4 wheel and tire sizes match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#V3"                                                                                                                                                                                                                                                       >V3
+</a>.
+
+<br><br><b>No
+</b><br>ADVISE the customer that 4WD systems require 4 matched, correctly inflated, correctly maintained tires to operate correctly.
+</td></tr><tr><td><a name="V3">&nbsp;
+</a><b>V3 CHECK TIRE WEAR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check each of the 4 tires for wear.
+</li><li><b>Are the 4 tires worn evenly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#V4"                                                                                                                                                                                                                                                       >V4
+</a>.
+
+<br><br><b>No
+</b><br>ADVISE the customer that 4WD systems require 4 matched, correctly inflated, correctly rotated tires to operate correctly.
+</td></tr><tr><td><a name="V4">&nbsp;
+</a><b>V4 CHECK TIRE INFLATION PRESSURE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the inflation pressure in each tire. Refer to vehicle certification label.
+</li><li><b>Are the tire inflation pressures correct?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#V5"                                                                                                                                                                                                                                                       >V5
+</a>.
+
+<br><br><b>No
+</b><br>ADJUST the tire pressure as necessary. TEST the vehicle for normal operation. ADVISE the customer that 4WD systems require 4 matched, correctly inflated, correctly maintained tires to operate correctly.
+</td></tr><tr><td><a name="V5">&nbsp;
+</a><b>V5 CHECK THE FRONT AND REAR AXLE RATIOS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check that front and rear axle ratios match. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s530l.htm&rightside=s62s530r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-03
+</a>.
+</li><li><b>Do the front and rear axle ratios match?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>RETURN the vehicle to the customer and ADVISE about correct 4WD usage and normal vehicle behavior.
+
+<br><br><b>No
+</b><br>CHECK the vehicle identification label. INSTALL the correct axle(s). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s500l.htm&rightside=s62s500r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 205-00
+</a>.
+</td></tr></table><a name="PS2-W">&nbsp;
+</a><p><b>Pinpoint Test W: The Vehicle Binds In Turns/Resists Turning/Pulsates/Shudders In A Straightline
+</b></p><h5>Normal Operation
+</h5><p>When the vehicle is operating in 4H, all 4 wheels rotate at the same speed. The amount of traction the vehicle can achieve is dependent on the amount of traction each tire can establish with the road surface. In order for the 4WD system to
+function correctly, each tire must be in good condition and the front and rear axle ratios must match.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>4H indicator
+</li><li>4WD control module (PCM)
+</li><li>Transfer case and related components
+</li><li>Wheel/tire assemblies
+</li></ul><a name="W">&nbsp;
+</a><h5>PINPOINT TEST W: THE VEHICLE BINDS IN TURNS/RESISTS TURNING/PULSATES/SHUDDERS IN A STRAIGHTLINE
+</h5>
+
+<p><b>NOTE:
+</b>  4H mode is not intended for driving on hard/dry surfaces.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="W1">&nbsp;
+</a><b>W1 VERIFY THE CONCERN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Test drive the vehicle on a straight stretch of road in AWD mode.
+</li><li>Drive the vehicle through turns and parking lot maneuvers.
+</li><li><b>Does the vehicle bind, pulsate or shudder?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the problem occurs in AWD mode, GO to 
+<a href="s6287a05.htm#W2"                                                                                                                                                                                                                                                       >W2
+</a>. If the problem occurs in AWD LOCKED mode, binding is a normal condition.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-X"                                                                                                                                                                                                                                                       >Go To Pinpoint Test X
+</a>.
+</td></tr><tr><td><a name="W2">&nbsp;
+</a><b>W2 CHECK THE 4H INDICATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Review the test drive notes.
+</li><li><b>Did the 4H indicator illuminate or flash?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the 4H indicator flashed, GO to 
+<a href="s6287a05.htm#W4"                                                                                                                                                                                                                                                       >W4
+</a>. If the 4H indicator stayed illuminated, GO to 
+<a href="s6287a05.htm#W3"                                                                                                                                                                                                                                                       >W3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#W5"                                                                                                                                                                                                                                                       >W5
+</a>.
+</td></tr><tr><td><a name="W3">&nbsp;
+</a><b>W3 VERIFY THE FAULT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Review the test drive notes.
+</li><li><b>Was 4H selected when the 4H indicator was illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is functioning correctly.
+
+<br><br><b>No
+</b><br>The fault may have been caused by an intermittent, uncommanded or autolock shift. TEST the system for normal operation. 
+<a href="s6287a05.htm#PS2-X"                                                                                                                                                                                                                                                       >Go To Pinpoint Test X
+</a>.
+</td></tr><tr><td><a name="W4">&nbsp;
+</a><b>W4 CHECK FOR DTCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module DTC index for diagnosis.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#W5"                                                                                                                                                                                                                                                       >W5
+</a>.
+</td></tr><tr><td><a name="W5">&nbsp;
+</a><b>W5 VERIFY THE CONCERN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Transfer Case C3146.
+</li><li>Test drive the vehicle on a straight stretch of road, shift the transfer case through each mode. Record any fault conditions.
+</li><li><b>Is the concern present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><b>Vehicles with limited slip rear differential:
+</b> The condition is normal and no repair action is necessary. 
+<b>Vehicles without limited slip rear differential:
+</b> INSPECT the driveline components for damage or wear. REFER to
+Inspection and Verification.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#W6"                                                                                                                                                                                                                                                       >W6
+</a>.
+</td></tr><tr><td><a name="W6">&nbsp;
+</a><b>W6 CHECK THE TRANSFER CASE CLUTCH DUTY CYCLE PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Transfer Case C3146.
+</li><li>CLEAR the DTCs.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the transfer case clutch duty cycle (pulse width modulated-(PWM)) PID at closed throttle, engine OFF, key ON.
+</li><li><b>Is the clutch duty cycle greater than 10%?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#W7"                                                                                                                                                                                                                                                       >W7
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+</td></tr><tr><td><a name="W7">&nbsp;
+</a><b>W7 CHECK SHAFT SPEED PIDs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>While driving the vehicle at 30 km/h (18 mph), monitor the wheel speed PIDs.
+</li><li>COMPARE the speedometer reading to the wheel speed PIDs.
+</li><li><b>Do the wheel speed PIDs and speedometer speeds match within 1.5 km/h (1 mph)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#W8"                                                                                                                                                                                                                                                       >W8
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY that the 4 road wheels are the same size and have similar tread depth, then, CHECK the ABS system for faults. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>.
+</td></tr><tr><td><a name="W8">&nbsp;
+</a><b>W8 CHECK THE THROTTLE POSITION SENSOR PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Slowly move throttle from closed throttle to WOT and observe the throttle position sensor PID.
+</li><li><b>Does the value vary between 0% at closed throttle and 100% at WOT?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#W9"                                                                                                                                                                                                                                                       >W9
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the throttle position sensor and/or PCM for faults. Refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</td></tr><tr><td><a name="W9">&nbsp;
+</a><b>W9 CHECK THE TRANSFER CASE FRONT DRIVESHAFT OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>With the vehicle in NEUTRAL, position it on a hoist. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s020l.htm&rightside=s62s020r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 100-02
+</a>.
+</li><li>Rotate the front driveshaft by hand.
+</li><li><b>Do the front driveshaft rotate freeely (does it require less than 45 Nm [33 lb-ft] to rotate)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new 4WD control module (PCM). REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CHECK the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>. TEST the system for normal operation.
+</td></tr></table><a name="PS2-X">&nbsp;
+</a><p><b>Pinpoint Test X: AWD System Functional Test
+</b></p><h5>Normal Operation
+</h5><p>When the vehicle operating in 4H mode, all 4 wheels rotate at the same speed. The amount of traction the vehicle can achieve depends on the amount of traction each tire can establish with the road surface. In order for the AWD system to operate
+correctly, each wheel/tire assembly must have matching sizes, and the front and rear axle ratios must match.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>4H indicator
+</li><li>4WD control module (PCM)
+</li><li>Transfer case and related components
+</li><li>Wheel/tire assemblies
+</li></ul><a name="X">&nbsp;
+</a><h5>PINPOINT TEST X: AWD SYSTEM FUNCTIONAL TEST
+</h5>
+
+<p><b>NOTE:
+</b>  4H mode is not intended for driving on hard/dry surfaces.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="X1">&nbsp;
+</a><b>X1 CHECK FOR 4H INDICATOR PROVE OUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li><b>Does the 4H indicator illuminate at prove out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X2"                                                                                                                                                                                                                                                       >X2
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the instrument cluster for faults. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</td></tr><tr><td><a name="X2">&nbsp;
+</a><b>X2 CHECK AWD OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select AWD mode.
+</li><li><b>Is the 4H indicator illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X3"                                                                                                                                                                                                                                                       >X3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X5"                                                                                                                                                                                                                                                       >X5
+</a>.
+</td></tr><tr><td><a name="X3">&nbsp;
+</a><b>X3 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC Index for diagnosis.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X4"                                                                                                                                                                                                                                                       >X4
+</a>.
+</td></tr><tr><td><a name="X4">&nbsp;
+</a><b>X4 CHECK FOR WIND-UP IN AWD MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-U"                                                                                                                                                                                                                                                       >Go To Pinpoint Test U
+</a>.
+</td></tr><tr><td><a name="X5">&nbsp;
+</a><b>X5 CHECK THE TRANSFER CASE CLUTCH DUTY CYCLE PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the transfer case clutch duty cycle (pulse width modulated-[PWM]) PID at closed throttle.
+</li><li><b>Does the clutch duty cycle PID indicate 2 to 4% clutch at closed throttle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X6"                                                                                                                                                                                                                                                       >X6
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</td></tr><tr><td><a name="X6">&nbsp;
+</a><b>X6 CHECK SHAFT SPEED PIDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the transfer case front and rear shaft speeds.
+</li><li>Drive the vehicle 30 km/h (18 mph).
+</li><li>Record and compare the front wheel speed and the rear wheel speed.
+</li><li><b>Do the front shaft speed and rear shaft speed values match within 1.5 km/h (1 mph)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X7"                                                                                                                                                                                                                                                       >X7
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the ABS system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a> and VERIFY that the 4 road tires sizes match.
+</td></tr><tr><td><a name="X7">&nbsp;
+</a><b>X7 CHECK THE THROTTLE POSITION OUTPUT PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PID/DATA Monitor and Record.
+</li><li>Monitor the thottle position output PID.
+</li><li>Slowly move the throttle from closed throttle to WOT and observe the throttle position output PID.
+</li><li><b>Does the value vary between 0% at closed throttle and 100% at WOT?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X8"                                                                                                                                                                                                                                                       >X8
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the throttle position sensor and/or PCM for faults. Refer to Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</td></tr><tr><td><a name="X8">&nbsp;
+</a><b>X8 CHECK FOR WIND-UP IN TURNS ON THROTTLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface in turns while applying the throttle.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK the transfer case. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s87bl.htm&rightside=s62s87br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 308-07B
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X9"                                                                                                                                                                                                                                                       >X9
+</a>.
+</td></tr><tr><td><a name="X9">&nbsp;
+</a><b>X9 CHECK 4H OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select 4H mode.
+</li><li><b>Does the 4H indicator illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X10"                                                                                                                                                                                                                                                       >X10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X11"                                                                                                                                                                                                                                                       >X11
+</a>.
+</td></tr><tr><td><a name="X10">&nbsp;
+</a><b>X10 CHECK FOR 4H WIND-UP
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface in turns while applying the throttle.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6287a05.htm#X13"                                                                                                                                                                                                                                                       >X13
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</td></tr><tr><td><a name="X11">&nbsp;
+</a><b>X11 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control Module (PCM) DTC Index for diagnosis.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X12"                                                                                                                                                                                                                                                       >X12
+</a>.
+</td></tr><tr><td><a name="X12">&nbsp;
+</a><b>X12 CHECK FOR WIND-UP IN 4H MODE ON THROTTLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface in turns while applying the throttle.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a05.htm#PS2-U"                                                                                                                                                                                                                                                       >Go To Pinpoint Test U
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</td></tr><tr><td><a name="X13">&nbsp;
+</a><b>X13 CHECK AWD OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select AWD mode.
+</li><li><b>Did the 4H indicator turn OFF?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The 4WD system is operating correctly.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X14"                                                                                                                                                                                                                                                       >X14
+</a>.
+</td></tr><tr><td><a name="X14">&nbsp;
+</a><b>X14 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out the on-demand self test.
+</li><li><b>Are DTCs retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the 4WD control module (PCM) DTC Index for diagnosis.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6287a05.htm#X15"                                                                                                                                                                                                                                                       >X15
+</a>.
+</td></tr><tr><td><a name="X15">&nbsp;
+</a><b>X15 CHECK FOR WIND-UP IN AWD MODE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Drive the vehicle on a dry, hard surface while executing turns.
+</li><li><b>Is wind-up present in turns?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s6287a05.htm#PS2-U"                                                                                                                                                                                                                                                       >Go To Pinpoint Test U
+</a>.
+
+<br><br><b>No
+</b><br><a href="s6287a05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</a>.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

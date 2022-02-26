@@ -1,0 +1,116 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Anti-Theft"><meta name="tps_ss_title" content="GENERAL PROCEDURES"><meta name="tps_procid" content="S5P8827Q0"><meta name="tps_procsgmlid" content="n873915"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-01:  Anti-Theft
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">GENERAL PROCEDURES
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Key Programming Switch State Control
+</h4><meta name="tps_proctitle" content="Key Programming Switch State Control">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool 
+
+<br></td></tr></table><p><b>NOTE:
+</b>  The spare key programming switch is a diagnostic tool programmable switch which provides the capability to enable/disable the customer spare key programming procedure. Refer to the owner literature or
+
+<a href="s62j1009.htm"                                                                                                                                                                                                                                                       >Key Programming Using Two Programmed Keys
+</a> in this section. This programmable switch is provided as a convenience for customers who may not want the spare key programming procedure available to the vehicle
+driver.
+</p><p><b>NOTE:
+</b>  The spare key programming switch state can be viewed by VIC PCM SPARE_KY.
+</p>
+
+<ol start="1"><li>Insert a programmed ignition key into the ignition lock cylinder and turn the ignition switch to ON.
+</li></ol>
+
+<ol start="2"><li>Using the diagnostic tool Ford Service Function (FSF) card, select PCM from the menu. Follow SECURITY ACCESS to obtain security access. For additional information, refer to 
+<a href="s62j1012.htm"                                                                                                                                                                                                                                                       >Anti-Theft Security Access
+</a> in
+this section.
+</li></ol>
+
+<ol start="3"><li><p><b>NOTE:
+</b>  The default setting on delivery of all new vehicles is &#60;ENABLE>.
+</p>From the diagnostic tool menu, select SPARE KEY PROGRAMMING SWITCH and set to the desired setting:
+
+<br>&#60;ENABLE> Spare key programming procedure is accessible.
+
+<br>&#60;DISABLE> Spare key programming procedure is not accessible.
+</li></ol><p><b>Unlimited Key Mode Programming
+</b></p><p><b>Enabling Unlimited Key Mode
+</b></p><p><b>NOTE:
+</b>  Unlimited key mode is intended for use by those customers who need more than 8 keys for their vehicle.
+</p>
+
+<ol start="1"><li>The customer must choose a 4-digit, non-0000 number to be programmed to all of their vehicles. All customer vehicles need to use the same number. Valid digits are 0-9 plus the letters A-F.
+</li></ol>
+
+<ol start="2"><li>Note: If the PID: UNLIMITED TRANSPONDER KEY ID is not available, unlimited key mode is turned on, and must be turned off before viewing the stored code. At this time, unlimited keys may be programmed to the vehicle. To view/change the stored
+code, follow the procedure for turning off unlimited key mode below. Check the PID: UNLIMITED TRANSPONDER KEY ID and compare its value against the code chosen in Step 1.
+</li></ol>
+
+<ol start="3"><li>Using the diagnostic tool, select PCM from the menu. Follow SECURITY ACCESS to obtain security access. For additional information, refer to 
+<a href="s62j1012.htm"                                                                                                                                                                                                                                                       >Anti-Theft Security Access
+</a> in this section.
+</li></ol>
+
+<ol start="4"><li>If the Unlimited Transponder Security Key PID is 0000, select Active Command: SET UNLIMITED TRANSPONDER KEY. Enter the 4-digit code chosen by the user.
+</li></ol>
+
+<ol start="5"><li>Select: ENABLE UNLIMITED KEY MODE.
+</li></ol>
+
+<ol start="6"><li>Select: IGNITION CODE ERASE.
+</li></ol>
+
+<ol start="7"><li>Disconnect the diagnostic tool and turn the ignition OFF.
+</li></ol>
+
+<ol start="8"><li>Program 2 ignition keys to enable the vehicle.
+</li></ol>
+
+<ol start="9"><li>Program any additional keys using either 
+<a href="s62j1009.htm"                                                                                                                                                                                                                                                       >Key Programming Using Two Programmed Keys
+</a> or 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this section.
+</li></ol><p><b>Disabling Unlimited Key Mode
+</b></p>
+
+<ol start="1"><li>Using a diagnostic tool, select PCM from the menu. Follow SECURITY ACCESS to obtain security access. For additional information, refer to 
+<a href="s62j1012.htm"                                                                                                                                                                                                                                                       >Anti-Theft Security Access
+</a> in this section.
+</li></ol>
+
+<ol start="2"><li>Select: DISABLE UNLIMITED KEY MODE.
+</li></ol>
+
+<ol start="3"><li>Select: IGNITION KEY CODE ERASE.
+</li></ol>
+
+<ol start="4"><li>Disconnect the diagnostic tool and turn the ignition OFF.
+</li></ol>
+
+<ol start="5"><li>Program 2 keys to enable the vehicle.
+</li></ol>
+
+<ol start="6"><li>Program any additional keys. For additional information, refer to 
+<a href="s62j1009.htm"                                                                                                                                                                                                                                                       >Key Programming Using Two Programmed Keys
+</a> or 
+<a href="s62j1010.htm"                                                                                                                                                                                                                                                       >Key Programming Using Diagnostic Equipment
+</a> in this
+section.
+</li></ol><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

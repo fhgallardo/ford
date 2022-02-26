@@ -1,0 +1,889 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="10"><meta name="tps_section" content="03"><meta name="tps_section_title" content="Speed Control"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P4457Q0"><meta name="tps_procsgmlid" content="n914980"><meta name="tps_packetinfo" content="452865"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 310-03:  Speed Control
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  09/15/2005
+</div></TD></TR></TABLE><hr><h4>Speed Control
+</h4><meta name="tps_proctitle" content="Speed Control"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=031&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >31
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st2621a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Diagnostic Tool, Restraint System (2 required)
+
+<br>418-F395
+</td></tr></table><div><a name="extract_266">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The speed control system is controlled by the powertrain control module (PCM). The speed control system is designed to maintain a selected vehicle speed between 48 and 200 km/h (30 and 124 mph). The speed control system is controlled by the
+steering wheel mounted switches (ON, OFF, SET/ACCEL, COAST, and RESUME), the stoplamp switch, clutch pedal position (CPP) switch, and the speed control deactivator switch. The steering wheel mounted switches are hardwired to the PCM through the
+clockspring.
+</p><p>The speed control functions include:
+</p><ul type="disc"><li>turning the speed control system on.
+</li><li>setting and maintaining the desired vehicle speed.
+</li><li>accelerating the vehicle speed.
+</li><li>decelerating the vehicle speed.
+</li><li>resuming the prior vehicle speed.
+</li><li>turning the vehicle speed control system off.
+</li></ul><p>Pressing and releasing the ON switch turns the speed control system on. Pressing and releasing the SET/ACCEL or COAST switch while the vehicle is traveling at the desired speed activates the speed control system.
+</p><p>Tapping the SET/ACCEL or the COAST switch while in the set mode respectively, increases or decreases the maintained vehicle speed by 1.6 km/h (1 mph) per tap. If the respective button is pressed and held, the vehicle speed continues to
+accelerate or decelerate until the button is released.
+</p><p>Pressing and releasing the OFF switch, or turning the ignition switch to the OFF position, turns the speed control system off. Applying the brake pedal puts the speed control system into the STANDBY mode. Pressing the RESUME button, when the
+speed control system is in the STANDBY mode causes the vehicle to accelerate to the last set speed. Resume does not function if the OFF button is pressed, the ignition switch is in the OFF position, or if the current vehicle speed is below the
+minimum operational speed.
+</p><p>The CPP switch is used on vehicles equipped with a manual transmission. When the clutch pedal is applied with the vehicle speed control system engaged, the normally closed switch opens and signals the PCM to deactivate the speed control.
+</p><p>Whenever the speed control system is engaged and active, a speed control icon on the instrument cluster or message center is illuminated.
+</p><p>The speed control deactivator switch is provided as an additional safety feature. Normally, when the brake pedal is applied, an electrical signal from the stoplamp circuit to the PCM deactivates the system. Under increased brake pedal effort,
+the speed control deactivator switch opens and removes the voltage from the PCM input circuit, releasing the throttle.
+</p><p>The inputs to the PCM are:
+</p><ul type="disc"><li>Output shaft speed (OSS) sensor
+</li><li>Digital transmission range (TR) sensor
+</li><li>Speed control switch(es)
+</li><li>CPP switch
+</li><li>Speed control deactivator switch
+</li><li>Stoplamp switch
+</li><li>Accelerator pedal position sensor
+</li></ul><p>The outputs of the PCM for the speed control system are:
+</p><ul type="disc"><li>Speed control indicator lamp
+</li><li>Throttle command
+</li></ul><p>The speed control system throttle position is completely controlled by the PCM through the electronic-controlled throttle body. Speed control electronics are contained entirely within the electronic throttle control (ETC) subsystem.
+</p><p>When the speed control system is active, the PCM corrects for deviations in the actual vehicle by proportionally moving the throttle plate. The PCM modulates the throttle to minimize error between the actual vehicle speed and the desired speed.
+</p><p>The PCM strategy uses the throttle control for smooth accelerations.
+</p><p>The PCM sends a serial message over the controlled area network (CAN) to the instrument cluster to control the operation of the speed control telltale.
+</p><p>In the event of an OFF command or a deactivation request from the speed control deactivator switch, the speed control system carries out a hard deactivation and immediately returns the throttle to the idle position.
+</p><p>The speed control system provides self-diagnostics. The speed control is disabled anytime an error is detected in the system. No cluster telltale or message center messages are displayed when faults occur. Fault codes are logged by the PCM.
+</p><p>An ETC system fault also causes the speed control system to be disabled. In this case, an ETC system warning telltale (wrench light) or a message center message is displayed.
+</p><p>Additionally, the following conditions cause the speed control system to deactivate:
+</p><ul type="disc"><li>Transmission gear selector in a position other than D or OD
+</li><li>Clutch pedal is pressed
+</li><li>Speed control set speed is over-ridden with the accelerator pedal for a period longer than 5 minutes
+</li><li>Parking brake is applied
+</li><li>Vehicle speed loss from set speed of greater than 16 km/h (10 mph) occurs
+</li><li>Vehicle speed falls below the minimum allowable limit of 48 km/h (30 mph)
+</li><li>Speed control switch pressed or stuck longer than 2 minutes
+</li></ul><div><a name="extract_267">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect the following for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Throttle lever
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Auxiliary relay box fuse F03 (5A)
+</LI><LI>Central junction box (CJB) fuse(s):
+
+<UL type="square"><LI>2 (20A)
+</LI><LI>14 (10A)
+</LI></UL></LI><LI>Circuitry
+</LI><LI>Stoplamp switch
+</LI><LI>Speed control deactivator switch
+</LI><LI>Clutch pedal position (CPP) switch
+</LI><LI>Powertrain control module (PCM)
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>Verify the stoplamps operate correctly with the ignition switch in the OFF position. If the stoplamps do not operate correctly, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</li></ol><ol start="5"><li>Verify the parking brake warning indicator is operating correctly. If the parking brake warning indicator is not operating correctly, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ol><ol start="6"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="7"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="8"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN circuits fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for PCM, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the PCM.
+</li></ul></li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to the Powertrain Control Module (PCM) Diagnostic Trouble Code (DTC) Index.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s62a3002.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Powertrain Control Module (PCM) Diagnostic Trouble Code (DTC) Index 
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTCs
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">P0500
+</TD><TD valign="top" align="LEFT">Vehicle Speed Error
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT">REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</TD></TR><TR><TD valign="top" align="CENTER">P0579
+</TD><TD valign="top" align="LEFT">Cruise Control Multifunction Input A Circuit Range/Performance
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT"><A href="s62a3002.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0581
+</TD><TD valign="top" align="LEFT">Cruise Control Multifunction Circuit High
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT"><A href="s62a3002.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0720
+</TD><TD valign="top" align="LEFT">Insufficient Input from Output Shaft Speed Sensor
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT">If equipped with a manual transmission, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+
+<BR>If equipped with an automatic transmission, REFER to 
+<A href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 307-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0721
+</TD><TD valign="top" align="LEFT">Noise Interference on Output Shaft Speed Sensor Signal
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT">If equipped with a manual transmission, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+
+<BR>If equipped with an automatic transmission, REFER to 
+<A href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 307-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0722
+</TD><TD valign="top" align="LEFT">No Signal from Output Shaft (OSS) Speed Sensor
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT">If equipped with a manual transmission, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+
+<BR>If equipped with an automatic transmission, REFER to 
+<A href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 307-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0833
+</TD><TD valign="top" align="LEFT">Clutch Pedal Switch B Circuit
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT"><A href="s62a3002.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1572
+</TD><TD valign="top" align="LEFT">Brake Pedal Switch Circuit
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT"><A href="s62a3002.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1703
+</TD><TD valign="top" align="LEFT">Brake Switch Out of Self-Test Range
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT"><A href="s62a3002.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All other DTCs
+</TD><TD valign="top" align="LEFT">&#8212;
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR></TABLE><br><div><a name="extract_268">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The speed control is inoperative
+</li></ul></td><td><ul type="disc"><li>Speed control switch
+</li><li>Digital transmission range (TR) sensor
+</li><li>Powertrain control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s62a3002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The speed control switch is inoperative (no DTCs)
+</li></ul></td><td><ul type="disc"><li>PCM not configured for speed control
+</li></ul></td><td><ul type="disc"><li>CONFIGURE the PCM for speed control. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-01
+</a>.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Speed control switch(es)
+</li></ul></td><td><ul type="disc"><li>INSTALL a new speed control switch. REFER to 
+<a href="s62a3004.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; Without Remote Audio/Climate Controls
+</a> or
+
+<a href="s62a3005.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; With Remote Audio/Climate Controls
+</a> in this section.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The speed control indicator lamp is always on
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Instrument cluster
+</li><li>PCM
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The speed control does not disengage when the clutch is applied
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Clutch pedal position (CPP) switch
+</li><li>PCM
+</li></ul></td><td><ul type="disc"><li><a href="s62a3002.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr></table><div><a name="extract_269">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Speed Control Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The powertrain control module (PCM) sends a signal through circuit 151 (LB/BK) to the speed control switches, which passes through the clockspring. The return signal is sent through circuit 848 (DG/OG) and the clockspring. The return signal is
+sent through circuit 848 (DG/OG) and the clockspring. The stoplamp switch sends a voltage signal through circuit 511 (LG) to the PCM when the brake pedal is applied, and deactivates the speed control if engaged.
+</p><p>Vehicles equipped with an optional manual transmission have an additional clutch pedal position (CPP) switch. The CPP switch, normally closed, supplies a ground signal to the PCM through circuit 306 (TN/LB). When the clutch pedal is applied,
+the CPP switch moves to the open position causing the PCM to lose the ground signal and deactivate the speed control.
+</p><p>The speed control deactivator switch interrupts the power signal to the PCM through circuit 307 (BK/YE) when the brake pedal is applied firmly and passes the stoplamp switch trip point. This is a redundant signal to the PCM.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Speed control switch
+</li><li>Digital transmission range (TR) sensor
+</li><li>PCM
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE SPEED CONTROL IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK FOR DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Review the recorded DTCs from the powertrain control module (PCM) self-test.
+</li><li><b>Are any DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the Powertrain Control Module (PCM) Diagnostic Trouble Code (DTC) Index.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE PARKING BRAKE WARNING INDICATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>While observing the parking brake warning indicator, apply and release the parking brake.
+</li><li><b>Does the parking brake warning indicator operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to continue diagnosis of the parking brake warning indicator.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE SPEED CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between the PCM C175b-56, circuit 151 (LB/BK), harness side and the PCM C175b-57, circuit 848 (DG/OG), harness side.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Speed Control Switch
+</TH><TH valign="bottom" align="CENTER">Resistance Value
+</TH></TR><TR><TD valign="top" align="CENTER">OFF
+</TD><TD valign="top" align="CENTER">Less than 5 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">COAST
+</TD><TD valign="top" align="CENTER">276 - 324 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">SET/ACCEL
+</TD><TD valign="top" align="CENTER">552 - 648 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">RESUME
+</TD><TD valign="top" align="CENTER">1,021 - 1,199 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">ON
+</TD><TD valign="top" align="CENTER">1,941 - 2,278 ohms
+</TD></TR><TR><TD valign="top" align="CENTER">No switch pressed
+</TD><TD valign="top" align="CENTER">3,965 - 4,655 ohms
+</TD></TR></TABLE><br>
+
+<br><IMG src="n0002245.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the speed control switch resistance values OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If equipped with an automatic transmission, GO to 
+<a href="s62a3002.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br>If equipped with a manual transmission, GO to 
+<a href="s62a3002.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new speed control switch. REFER to 
+<a href="s62a3004.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; Without Remote Audio/Climate Controls
+</a> or
+
+<a href="s62a3005.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; With Remote Audio/Climate Controls
+</a> in this section. TEST the system for normal operation.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK THE DIGITAL TRANSMISSION RANGE (TR) SENSOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  PCM C175b.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM TR Sensor PID.
+</li><li>Monitor the PCM TR sensor PID.
+</li><li>Select DRIVE.
+</li><li><b>Does the PID value agree with the transmission range selector lever position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a> to continue diagnosis of the digital TR sensor.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE DIGITAL TR SENSOR FOR CORRECT ALIGNMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the digital TR sensor alignment. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a>.
+</li><li><b>Is the digital TR sensor aligned correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>ADJUST the digital TR sensor. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s710l.htm&rightside=s62s710r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-01
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE VEHICLE SPEED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  This step may require an assistant.
+
+<li>Enter the following diagnostic mode on the diagnostic tool:  Anti-lock Brake System (ABS) Module Wheel Speed PID.
+</li><li>Monitor and record the ABS module wheel speed PID while driving the vehicle at 48 km/h (30 mph) as indicated on the speedometer.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM Vehicle Speed PID.
+</li><li>Monitor and record the PCM vehicle speed PID while driving the vehicle at 48 km/h (30 mph).
+</li><li><b>Does the speed indicated by the ABS module wheel speed PID match the PCM vehicle speed PID?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+
+<br><br><b>No
+</b><br>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual to continue diagnosis of the output shaft sensor (OSS) signal.
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: DTC P1572 or DTC P1703 &#8212; Brake On/Off Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>When the brake pedal is applied, the stoplamp switch supplies voltage to the stoplamps through circuit 511 (LG). This signal is also supplied to the PCM to indicate the brake pedal is applied. When the PCM senses the voltage from the stoplamp
+switch, the speed control is deactivated.
+</p><p>The speed control deactivator switch interrupts the power signal to the PCM through circuit 307 (BK/YE) when the brake pedal is applied firmly and passes the stoplamp switch trip point. This is a redundant signal to the PCM.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit 295 (LB/PK) open
+</li><li>Circuit 307 (BK/YE) open or short to voltage
+</li><li>Circuit 511 (LG) open
+</li><li>Speed control deactivator switch
+</li><li>PCM
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: DTC P1572 OR DTC P1703 &#8212; BRAKE ON/OFF CIRCUIT FAILURE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE OPERATION OF THE STOPLAMPS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Apply and release the brake pedal while observing the stoplamps.
+</li><li><b>Do the stoplamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a> to continue diagnosis of the stoplamps.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUIT 511 (LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Powertrain Control Module (PCM) C175b.
+</li><li>While applying the brake pedal, measure the voltage between the PCM C175b-46, circuit 511 (LG), harness side and ground.
+</li><br><IMG src="n0002246.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self test.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE SPEED CONTROL DEACTIVATOR SWITCH FOR CORRECT OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>While firmly applying and releasing the brake pedal, measure the voltage between the PCM C175b-47, circuit 307 (BK/YE), harness side and ground.
+</li><br><IMG src="n0002249.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts with the brake pedal released, and 0 volts with the brake pedal firmly applied?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#B7"                                                                                                                                                                                                                                                       >B7
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK CIRCUIT 295 (LB/PK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Speed Control Deactivator Switch C277.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the speed control deactivator switch C277-2, circuit 295 (LB/PK), harness side and ground.
+</li><br><IMG src="n0002250.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 14 (10A) is OK. If OK, REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK CIRCUIT 307 (BK/YE) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage between the speed control deactivator switch C277-1, circuit 307 (BK/YE), harness side and ground.
+</li><br><IMG src="n0002251.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#B6"                                                                                                                                                                                                                                                       >B6
+</a>.
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK CIRCUIT 307 (BK/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the PCM C175b-47, circuit 307 (BK/YE), harness side and the speed control deactivator switch C277-1, circuit 307 (BK/YE), harness side.
+</li><br><IMG src="n0002254.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new speed control deactivator switch. REFER to 
+<a href="s62a3003.htm"                                                                                                                                                                                                                                                       >Speed Control Deactivator Switch
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: DTC P0579 or DTC P0581 &#8212; Speed Control Switch Circuit Failure
+</b></p><h5>Normal Operation
+</h5><p>The powertrain control module (PCM) sends a signal, which passes through the clockspring, through circuit 151 (LB/BK) to the speed control switches. The return signal is sent through circuit 848 (DG/OG) and the clockspring.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 151 (LB/BK) open, short to voltage or ground
+</li><li>Circuit 848 (DG/OG) open, short to voltage
+</li><li>Clockspring
+</li><li>Speed control switch
+</li><li>Horn switch wiring harness
+</li><li>PCM
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DTC P0579 OR DTC P0581 &#8212; SPEED CONTROL SWITCH CIRCUIT FAILURE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE SPEED CONTROL SWITCH CIRCUITRY FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Key in ON position.
+</li><li>Turn the parking lamps on.
+</li><li>Measure the voltage between the PCM C175b-56, circuit 151 (LB/BK), harness side and ground; and between the C175b-57, circuit 848 (DG/OG), harness side and ground.
+</li><br><IMG src="n0002360.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>TURN the parking lamps off. GO to 
+<a href="s62a3002.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br><b>No
+</b><br>TURN the parking lamps off. GO to 
+<a href="s62a3002.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE AUDIO UNIT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Audio Unit C290a.
+</li><li>Key in ON position.
+</li><li>Turn the parking lamps on.
+</li><li>Measure the voltage between the PCM C175b-57, circuit 848 (DG/OG), harness side and ground.
+</li><br><IMG src="n0002256.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>TURN the parking lamps off. GO to 
+<a href="s62a3002.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>SEND the audio unit to an authorized repair facility. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK CIRCUITS 151 (LB/BK) AND 848 (DG/OG) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Clockspring C218b.
+</li><li>Key in ON position.
+</li><li>Turn the parking lamps on.
+</li><li>Measure the voltage between the PCM C175b-56, circuit 151 (LB/BK), harness side and ground; and between the C175b-57, circuit 848 (DG/OG), harness side and ground.
+</li><br><IMG src="n0002360.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK THE CLOCKSPRING FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect:  Clockspring C218b.
+</li><li>Remove the driver air bag module. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Connect the restraint system diagnostic tool (418-F395) to the upper clockspring air bag connector.
+</li><li>Disconnect:  Upper Clockspring.
+</li><li><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Make sure there is no one inside the vehicle and that there is nothing blocking or set in front of any air bag module when the battery is connected. Failure to follow these instructions may result in personal injury.
+</b></li><li>Connect the battery.
+</li><li>Key in ON position.
+</li><li>Turn the parking lamps on.
+</li><li>Measure the voltage between the PCM C175b-56, circuit 151 (LB/BK), harness side and ground; and between the C175b-57, circuit 848 (DG/OG), harness side and ground.
+</li><br><IMG src="n0002360.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new clockspring. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. DISCONNECT the battery. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>INSTALL a new speed control switch(es) harness. REFER to 
+<a href="s62a3004.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; Without Remote Audio/Climate Controls
+</a> or
+
+<a href="s62a3005.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; With Remote Audio/Climate Controls
+</a> in this section. DISCONNECT the battery. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK THE SPEED CONTROL SWITCH CIRCUITRY FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the PCM C175b-56, circuit 151 (LB/BK), harness side and ground.
+</li><br><IMG src="a0096312.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK THE CLOCKSPRING FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the driver air bag module. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Disconnect:  Upper Clockspring.
+</li><li>Measure the resistance between the PCM C175b-56, circuit 151 (LB/BK), harness side and ground.
+</li><br><IMG src="a0096312.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new speed control switch(es) harness. REFER to 
+<a href="s62a3004.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; Without Remote Audio/Climate Controls
+</a> or
+
+<a href="s62a3005.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; With Remote Audio/Climate Controls
+</a> in this section. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK CIRCUIT 151 (LB/BK) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Clockspring C218b.
+</li><li>Measure the resistance between the PCM C175b-56, circuit 151 (LB/BK), harness side and ground.
+</li><br><IMG src="a0096312.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new clockspring. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. DISCONNECT the battery. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. INSTALL the driver air bag module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK THE SPEED CONTROL SWITCH CIRCUITRY FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the PCM C175b-56, circuit 151 (LB/BK), harness side and the PCM C175b-57, circuit 848 (DG/OG), harness side.
+</li><br><IMG src="n0002245.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance between 3,965 and 4,655 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#C11"                                                                                                                                                                                                                                                       >C11
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK CIRCUITS 151 (LB/BK) AND 848 (DG/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Clockspring C218b.
+</li><li>Measure the resistance between the PCM C175b-56, circuit 151 (LB/BK), harness side and the clockspring C218b-4, circuit 151 (LB/BK), harness side; and between the PCM
+C175b-57 circuit 848 (DG/OG), harness side and the clockspring C218b-5, circuit 848 (DG/OG), harness side.
+</li><br><IMG src="a0079239.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK THE CLOCKSPRING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the driver air bag. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Disconnect:  Upper Clockspring.
+</li><li>Measure the resistance between the clockspring C218b pin 4, component side and the upper clockspring pin 3, component side; and between the clockspring C218b pin 5, component side and the upper clockspring pin 2, component side.
+</li><br><IMG src="n0002257.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new speed control switch(es) harness. REFER to 
+<a href="s62a3004.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; Without Remote Audio/Climate Controls
+</a> or
+
+<a href="s62a3005.htm"                                                                                                                                                                                                                                                       >Speed Control Switch &#8212; With Remote Audio/Climate Controls
+</a> in this section. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>INSTALL a new clockspring. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. DISCONNECT the battery. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C11">&nbsp;
+</a><b>C11 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. DISCONNECT the battery. INSTALL the driver air bag module. REFER to
+
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Speed Control Does Not Disengage When The Clutch Is Applied
+</b></p><h5>Normal Operation
+</h5><p>Vehicles equipped with a manual transmission have an additional clutch pedal position (CPP) switch. The CPP switch, normally closed, supplies a ground signal to the powertrain control module (PCM) through circuit 306 (TN/LB). When the clutch
+pedal is pressed, the CPP switch moves to the open position, causing the PCM to lose the ground signal and deactivate the speed control.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 306 (TN/LB) short to ground
+</li><li>CPP switch
+</li><li>PCM
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE SPEED CONTROL DOES NOT DISENGAGE WHEN THE CLUTCH IS APPLIED
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE PCM CPP SWITCH PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM CPP Switch PID.
+</li><li>Monitor the PCM CPP switch PID while pressing and releasing the clutch pedal.
+</li><li><b>Does the CPP switch PID agree with the clutch pedal position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK CIRCUIT 306 (TN/LB) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Disconnect:  CPP Switch C257.
+</li><li>Measure the resistance between the PCM C175b-38, circuit 306 (TN/LB), harness side and ground.
+</li><br><IMG src="n0009508.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new CPP switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: DTC P0833 &#8212; Clutch Pedal Switch B Circuit
+</b></p><h5>Normal Operation
+</h5><p>Vehicles equipped with a manual transmission have an additional clutch pedal position (CPP) switch. The CPP switch, normally closed, supplies a ground signal to the powertrain control module (PCM) through circuit 306 (TN/LB). When the clutch
+pedal is pressed, the CPP switch moves to the open position, causing the PCM to lose the ground signal and deactivate the speed control. Circuit 570 (BK/WH) supplies ground to the CPP switch.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 306 (TN/LB) open
+</li><li>Circuit 570 (BK/WH) open
+</li><li>CPP switch
+</li><li>PCM
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: DTC P0833 &#8212; CLUTCH PEDAL SWITCH B CIRCUIT
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE PCM CPP SWITCH PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM CPP Switch PID.
+</li><li>Monitor the PCM CPP switch PID while pressing and releasing the clutch pedal.
+</li><li><b>Does the CPP switch PID agree with the clutch pedal position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a3002.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK CIRCUIT 570 (BK/WH) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  CPP Switch C257.
+</li><li>Measure the resistance between the CPP switch C257-3, circuit 570 (BK/WH), harness side and ground.
+</li><br><IMG src="n0009507.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a3002.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK CIRCUIT 306 (TN/LB) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between the PCM C175b-38, circuit 306 (TN/LB), harness side and the CPP switch C257-4, circuit 306 (TN/LB), harness side; and between the PCM
+C175b-38, circuit 306 (TN/LB), harness side and ground.
+</li><br><IMG src="n0009509.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the PCM and the CPP switch, and greater than 10,000 ohms between the PCM and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new CPP switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

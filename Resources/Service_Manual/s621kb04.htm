@@ -1,0 +1,392 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="5"><meta name="tps_group" content="01"><meta name="tps_section" content="20B"><meta name="tps_section_title" content="Supplemental Restraint System"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P1616Q6787"><meta name="tps_procsgmlid" content="n997674"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 501-20B:  Supplemental Restraint System
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Diagnostic Instructions &#8212; Air Bag and Safety Belt Pretensioner Supplemental Restraint System (SRS)
+</h4><meta name="tps_proctitle" content="Diagnostic Instructions &#8212; Air Bag and Safety Belt Pretensioner Supplemental Restraint System (SRS)">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr></table><p>The symptom chart can be used to help locate supplemental restraint system (SRS) concerns if no diagnostic trouble codes (DTCs) are retrieved and the listed symptoms are observed. Whether or not the listed symptoms are observed, always carry
+out the following:
+</p><ol start="1"><li>Retrieve all DTCs stored in the restraints control module (RCM) memory. For additional information, refer to Retrieve/Clear Continuous DTCs in this section.
+</li></ol><ol start="2"><li>Run the On-Demand Self Test to determine what DTCs are currently being sensed by the RCM. Refer to On-Demand Self Test in this section.
+</li></ol><ol start="3"><li>If the stored DTCs are different than the current DTCs, always repair the current DTCs first.
+</li></ol><ol start="4"><li>If memory displays different continuous DTCs than the On-Demand Self Test, carry out in the following order:
+</li></ol><ul type="disc"><li>On-Demand Self Test
+</li><li>Memory (Retrieve/Clear Continuous DTCs)
+</li></ul><p>A DTC can indicate several concerns. The DTCs are to assist in system diagnosis and are not to be considered definitive. Always refer to the pinpoint test corresponding to the DTC to determine where the concern lies and to repair the concern
+correctly.
+</p><p>The SRS diagnostics can be divided into 3 sections:
+</p><ul type="disc"><li>Diagnostic test modes
+</li><li>PID/data monitor and record
+</li><li>Active command modes
+</li></ul><div><a name="extract_96">&nbsp;
+</a></div>
+
+<p><b>Diagnostic Test Modes
+</b></p><p>Two menu options are available under the diagnostic test modes:
+</p><ul type="disc"><li>Retrieve/Clear Continuous DTCs
+</li><li>On-Demand Self Test
+</li></ul><div><a name="extract_97">&nbsp;
+</a></div>
+
+<p><b>Retrieve/Clear Continuous DTCs
+</b></p><p>During vehicle operation, the restraints control module (RCM) will detect and store both intermittent and hard failure DTCs in nonvolatile memory. The DTC strategy employed by the RCM incorporates a time-out scheme for determining when a
+concern exists in the system. This requires a concern to exist for up to one minute in the system before the RCM will detect it. For the RCM to determine that a concern no longer exists, the concern must be absent for up to one minute. The actual
+detection time-outs vary with each DTC. The DTCs can be retrieved with a diagnostic tool using the retrieve/clear continuous DTCs option. Any DTCs stored in the RCM will be displayed on the diagnostic tool along with a brief description of the DTC.
+If no DTCs are present, the diagnostic tool will display a SYSTEM PASSED message. This option can also be used to clear DTCs from the RCM memory, as long as the concern no longer exists. Once 128 key cycles have been recorded since the concern was
+last detected, the DTC will automatically be removed from memory.
+</p><p>To retrieve or clear DTCs, follow these steps:
+</p><ol start="1"><li>Connect the diagnostic tool to the data link connector (DLC).
+</li></ol><ol start="2"><li>Turn the ignition switch to the ON position.
+</li></ol><ol start="3"><li>Follow the manufacturer's instructions for the diagnostic tool being used.
+</li></ol><ol start="4"><li><p><b>NOTE:
+</b>  Before proceeding with the clearing operation, make note of the DTCs displayed. Once cleared, DTCs cannot be retrieved.
+</p>All continuous DTCs will be displayed on the screen.
+</li></ol><ol start="5"><li>Clear the DTCs. After clearing the DTCs, cycle the key OFF, then ON.
+
+<ul type="disc"><li>Continuous DTCs that have been cleared will 
+<b>not
+</b> re-occur as "Continuous" in the same key cycle. Only new DTCs which were 
+<b>not
+</b> present before clearing can occur as "Continuous" after clearing.
+</li></ul></li></ol><div><a name="extract_98">&nbsp;
+</a></div>
+
+<p><b>On-Demand Self Test
+</b></p><p>The On-Demand Self Test option is used to verify that no electrical concerns exist with the air bag SRS. Upon entering the self-test, the restraints control module (RCM) will make an electrical check of each electrical component in the system.
+If a concern is detected, a DTC is displayed on the diagnostic tool with a brief description of the DTC. Concerns detected during the self-test are not stored in memory, unless the same concern was also detected during normal vehicle operation. The
+self-test should always be run after any repair to verify that the repair was successful.
+</p><p>To run the On-Demand Self Test, follow these steps:
+</p><ol start="1"><li>Connect the diagnostic tool to the data link connector (DLC).
+</li></ol><ol start="2"><li>Turn the ignition switch to the ON position.
+</li></ol><ol start="3"><li>Follow the manufacturer's instructions for the diagnostic tool being used.
+</li></ol><ol start="4"><li>The RCM will run the On-Demand Self Test and display on-demand DTCs (reflecting hard system concerns) on the screen.
+</li></ol><div><a name="extract_99">&nbsp;
+</a></div>
+
+<p><b>Bit-Mapped Diagnostic Trouble Codes (DTCs)
+</b></p><p>Many of the continuous and on-demand DTCs that can be present in the RCM are bit-mapped DTCs that utilize PIDs (flagged faults). Bit-mapped DTCs are conceptually different from the previous style of DTCs. Previously, DTCs identified a specific
+concern for a given component and pointed to a particular diagnostic path. In the diagnostic path, PIDs are sometimes used to determine the root cause. Bit-mapped DTCs do not identify the specific concern. A bit-mapped DTC identifies the
+component(s) in which the concern exists. The next level (PIDs or flagged faults) identifies the specific concern.
+</p><p>A diagnostic tool must be used to view the PIDs (flagged faults) of a bit-mapped DTC. Once a diagnostic tool has retrieved a bit-mapped DTC, the diagnostic tool will provide the option to "FLAG" that DTC. When the option to "FLAG" the DTC is
+available, it must be carried out to identify the specific concern that is present. When the option to "FLAG" the DTC has been carried out, the diagnostic tool will then display the PIDs (flagged faults) for that DTC, including the status or state
+that exists (on-demand DTC) or existed (continuous DTC).
+</p><p>To view and flag bit-mapped DTCs, follow these steps:
+</p><ol start="1"><li>Connect the diagnostic tool to the data link connector (DLC).
+</li></ol><ol start="2"><li>Turn the ignition switch to the ON position.
+</li></ol><ol start="3"><li>Follow the manufacturer's instructions for the diagnostic tool being used.
+</li></ol><ol start="4"><li>Carry out an On-Demand Self Test or retrieve continuous DTCs.
+</li></ol><ol start="5"><li>Select the DTC and the "FLAG" option on the diagnostic tool.
+</li></ol><ol start="6"><li>The diagnostic tool will display PIDs for the DTC. Record all flagged faults.
+</li></ol><div><a name="extract_100">&nbsp;
+</a></div>
+
+<p><b>PID/Data Monitor and Record
+</b></p><p>The PID/Data Monitor and Record option allows the diagnostic tool operator to read the state of several parameter IDs (PIDs) to aid in diagnosing the system. PIDs are real time measurements of parameters such as voltages, resistances, etc.,
+calculated by the restraints control module (RCM) and sent to the diagnostic tool for display. Many of the PIDs supported by the RCM are calculated periodically and are, therefore, not true real time readings.
+</p><p>To retrieve PIDs, follow these steps:
+</p><ol start="1"><li>Connect the diagnostic tool to the data link connector (DLC).
+</li></ol><ol start="2"><li>Turn the ignition switch to the ON position.
+</li></ol><ol start="3"><li>Follow the manufacturer's instructions for the diagnostic tool being used.
+</li></ol><ol start="4"><li>Record all PIDs that are to be retrieved and initiate PID retrieval. PIDs are updated continuously on the display.
+</li></ol><div><a name="extract_101">&nbsp;
+</a></div>
+
+<p><b>Active Commands
+</b></p><div><a name="extract_102">&nbsp;
+</a></div>
+
+<p><b>Instrument Cluster Module
+</b></p><p>These commands allow the technician to verify the operation of instrument cluster module components and subsystems.
+</p><div><a name="extract_103">&nbsp;
+</a></div>
+
+<p><b>Restraints Control Module
+</b></p><p>These commands allow the technician to verify operation of the supplemental restraint system (SRS) indicator lamps.
+</p><div><a name="extract_104">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern by checking the air bag indicator in the instrument cluster. For additional information, refer to Prove Out the System in this section.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical and electrical damage using the following chart.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Damaged restraints control module (RCM) or loose mounting
+</LI><LI>Damaged front impact severity sensor or loose mounting
+</LI><LI>Damaged side impact sensor or loose mounting
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Open central junction box (CJB) fuse 19 (10A)
+</LI><LI>Damaged wiring harness
+</LI><LI>Loose, damaged or corroded connectors
+</LI><LI>Circuitry open/shorted
+</LI><LI>Damaged shorting bars
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector and select the vehicle to be tested from the diagnostic tool menu.
+
+<br>If the diagnostic tool does not communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check that the latest diagnostic tool software release is being used.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>ISO circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>no response/not equipped for restraints control module (RCM), GO to 
+<a href="s621kb04.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ul><ul type="disc"><li>system passed, retrieve and record the continuous diagnostic trouble codes (DTCs) and carry out the on demand self test diagnostics for the RCM.
+</li></ul></li></ol><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the Restraints Control Module (RCM) Diagnostic Trouble Code (DTC) Table.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s621kb04.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_105">&nbsp;
+</a></div>
+
+<p><b>Lamp Fault Codes
+</b></p><p>When the restraints control module (RCM) detects a system fault, it will cause the air bag indicator to flash a coded sequence; a lamp fault code (LFC). The code is 2 digits. The first digit is flashed with a 0.5-second interval between pulses.
+There is a 2-second pause before the second digit is flashed, which also has a 0.5-second interval between pulses. There is a 5-second pause between each display of an LFC.
+</p><p>Each LFC is flashed 5 times after which the air bag indictor will remain lit for the remainder of the key-on cycle. If there are multiple LFCs, each LFC will flash in order of priority.
+</p><div><a name="extract_106">&nbsp;
+</a></div>
+
+<p><b>Diagnostic Trouble Codes (DTCs)
+</b></p><p>While the lamp fault codes (LFCs) are an indication of a general concern in the passive restraints system, the diagnostic trouble codes (DTCs) are more specific. The DTCs can be retrieved from the restraints control module (RCM) with a
+diagnostic tool via the data link connector (DLC).
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Restraints Control Module (RCM) Diagnostic Trouble Code (DTC) Table
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+<SUP>a
+</SUP></TH><TH valign="bottom" align="CENTER">LFC
+<SUP>b
+</SUP></TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Action To Take
+</TH></TR><TR><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER">Continuous
+</TD><TD valign="top" align="LEFT">The Air Bag Warning Indicator is Illuminated Continuously &#8212; RCM Disconnected or Inoperative, Loss of Battery Feed or Loss of Signal Ground
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1231
+</TD><TD valign="top" align="CENTER">13
+</TD><TD valign="top" align="LEFT">Crash Data Memory Full
+</TD><TD valign="top" align="LEFT">Install a new RCM and impact sensor. REFER to 
+<A href="s621kb08.htm"                                                                                                                                                                                                                                                       >Inspection and Repair After a Supplemental Restraint System (SRS) Deployment
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1317
+</TD><TD valign="top" align="CENTER">Continuous
+</TD><TD valign="top" align="LEFT">Battery Voltage High
+</TD><TD valign="top" align="LEFT">CHECK battery voltage. Should be below 16 volts. REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1318
+</TD><TD valign="top" align="CENTER">Continuous
+</TD><TD valign="top" align="LEFT">Battery Voltage Low
+</TD><TD valign="top" align="LEFT">CHECK battery voltage. Should be above 9.0 volts. REFER to 
+<A href="s62~tr~en~leftside=s62se00l.htm&rightside=s62se00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 414-00
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="CENTER">12
+</TD><TD valign="top" align="LEFT">RCM Is Faulted
+</TD><TD valign="top" align="LEFT">Install a new RCM. REFER to 
+<A href="s621kb11.htm"                                                                                                                                                                                                                                                       >Restraints Control Module (RCM)
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1869
+</TD><TD valign="top" align="CENTER">NONE 
+
+<BR> Continuous lamp 
+
+<BR> Secondary air bag warning sounds if another fault is present
+</TD><TD valign="top" align="LEFT">Air Bag Warning Indicator Circuit Open or Short to Ground
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1870
+</TD><TD valign="top" align="CENTER">NONE 
+
+<BR> Secondary air bag warning sounds if another fault is present
+</TD><TD valign="top" align="LEFT">Air Bag Warning Indicator Circuit Short to Battery
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1884
+</TD><TD valign="top" align="CENTER">18
+</TD><TD valign="top" align="LEFT">PAD Warning Lamp Circuit Failure
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1890
+</TD><TD valign="top" align="CENTER">18
+</TD><TD valign="top" align="LEFT">PAD Warning Lamp Circuit Short to Battery
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1891
+</TD><TD valign="top" align="CENTER">53
+</TD><TD valign="top" align="LEFT">Air Bag Tone Warning Indicator Circuit Short to Battery
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1892
+</TD><TD valign="top" align="CENTER">53
+</TD><TD valign="top" align="LEFT">Air Bag Tone Warning Indicator Circuit Short to Ground or Open
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1921
+</TD><TD valign="top" align="CENTER">14
+</TD><TD valign="top" align="LEFT">Air Bag Diagnostic Monitor Ground Circuit Open
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2290
+</TD><TD valign="top" align="CENTER">16
+</TD><TD valign="top" align="LEFT">Occupant Classification System Fault
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2292
+</TD><TD valign="top" align="CENTER">33
+</TD><TD valign="top" align="LEFT">Restraint System &#8212; Safety Belt Pretensioner Fault (Driver Pretensioner Circuit Fault)
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2292
+</TD><TD valign="top" align="CENTER">34
+</TD><TD valign="top" align="LEFT">Restraint System &#8212; Safety Belt Pretensioner Fault (Passenger Pretensioner Circuit Fault)
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2293
+</TD><TD valign="top" align="CENTER">19
+</TD><TD valign="top" align="LEFT">Restraint System &#8212; Air Bag Fault (Driver Front Air Bag Circuit Fault)
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2293
+</TD><TD valign="top" align="CENTER">21
+</TD><TD valign="top" align="LEFT">Restraint System &#8212; Air Bag Fault (Passenger Front Air Bag Circuit Fault)
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2296
+</TD><TD valign="top" align="CENTER">42
+</TD><TD valign="top" align="LEFT">Restraint System &#8212; Impact Sensor Fault (Front Impact Severity Sensor Circuit Fault)
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-L"                                                                                                                                                                                                                                                       >Go To Pinpoint Test L
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2434
+</TD><TD valign="top" align="CENTER">51
+</TD><TD valign="top" align="LEFT">Driver Safety Belt Buckle Switch Circuit Short to Ground
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-M"                                                                                                                                                                                                                                                       >Go To Pinpoint Test M
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2435
+</TD><TD valign="top" align="CENTER">51
+</TD><TD valign="top" align="LEFT">Driver Safety Belt Buckle Switch Circuit Resistance Out of Range
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-N"                                                                                                                                                                                                                                                       >Go To Pinpoint Test N
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2438
+</TD><TD valign="top" align="CENTER">52
+</TD><TD valign="top" align="LEFT">Passenger Safety Belt Buckle Switch Circuit Short to Ground
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-O"                                                                                                                                                                                                                                                       >Go To Pinpoint Test O
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2439
+</TD><TD valign="top" align="CENTER">52
+</TD><TD valign="top" align="LEFT">Passenger Safety Belt Buckle Switch Circuit Resistance Out of Range
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-P"                                                                                                                                                                                                                                                       >Go To Pinpoint Test P
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2477
+</TD><TD valign="top" align="CENTER">Continuous
+</TD><TD valign="top" align="LEFT">Module Configuration Error
+</TD><TD valign="top" align="LEFT">INSTALL a new RCM.
+</TD></TR><TR><TD valign="top" align="CENTER">B2691
+</TD><TD valign="top" align="CENTER">51
+</TD><TD valign="top" align="LEFT">Driver Safety Belt Buckle Switch Circuit Fault
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-Q"                                                                                                                                                                                                                                                       >Go To Pinpoint Test Q
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2692
+</TD><TD valign="top" align="CENTER">52
+</TD><TD valign="top" align="LEFT">Passenger Safety Belt Buckle Switch Circuit Fault
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-R"                                                                                                                                                                                                                                                       >Go To Pinpoint Test R
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2909
+</TD><TD valign="top" align="CENTER">16
+</TD><TD valign="top" align="LEFT">Belt Tension Sensor Fault
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-S"                                                                                                                                                                                                                                                       >Go To Pinpoint Test S
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1414
+</TD><TD valign="top" align="CENTER">15
+</TD><TD valign="top" align="LEFT">Incorrect Module Design Level
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-T"                                                                                                                                                                                                                                                       >Go To Pinpoint Test T
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1947
+</TD><TD valign="top" align="CENTER">49
+</TD><TD valign="top" align="LEFT">Driver Seat Track Position Sensor Circuit Short to Ground
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-U"                                                                                                                                                                                                                                                       >Go To Pinpoint Test U
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1948
+</TD><TD valign="top" align="CENTER">49
+</TD><TD valign="top" align="LEFT">Driver Seat Track Position Sensor Circuit Resistance Out of Range
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-V"                                                                                                                                                                                                                                                       >Go To Pinpoint Test V
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">C1981
+</TD><TD valign="top" align="CENTER">49
+</TD><TD valign="top" align="LEFT">Driver Seat Track Position Sensor Circuit Fault
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-W"                                                                                                                                                                                                                                                       >Go To Pinpoint Test W
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="LEFT">No Communication with the Restraints Control Module.
+</TD><TD valign="top" align="LEFT"><A href="s621kb05.htm#PS2-X"                                                                                                                                                                                                                                                       >Go To Pinpoint Test X
+</A>.
+</TD></TR></TABLE><DIV><SUP>a
+</SUP>  DTC: Diagnostic trouble code, retrieved using diagnostic tool.
+
+<BR><SUP>b
+</SUP>  LFC: Lamp fault code, flashed on air bag indicator.
+
+
+<br><div><a name="extract_107">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>Air bag warning indicator is illuminated continuously
+</li></ul></td><td><ul type="disc"><li>Fuse open
+</li><li>Damaged wiring, terminals or connectors
+</li><li>A faulty diagnostic connector
+</li><li>A faulted RCM
+</li><li>A faulty instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s621kb05.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Air bag indicator flashing
+</li></ul></td><td><ul type="disc"><li>Supplemental restraint system (SRS) fault
+</li></ul></td><td><ul type="disc"><li>REFER to DTC Priority Table.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Audible tone &#8212; DTCs retrieved
+</li></ul></td><td><ul type="disc"><li>SRS system fault and air bag indicator fault
+</li></ul></td><td><ul type="disc"><li>REFER to DTC Priority Table.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the restraints control module (RCM)
+</li></ul></td><td><ul type="disc"><li>Fuse open
+</li><li>Circuitry
+</li><li>Diagnostic tool
+</li><li>Data link connector (DLC)
+</li><li>RCM
+</li></ul></td><td><ul type="disc"><li><a href="s621kb05.htm#PS2-X"                                                                                                                                                                                                                                                       >Go To Pinpoint Test X
+</a>.
+</li></ul></td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

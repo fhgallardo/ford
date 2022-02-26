@@ -1,0 +1,1594 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="5"><meta name="tps_group" content="01"><meta name="tps_section" content="14"><meta name="tps_section_title" content="Handles, Locks, Latches and Entry Systems"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P9241Q0"><meta name="tps_procsgmlid" content="n918005"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 501-14:  Handles, Locks, Latches and Entry Systems
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Locks, Latches and Entry Systems
+</h4><meta name="tps_proctitle" content="Locks, Latches and Entry Systems"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=110&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >110
+</a> for schematic and connector information.
+</p><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=117&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >117
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool 
+
+<br></td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B or equivalent
+</td></tr></table><div><a name="extract_54">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p><b>Power Locks
+</b></p><p>The power lock/unlock feature requests all of the vehicle doors to lock or unlock upon a request from the door lock control switch, remote keyless entry (RKE) keypad, or RKE transmitter. Power locking and unlocking functions independently of
+the key position, vehicle speed, or transmission position. The vehicle security module activates internal relays to supply the correct power and grounds for the door lock actuators.
+</p><p><b>Power Unlock Inhibit
+</b></p><p><b>NOTE:
+</b>  The power unlock inhibit feature is not enabled when the vehicle is delivered to the customer. If the customer requests this feature the module can be configured to enable this feature.
+</p><p>With the key out of the ignition lock cylinder, 20 seconds after electrically locked (RKE transmitter, RKE keypad, door lock control switch locked with door ajar) and all doors closed, the door lock control switch UNLOCK button is disabled if
+the power unlock inhibit feature is enabled. (The lock function still operates.)
+</p><p><b>Deactivating/Activating Power Door Unlock Switch Inhibit
+</b></p><p><b>NOTE:
+</b>  The power door unlock switch inhibit feature needs to be enabled to perform this procedure.
+</p><p>This feature can be configured by the customer. Steps 1, 2 and 3 must be completed within 30 seconds.
+</p><ol start="1"><li>Turn the key to ON, then press UNLOCK 3 times.
+</li></ol><ol start="2"><li>Turn the key to OFF, then press UNLOCK 3 times.
+</li></ol><ol start="3"><li>Turn the key to ON.
+</li></ol><ol start="4"><li>Verify that the horn chirps. This indicates the enable/disable mode is ready to receive program changes.
+</li></ol><ol start="5"><li>Within 5 seconds press the LOCK button twice.
+</li></ol><p>One horn chirp indicates the system is disabled. One horn chirp, followed by the horn sounding, indicates the system is enabled.
+</p><p>Pressing the lock button twice again toggles the door lock control switch UNLOCK button inhibit feature state.
+</p><p>Turn the key OFF to exit the enable/disable programming mode.
+</p><p><b>Autolock
+</b></p><p><b>NOTE:
+</b>  The autolock feature is not available on vehicles equipped with manual transmissions.
+</p><p>The autolock feature locks all the doors when all the doors are closed, the brake pedal is pressed with the key in the ON position, and vehicle speed then exceeds 8 km/h (5 mph) or higher. This feature relocks the doors (if any doors were open)
+after the brake pedal is pressed, once all the doors are read as closed and vehicle speed then exceeds 8 km/h (5 mph). Door ajar switches are wired directly to the vehicle security module. The autolock feature can be enabled/disabled through module
+configuration, the ignition switch, and the RKE keypad. The autolock feature also uses inputs from the key position, the brake pedal position (BPP) switch, and vehicle speed through the universal asynchronous receiver-transmitter (UART)-based
+protocol (UBP) network.
+</p><p><b>Smart Unlock
+</b></p><p>The smart unlock feature prevents the driver door from locking with the key in the ignition lock cylinder. When the vehicle security module receives a LOCK command from a door lock control switch, and the key is in the ignition lock cylinder
+with the driver door open, the vehicle security module commands the driver door to UNLOCK.
+</p><p><b>Remote Keyless Entry (RKE) Transmitter
+</b></p><IMG src="a0087147.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="1"><p>The RKE transmitter can be programmed using a diagnostic tool or by using the ignition lock cylinder method.
+</p><p>The RKE transmitter initiates the following electronic system functions:
+</p><ul type="disc"><li>unlocks the driver door
+</li><li>unlocks all doors
+</li><li>locks all doors
+</li><li>activates/deactivates the panic alarm
+</li><li>commands the interior lamps on (when unlocking) and off (when locking)
+</li><li>sounds the horn once when LOCK is pressed twice within 3 seconds and the doors are closed
+</li></ul><p>The RKE transmitter has a minimum operating range of 10 m (33 feet).
+</p><p><b>Remote Keyless Entry (RKE) Transmitter Lock/Unlock Control &#8212; Unlock
+</b></p><p>The RKE transmitter feature provides lock/unlock functions independently of key position, vehicle speed, or transmission position. The RKE transmitter feature provides a 2-step process for unlocking the doors. Upon receipt of the first requests
+for unlocking the doors, the remote control feature requests the vehicle security module to unlock the driver door only. If another unlock request is received within 3 seconds of the first, the RKE transmitter feature requests that all doors be
+unlocked.
+</p><p><b>Remote Keyless Entry (RKE) Transmitter Lock/Unlock Control &#8212; Lock
+</b></p><p>The RKE transmitter feature requests that all the doors be locked when the door lock control switch LOCK button is pressed. On any press of the LOCK button with all doors closed, the RKE transmitter feature requests 1 flash of the parking
+lamps. If any door is ajar, no flash occurs, indicating the vehicle security module locked all the doors but 1 or more doors are ajar. As soon as the last door is closed, the vehicle provides 1 flash of the parking lamps. If 2 presses of the LOCK
+button are received within 3 seconds the horn chirps once, and the parking lamps flash twice to indicate that all the doors are closed and locked. If any door is ajar when the second lock request is received within 3 seconds of the first, the RKE
+transmitter feature requests the horn chirp twice without flashing the parking lamps to indicate it locked all the doors but 1 or more doors are ajar. When the key is in the ON or START position, no parking lamp flashes or horn chirp confirmations
+occur.
+</p><p><b>Panic Alarm
+</b></p><p>The panic alarm feature provides audible and visual alarms which are evident from the exterior of the vehicle. The panic alarm feature requests that the parking lamps are flashed and the horn sounds until deactivation. The flashing of the
+outputs occurs simultaneously. Activation of the panic alarm is accomplished by pressing the PANIC button on an RKE transmitter whenever the key is in the OFF or ACC positions. At all other times this feature is disabled. Deactivation of an active
+PANIC alarm is accomplished by: 1) a second press of the RKE transmitter PANIC button, 2) the key is switched out of the OFF or ACC position, or 3) a period of 2 minutes and 45 seconds has elapsed since the initial activation.
+</p><p><b>Remote Keyless Entry (RKE) Keypad
+</b></p><p>The RKE keypad, located in the exterior handle of the driver door, provides a method for the customer to access the vehicle without a key or RKE transmitter. The RKE keypad feature:
+</p><ul type="disc"><li>locks all doors and inhibits the door lock control switch unlock capability after 20 seconds (if the inhibit feature is enabled).
+</li><li>unlocks only the driver door.
+</li><li>unlocks all doors.
+</li><li>programs/erases the customer key code.
+</li><li>enables/disables autolocking.
+</li></ul><p>The RKE keypad feature operates independently of key position status, vehicle speed, or transmission position. When an RKE keypad button is pressed, the RKE keypad buttons illuminate to provide better visibility. If LOCK ALL DOORS is entered or
+5 seconds have elapsed since the last button press, the illumination is turned off.
+</p><p>Each vehicle equipped with an RKE keypad is programmed with a 5-digit entry code. This code is provided to the customer through a wallet card in the owner literature package. In addition, this code is available through a diagnostic tool and is
+also printed on the vehicle security module label. When entering codes each digit must be entered within 5 seconds of the previous button press.
+</p><p><b>Anti-Scan Feature
+</b></p><p>To provide added security, the RKE keypad is disabled for 1 minute after 35 button presses without a valid entry code being entered. The RKE keypad flashes during this 1-minute mode with all functionality disabled except for 7/8 and 9/0 still
+being allowed to lock the vehicle.
+</p><p>Anti-Scan is turned off after 1 minute of RKE keypad inactivity.
+</p><p><b>Unlocking the Doors with the Remote Keyless Entry (RKE) Keypad System
+</b></p><p>To unlock the driver door, enter either the factory set code or the personal code (each digit must be pressed within 5 seconds of the prior digit). The interior lamps will illuminate.
+</p><p>To unlock all doors, enter either the factory set code or the personal code (driver door unlocks) and press the 3/4 control within 5 seconds.
+</p><p><b>Locking the Doors with the Remote Keyless Entry (RKE) Keypad System
+</b></p><p>It is not necessary to enter the factory set or personal code prior to locking all doors. To lock all doors, press the 7/8 and 9/0 controls at the same time.
+</p><div><a name="extract_55">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Latches
+</LI><LI>Binding cables
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) fuse(s):
+
+<UL type="square"><LI>18 (10A)
+</LI><LI>107 (30A)
+</LI></UL></LI><LI>Circuitry
+</LI><LI>Door ajar switch(es)
+</LI><LI>Door lock control switch(es)
+</LI><LI>Door lock actuator(s)
+</LI><LI>RKE transmitter
+</LI><LI>RKE keypad
+</LI><LI>Vehicle security module
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+</li></ol><ul type="disc"><li>check that the program card is correctly installed.
+</li><li>check that connections to the vehicle.
+</li><li>check the ignition switch position.
+</li></ul><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN, UBP or ISO circuits fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for vehicle security module, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the vehicle security module.
+</li></ul></li></ol><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the Vehicle Security Module Diagnostic Trouble Code (DTC) Index.
+</li></ol><ol start="8"><li>If DTCs are retrieved that are not found in the Vehicle Security Module Diagnostic Trouble Code (DTC) Index, refer to the Diagnostic Trouble Code (DTC) Index in 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="9"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s621e003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Vehicle Security Module Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1309
+</TD><TD valign="top" align="CENTER">Power Door Lock Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1322
+</TD><TD valign="top" align="CENTER">LH Front Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1330
+</TD><TD valign="top" align="CENTER">RH Front Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1338
+</TD><TD valign="top" align="CENTER">RH Rear Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1341
+</TD><TD valign="top" align="CENTER">Door Unlock Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1574
+</TD><TD valign="top" align="CENTER">LH Rear Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1625
+</TD><TD valign="top" align="CENTER">Remote Keyless Entry Keypad Lamp Circuit Short to Battery
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1626
+</TD><TD valign="top" align="CENTER">Remote Keyless Entry Keypad Lamp Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2276
+</TD><TD valign="top" align="CENTER">Less Than 2 Remote Transmitters Programmed
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER">PROGRAM the remote transmitter. REFER to 
+<A href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</A> in this section.
+</TD></TR><TR><TD valign="top" align="CENTER">B2425
+</TD><TD valign="top" align="CENTER">Remote Keyless Entry Out of Sync
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2695
+</TD><TD valign="top" align="CENTER">Keypad A Switch Circuit Failure
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2696
+</TD><TD valign="top" align="CENTER">Keypad B Switch Circuit Failure
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2697
+</TD><TD valign="top" align="CENTER">Keypad C Switch Circuit Failure
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s621e003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</A>.
+</TD></TR></TABLE><br><div><a name="extract_56">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the vehicle security module
+</li></ul></td><td><ul type="disc"><li>Fuse(s)
+</li><li>Circuitry
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>A single/more than one door lock is inoperative
+</li></ul></td><td><ul type="disc"><li>Door lock control switches
+</li><li>Door lock actuators
+</li><li>Circuitry
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The doors do not lock/unlock using the remote keyless entry keypad
+</li></ul></td><td><ul type="disc"><li>Remote keyless entry (RKE) keypad
+</li><li>Circuitry
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The doors do not lock/unlock using the remote keyless entry transmitter
+</li></ul></td><td><ul type="disc"><li>Remote keyless entry (RKE) transmitter battery
+</li><li>RKE transmitter
+</li><li>RKE transmitter programming
+</li><li>Aftermarket systems
+</li><li>High power devices
+</li><li>TV/radio transmission towers
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The remote keyless entry transmitter is out of synchronization
+</li></ul></td><td><ul type="disc"><li>Remote keyless entry (RKE) transmitter
+</li><li>RKE transmitter button pressed a substantial amount of times while outside the range of the vehicle
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The autolock does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Door ajar switches
+</li><li>Circuitry
+</li><li>Universal asynchronous receiver-transmitter (UART)-based protocol (UBP) network
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The smart lock does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Door lock control switches
+</li><li>Driver door ajar switch
+</li><li>Universal asynchronous receiver-transmitter (UART)-based protocol (UBP) communications network
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Panic feature is inoperative/does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Remote keyless entry (RKE) transmitter
+</li><li>Circuitry
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The remote keyless entry keypad illumination is inoperative
+</li></ul></td><td><ul type="disc"><li>Remote keyless entry (RKE) keypad
+</li><li>Circuitry
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The power door unlock inhibit feature is inoperative
+</li></ul></td><td><ul type="disc"><li>Feature not enabled
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li>ENABLE the power door unlock inhibit feature.
+</li><li>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The remote keyless entry transmitter has poor range performance
+</li></ul></td><td><ul type="disc"><li>Aftermarket system
+</li><li>High power devices
+</li><li>TV/radio transmission towers
+</li><li>Remote keyless entry (RKE) transmitter
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s621e003.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr></table><div><a name="extract_57">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: A Single/More Than One Door Lock Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The door lock control switches supply a ground signal to the vehicle security module. When the vehicle security module receives ground through circuit 119 (PK/YE), the vehicle security module grounds circuit 163 (RD/OG) and circuit 118 (PK/OG),
+while energizing circuit 117 (PK/BK) to lock the doors. When the vehicle security module reads ground at circuit 120 (PK/LG), the vehicle security module grounds circuit 117 (PK/BK), while energizing circuit 163 (RD/OG) and circuit 118 (PK/OG), to
+unlock the doors. The driver door lock control switch and passenger door lock control switch circuits are spliced together within the wiring harness.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 57 (BK) open
+</li><li>circuit 117 (PK/BK) open or short to ground
+</li><li>circuit 118 (PK/OG) open or short to ground
+</li><li>circuit 119 (PK/YE) open, short to ground, or short to voltage
+</li><li>circuit 120 (PK/LG) open, short to ground, or short to voltage
+</li><li>circuit 163 (RD/OG) open or short to ground
+</li><li>door lock control switch
+</li><li>door lock actuator
+</li><li>vehicle security module
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: A SINGLE/MORE THAN ONE DOOR LOCK IS INOPERATIVE
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE DIAGNOSTIC TROUBLE CODES (DTCS)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check the recorded results from the previous self-test.
+</li><li><b>Are DTCs B1309 or B1341 retrieved?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE DOOR LOCK ACTUATOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Verify the power door unlock inhibit feature is disabled.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Door lock and unlock active commands.
+</li><li><b>Do all doors lock and unlock correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC B1309 or DTC B1341 is retrieved, DISCONNECT vehicle security module C3008b. GO to 
+<a href="s621e003.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+
+<br><br>If no DTCs are retrieved, GO to 
+<a href="s621e003.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#A9"                                                                                                                                                                                                                                                       >A9
+</a>.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE SUSPECT DOOR LOCK CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the door lock control switch component test for the suspect door lock control switch.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Is the suspect door lock control switch OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new door lock control switch as necessary. REFER to 
+<a href="s621e031.htm"                                                                                                                                                                                                                                                       >Door Lock Control Switch
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK GROUND CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the suspect door lock control switch C505-4 (driver) or C605-4 (passenger), circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0070001.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK CIRCUITS 119 (PK/YE) AND 120 (PK/LG) TO THE VEHICLE SECURITY MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect a fused (5A) jumper wire between the suspect door lock control switch C505-6 (driver) or C605-6 (passenger), circuit 120 (PK/LG), harness side and ground; and between the
+suspect door lock control switch C505-2 (driver) or C605-2 (passenger), circuit 119 (PK/YE), harness side and ground.
+</li><br><IMG src="a0070002.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Do the door locks unlock and lock?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new door lock control switch as necessary. REFER to 
+<a href="s621e031.htm"                                                                                                                                                                                                                                                       >Door Lock Control Switch
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REMOVE the fused jumper wire. GO to 
+<a href="s621e003.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK CIRCUITS 119 (PK/YE) AND 120 (PK/LG) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the suspect door lock control switch C505-6 (driver) or C605-6 (passenger), circuit 120 (PK/LG), harness side and ground; and between the suspect door lock
+control switch C505-2 (driver) or C605-2 (passenger), circuit 119 (PK/YE), harness side and ground.
+</li><br><IMG src="a0079586.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK CIRCUITS 119 (PK/YE) AND 120 (PK/LG) FOR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the suspect door lock control switch C505-6 (driver) or C605-6 (passenger), circuit 120 (PK/LG), harness side and ground; and between the suspect door
+lock control switch C505-2 (driver) or C605-2 (passenger), circuit 119 (PK/YE), harness side and ground.
+</li><br><IMG src="a0070004.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If DTC B1309 or DTC B1341 is retrieved, GO to 
+<a href="s621e003.htm#A12"                                                                                                                                                                                                                                                       >A12
+</a>.
+
+<br><br>If no DTCs are retrieved, GO to 
+<a href="s621e003.htm#A8"                                                                                                                                                                                                                                                       >A8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A8">&nbsp;
+</a><b>A8 CHECK CIRCUITS 119 (PK/YE) AND 120 (PK/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the suspect door lock control switch C505-6 (driver) or C605-6 (passenger), circuit 120 (PK/LG), harness side and the vehicle security module
+C3008b-1, circuit 120 (PK/LG), harness side; and between the suspect door lock control switch C505-2 (driver) or C605-2 (passenger), circuit 119 (PK/YE),
+harness side and vehicle security module C3008b-9, circuit 119 (PK/YE), harness side.
+</li><br><IMG src="a0070005.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#A12"                                                                                                                                                                                                                                                       >A12
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A9">&nbsp;
+</a><b>A9 CHECK THE MANUAL OPERATION OF THE SUSPECT DOOR LOCK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Manually operate the suspect door lock while checking for a binding or stuck condition.
+</li><li><b>Is the lock stuck or binding?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the binding components. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#A10"                                                                                                                                                                                                                                                       >A10
+</a>.
+</td></tr><tr><td><a name="A10">&nbsp;
+</a><b>A10 CHECK THE SUSPECT DOOR LOCK ACTUATOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Suspect Door Lock Actuator Connector.
+</li><li>Connect a fused (5A) jumper wire between the suspect door lock actuator connector pin 1, component side and the battery positive terminal; and between the suspect door lock actuator connector pin 2, component side and ground.
+</li><br><IMG src="a0044668.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Connect a fused (5A) jumper wire between the suspect door lock actuator connector pin 2, component side and the battery positive terminal; and between the suspect door lock actuator connector pin 1, component side and ground.
+</li><br><IMG src="a0044669.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Does the door lock actuator operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the fused jumper wire. GO to 
+<a href="s621e003.htm#A11"                                                                                                                                                                                                                                                       >A11
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new door lock actuator. REFER to 
+<a href="s621e014.htm"                                                                                                                                                                                                                                                       >Front Door Lock Actuator
+</a> or 
+<a href="s621e021.htm"                                                                                                                                                                                                                                                       >Rear Door Lock Actuator
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A11">&nbsp;
+</a><b>A11 CHECK THE DOOR LOCK ACTUATOR CIRCUITS FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008a.
+</li><li>If the driver door lock is inoperative, connect a fused (5A) jumper wire between the vehicle security module C3008a-2, circuit 117 (PK/BK), harness side and the vehicle security module
+C3008a-5, circuit 163 (RD/OG), harness side.
+</li><br><IMG src="a0070006.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>If any door lock is inoperative other than the driver door, connect a fused (5A) jumper wire between the vehicle security module C3008a-2, circuit 117 (PK/BK), harness side and the vehicle security module
+C3008a-3, circuit 118 (PK/OG), harness side.
+</li><br><IMG src="a0070018.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the suspect door lock actuator connector pin 1, circuit 117 (PK/BK) harness side and the suspect door lock actuator connector pin 2, circuit 163 (RD/OG) (driver door) or circuit 118 (PK/OG) (passenger doors),
+harness side.
+</li><br><IMG src="a0044670.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the fused jumper wire. GO to 
+<a href="s621e003.htm#A12"                                                                                                                                                                                                                                                       >A12
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A12">&nbsp;
+</a><b>A12 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Doors Do Not Lock/Unlock Using The Remote Keyless Entry Keypad
+</b></p><h5>Normal Operation
+</h5><p>The vehicle security module receives digitally coded inputs from the remote keyless entry (RKE) keypad and operates the locks accordingly.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 78 (LB/YE) open or short to ground
+</li><li>circuit 122 (YE) open or short to ground
+</li><li>circuit 123 (RD) open or short to ground
+</li><li>circuit 124 (BN) open
+</li><li>RKE keypad
+</li><li>vehicle security module
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE DOORS DO NOT LOCK/UNLOCK USING THE REMOTE KEYLESS ENTRY KEYPAD
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE VEHICLE SECURITY MODULE KEYPAD PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Vehicle Security Module PIDS.
+</li><li>Press each RKE keypad button while viewing the vehicle security module KEYPAD PIDS.
+</li><li><b>Do the PID values agree with the keypad button positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUITS 78 (LB/YE), 122 (YE) AND 123 (RD) FOR RESISTANCE TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Vehicle Security Module C3008a.
+</li><li>Using the following table, measure the resistance between the vehicle security module C3008a harness side and ground:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Vehicle Security Module Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C3008a-14
+</TD><TD valign="top" align="CENTER">78 (LB/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-15
+</TD><TD valign="top" align="CENTER">122 (YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-16
+</TD><TD valign="top" align="CENTER">123 (RD)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0070019.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any resistance less than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK CIRCUITS 78 (LB/YE), 122 (YE) AND 123 (RD) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Keyless Entry Keypad C500.
+</li><li>Using the following table, measure the resistance between the vehicle security module C3008a harness side and ground:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Vehicle Security Module Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C3008a-14
+</TD><TD valign="top" align="CENTER">78 (LB/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-15
+</TD><TD valign="top" align="CENTER">122 (YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-16
+</TD><TD valign="top" align="CENTER">123 (RD)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0070019.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any resistance less than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit(s). CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>INSTALL a new RKE keypad. REFER to 
+<a href="s621e033.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Keypad
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK CIRCUITS 78 (LB/YE), 122 (YE), 123 (RD) AND 124 (BN) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   RKE Keypad C500.
+</li><li>Using the following table, measure the resistance between the vehicle security module C3008a, harness side and RKE keypad C500, harness side:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Vehicle Security Module Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH><TH valign="bottom" align="CENTER">RKE Keypad Connector-Pin
+</TH></TR><TR><TD valign="top" align="CENTER">C3008a-14
+</TD><TD valign="top" align="CENTER">78 (LB/YE)
+</TD><TD valign="top" align="CENTER">C500-8
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-15
+</TD><TD valign="top" align="CENTER">122 (YE)
+</TD><TD valign="top" align="CENTER">C500-6
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-16
+</TD><TD valign="top" align="CENTER">123 (RD)
+</TD><TD valign="top" align="CENTER">C500-5
+</TD></TR><TR><TD valign="top" align="CENTER">C3008a-11
+</TD><TD valign="top" align="CENTER">124 (BN)
+</TD><TD valign="top" align="CENTER">C500-4
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0070020.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new RKE keypad. REFER to 
+<a href="s621e033.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Keypad
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s). CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CLEAR the DTCs. REPEAT the vehicle security module self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Doors Do Not Lock/Unlock Using The Remote Keyless Entry Transmitter
+</b></p><h5>Normal Operation
+</h5><p>Remote locking and unlocking of the doors is accomplished by the vehicle security module receiving a command message from the remote keyless entry (RKE) transmitter. The vehicle security module processes the command and sends a signal directly
+to the door lock actuators.
+</p><p>All RKE transmitters must be present to begin diagnosis of the RKE system.
+</p><p>Aftermarket or dealer-installed systems may adversely affect the RKE system operation. These systems should be disconnected before diagnosing any RKE concerns.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>RKE transmitter battery
+</li><li>RKE transmitter programming
+</li><li>RKE transmitter
+</li><li>aftermarket systems
+</li><li>high power devices
+</li><li>TV/radio transmission towers
+</li><li>vehicle security module
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE DOORS DO NOT LOCK/UNLOCK USING THE REMOTE KEYLESS ENTRY TRANSMITTER
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK FOR THE CORRECT RKE TRANSMITTERS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check that the correct RKE transmitters are used with the vehicle.
+</li>
+
+<ul type="disc"><li>Make sure the RKE transmitters are ones provided with the original equipment manufacturer (OEM) system and not from an aftermarket or a dealer-installed system that may have been installed on the vehicle.
+</li></ul><li><b>Are all the correct RKE transmitters present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br><b>No
+</b><br>The system cannot be tested without the correct RKE transmitters. INFORM the customer that all the correct RKE transmitters need to be present to proceed with diagnosis of the system.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE OPERATION OF THE RKE TRANSMITTER WITH THE KEY IN THE OFF POSITION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check the operation of the RKE transmitter.
+</li><li><b>Does the system operate correctly now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating as designed. INFORM the customer of the correct vehicle behavior.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK THE POWER DOOR LOCK SYSTEM FOR CORRECT OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the door lock/unlock operation by actuating the driver door lock control switch.
+</li><li><b>Do all the doors lock and unlock correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>To diagnose the inoperative door locks,
+
+<a href="s621e003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK FOR COMPLETE FUNCTIONALITY OF THE RKE TRANSMITTER(S)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check all the RKE transmitter buttons on each RKE transmitter for correct operation.
+</li><li><b>Does the PANIC button operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPLACE the RKE transmitter. PROGRAM all RKE transmitters. REFER to 
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. INFORM the customer that any RKE transmitters not present need to be
+programmed. CLEAR the DTCs. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 MAKE SURE THE REMOTE TRANSMITTER SIGNAL IS BEING RECEIVED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Enter the vehicle security module function tests, transmitter test or program transmitter menu selection.
+</li><li>Monitor the RKE transmitter identification code (TIC) through the diagnostic tool menus.
+</li><li><b>NOTE:
+</b>  The vehicle must be electronically unlocked prior to using any diagnostic tools (through the RKE transmitter or the door lock control switch).
+</li><li>Verify the RKE transmitter signal is being received. Using a diagnostic tool, press a button on the RKE transmitter while observing the diagnostic tool.
+</li><li><b>Does the TIC show up on the diagnostic tool screen when a button is pressed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK IF THE RKE TRANSMITTERS ARE PROGRAMMED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Enter the vehicle security module function tests, transmitter test or program transmitter menu selection.
+</li><li>Monitor the RKE transmitter TIC/DATA through the diagnostic tool menus.
+</li><li>Verify the RKE transmitters are programmed to the vehicle.
+</li><li><b>Does the TIC displayed under current RKE transmitter match any of the TICs stored in memory?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+
+<br><br><b>No
+</b><br>PROGRAM all of the RKE transmitters. REFER to 
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. INFORM the customer that any RKE transmitters not present need to be programmed. CLEAR the
+DTCs. TEST the system for normal operation.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK THE RKE TRANSMITTER BATTERY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Using a thin coin, open the RKE transmitter.
+</li><li>Do not clean off any grease from the battery terminal on the back surface of the circuit board.
+</li><li>Verify the correct battery is being used (CR2032.)
+</li><li>Remove the RKE transmitter battery and measure the voltage.
+</li><li><b>Is the voltage greater than 2.5 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new battery. (Be sure the battery is seated correctly.) DO NOT program the RKE transmitters. (Faulty or dead batteries do not erase TICs from memory.) CLEAR the DTCs. TEST the system for normal operation.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK IF THE RKE TRANSMITTER IS OUT OF SYNCHRONIZATION WITH THE VEHICLE SECURITY MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  The vehicle must be electronically unlocked prior to using any service tools (through the RKE transmitter or the door lock control switch).
+</li><li>Retrieve the continuous DTCs via the diagnostic tool.
+</li><li><b>Is continuous DTC B2425 stored in the vehicle security module?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>To diagnose the RKE transmitter out of synchronization,
+
+<a href="s621e003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK FOR NORMAL OPERATION WITH A KNOWN GOOD RKE TRANSMITTER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Enter the vehicle security module function tests, transmitter test or program transmitter menu selection.
+</li><li>Monitor the RKE transmitter TIC/DATA through the diagnostic tool menus.
+</li><li>Using the customer's second remote transmitter or a known good RKE transmitter that is correct for the vehicle, verify the RKE transmitter signal is being received.
+</li><li><b>Does the TIC show up on the diagnostic tool when a button is pressed on the RKE transmitter?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPLACE the inoperative RKE transmitter. PROGRAM all RKE transmitter(s). REFER to 
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. INFORM the customer that any RKE transmitters not present
+need to be programmed. CLEAR the DTCs. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a>.
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK THE VEHICLE SECURITY MODULE FOR CORRECT OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. PROGRAM all the RKE transmitters. REFER to
+
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. INFORM the customer that any RKE transmitters not present need to be programmed. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Remote Keyless Entry Transmitter Is Out Of Synchronization
+</b></p><h5>Normal Operation
+</h5><p>The remote keyless entry (RKE) transmitters and the vehicle security module use a rolling code to prevent the codes from being "captured" by a code grabber. The system advances the counter in the RKE transmitter and in the vehicle security
+module every time an RKE transmitter button is pressed.
+</p><p>All RKE transmitters must be present to begin diagnosis of the RKE system.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>RKE transmitter button is pressed a substantial amount of times while outside the range of the vehicle
+</li><li>RKE transmitter
+</li><li>vehicle security module
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE REMOTE KEYLESS ENTRY TRANSMITTER IS OUT OF SYNCHRONIZATION
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 RESYNCHRONIZE THE INOPERATIVE RKE TRANSMITTER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Press any button on the inoperative RKE transmitter 4 times consecutively within 30 seconds.
+</li><li><b>Does the RKE transmitter operate correctly now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is OK. CLEAR the DTCs. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK FOR A SECOND RKE TRANSMITTER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for another RKE transmitter that operates with the vehicle.
+</li><li><b>Is there another RKE transmitter that operates with the vehicle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 RESYNCHRONIZE THE INOPERATIVE RKE TRANSMITTER USING THE SECOND RKE TRANSMITTER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Press any button on the operational RKE transmitter.
+</li><li>Within 30 seconds, press a button on the inoperative RKE transmitter.
+</li><li>Check the inoperative RKE transmitter for correct operation.
+</li><li><b>Does the inoperative RKE transmitter operate now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is OK. CLEAR the DTCs. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 PROGRAM ALL THE RKE TRANSMITTERS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Program the inoperative RKE transmitter individually using a diagnostic tool or program all RKE transmitters using the manual key cycle method. Refer to 
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in
+this section.
+</li><li><b>Does the inoperative RKE transmitter operate now?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is OK. INFORM the customer that any RKE transmitters not present need to be programmed. CLEAR the DTCs. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>To diagnose the inoperative RKE transmitter,
+
+<a href="s621e003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: The Autolock Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>When autolock is enabled the vehicle security module reads inputs from:
+</p><ul type="disc"><li>the ignition switch
+</li><li>the brake pedal position (BPP) switch
+</li><li>the door ajar switches (all doors closed)
+</li></ul><p>The brake pedal position (BPP) switch and transmission range (TR) sensor inputs are received through the universal asynchronous receiver-transmitter (UART)-based protocol (UBP) communications network. Once the vehicle security module receives
+all 3 inputs the doors automatically lock.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 57 (BK) open
+</li><li>circuit 344 (BK/YE) open
+</li><li>circuit 345 (BK/PK) open
+</li><li>circuit 346 (BK/WH) open (SuperCrew)
+</li><li>circuit 363 (BK/LB) open (SuperCrew)
+</li><li>door ajar switches
+</li><li>UBP communications network
+</li><li>vehicle security module
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE AUTOLOCK DOES NOT OPERATE CORRECTLY
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 VERIFY THE AUTOLOCK FEATURE IS ENABLED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the autolock feature is enabled.
+</li><li><b>Is the autolock feature enabled?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>TURN ON the feature with any configuration method.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK ALL VEHICLE SECURITY MODULE DOOR AJAR PIDs FOR CORRECT READINGS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Vehicle security module door ajar PIDs.
+</li><li>Monitor all vehicle security module door ajar PIDS while opening and closing all doors.
+</li><li><b>Do the PID values agree with the door positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK THE SUSPECT DOOR AJAR SWITCH CIRCUIT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Suspect Door Ajar Switch Connector.
+</li><li>Connect a fused (5A) jumper wire between the pins of the suspect door ajar switch. Refer to the following chart:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Door
+</TH><TH valign="bottom" align="CENTER">Connector
+</TH></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C526
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C602
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C715
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C820
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0070021.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Do the courtesy lamps turn off?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new door ajar switch. REFER to 
+<a href="s621e032.htm"                                                                                                                                                                                                                                                       >Door Ajar Switch
+</a> in this section.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK THE SUSPECT DOOR AJAR SWITCH CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the suspect door ajar switch connector, harness side and ground. Refer to the following chart:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Door Ajar Switch
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C526-1 (LH front)
+</TD><TD valign="top" align="CENTER">57 (BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C602-1 (RH front)
+</TD><TD valign="top" align="CENTER">57 (BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C715-1 (LH rear)
+</TD><TD valign="top" align="CENTER">57 (BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C820-1 (RH rear)
+</TD><TD valign="top" align="CENTER">57 (BK)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0070022.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 CHECK THE CIRCUIT BETWEEN THE VEHICLE SECURITY MODULE AND THE SUSPECT DOOR AJAR SWITCH FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Measure the resistance between the suspect door ajar switch connector, harness side and the vehicle security module C3008b, harness side. Refer to the following chart:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Door Ajar Switch
+</TH><TH valign="bottom" align="CENTER">Vehicle Security Module
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">C526-2 (LH front)
+</TD><TD valign="top" align="CENTER">C3008b-4
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C602-2 (RH front)
+</TD><TD valign="top" align="CENTER">C3008b-5
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C715-2 (LH rear)
+</TD><TD valign="top" align="CENTER">C3008b-12
+</TD><TD valign="top" align="CENTER">363 (BK/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">C820-2 (RH rear)
+</TD><TD valign="top" align="CENTER">C3008b-13
+</TD><TD valign="top" align="CENTER">346 (BK/WH)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0070023.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#E6"                                                                                                                                                                                                                                                       >E6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="E6">&nbsp;
+</a><b>E6 CHECK THE PCM, INSTRUMENT CLUSTER AND ABS PIDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PCM Vehicle Speed PID.
+</li><li>Monitor the PCM vehicle speed PID.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Instrument Cluster PID.
+</li><li>Monitor the instrument cluster ignition switch status PID.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  ABS Module PID.
+</li><li>Monitor the ABS module brake input switch status PID.
+</li><li><b>Are the correct values received?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#E7"                                                                                                                                                                                                                                                       >E7
+</a>.
+
+<br><br><b>No
+</b><br>To diagnose for an incorrect vehicle speed PID, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+
+<br><br>To diagnose for an incorrect ignition switch status PID, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+
+<br><br>To diagnose for an incorrect brake input switch status PID, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>.
+</td></tr><tr><td><a name="E7">&nbsp;
+</a><b>E7 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The Smart Lock Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>Smart lock unlocks the driver door if the key is in the ignition and the driver door is open when the vehicle is locked with the interior door lock control switch remote keyless entry (RKE) keypad, or RKE transmitter. The smart locking feature
+requests that driver door be unlocked 1 second after these conditions arise. The smart lock feature unlocks the driver door only if the keycode programming and transmitter identification code (TIC) programming modes are not active.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 57 (BK) open
+</li><li>circuit 344 (BK/YE) open
+</li><li>driver door ajar switch
+</li><li>universal asynchronous receiver-transmitter (UART)-based protocol (UBP) communications network
+</li><li>vehicle security module
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE SMART LOCK DOES NOT OPERATE CORRECTLY
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE VEHICLE SECURITY MODULE DRIVER DOOR AJAR PID FOR CORRECT READINGS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Vehicle security module driver door ajar PID.
+</li><li>Monitor the vehicle security module driver door ajar PID while opening and closing the driver door.
+</li><li><b>Do the PID values agree with the door positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE DRIVER DOOR AJAR SWITCH INPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Driver Door Ajar Switch C526.
+</li><li>Connect a fused (5A) jumper wire between the driver door ajar switch C526-1, circuit 57 (BK), harness side and driver door ajar switch C526-2, circuit 344 (BK/YE), harness side.
+</li><br><IMG src="a0070021.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Do the courtesy lamps turn off?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new door ajar switch. REFER to 
+<a href="s621e032.htm"                                                                                                                                                                                                                                                       >Door Ajar Switch
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the driver door ajar switch C526-1, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0070022.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK CIRCUIT 344 (BK/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Measure the resistance between the driver door ajar switch 526-2, circuit 344 (BK/YE), harness side and the vehicle security module C3008b-4, circuit 344 (BK/YE), harness side.
+</li><br><IMG src="a0075509.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 CHECK THE PCM, INSTRUMENT CLUSTER AND ABS PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  PCM Vehicle Speed PID.
+</li><li>Monitor the PCM vehicle speed PID.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Instrument Cluster PID.
+</li><li>Monitor the instrument cluster ignition switch status PID.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  ABS Module PID.
+</li><li>Monitor the ABS module brake input switch status PID
+</li><li><b>Are the correct values received?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br><b>No
+</b><br>To diagnose for an incorrect vehicle speed PID, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+
+<br><br>To diagnose for an incorrect ignition switch status PID, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+
+<br><br>To diagnose for an incorrect brake input switch status PID, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>.
+</td></tr><tr><td><a name="F6">&nbsp;
+</a><b>F6 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CLEAR the DTCs. REPEAT the vehicle security module self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: Panic Feature Is Inoperative/Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>Once the panic feature is activated, the vehicle security module supplies ground to circuit 1 (DB), energizing the horn relay which supplies voltage to circuit 6 (YE/LG). This activates the horn and circuit 14 (BN) to activate the parking
+lamps.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 1 (DB) open
+</li><li>circuit 14 (BN) open
+</li><li>circuit 195 (TN/WH) open
+</li><li>remote keyless entry (RKE) transmitter
+</li><li>vehicle security module
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: PANIC FEATURE IS INOPERATIVE/DOES NOT OPERATE CORRECTLY
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 VERIFY THE OPERATION OF THE HORN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Operate the horn through the steering wheel switch.
+</li><li><b>Does the horn operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd60l.htm&rightside=s62sd60r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-06
+</a> to continue diagnosis of the horn.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 VERIFY THE PARKING LAMP OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn on the parking lamps with the headlamp switch.
+</li><li><b>Do the parking lamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a> to continue diagnosis of the parking lamps.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK THE HORN OPERATION FROM THE VEHICLE SECURITY MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Activate the horn active command for 1 second.
+</li><li><b>Does the horn operate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G4"                                                                                                                                                                                                                                                       >G4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#G9"                                                                                                                                                                                                                                                       >G9
+</a>.
+</td></tr><tr><td><a name="G4">&nbsp;
+</a><b>G4 CHECK THE PARKING LAMP OPERATION FROM THE VEHICLE SECURITY MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Activate the parking lamps active command for 5 seconds.
+</li><li><b>Do the parking lamps operate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G5"                                                                                                                                                                                                                                                       >G5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#G7"                                                                                                                                                                                                                                                       >G7
+</a>.
+</td></tr><tr><td><a name="G5">&nbsp;
+</a><b>G5 CHECK THE RKE TRANSMITTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Unlock and lock the doors using the RKE transmitter buttons.
+</li><li><b>Do the doors lock and unlock correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G6"                                                                                                                                                                                                                                                       >G6
+</a>.
+
+<br><br><b>No
+</b><br><a href="s621e003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a> to diagnose the inoperative door locks from the RKE transmitter.
+</td></tr><tr><td><a name="G6">&nbsp;
+</a><b>G6 CHECK THE RKE TRANSMITTER SIGNAL TO THE VEHICLE SECURITY MODULE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Read the vehicle security module REMOTE TRANSMITTER SIGNAL PID while pressing the PANIC button on the RKE transmitter.
+</li><li><b>Do the PID values agree with the button presses?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G10"                                                                                                                                                                                                                                                       >G10
+</a>.
+
+<br><br><b>No
+</b><br>REPLACE the RKE transmitter. PROGRAM all the RKE transmitters. REFER to 
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G7">&nbsp;
+</a><b>G7 CHECK CIRCUIT 195 (TN/WH) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008a.
+</li><li>Measure the voltage between the vehicle security module C3008a-7, circuit 195 (TN/WH), harness side and ground.
+</li><br><IMG src="a0070024.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G8"                                                                                                                                                                                                                                                       >G8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G8">&nbsp;
+</a><b>G8 CHECK CIRCUIT 14 (BN) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Headlamp Switch C205a.
+</li><li>Measure the resistance between the vehicle security module C3008a-6, circuit 14 (BN), harness side and the headlamp switch C2150a-5, circuit 14 (BN), harness side.
+</li><br><IMG src="n0013324.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#G10"                                                                                                                                                                                                                                                       >G10
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G9">&nbsp;
+</a><b>G9 CHECK CIRCUIT 1 (DB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008a.
+</li><li>Connect a fused (5A) jumper wire between the vehicle security module C3008a-12, circuit 1 (DB), harness side and ground.
+</li><br><IMG src="a0070026.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Does the horn sound?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the fused jumper wire. GO to 
+<a href="s621e003.htm#G10"                                                                                                                                                                                                                                                       >G10
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="G10">&nbsp;
+</a><b>G10 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: The Remote Keyless Entry Keypad Illumination Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>When the remote keyless entry (RKE) keypad illumination is activated, the vehicle security module supplies voltage to circuit 66 (LB) to illuminate the RKE keypad. The RKE keypad is grounded through circuit 57 (BK).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 57 (BK) open
+</li><li>circuit 66 (LB) open or short to ground
+</li><li>RKE keypad
+</li><li>vehicle security module
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: THE REMOTE KEYLESS ENTRY KEYPAD ILLUMINATION IS INOPERATIVE
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK THE RKE KEYPAD SWITCH PID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Vehicle Security Module KEYPAD PIDS.
+</li><li>Press each RKE keypad button while viewing the vehicle security module KEYPAD PIDS.
+</li><li><b>Do the PID values agree with the RKE keypad button positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+
+<br><br><b>No
+</b><br><a href="s621e003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a> to diagnose the incorrect RKE keypad PID values.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK THE VEHICLE SECURITY MODULE OUTPUT FUNCTION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Activate the keypad backlighting on and off active commands.
+</li><li>Trigger LIGHT ON then OFF.
+</li><li><b>Does the RKE keypad backlighting turn on and off when commanded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#H6"                                                                                                                                                                                                                                                       >H6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  RKE Keypad C500.
+</li><li>Measure the resistance between the RKE keypad C500-3, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0070027.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#H4"                                                                                                                                                                                                                                                       >H4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="H4">&nbsp;
+</a><b>H4 CHECK CIRCUIT 66 (LB) FOR A SHORT TO BATTERY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008a.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the RKE keypad C500-7, circuit 66 (LB), harness side and ground.
+</li><br><IMG src="a0078888.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621e003.htm#H5"                                                                                                                                                                                                                                                       >H5
+</a>.
+</td></tr><tr><td><a name="H5">&nbsp;
+</a><b>H5 CHECK CIRCUIT 66 (LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the RKE keypad C500-7, circuit 66 (LB), harness side and the vehicle security module C3008a-10, circuit 66 (LB), harness side.
+</li><br><IMG src="a0070045.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new RKE keypad. REFER to 
+<a href="s621e033.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Keypad
+</a> in this section. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="H6">&nbsp;
+</a><b>H6 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>for corrosion
+</li><li>for pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: The Remote Keyless Entry Transmitter Has Poor Range Performance
+</b></p><h5>Normal Operation
+</h5><p>Remote locking and unlocking of the doors is accomplished by the vehicle security module receiving a command message from the remote keyless entry (RKE) transmitter. The vehicle security module processes the command and sends a signal directly
+to the door lock actuators. The RKE transmitter has a minimum operating range of 10 m (33 feet).
+</p><p>All RKE transmitters must be present to begin diagnosis of the RKE system.
+</p><p>Aftermarket or dealer-installed system may adversely affect the RKE system operation. These systems should be disconnected before diagnosing any RKE concerns.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>aftermarket systems
+</li><li>high power devices
+</li><li>TV/radio transmission towers
+</li><li>RKE transmitter
+</li><li>vehicle security module
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: THE REMOTE KEYLESS ENTRY TRANSMITTER HAS POOR RANGE PERFORMANCE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 CHECK FOR THE CORRECT RKE TRANSMITTERS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check that the correct RKE transmitters are used with the vehicle.
+</li>
+
+<ul type="disc"><li>Make sure the RKE transmitters are ones provided with the original equipment manufacturer (OEM) system and not from an aftermarket or a dealer installed system that may have been installed on the vehicle.
+</li></ul><li><b>Are all the correct RKE transmitters present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#I2"                                                                                                                                                                                                                                                       >I2
+</a>.
+
+<br><br><b>No
+</b><br>The system cannot be tested without the correct RKE transmitters. INFORM the customer that all the correct RKE transmitters need to be present to proceed with diagnosis of the system.
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK ALL RKE TRANSMITTERS FOR POOR RANGE PERFORMANCE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  The 3 m (10 ft) measurement of range is not the standard but is a guideline that clearly indicates a vehicle is experiencing poor range performance.
+</li><li>Check all RKE transmitters for poor range performance (less than 3 m [10 ft]).
+</li><li><b>Do all RKE transmitters experience poor range?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#I3"                                                                                                                                                                                                                                                       >I3
+</a>.
+
+<br><br><b>No
+</b><br>REPLACE the inoperative RKE transmitter and PROGRAM all the RKE transmitters. REFER to 
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. INFORM the customer that any RKE transmitters not
+present need to be programmed. CLEAR the DTCs. TEST the system for normal operation.
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 CHECK THE LOCATION OF THE VEHICLE AND APPROACH ANGLES AROUND VEHICLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Make sure the poor performance is consistent in nature and is not from one approaching angle.
+</li><li>RKE transmitter range performance may be degraded in certain locations. For example, if the vehicle is within 0.8 km (0.5 mile) of high power devices or radio/TV towers, the operating distance of the RKE transmitters may be reduced.
+</li><li><b>Is the poor range performance consistent around the vehicle?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621e003.htm#I4"                                                                                                                                                                                                                                                       >I4
+</a>.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. CLEAR the DTCs. TEST the system for normal operation.
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK THE VEHICLE SECURITY MODULE FOR CORRECT OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. PROGRAM all the RKE transmitters. REFER to
+
+<a href="s621e004.htm"                                                                                                                                                                                                                                                       >Remote Keyless Entry Transmitter Programming
+</a> in this section. INFORM the customer that any RKE transmitters not present need to be programmed. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

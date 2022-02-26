@@ -1,0 +1,655 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="13"><meta name="tps_section" content="09"><meta name="tps_section_title" content="Warning Devices"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P6714Q0"><meta name="tps_procsgmlid" content="n926532"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 413-09:  Warning Devices
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Warning Devices
+</h4><meta name="tps_proctitle" content="Warning Devices"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=066&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >66
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B or equivalent
+</td></tr></table><p><b>Principles of Operation
+</b></p><p>The instrument cluster, and the restraints control module (RCM) control the following chimes:
+</p><ul type="disc"><li>safety belt warning (repetitive chime)
+</li><li>key-in-ignition warning (repetitive chime)
+</li><li>headlamps on warning (repetitive chime)
+</li><li>door ajar warning (single tone)
+</li><li>air bag warning (repetitive chime)
+</li></ul><p>The following 5 distinct chime rates are used to indicate warning:
+</p><ul type="disc"><li>safety belt warning is 1 chime per second
+</li><li>key-in-ignition warning is 2 chimes per second
+</li><li>headlamps on warning is 4 chimes per second
+</li><li>door ajar warning is a single chime
+</li><li>air bag warning is 5 chimes per second
+</li></ul><p><b>Safety Belt Warning Chime
+</b></p><p>The safety belt warning chime warns the driver safety belt is not fastened. The safety belt warning chime sounds when the driver safety belt is not fastened and when the ignition lock cylinder is turned from the OFF/LOCK or ACC to the ON or
+START position. The safety belt warning chime stops sounding if any of the following conditions is met:
+</p><ul type="disc"><li>the safety belt is fastened.
+</li><li>the ignition lock cylinder is switched from the ON or START to the OFF/LOCK or ACC position.
+</li><li>the chime has sounded for 6 seconds.
+</li></ul><p>The safety belt warning chime inputs are:
+</p><ul type="disc"><li>ignition switch position.
+</li><li>driver safety belt switch.
+</li></ul><p><b>Safety Belt Minder
+</b></p><p><b>NOTE:
+</b>  The safety belt minder feature is configurable. To configure using the diagnostic tool, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si10l.htm&rightside=s62si10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-01
+</a>. To configure without using the diagnostic tool, refer to
+
+<a href="s62d9003.htm"                                                                                                                                                                                                                                                       >Safety Belt Minder Deactivating/Activating
+</a> in this section.
+</p><p>The safety belt minder feature supplements the current safety belt warning function. The safety belt minder feature is enabled after the current safety belt warning is complete. If the driver safety belt is not buckled approximately 5 seconds
+after the safety belt warning indicator has turned off, the safety belt minder reminds the driver that his/her safety belt is unbuckled by intermittently sounding a chime and illuminating the safety belt warning lamp in the instrument cluster. While
+activated, the safety belt minder alternates the chime and indicator from on for 6 seconds to off for 30 seconds.
+</p><p>The belt minder reminder stops if any of the following conditions is met:
+</p><ul type="disc"><li>the driver safety belt is buckled.
+</li><li>the ignition lock cylinder is turned to the OFF or ACC position.
+</li><li>5 minutes have elapsed since the belt minder has started.
+</li></ul><p><b>Door Ajar Warning Chime
+</b></p><p>The door ajar warning chime warns that a door has become ajar. The door ajar warning chime is a single tone with the duration of 1 second. The tone sounds when the driver or passenger door initially becomes ajar while the ignition lock cylinder
+is in the ON position.
+</p><p>The door ajar warning chime inputs are:
+</p><ul type="disc"><li>ignition switch position.
+</li><li>door ajar switches.
+</li></ul><p><b>Key-In-Ignition Warning Chime
+</b></p><p>The key-in-ignition warning chime warns that the key is in the ignition lock cylinder when the driver door is ajar. The key-in-ignition warning chime sounds when:
+</p><ul type="disc"><li>the driver door is ajar, the ignition lock cylinder is in the OFF/LOCK or ACC position, and the key is in the ignition lock cylinder.
+</li></ul><p>The key-in-ignition warning chime stops sounding if any of the following conditions is met:
+</p><ul type="disc"><li>the driver door is closed.
+</li><li>the key is removed from the ignition lock cylinder.
+</li><li>the ignition lock cylinder is turned to the RUN position.
+</li></ul><p>The key-in-ignition warning chime inputs are:
+</p><ul type="disc"><li>ignition switch position.
+</li><li>key-in-ignition warning switch (part of the ignition switch).
+</li><li>LH door ajar switch.
+</li></ul><p><b>Headlamps On Warning Chime
+</b></p><p>The headlamps on warning chime warns that the headlamps are on when all the following conditions are met:
+</p><ul type="disc"><li>the driver door is ajar.
+</li><li>the headlamp switch is in the PARK or HEAD position.
+</li><li>the ignition lock cylinder is in the OFF/LOCK position.
+</li><li>the key is out of the ignition lock cylinder.
+</li></ul><p>The headlamps on warning chime stops sounding when any one of the conditions above are removed.
+</p><p>The headlamps on warning chime inputs are:
+</p><ul type="disc"><li>ignition switch position.
+</li><li>headlamp switch position.
+</li><li>driver door ajar switch.
+</li><li>key-in-ignition warning switch.
+</li></ul><p><b>Air Bag Warning Chime
+</b></p><p>The air bag warning chime warns that the air bag warning indicator is inoperative or an active fault is present within the air bag system. The audible warning format consists of 5 sets of tones in 1 second increments.
+</p><p>The air bag warning chime input is the RCM.
+</p><div><a name="extract_313">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Circuitry
+</LI><LI>Connector(s)
+</LI><LI>Key-in-ignition warning switch (part of the ignition switch)
+</LI><LI>Instrument cluster
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the concern is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN, UBP or ISO circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for the instrument cluster, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to continue diagnosis.
+
+<br>No response/not equipped for the RCM, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out self-test diagnostics for the RCM.
+</li></ul></li></ol><ol start="7"><li>If the DTCs retrieved are related to the concern, go to Instrument Cluster Diagnostic Trouble Code (DTC) Index. For all other DTCs, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s62d9002.htm#SC2"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Instrument Cluster Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="CENTER">ECU is Defective
+</TD><TD valign="top" align="CENTER">Instrument Cluster
+</TD><TD valign="top" align="CENTER">CLEAR the DTCs. REPEAT the self-test. IF DTC B1342 is retrieved again, INSTALL a new instrument cluster. REFER to 
+<A href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 413-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1352
+</TD><TD valign="top" align="CENTER">Ignition Key-In Circuit Failure
+</TD><TD valign="top" align="CENTER">Instrument Cluster
+</TD><TD valign="top" align="CENTER"><A href="s62d9002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All Other DTCs
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER">Instrument Cluster
+</TD><TD valign="top" align="CENTER">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR></TABLE><br><div><a name="extract_314">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC2">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The key-in-ignition chime does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Key-in-ignition warning switch (part of the ignition switch)
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62d9002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The headlamps on warning chime is inoperative
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Headlamp switch
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62d9002.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The door ajar warning chime is inoperative/does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li>VERIFY the door ajar warning indicator operates correctly.
+</li><ul type="square" class="singlespace"><li>If the door ajar warning indicator operates correctly, INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul><ul type="square" class="singlespace"><li>If the door ajar warning indicator does not operate correctly, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to continue diagnosis of the door ajar warning indicator.
+</li></ul></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The safety belt warning chime does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li>VERIFY the safety belt warning indicator operates correctly.
+</li><ul type="square" class="singlespace"><li>If the safety belt warning indicator operates correctly, INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul><ul type="square" class="singlespace"><li>If the safety belt warning indicator does not operate correctly, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to continue diagnosis of the safety belt warning indicator.
+</li></ul></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The safety belt minder feature does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Safety belt minder deactivated
+</li></ul></td><td><ul type="disc"><li>ACTIVATE the safety belt minder. REFER to 
+<a href="s62d9003.htm"                                                                                                                                                                                                                                                       >Safety Belt Minder Deactivating/Activating
+</a> in this section.
+</li></ul></td></tr><tr valign="top"><td></td><td><ul type="disc"><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The air bag warning chime is inoperative
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62d9002.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>All the chimes are inoperative
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62d9002.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The chime sounds when the driver door is ajar (no key in ignition and headlamps OFF)
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Key-in-ignition warning switch (part of the ignition switch)
+</li><li>Headlamp switch
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62d9002.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr></table><div><a name="extract_315">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Key-In-Ignition Warning Chime Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>When the key is inserted into the ignition lock cylinder, the key-in-ignition switch (part of the ignition switch) closes circuit 158 (BK/PK) to the instrument cluster. The 12 volt input signals the instrument cluster that the key is inserted.
+If the instrument cluster detects that the ignition lock cylinder is in the OFF position with the key inserted in the ignition cylinder and the driver door is ajar, the key-in-ignition warning chime sounds.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 158 (BK/PK) open or short to ground
+</li><li>key-in-ignition warning switch (part of the ignition switch)
+</li><li>instrument cluster
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE KEY-IN-IGNITION WARNING CHIME DOES NOT OPERATE CORRECTLY
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="AK1">&nbsp;
+</a><b>A1 CHECK THE INTERIOR LAMPS FOR CORRECT OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Open the driver door.
+</li><li><b>Do the interior lamps illuminate when the driver door is open?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh20l.htm&rightside=s62sh20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-02
+</a> to continue diagnosis of the interior lamps.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUIT 158 (BK/PK) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the key from the ignition switch lock cylinder.
+</li><li>Disconnect:  Instrument Cluster C220b.
+</li><li>Insert the key into the ignition switch lock cylinder.
+</li><li>Measure the voltage between the instrument cluster C220b-15, circuit 158 (BK/PK), harness side and ground.
+</li><br><IMG src="a0081049.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62d9002.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK CIRCUIT 158 (BK/PK) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the key from the ignition switch lock cylinder.
+</li><li>Disconnect:  Ignition Switch C250.
+</li><li>Measure the resistance between the instrument cluster C220b-15, circuit 158 (BK/PK), harness side and the ignition switch C250-5, circuit 158 (BK/PK), harness side; and between the
+instrument cluster C220b-15, circuit 158 (BK/PK), harness side and ground.
+</li><br><IMG src="a0081050.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the instrument cluster and the ignition switch, and greater than 10,000 ohms between the instrument cluster and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK FOR CORRECT IGNITION SWITCH OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the ignition switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Is the ignition switch OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new ignition switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Headlamps On Warning Chime Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The headlamps on warning chime sounds when the driver door is opened, the ignition lock cylinder is in the OFF position, the key is out, and the instrument cluster receives a headlamps/parking lamps on signal from the headlamp switch through
+circuit 257 (WH/RD). The headlamps on warning chime operates only when autolamp is not selected.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 257 (WH/RD) open or short to ground
+</li><li>headlamp switch
+</li><li>instrument cluster
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE HEADLAMPS ON WARNING CHIME IS INOPERATIVE
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK FOR CORRECT INTERIOR LAMPS OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Open the driver door.
+</li><li><b>Do the interior lamps illuminate when the driver door is opened?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh20l.htm&rightside=s62sh20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-02
+</a> to continue diagnosis of the interior lamps.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK FOR CORRECT INSTRUMENT CLUSTER ILLUMINATION OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the parking lamps to the ON position.
+</li><li><b>Are the instrument cluster illumination lamps on?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd00l.htm&rightside=s62sd00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-00
+</a> to continue diagnosis of the backlighting system.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK FOR CORRECT HEADLAMPS ON WARNING CHIME OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the headlamp switch to the ON position.
+</li><li>Open the driver door.
+</li><li><b>Does the headlamps on warning chime sound?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The system is operating correctly at this time.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62d9002.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK CIRCUIT 257 (WH/RD) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the headlamp switch OFF.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Turn the headlamp switch to the ON position.
+</li><li>Measure the voltage between the instrument cluster C220a-9, circuit 257 (WH/RD), harness side and ground.
+</li><br><IMG src="a0081131.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#B7"                                                                                                                                                                                                                                                       >B7
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62d9002.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK CIRCUIT 257 (WH/RD) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the headlamp switch OFF.
+</li><li>Disconnect:  Headlamp Switch C2150a.
+</li><li>Measure the resistance between the instrument cluster C220a-9, circuit 257 (WH/RD), harness side and the headlamp switch C2150a-4, circuit 257 (WH/RD), harness side; and between the
+instrument cluster C220a-9, circuit 257 (WH/RD), harness side and ground.
+</li><br><IMG src="n0013346.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the instrument cluster and headlamp switch, and greater than 10,000 ohms between the instrument cluster and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#B6"                                                                                                                                                                                                                                                       >B6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK THE EXTERIOR LIGHTS OPERATION 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Headlamp Switch C2150a.
+</li><li>Connect:  Instrument Cluster C220a.
+</li><li>Check the exterior lights operation.
+</li><li><b>Do the exterior lights operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new headlamp switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a> to continue diagnosis of the exterior lights.
+</td></tr><tr><td><a name="B7">&nbsp;
+</a><b>B7 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Air Bag Warning Chime Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster sounds the airbag warning chime when it receives a chime request signal from the restraints control module (RCM) through circuit 1083 (LB/PK). The RCM sends the chime request signal to the instrument cluster only if there
+is a fault and the air bag warning indicator is inoperative.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>instrument cluster
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE AIR BAG WARNING CHIME IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK FOR RECORDED RCM DIAGNOSTIC TROUBLE CODES (DTCs)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for recorded RCM DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are DTCs B1891 or B1892 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a> to continue diagnosis of the supplemental restraints system (SRS).
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62d9002.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: All The Chimes Are Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The warning chime is an integral part of the instrument cluster. The instrument cluster sounds the warning chimes after receiving hardwired and data signal inputs from various sources. Data input signals are transmitted to the instrument
+cluster over the (UART)-based protocol (UBP) communication network, circuit 1906 (PK).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>instrument cluster
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: ALL THE CHIMES ARE INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE INSTRUMENT CLUSTER GAUGE SWEEP
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the instrument cluster self-test to sweep the instrument cluster gauges. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li><li>Observe the instrument cluster gauges during the sweep gauges self-test.
+</li><li><b>Does the instrument cluster sweep all the gauges during the self-test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to continue diagnosis of the instrument cluster.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: The Chime Sounds When The Driver Door Is Ajar (No Key In Ignition and Headlamps OFF)
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster sounds the warning chime when the driver door is open and the ignition switch is in the OFF position, or the headlamps are left on.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>circuit 158 (BK/PK) short to voltage
+</li><li>circuit 257 (WH/RD) short to voltage
+</li><li>headlamp switch
+</li><li>key-in-ignition warning switch (part of the ignition switch)
+</li><li>instrument cluster
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE CHIME SOUNDS WHEN THE DRIVER DOOR IS AJAR (NO KEY IN IGNITION AND HEADLAMPS OFF)
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK CIRCUIT 158 (BK/PK) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the key from the ignition lock cylinder.
+</li><li>Disconnect:  Instrument Cluster C220b.
+</li><li>Measure the voltage between the instrument cluster C220b-15, circuit 158 (BK/PK), harness side and ground.
+</li><br><IMG src="a0081049.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62d9002.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK FOR CORRECT KEY-IN-IGNITION WARNING SWITCH OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Ignition Switch C250.
+</li><li>Measure the voltage between the instrument cluster C220b-15, circuit 158 (BK/PK), harness side and ground.
+</li><br><IMG src="a0081049.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new ignition switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK CIRCUIT 257 (WH/RD) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn the headlamp switch OFF.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the voltage between the instrument cluster C220a-9, circuit 257 (WH/RD), harness side and ground.
+</li><br><IMG src="a0081131.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62d9002.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62d9002.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK FOR CORRECT HEADLAMP SWITCH OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Headlamp Switch C2150a.
+</li><li>Measure the voltage between the instrument cluster C220a-9, circuit 257 (WH/RD), harness side and ground.
+</li><br><IMG src="a0081131.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new headlamp switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

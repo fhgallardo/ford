@@ -1,0 +1,167 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="19"><meta name="tps_section" content="10"><meta name="tps_section_title" content="Multifunction Electronic Modules"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P10031Q0"><meta name="tps_procsgmlid" content="n859457"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 419-10:  Multifunction Electronic Modules
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Vehicle Security Module (VSM)
+</h4><meta name="tps_proctitle" content="Vehicle Security Module (VSM)"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=110&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >110
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool 
+
+<br></td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B or equivalent
+</td></tr></table><div><a name="extract_397">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The vehicle security module controls the power door lock system. The module monitors the door lock/unlock switch inputs from the interior door lock switches. When the module receives an unlock/lock command from any door lock control switch, the
+module activates the door lock actuators. The module also controls the following remote lock/unlock features:
+</p><ul type="disc"><li>remote keyless entry (RKE) transmitter lock/unlock
+</li><li>panic alarm
+</li><li>RKE keypad
+</li></ul><p>For additional information, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</p><div><a name="extract_398">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) fuses:
+
+<UL type="square"><LI>18 (10A)
+</LI><LI>107 (30A)
+</LI></UL></LI><LI>Circuitry
+</LI><LI>Vehicle security module
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+</li></ol><ul type="disc"><li>check that the program card is correctly installed.
+</li><li>check the connections to the vehicle.
+</li><li>check the ignition switch position.
+</li><li>check that the locks are in the unlocked position.
+</li></ul><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+</li></ol><ul type="disc"><li>CAN, ISO or UBP circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li><li>No response/not equipped for the vehicle security module, 
+<a href="s62ja005.htm#B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs and carry out self-test diagnostics for the vehicle security module.
+</li></ul><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the 
+<a href="s62ja003.htm"                                                                                                                                                                                                                                                       >Diagnostic Trouble Code (DTC) Chart
+</a> in this section.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s62ja005.htm#SC2"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><div><a name="extract_399">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC2">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>No communication with the vehicle security module
+</li></ul></td><td><ul type="disc"><li>Fuse(s)
+</li><li>Circuitry
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s62ja005.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr></table><div><a name="extract_400">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: No Communication With The Vehicle Security Module
+</b></p><h5>Normal Operation
+</h5><p>The vehicle security module receives voltage from the central junction box (CJB) through circuits 7 (LG/YE) and 294 (WH/LB). The vehicle security module is grounded through circuits 57 (BK) and 938 (BK/LG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>fuse(s)
+</li><li>circuit 7 (LG/YE) open
+</li><li>circuit 57 (BK) open
+</li><li>circuit 294 (WH/LB) open
+</li><li>circuit 938 (BK/LG) open
+</li><li>vehicle security module
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: NO COMMUNICATION WITH THE VEHICLE SECURITY MODULE
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE VEHICLE SECURITY MODULE C3008a AND C3008b FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Vehicle Security Module C3008a and C3008b.
+</li><li>Inspect the vehicle security module connectors for damage.
+</li><li><b>Are the vehicle security module connectors OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62ja005.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the vehicle security module connector. CARRY OUT the diagnostic tool data link test.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUITS 7 (LG) AND 294 (WH/LB) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the vehicle security module C3008a-8, circuit 7 (LG/YE), harness side and ground; and between the vehicle security module C3008b-16, circuit 294 (WH/LB),
+harness side and ground.
+</li><br><IMG src="a0072676.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the voltages greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62ja005.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the CJB fuses 18 (10A) and 107 (30A) are OK. If OK, REPAIR the circuit. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK CIRCUITS 57 (BK) AND 938 (BK/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the vehicle security module C3008a-4, circuit 57 (BK), harness side and ground; and between the vehicle security module C3008b-2, circuit 938 (BK/LG),
+harness side and ground.
+</li><br><IMG src="a0072677.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to continue diagnosis of the communications network.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

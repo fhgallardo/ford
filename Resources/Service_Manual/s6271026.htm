@@ -1,0 +1,1120 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="07"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Automatic Transmission &#8212; 4R70E/4R75E"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P267Q703511"><meta name="tps_procsgmlid" content="n988664"><meta name="tps_packetinfo" content="502553"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 307-01:  Automatic Transmission &#8212; 4R70E/4R75E
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  10/12/2006
+</div></TD></TR></TABLE><hr><h4>Pinpoint Tests &#8212; OSC Equipped Vehicle
+</h4><meta name="tps_proctitle" content="Pinpoint Tests &#8212; OSC Equipped Vehicle">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1632a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">MLP-TR Cable
+
+<br>418-F107 (007-00111) or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st1389a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Transmission Tester
+
+<br>007-00130 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st1761a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Trans Tester TR/MLP and Manual Overlay
+
+<br>007-00131 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73 III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2545a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Gauge, Transmission Solenoid Connectors
+
+<br>307-426
+</td></tr></table><p>Any time an electrical connector or solenoid body is disconnected, inspect the connector for pin condition, corrosion and contamination. Also inspect the connector seal for damage. Clean, repair or install a new connector or component as
+required.
+</p><h5>Shift Solenoids Pre-Diagnosis
+</h5><p>Use the following shift solenoid operation information when carrying out Pinpoint Test A.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Solenoid Operation Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER" rowspan="2">Selector Lever Position
+</TH><TH valign="bottom" align="CENTER" rowspan="2">PCM Commanded Gear
+</TH><TH valign="bottom" align="CENTER" colspan="3">Transmission Shift Solenoids
+</TH></TR><TR><TH valign="bottom" align="CENTER">SSA
+</TH><TH valign="bottom" align="CENTER">SSB
+</TH><TH valign="bottom" align="CENTER">TCC
+</TH></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">P/R/N
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD></TR><TR><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE"><B>w/OD OFF
+</B></TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER">Manual 2
+</TD><TD valign="top" align="CENTER">2
+</TD><TD valign="top" align="CENTER">OFF
+</TD><TD valign="top" align="CENTER">OFF
+</TD><TD valign="top" align="CENTER">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">Manual 1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">1
+<SUP>a
+</SUP></TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">EC
+</TD></TR></TABLE><DIV><SUP>a
+</SUP>  When a manual pull-in occurs above a calibrated speed the transmission will downshift from the higher gear until the vehicle speed drops below this calibrated speed.
+
+
+
+<P>EC = Electronically controlled.
+</P><P>HD = Hydraulically disabled.
+</P><br><h5>Shift Solenoid Failure Mode Chart "Always Off" 
+</h5><p>Failed off due to powertrain control module and or vehicle wiring concerns, shift solenoid electrically or hydraulically stuck off.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER" rowspan="2">SSA ALWAYS OFF:
+</TH><TH valign="bottom" align="CENTER" colspan="3">Selector Lever Position
+</TH></TR><TR><TH valign="bottom" align="CENTER">(D)
+</TH><TH valign="bottom" align="CENTER">2
+</TH><TH valign="bottom" align="CENTER">1
+</TH></TR><TR><TD valign="top" align="CENTER"><B>PCM Gear
+
+<BR> Commanded
+</B></TD><TD valign="top" align="CENTER" colspan="3"><B>Actual Gear
+
+<BR> Obtained
+</B></TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2*
+</TD></TR></TABLE>
+
+<P>*No engine braking.
+</P><br><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER" rowspan="2">SSB ALWAYS OFF:
+</TH><TH valign="bottom" align="CENTER" colspan="3">Selector Lever Position
+</TH></TR><TR><TH valign="bottom" align="CENTER">(D)
+</TH><TH valign="bottom" align="CENTER">2
+</TH><TH valign="bottom" align="CENTER">1
+</TH></TR><TR><TD valign="top" align="CENTER"><B>PCM Gear
+
+<BR> Commanded
+</B></TD><TD valign="top" align="CENTER" colspan="3"><B>Actual Gear
+
+<BR> Obtained
+</B></TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">1
+</TD></TR></TABLE><br><h5>Shift Solenoid Failure Mode Chart "Always On"
+</h5><p>Failed on due to powertrain control module and or vehicle wiring concerns, shift solenoid electrically or hydraulically stuck on.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER" rowspan="2">SSA ALWAYS ON:
+</TH><TH valign="bottom" align="CENTER" colspan="3">Selector Lever Position
+</TH></TR><TR><TH valign="bottom" align="CENTER">(D)
+</TH><TH valign="bottom" align="CENTER">2
+</TH><TH valign="bottom" align="CENTER">1
+</TH></TR><TR><TD valign="top" align="CENTER"><B>PCM Gear
+
+<BR> Commanded
+</B></TD><TD valign="top" align="CENTER" colspan="3"><B>Actual Gear
+
+<BR> Obtained
+</B></TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2*
+</TD></TR></TABLE>
+
+<P>*No engine braking.
+</P><br><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER" rowspan="2">SSB ALWAYS ON:
+</TH><TH valign="bottom" align="CENTER" colspan="3">Selector Lever Position
+</TH></TR><TR><TH valign="bottom" align="CENTER">(D)
+</TH><TH valign="bottom" align="CENTER">2
+</TH><TH valign="bottom" align="CENTER">1
+</TH></TR><TR><TD valign="top" align="CENTER"><B>PCM Gear
+
+<BR> Commanded
+</B></TD><TD valign="top" align="CENTER" colspan="3"><B>Actual Gear
+
+<BR> Obtained
+</B></TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2*
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2*
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2*
+</TD></TR></TABLE>
+
+<P>*No engine braking.
+</P><br><p><b>Pinpoint Tests
+</b></p><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: SHIFT AND TORQUE CONVERTER CLUTCH SOLENOIDS
+</h5>
+
+<p><b>NOTE:
+</b>  Read and record all DTCs. All Digital TR Sensor and VSS DTCs must be repaired before entering Output State Control (OSC).
+</p><p><b>NOTE:
+</b>  Refer to the Transmission Internal Harness illustration preceding these pinpoint tests.
+</p><p><b>NOTE:
+</b>  Refer to the Transmission Vehicle Harness Connector illustration preceding these pinpoint tests.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 ELECTRONIC DIAGNOSTICS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select PARK.
+</li><li>Key in OFF position.
+</li><li>Check to make sure the transmission harness connector is fully seated, pins are fully engaged in connector and in good condition before proceeding.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Diagnostic Data Link.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Active Command Modes.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Output State Control (OSC).
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Trans-Bench Mode.
+</li><li><b>Does vehicle enter Trans-Bench Mode?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>REPEAT procedure to enter Trans-Bench Mode. If vehicle did not enter Trans-Bench Mode, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual for diagnosis of PCM.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 WIGGLE TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select PIDs to be monitored.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">PID Command
+</TH><TH valign="bottom" align="CENTER">PID Actual
+</TH></TR><TR><TD valign="top" align="CENTER">SSA
+</TD><TD valign="top" align="CENTER">SS1F
+</TD></TR><TR><TD valign="top" align="CENTER">SSB
+</TD><TD valign="top" align="CENTER">SS2F
+</TD></TR><TR><TD valign="top" align="CENTER">TCC
+</TD><TD valign="top" align="CENTER">TCCF
+</TD></TR></TABLE><br>
+
+<li>Select "ON" to turn suspect solenoid on.
+</li><li>Press "SEND".
+</li><li>Wiggle all wiring and connectors to the transmission. Monitor the Solenoid State for changes.
+</li><li>Select "OFF" to turn solenoid off.
+</li><li>Press "SEND".
+</li><li><b>Does the suspect solenoid(s) fault state change?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR open or short in the vehicle harness or connector.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 SOLENOID FUNCTIONAL CHECK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor each solenoid state.
+</li><li>Turn each solenoid ON and OFF.
+</li><li><b>Does the solenoid turn ON and OFF when commanded and can solenoid activation be heard?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 OSC TRANS-DRIVE MODE (GR_CM OR TCC)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out OSC Trans-Drive Mode.
+</li><li>Select GR_CM for Shift Solenoids or follow procedures for GR_CM as listed.
+</li><li>Select TCC for Torque Converter Clutch Solenoid. Follow procedures of TCC in Drive Mode as listed.
+</li><li><b>Does the transmission upshift and downshift or torque converter engage/disengage when commanded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR all DTCs. ROAD TEST to verify if concern is still present. If concern is still present, REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section to diagnose shift or torque converter concern.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK FOR BATTERY VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove transmission fluid pan.
+</li><li>Visually inspect the lead frame and connectors for damage.
+</li><li>Key in ON position.
+</li><li>Measure the voltage with the positive lead to VPWR solenoid pin and negative lead to a good ground.
+</li><br><IMG src="gd4490a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>CHECK for open or short circuit in harness, or solenoid.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 ELECTRICAL SIGNAL CHECK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage with the positive lead connected to VPWR solenoid pin and the negative lead to the signal pin of the appropriate solenoid.
+</li><br><IMG src="gd4491a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Enter the following diagnostic mode on the diagnostic tool:  Trans-Bench Mode.
+</li><li>Select Parameter SSA, SSB or TCC.
+</li><li>Select "ON".
+</li><li>Press "SEND".
+</li><li>Turn the solenoids ON and OFF, while monitoring the voltage, solenoid state on the diagnostic tool (ON and OFF), and listen for the solenoid to activate (click).
+</li><li>Measure the voltage with the positive lead to VPWR pin and the negative lead to the TCC pin.
+</li><br><IMG src="gd4492a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Enter the following diagnostic mode on the diagnostic tool:  Select Parameter TCC.
+</li><li>Select "ON".
+</li><li>Press "SEND".
+</li><li>Turn the solenoid ON and OFF, while monitoring the voltage, solenoid state on the diagnostic tool (ON and OFF), and listen for the solenoid to activate (click).
+</li><li>Select "OFF", press "SEND".
+</li><li><b>Does the voltage and solenoid state change?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+
+<br><br><b>No
+</b><br>CHECK for open or short circuit in harness, solenoid or a PCM concern.
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK MOLDED LEAD FRAME CONNECTIONS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Molded Lead Frame.
+</li><li>Inspect for damaged or pushed-out pins, corrosion, etc.
+</li><li>Using special tool, check each of the molded lead frame connector pins.
+</li><br><IMG src="n0034644.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Does the special tool go through the molded lead frame connector pins?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new molded lead frame. GO to 
+<a href="s6271026.htm#A8"                                                                                                                                                                                                                                                       >A8
+</a> .
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#A8"                                                                                                                                                                                                                                                       >A8
+</a>.
+</td></tr><tr><td><a name="A8">&nbsp;
+</a><b>A8 CHECK SOLENOID RESISTANCE AT SOLENOID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance of solenoid SSA and SSB.
+</li><br><IMG src="ad1391a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance of the TCC solenoid.
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Solenoid
+</TH><TH valign="bottom" align="CENTER">Resistance (ohms)
+</TH></TR><TR><TD valign="top" align="CENTER">SSA
+</TD><TD valign="top" align="CENTER">20-30
+</TD></TR><TR><TD valign="top" align="CENTER">SSB
+</TD><TD valign="top" align="CENTER">20-30
+</TD></TR><TR><TD valign="top" align="CENTER">TCC
+</TD><TD valign="top" align="CENTER">10-16
+</TD></TR></TABLE><br>
+
+<br><IMG src="ad1392a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances correct?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#A9"                                                                                                                                                                                                                                                       >A9
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new solenoid.
+</td></tr><tr><td><a name="A9">&nbsp;
+</a><b>A9 CHECK SOLENOID FOR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between each of the TCC solenoid pins and ground.
+</li><br><IMG src="ad1393a.gif"                                                                                                                                                                                                                                                        height="175" width="269" border="0"><li>Measure the resistance between the SSA, SSB and vehicle power pins and ground.
+</li><br><IMG src="n0062111.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new solenoid.
+
+<br><br><b>No
+</b><br>REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section for diagnosis of shift or torque converter concerns.
+</td></tr></table><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: TRANSMISSION FLUID TEMPERATURE (TFT) SENSOR
+</h5>
+
+<p><b>NOTE:
+</b>  Refer to the Transmission Connector Layouts preceding these pinpoint tests.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 ELECTRONIC DIAGNOSTICS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check to make sure the transmission harness connector is fully seated, pins are fully engaged in connector and in good condition before proceeding.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Select Diagnostic Data Link.
+</li><li>Select PCM.
+</li><li>Select PID/Data Monitor and Record.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PIDs; TFT, TFTV.
+</li><li><b>Does the vehicle enter PID/Data Monitor and Record?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REPEAT procedure to enter PID. If vehicle did not enter PID, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual for diagnosis of PCM.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 WARM-UP/COOL-DOWN CYCLE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While monitoring the TFT PIDs, carry out the following test: If transmission is cold, run transmission to warm it up. If transmission is warm, allow transmission to cool down.
+</li><li><b>Do the TFT PIDs increase as the transmission is warmed up or decrease as the transmission is cooled, or does the TFT or TFTV drop in and out of range?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If the TFT PIDs increase as the transmission is warmed or decrease as the transmission is cooled, CLEAR all DTCs. ROAD TEST to verify if concern is still present. If concern is still present, REFER to
+
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section to diagnose transmission overheating.
+
+<br><br>If the TFT or TFTV drop in and out of range, INSPECT for intermittent concern in the internal/external harness, sensor or connector.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 ELECTRICAL SIGNAL CHECK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Remove transmission fluid pan.
+</li><li>Visually inspect the molded lead frame and connectors for damage.
+</li><li>Measure the voltage with the positive lead to positive TFT at sensor pin and negative lead to a good ground.
+</li><br><IMG src="gd4493a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br>CHECK for open or short circuit in vehicle harness, internal harness or a PCM concern.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK RESISTANCE OF TFT SENSOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Transmission Harness .
+</li><li>Measure the resistance between the positive TFT and negative TFT pins at transmission connector, using the following:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Transmission Fluid Temperature
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">&#176;C
+</TH><TH valign="bottom" align="CENTER">&#176;F
+</TH><TH valign="bottom" align="CENTER">Resistance (Ohms)
+</TH></TR><TR><TD valign="top" align="CENTER">-40 to -20
+</TD><TD valign="top" align="CENTER">-40 to -4
+</TD><TD valign="top" align="CENTER">967K - 284K
+</TD></TR><TR><TD valign="top" align="CENTER">-19 to -1
+</TD><TD valign="top" align="CENTER">-3 - 31
+</TD><TD valign="top" align="CENTER">284K - 100K
+</TD></TR><TR><TD valign="top" align="CENTER">0 - 20
+</TD><TD valign="top" align="CENTER">32 - 68
+</TD><TD valign="top" align="CENTER">100K - 37K
+</TD></TR><TR><TD valign="top" align="CENTER">21 - 40
+</TD><TD valign="top" align="CENTER">69 - 104
+</TD><TD valign="top" align="CENTER">37K - 16K
+</TD></TR><TR><TD valign="top" align="CENTER">41 - 70
+</TD><TD valign="top" align="CENTER">105 - 158
+</TD><TD valign="top" align="CENTER">16K - 5K
+</TD></TR><TR><TD valign="top" align="CENTER">71 - 90
+</TD><TD valign="top" align="CENTER">159 - 194
+</TD><TD valign="top" align="CENTER">5K - 2.7K
+</TD></TR><TR><TD valign="top" align="CENTER">91 - 110
+</TD><TD valign="top" align="CENTER">195 - 230
+</TD><TD valign="top" align="CENTER">2.7K - 1.5K
+</TD></TR><TR><TD valign="top" align="CENTER">111 - 130
+</TD><TD valign="top" align="CENTER">231 - 266
+</TD><TD valign="top" align="CENTER">1.5K - 0.8K
+</TD></TR><TR><TD valign="top" align="CENTER">131 - 150
+</TD><TD valign="top" align="CENTER">267 - 302
+</TD><TD valign="top" align="CENTER">0.8K - 0.54K
+</TD></TR></TABLE><br>
+
+<br><IMG src="ad1396a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance correct?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section to diagnose an overheating concern.
+
+<br><br><b>No
+</b><br>INSTALL a new internal harness (sensor is part of harness).
+</td></tr></table><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: DIGITAL TRANSMISSION RANGE (TR) SENSOR
+</h5>
+
+<p><b>NOTE:
+</b>  Refer to the Digital Transmission Range (TR) Sensor Connector illustration preceding these pinpoint tests.
+</p><p><b>NOTE:
+</b>  Refer to the Digital Transmission Range (TR) Sensor Diagnosis Chart preceding these pinpoint tests.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 VERIFY DIAGNOSTIC TROUBLE CODES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select PARK.
+</li><li>Key in OFF position.
+</li><li><b>NOTE:
+</b>  DTC codes P0705 and P0708 cannot be set by an incorrectly adjusted digital TR sensor.
+</li><li>Carry out on-board diagnostic test.
+</li><li><b>Are only DTC codes P0705, P0708 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 VERIFY DIGITAL TRANSMISSION RANGE SENSOR ALIGNMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check to make sure the digital TR sensor harness connector is fully seated, pins are fully engaged in connector and in good condition before proceeding.
+</li><li>Apply the parking brake.
+</li><li>Select NEUTRAL.
+</li><li>Disconnect the shift cable/linkage from the manual lever.
+</li><li>Verify that the TR Sensor Alignment Gauge fits in the appropriate slots.
+</li><li><b>Is the digital TR sensor adjustment OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>ADJUST the digital TR sensor. PLACE transmission range selector lever in P and CLEAR DTCs. REPEAT OBD Tests. GO to 
+<a href="s6271026.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a> .
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 VERIFY SHIFT CABLE/LINKAGE ADJUSTMENT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Place the manual lever in the overdrive position.
+</li><li>Select DRIVE.
+</li><li>Reconnect the shift cable/linkage.
+</li><li>Verify that the shift cable/linkage is adjusted OK.
+</li><li><b>Is the shift cable/linkage adjusted OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>ADJUST the shift cable/linkage. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s750l.htm&rightside=s62s750r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 307-05
+</a>.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK ELECTRICAL SIGNAL OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Select PARK.
+</li><li>Disconnect:  Digital TR Sensor.
+</li><li><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not pry on connector. This will damage the connector and result in a transmission concern.
+</b></li><li>Press the button and pull out on the digital TR harness connector.
+</li><li>Inspect both ends of the connector for damage or pushed-out pins, corrosion, loose wires and missing or damaged seals.
+</li><li><b>Are the connector, pins and harness damaged?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR as required. CLEAR DTCs and REPEAT OBD Tests.
+
+<br><br><b>No
+</b><br>If diagnosing a DTC, GO to 
+<a href="s6271026.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a> .
+
+<br><br>If diagnosing a starting concern or a reversing lamp concern, GO to 
+<a href="s6271026.htm#C10"                                                                                                                                                                                                                                                       >C10
+</a> .
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK ELECTRICAL SYSTEM OPERATION (DIGITAL TR AND PCM)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Connect:  Digital TR Sensor.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  TR PIDS TR, TR_D, TR_V.
+</li><li>Move transmission range selector lever into each gear and stop.
+</li><li>Observe any of the following PIDs, TR and TR_D, TR_V (vehicle dependent) while wiggling harness, tapping on sensor, or driving the vehicle. Use PIDs TR, and TR_D for DTCs P0705, P1704, and P1705. Use PIDs TR, and
+TR_V for DTC P0708.
+</li><li>Compare the PIDs to the Digital Transmission Range (TR) Sensor Diagnosis Chart.
+</li><li><b>Do the PIDs TR, TR_D and TR_V match the Digital Transmission Range (TR) Sensor Diagnosis chart, and does the TR_D PID remain steady when the harness is wiggled, the sensor is tapped, or the vehicle driven?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The problem is not in the digital TR sensor system. REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section for further diagnosis.
+
+<br><br><b>No
+</b><br>If TR_D changes when wiggling harness, tapping on the sensor, or driving the vehicle, the problem may be intermittent.
+
+<br><br>GO to 
+<a href="s6271026.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK DIGITAL TRANSMISSION RANGE SENSOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Digital TR Sensor .
+</li><li><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not pry on the connector. This will damage the connector and result in a transmission concern.
+</b></li><li>Connect:  TR-E Cable to Transmission Tester.
+</li><li>Connect:  TR-E Cable to Digital TR Sensor.
+</li><li>Place the Digital TR Overlay onto Transmission Tester.
+</li><li>Carry out Sensor Test as instructed on the Digital TR Overlay.
+</li><li><b>Does the status lamp on the tester TRS-E cable match the selected gear positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Concern is not in the digital TR sensor, GO to 
+<a href="s6271026.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a> .
+
+<br><br><b>No
+</b><br>INSTALL a new digital TR sensor. CLEAR DTCs and REPEAT OBD Tests.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK PCM HARNESS CIRCUITS FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Powertrain Control Module (PCM) .
+</li><li>Inspect for damaged or pushed-out pins, corrosion or loose wires.
+</li><li>Disconnect:  Digital TR Sensor.
+</li><li><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not pry on the connector. This will damage the connector and result in a transmission concern.
+</b></li><li>Disconnect the digital TR sensor connector.
+</li><li>Measure the resistance between the PCM test pin 43 and signal return circuit pin 2 at digital TR sensor connector harness side.
+</li><br><IMG src="a0089870.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between the PCM test pin 17 and TR1 circuit pin 4 at digital TR sensor connector harness side.
+</li><br><IMG src="a0089871.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between the PCM test pin 18 and TR2 circuit pin 5 at digital TR sensor connector harness side.
+</li><br><IMG src="a0089872.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between the PCM test pin 32 and TR4 circuit pin 6 at digital TR sensor connector harness side.
+</li><br><IMG src="a0089873.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between the PCM test pin 19 and TR3A circuit pin 3 at digital TR sensor connector harness side.
+</li><br><IMG src="a0089874.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are all resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR open circuit(s). RECONNECT all components. CLEAR DTCs. REPEAT OBD Tests.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK PCM HARNESS CIRCUITS FOR SHORT TO GROUND OR POWER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between PCM test pin 43 and chassis ground.
+</li><br><IMG src="a0089875.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 17 and chassis ground.
+</li><br><IMG src="a0089876.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 18 and chassis ground.
+</li><br><IMG src="a0089877.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 32 and chassis ground.
+</li><br><IMG src="a0089878.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 19 and chassis ground.
+</li><br><IMG src="a0089879.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are all resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#C9"                                                                                                                                                                                                                                                       >C9
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR short circuit(s). RECONNECT all components. CLEAR DTCs. REPEAT OBD Tests.
+</td></tr><tr><td><a name="C9">&nbsp;
+</a><b>C9 CHECK FOR SHORT BETWEEN TR/PCM INPUT SIGNAL CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between PCM test pin 17 and PCM test pins 18, 19, and 32.
+</li><br><IMG src="a0089880.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 18 and PCM test pins 17, 19, and 32.
+</li><br><IMG src="a0089881.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 19 and PCM test pins 17, 18, and 32.
+</li><br><IMG src="a0089883.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM test pin 32 and PCM test pins 17, 18, and 19.
+</li><br><IMG src="a0089882.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are all the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s34al.htm&rightside=s62s34ar.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04A
+</a>, 
+<a target="leftside" href="s62~tr~en~leftside=s62s34bl.htm&rightside=s62s34br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04B
+</a> or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s34cl.htm&rightside=s62s34cr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04C
+</a>. RECONNECT all components. CLEAR DTCs. REPEAT OBD Tests.
+
+<br><br><b>No
+</b><br>REPAIR shorts on circuits having less than 10,000 ohms between other TR/PCM input signal circuits. RECONNECT all components. CLEAR DTCs. REPEAT OBD Tests.
+</td></tr><tr><td><a name="C10">&nbsp;
+</a><b>C10 CHECK THE NON-PCM INTERNAL CIRCUITS OF SENSOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  TRS-E Cable to Transmission Tester.
+</li><li>Connect:  TRS-E Cable to Digital TR Sensor.
+</li><li>Place the Digital TR Overlay onto Transmission Tester.
+</li><li>Carry out Switch Test as instructed on the Digital TR Overlay.
+</li><li><b>Does the status lamp on the tester indicate RED for the correct gear position?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Concern is not in the digital TR sensor. For starting system concerns, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s34al.htm&rightside=s62s34ar.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04A
+</a>, 
+<a target="leftside" href="s62~tr~en~leftside=s62s34bl.htm&rightside=s62s34br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04B
+</a>or 
+<a target="leftside" href="s62~tr~en~leftside=s62s34cl.htm&rightside=s62s34cr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04C
+</a>. For reversing lamp concerns, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>. For optional circuits, REFER to the
+Powertrain Control/Emissions Diagnosis (PC/ED) manual for diagnosis.
+
+<br><br><b>No
+</b><br>INSTALL a new digital TR sensor. CLEAR DTCs. REPEAT OBD Tests.
+</td></tr></table><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: ELECTRICAL PRESSURE CONTROL (EPC) SOLENOID
+</h5>
+
+<p><b>NOTE:
+</b>  Refer to the Transmission Internal Harness illustration preceding these pinpoint tests.
+</p><p><b>NOTE:
+</b>  Read and record all DTCs. All Digital TR Sensor and VSS DTCs must be repaired before entering Output State Control (OSC).
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 ELECTRONIC DIAGNOSTICS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Select PARK.
+</li><li>Check to make sure the transmission harness connector is fully seated, pins are fully engaged in the connector and in good condition before proceeding.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Diagnostic Data Link.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Active Command Modes.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Output State Control (OSC).
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Trans-Bench Mode.
+</li><li><b>Does the vehicle enter the Trans-Bench Mode?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>REPEAT procedure to ENTER Trans-Bench Mode. If vehicle did not enter OSC, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual for diagnosis of PCM.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 SOLENOID FUNCTIONAL TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Install 2,060 kPa (300 psi) pressure gauge into EPC tap.
+</li><li>Monitor pressure gauge.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Parameter; EPC.
+</li><li>Select value - 15, 30, 45, 60, 70 or 90 psi.
+</li><li>Press "SEND".
+</li><li>Select another value "0-90 psi".
+</li><li>Press "SEND".
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  XXX.
+</li><li>Press "SEND".
+</li><li><b>Does the pressure reading match the commanded pressure?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR DTCs. REPEAT OBD Tests.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Transmission Harness Connector.
+</li><li>Key in ON position.
+</li><li>Measure the voltage on pin 6 at the transmission harness connector to chassis ground.
+</li><br><IMG src="a0089885.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage less than 5 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK FOR BATTERY VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove transmission fluid pan.
+</li><li>Visually inspect the lead frame connectors for damage.
+</li><li>Key in ON position.
+</li><li>Measure the voltage with positive lead to VPWR solenoid pin and negative lead to a good ground.
+</li><br><IMG src="gd4494a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the OBD Tests.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 ELECTRICAL SIGNAL CHECK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage with positive lead connected to VPWR solenoid pin and connect negative lead to the signal pin of the EPC solenoid.
+</li><br><IMG src="gd4495a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Turn the solenoids ON and OFF, while monitoring the voltage reading, solenoid state on the diagnostic tool (ON and OFF), listen for the solenoid to activate (click).
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Trans-Bench Mode.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Parameter EPC.
+</li><li>Select a value "0-90 psi".
+</li><li>Press "SEND".
+</li><li>Select another value "0-90 psi".
+</li><li>Press "SEND".
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  XXX.
+</li><li>Press "SEND".
+</li><li><b>Does the voltage and solenoid state change?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>CHECK for open or short circuit in harness or PCM.
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK LEAD FRAME SOLENOID CONNECTIONS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Caption Lead Frame.
+</li><li>Inspect the lead frame for damages, pushed out pins, corrosion, etc.
+</li><li>Using the special tool, check each of the lead frame connector pins.
+</li><br><IMG src="n0034644.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Does the special tool go through the lead frame connector pins?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new lead frame. GO to 
+<a href="s6271026.htm#D7"                                                                                                                                                                                                                                                       >D7
+</a> .
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s6271026.htm#D7"                                                                                                                                                                                                                                                       >D7
+</a>.
+</td></tr><tr><td><a name="D7">&nbsp;
+</a><b>D7 CHECK SOLENOID RESISTANCE AT SOLENOID
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance of the EPC solenoid.
+</li><br><IMG src="ad1399a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance between 2.48 and 5.66 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#D8"                                                                                                                                                                                                                                                       >D8
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new solenoid. CLEAR the DTCs. REPEAT the OBD Tests.
+</td></tr><tr><td><a name="D8">&nbsp;
+</a><b>D8 CHECK SOLENOID FOR SHORT TO GROUND 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for continuity between engine GROUND and the EPC solenoid terminals with ohmmeter or other low current tester (less than 200 milliamps). Connection should show infinite resistance (no continuity).
+</li><br><IMG src="ad1400a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is there continuity?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new solenoid. CLEAR the DTCs. REPEAT the OBD Tests.
+
+<br><br><b>No
+</b><br>REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section for diagnosis of pressure concerns.
+</td></tr></table><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: OUTPUT SHAFT SPEED (OSS) SENSORS
+</h5>
+
+<p><b>NOTE:
+</b>  Refer to the Output Shaft Speed (OSS) Sensor Harness Connector illustration preceding these pinpoint tests.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 ELECTRONIC DIAGNOSTICS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check to make sure the transmission harness connector is fully seated, pins are fully engaged in connector and in good condition before proceeding.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Diagnostic Data Link.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM.
+</li><li>Select PID/Data Monitor and Record.
+</li><li>Select the PID OSS.
+</li><li><b>Does vehicle enter PID/Data Monitor and Record?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>REPEAT procedure to ENTER PID. If vehicle did not enter PID, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual for diagnosis of PCM.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 DRIVE CYCLE TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While monitoring the OSS Speed PID, drive the vehicle so that the transmission upshifts and downshifts through all gears.
+</li><li><b>Does the OSS Speed PID increase and decrease with vehicle speed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR all DTCs. ROAD TEST to verify if concern is still present. If concern is still present, REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section.
+
+<br><br><b>No
+</b><br>If the OSS Speed PID does not increase and decrease with vehicle speed, INSPECT for open or short in vehicle harness, sensor, a PCM concern, or internal hardware concern. GO to 
+<a href="s6271026.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br>If the sensor signal is erratic, INSPECT for intermittent concern in the internal/external harness, sensor, or connector.
+
+<br><br>If the sensor signal is consistent/unchanging output, GO to 
+<a href="s6271026.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a> .
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK THE PCM HARNESS FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM.
+</li><li>Disconnect:  OSS Sensor.
+</li><li>Measure the resistance between PCM pin 14 and OSS connector pin 2 harness side.
+</li><br><IMG src="n0065016.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM pin 43 and OSS connector pin 1 harness side.
+</li><br><IMG src="n0065017.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#E4"                                                                                                                                                                                                                                                       >E4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="E4">&nbsp;
+</a><b>E4 CHECK THE PCM HARNESS FOR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM.
+</li><li>Disconnect:  OSS Sensor.
+</li><li>Measure the resistance between PCM pin 14 and chassis ground.
+</li><br><IMG src="n0065025.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#E5"                                                                                                                                                                                                                                                       >E5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="E5">&nbsp;
+</a><b>E5 CHECK RESISTANCE OF OSS SENSOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the vehicle harness connector from the OSS sensor.
+</li><li>Measure the resistance between the OSS sensor pins.
+</li><br><IMG src="n0065030.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Record the resistance.
+</li><li><b>Is the resistance within 400-500 ohms at 77&#176;F (25&#176;C)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section for concern diagnosis.
+
+<br><br><b>No
+</b><br>INSTALL a new OSS sensor.
+</td></tr></table><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: TURBINE SHAFT SPEED (TSS) SENSORS
+</h5>
+
+<p><b>NOTE:
+</b>  Refer to the Turbine Shaft Speed (TSS) Sensor Harness Connector illustration preceding these pinpoint tests.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 ELECTRONIC DIAGNOSTICS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check to make sure the transmission harness connector is fully seated, pins are fully engaged in connector and in good condition before proceeding.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Diagnostic Data Link.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  PCM.
+</li><li>Select PID/Data Monitor and Record.
+</li><li>Select the PID TSS.
+</li><li><b>Does vehicle enter PID/Data Monitor and Record?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br><b>No
+</b><br>REPEAT procedure to ENTER PID. If vehicle did not enter PID, REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual for diagnosis of PCM.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 DRIVE CYCLE TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>While monitoring the TSS Speed PID, drive the vehicle so that the transmission upshifts and downshifts through all gears.
+</li><li><b>Does the TSS Speed PID increase and decrease with engine and vehicle speed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CLEAR all DTCs. ROAD TEST to verify if concern is still present. If concern is still present, REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section.
+
+<br><br><b>No
+</b><br>If the TSS Speed PID does not increase and decrease with engine and vehicle speed, INSPECT for open or short in vehicle harness, sensor, a PCM concern, or internal hardware concern.
+
+<br><br>If the sensor signal is erratic, INSPECT for intermittent concern in the internal/external harness, sensor, or connector.
+
+<br><br>If the sensor signal is steady, GO to 
+<a href="s6271026.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a> .
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK THE PCM HARNESS FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM.
+</li><li>Disconnect:  TSS Sensor.
+</li><li>Measure the resistance between PCM pin 15 and TSS connector pin 1 harness side.
+</li><br><IMG src="n0065018.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Measure the resistance between PCM pin 43 and TSS connector pin 2 harness side.
+</li><br><IMG src="n0065019.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK THE PCM HARNESS FOR SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM.
+</li><li>Disconnect:  TSS Sensor.
+</li><li>Measure the resistance between PCM pin 15 and chassis ground.
+</li><br><IMG src="n0065026.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 CHECK RESISTANCE OF TSS SENSOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the vehicle harness connector from the TSS sensor.
+</li><li>Measure the resistance between the TSS sensor pins.
+</li><br><IMG src="n0065031.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Record the resistance.
+</li><li><b>Is the resistance within 480-590 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section for concern diagnosis.
+
+<br><br><b>No
+</b><br>INSTALL a new TSS sensor.
+</td></tr></table><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: SOLENOID MECHANICAL FAILURE
+</h5>
+
+<p><b>NOTE:
+</b>  Repair all other DTCs before repairing the following DTCs: P1714, P1715, P1740.
+</p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 ELECTRONIC DIAGNOSIS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out KOEO Test.
+</li><li>If any of the following DTCs are present, continue with this test: P1714, P1715, P1740.
+</li><li><b>Are other DTCs present for TFT or shift solenoids?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the other DTCs first. CLEAR DTCs and CARRY OUT Transmission Drive Cycle Test. REPEAT Quick Test.
+
+<br><br><b>No
+</b><br>INSTALL a new solenoid and or body. REFER to the 
+<a href="s6271024.htm"                                                                                                                                                                                                                                                       >Diagnostic Trouble Code (DTC) Charts
+</a> in this section for code description. GO to 
+<a href="s6271026.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a> .
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 TRANSMISSION DRIVE CYCLE TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out transmission drive cycle test.
+</li><li>Carry out on-board diagnostic test.
+</li><li><b>Does the vehicle upshift and downshift OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s6271026.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section to diagnose shift concerns.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 RETRIEVE DTCS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Carry out KOEO Test until continuous DTCs have been displayed.
+</li><li><b>Are DTCs P1714, P1715, P1740 still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s34al.htm&rightside=s62s34ar.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04A
+</a>, 
+<a target="leftside" href="s62~tr~en~leftside=s62s34bl.htm&rightside=s62s34br.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04B
+</a> or
+
+<a target="leftside" href="s62~tr~en~leftside=s62s34cl.htm&rightside=s62s34cr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-04C
+</a>. ROAD TEST and REPEAT Quick Test.
+
+<br><br><b>No
+</b><br>Testing completed. If a concern still exists, REFER to 
+<a href="s6271030.htm"                                                                                                                                                                                                                                                       >Diagnosis By Symptom
+</a> in this section for concern diagnosis.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

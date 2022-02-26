@@ -1,0 +1,1525 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="18"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Module Communications Network"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P4591Q0"><meta name="tps_procsgmlid" content="n924312"><meta name="tps_packetinfo" content="491554"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 418-00:  Module Communications Network
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  07/21/2006
+</div></TD></TR></TABLE><hr><h4>Communications Network
+</h4><meta name="tps_proctitle" content="Communications Network"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=014&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >14
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2574a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Flex Probe Kit
+
+<br>105-R025B or equivalent
+</td></tr></table><div><a name="extract_378">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The vehicle has 3 module communications networks:
+</p><ul type="disc"><li>controller area network (CAN)
+</li><li>universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network
+</li><li>international standards organization (ISO) 9141 communications network
+</li></ul><p>The CAN has an unshielded twisted pair cable, data plus, circuit 1827 (WH/LG) and data minus, circuit 1828 (PK/LG).
+</p><p>The UBP communications network uses a single circuit communications network circuit 1906 (VT), as does the ISO 9141 communications network, which is a single circuit communications network, circuit 70 (LB/WH).
+</p><p>All 3 communications networks are connected to the data link connector (DLC). This makes diagnosis and testing of these systems easier by allowing 1 diagnostic tool to be able to diagnose and control any module on the 3 communications networks
+from 1 connector. The DLC can be found under the instrument panel between the steering column and the audio unit.
+</p><h5>Controller Area Network (CAN)
+</h5><p>The CAN is an unshielded twisted pair cable, data plus circuit 1827 (WH/LG) and data minus circuit 1828 (PK/LG). The CAN is not designed to operate under single point fault conditions. If either circuit is shorted to voltage or the CAN data
+plus is shorted to ground, module-to-module and module-to-tester communication is not possible. If the CAN data minus is shorted to ground or an open exists on either bus line, module-to-module and module-to-tester communication is marginal at best.
+The CAN bus may remain operational when one of the two termination resistors are not present. If there are issues with the CAN, there may be missing functionality and problems connecting with a diagnostic tool. On the CAN, there are 2 terminating
+modules which are composed of the powertrain control module (PCM) and the instrument cluster which are located at the far opposite ends of the CAN wiring.
+</p><h5>Universal Asynchronous Receiver Transmitter (UART)-based Protocol (UBP) Communications Network
+</h5><p>The UBP communications network does not function if the circuit is shorted to ground or voltage. The UBP communications network allows inter-module communication. If one of the modules on the UBP communications network loses power or shorts
+internally, communications to that module fail.
+</p><h5>International Standards Organization (ISO) 9141 Communications Network
+</h5><p>The ISO 9141 communications network does not permit inter-module communication. When the diagnostic tool communicates to modules on the ISO 9141 communications network, the diagnostic tool must ask for all information; the modules cannot
+initiate communications.
+</p><p>The ISO 9141 communications network does not function if the circuit is shorted to ground or battery voltage. Also, if one of the modules on the ISO 9141 communications network loses power or shorts internally, communications to that module
+fail.
+</p><div><a name="extract_379">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Central junction box (CJB) fuse 41 (20A)
+</LI><LI>Wiring harness
+</LI><LI>Connections
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, 
+<a href="s62i0002.htm#PS2-L"                                                                                                                                                                                                                                                       >Go To Pinpoint Test L
+</a>.
+</li></ol><ol start="6"><li><a href="s62i0002.htm#PC"                                                                                                                                                                                                                                                       >Go To Pinpoint Test PC
+</a>.
+</li></ol><p><b>System Precheck
+</b></p><a name="PC">&nbsp;
+</a><h5>PINPOINT TEST PC: DATA LINK DIAGNOSTICS TEST
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="PC1">&nbsp;
+</a><b>PC1 RUN THE DATA LINK DIAGNOSTICS TEST
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the data link diagnostics test.
+</li><li><b>Is system passed obtained?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The network test passed. If a single module NO RESPONSE / NOT EQUIPPED, RETURN to the Symptom Chart of the section for the module in question and DIAGNOSE voltage and ground circuits.
+
+<br><br>If the module in question voltage and ground circuits are OK, GO to 
+<a href="s62i0002.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a> in this section. If NO RESPONSE / NOT EQUIPPED from the PCM is reported, refer to the Powertrain Control/Emissions Diagnosis (PC/ED) manual, Section 5, pinpoint test QA.
+
+<br><br><b>No
+</b><br>If controller area network (CAN) circuit faults; all electronic control units no response/not equipped, 
+<a href="s62i0002.htm#I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+
+<br><br>If international standards organization (ISO) 9141 communications network circuit faults; all electronic control units no response/not equipped, 
+<a href="s62i0002.htm#J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</a>.
+
+<br><br>If universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network circuit faults; all electronic control units no response/not equipped, 
+<a href="s62i0002.htm#K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</a>.
+
+<br><br>If no response from the diagnostic tool, 
+<a href="s62i0002.htm#L"                                                                                                                                                                                                                                                       >Go To Pinpoint Test L
+</a>.
+
+<br><br>If the module in question is no response/not equipped, GO to 
+<a href="s62i0002.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</td></tr></table><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">U0073
+</TD><TD valign="top" align="CENTER">Control Module Communications Bus Off
+</TD><TD valign="top" align="CENTER">ABS
+</TD><TD valign="top" align="CENTER"><A href="s62i0002.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="CENTER">CAN Communication Bus Fault-Recieve Error
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="CENTER"><A href="s62i0002.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="CENTER">CAN Communication Bus Fault-Recieve Error
+</TD><TD valign="top" align="CENTER">ABS Module
+</TD><TD valign="top" align="CENTER"><A href="s62i0002.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1900
+</TD><TD valign="top" align="CENTER">CAN Communication Bus Fault Receive Error
+</TD><TD valign="top" align="CENTER">Instrument Cluster
+</TD><TD valign="top" align="CENTER"><A href="s62i0002.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1950
+</TD><TD valign="top" align="CENTER">UBP Communication Bus Fault
+</TD><TD valign="top" align="CENTER">Instrument Cluster
+</TD><TD valign="top" align="CENTER"><A href="s62i0002.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U1950
+</TD><TD valign="top" align="CENTER">UBP Communication Bus Fault
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="CENTER"><A href="s62i0002.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">U2023
+</TD><TD valign="top" align="CENTER">External Node Fault DTC
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="CENTER">U2023 is set when a module receives invalid network data from another module with a faulted input. RETRIEVE and REPAIR all non-network DTCs in the other modules on the network. REFER to
+
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A> for a list of all DTCs.
+</TD></TR><TR><TD valign="top" align="CENTER">U2023
+</TD><TD valign="top" align="CENTER">External Node Fault DTC
+</TD><TD valign="top" align="CENTER">ABS Module
+</TD><TD valign="top" align="CENTER">U2023 is set when a module receives invalid network data from another module with a faulted input. RETRIEVE and REPAIR all non-network DTCs in the other modules on the network. REFER to
+
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A> for a list of all DTCs.
+</TD></TR></TABLE><br><div><a name="extract_380">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The vehicle security module does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network
+</li><li>Vehicle security module
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The powertrain control module (PCM) does not respond to the scan tool
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>PCM
+</li></ul></td><td><ul type="disc"><li>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual, Section 5, pinpoint test QA before proceeding to 
+<a href="s62i0002.htm#B"                                                                                                                                                                                                                                                       >Pinpoint Test B
+</a>. If pinpoint test QA has been completed, 
+<a href="s62i0002.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The restraint control module (RCM) does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the international standards organization (ISO) 9141 communications network
+</li><li>RCM
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The driver seat module (DSM) does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network
+</li><li>DSM
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The parking aid module does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the international standards organization (ISO) 9141 communications network
+</li><li>Parking aid module
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The instrument cluster does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the controller area network (CAN)
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The electronic automatic temperature control (EATC) module does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network
+</li><li>EATC module
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The anti-lock brake system (ABS) module does not respond to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the controller area network (CAN)
+</li><li>ABS module
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No high speed controller area network (CAN) communication
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the CAN
+</li><li>CAN network modules
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-I"                                                                                                                                                                                                                                                       >Go To Pinpoint Test I
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No international standards organization (ISO) 9141 communications network communication
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the ISO 9141 communications network
+</li><li>ISO 9141 communications network modules
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-J"                                                                                                                                                                                                                                                       >Go To Pinpoint Test J
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network communication
+</li></ul></td><td><ul type="disc"><li>Circuit or connection in the UBP communications network
+</li><li>UBP communications network modules
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-K"                                                                                                                                                                                                                                                       >Go To Pinpoint Test K
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>No module/network communication &#8212; no power to the diagnostic tool
+</li></ul></td><td><ul type="disc"><li>Data link connector (DLC)
+</li><li>Fuse
+</li><li>Circuitry
+</li><li>Diagnostic tool
+</li></ul></td><td><ul type="disc"><li><a href="s62i0002.htm#PS2-L"                                                                                                                                                                                                                                                       >Go To Pinpoint Test L
+</a>.
+</li></ul></td></tr></table><div><a name="extract_381">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Vehicle Security Module Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The vehicle security module controls the remote keyless entry (RKE) and power door locks. The vehicle security module communicates with the diagnostic tool through the universal asynchronous receiver transmitter (UART)-based protocol (UBP)
+communications network circuit 1906 (VT).
+</p><p>Check the UBP circuit between the vehicle security module C3008b and the data link connector (DLC) C251. The total resistance value must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 1906 (VT),
+damage to the DLC C251, damage to the vehicle security module C3008b, or a problem in the in-line connector.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>UBP circuit 1906 (VT) open
+</li><li>vehicle security module C3008b
+</li><li>vehicle security module
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE VEHICLE SECURITY MODULE DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE VEHICLE SECURITY MODULE C3008B FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Inspect the vehicle security module C3008b for damage.
+</li><li><b>Is the vehicle security module C3008b OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the vehicle security module C3008b as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE UBP NETWORK BETWEEN THE DLC AND THE VEHICLE SECURITY MODULE FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-3, circuit 1906 (VT), harness side and the vehicle security module C3008b-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0075257.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Powertrain Control Module (PCM) Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The PCM communicates with the diagnostic tool through controller area network (CAN) circuits 1827 (WH/LG) and 1828 (PK/LG).
+</p><p>Check the CAN circuits between the PCM C175b and the data link connector (DLC) C251. The total resistance values must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 1827 (WH/LG) and 1828 (PK/LG),
+damage to the DLC C251, damage to the PCM C175b, or a problem with the in-line connector.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>CAN data plus circuit 1827 (WH/LG) open
+</li><li>CAN data minus circuit 1828 (PK/LG) open
+</li><li>PCM C175b
+</li><li>PCM
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE POWERTRAIN CONTROL MODULE (PCM) DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 POWERTRAIN CONTROL/EMISSIONS DIAGNOSIS (PC/ED) MANUAL PINPOINT TEST QA VERIFICATION CHECK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify that the PC/ED pinpoint test QA has been carried out.
+</li><li><b>Has the PC/ED pinpoint test QA been carried out?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual, Section 5, pinpoint test QA to diagnose no communication with the PCM.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE PCM C175B FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Inspect the PCM C175b for damage.
+</li><li><b>Is the PCM C175b OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the PCM C175b as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE CAN CIRCUITS BETWEEN THE PCM AND THE DLC FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the PCM C175b-2, circuit 1827 (WH/LG), harness side and the data link connector (DLC) C251-6, circuit 1827 (WH/LG), harness side.
+</li><br><IMG src="a0079247.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the PCM C175b-3, circuit 1828 (PK/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="a0079248.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Restraint Control Module (RCM) Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The RCM communicates with the diagnostic tool through the international standards organization (ISO) 9141 communications network circuit 70 (LB/WH).
+</p><p>Check the ISO 9141 circuit between the RCM C310a and the data link connector (DLC) C251. The total resistance value must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 70 (LB/WH), damage to the DLC
+C251, or damage to the C310a.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>ISO 9141 circuit 70 (LB/WH) open
+</li><li>RCM C310a
+</li><li>RCM
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE RESTRAINT CONTROL MODULE (RCM) DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE RCM C310A FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  The ISO 9141 diagnostics requires depower of the supplemental restraint system (SRS) when disconnecting the restraint control module (RCM) C310a. When Key ON occurs to carry out the data link diagnostic test, diagnostic trouble codes (DTCs) may
+be stored in the RCM. These DTCs should be cleared when network diagnostics are completed.
+
+<li>Key in OFF position.
+</li><li>Depower the air bag system. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Disconnect:  RCM C310a.
+</li><li>Inspect the RCM C310a for damage.
+</li><li><b>Is the RCM C310a OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the RCM C310a as necessary. CONNECT the RCM C310a. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE ISO 9141 NETWORK BETWEEN THE DLC AND THE RCM FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the RCM C310a-11, circuit 70 (LB/WH), harness side and the DLC C251-7, circuit 70 (LB/WH), harness side.
+</li><br><IMG src="a0058237.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CONNECT the RCM C310a. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK FOR CORRECT RCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the RCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the RCM connectors and make sure they seat correctly.
+</li><li>Repower the air bag system. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new RCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Driver Seat Module (DSM) Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The DSM communicates with the diagnostic tool through the universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network circuit 1906 (VT).
+</p><p>Check the UBP circuit between the DSM C341c and the data link connector (DLC) C251. The total resistance value must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 1906 (VT), damage to the DLC C251,
+damage to the DSM C341c, or a problem in the in-line connector.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>UBP circuit 1906 (VT) open
+</li><li>DSM C341c
+</li><li>DSM
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE DRIVER SEAT MODULE (DSM) DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE DSM C341C FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  DSM C341c.
+</li><li>Inspect the DSM C341c for damage.
+</li><li><b>Is the DSM C341c OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the DSM C341c as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE UPB NETWORK CIRCUIT BETWEEN THE DLC AND THE DSM FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DSM C341c-2, circuit 1906 (VT), harness side and the DLC C251-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0078550.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK FOR CORRECT DSM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the DSM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the DSM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new DSM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: The Parking Aid Module Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The parking aid module communicates with the diagnostic tool through the international standard organization (ISO) 9141 communications network circuit 70 (LB/WH).
+</p><p>Check the ISO 9141 circuit between the parking aid module C2023 and the data link connector (DLC) C251. The total resistance values must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 70 (LB/WH),
+damage to the DLC C251, damage to the parking aid module C2023, or a problem in the in-line connectors.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>ISO 9141 circuit 70 (LB/WH) open
+</li><li>parking aid module C2023
+</li><li>parking aid module
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE PARKING AID MODULE DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE PARKING AID MODULE C2023 FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Inspect the parking aid module C2023 for damage.
+</li><li><b>Is the parking aid module C2023 OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the parking aid module C2023 as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK THE ISO 9141 CIRCUIT BETWEEN THE DLC AND THE PARKING AID MODULE FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the parking aid module C2023-8, circuit 70 (LB/WH), harness side and the DLC C251-7, circuit 70 (LB/WH), harness side.
+</li><br><IMG src="a0075745.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the parking aid module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the parking aid module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sdd0l.htm&rightside=s62sdd0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-13
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The Instrument Cluster Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster communicates with the diagnostic tool through the controller area network (CAN) circuits 1827 (WH/LG) and 1828 (PK/LG).
+</p><p>Check the CAN circuits between the instrument cluster C220a and the data link connector (DLC) C251. The total resistance values must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 1827 (WH/LG) and
+1828 (PK/LG), damage to the DLC C251, damage to the instrument cluster C220a, or a problem with the in-line connector.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>CAN data plus circuit 1827 (WH/LG) open
+</li><li>CAN data minus circuit 1828 (PK/LG) open
+</li><li>instrument cluster C220a
+</li><li>instrument cluster
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE INSTRUMENT CLUSTER DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE INSTRUMENT CLUSTER C220A FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Inspect the instrument cluster C220a for damage.
+</li><li><b>Is the instrument cluster C220a OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the instrument cluster C220a as necessary. CONNECT the instrument cluster C220a. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE CAN CIRCUITS FOR AN OPEN BETWEEN THE DLC AND THE INSTRUMENT CLUSTER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the instrument cluster C220a-31, circuit 1827 (WH/LG), harness side.
+</li><br><IMG src="a0078553.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the DLC C251-14, circuit 1828 (PK/LG), harness side and the instrument cluster C220a-32, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="a0078554.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CONNECT the instrument cluster C220a. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: The Electronic Automatic Temperature Control (EATC) Module Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The EATC module communicates with the diagnostic tool through the universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network circuit 1906 (VT).
+</p><p>Check the UBP circuit between the EATC module C228b and the data link connector (DLC) C251. The total resistance value must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 1906 (VT), damage to the DLC
+C251, damage to the EATC module C228b, or a problem in the in-line connector.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>UBP circuit 1906 (VT) open
+</li><li>EATC module C228b
+</li><li>EATC module
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: THE ELECTRONIC AUTOMATIC TEMPERATURE CONTROL (EATC) MODULE DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK THE EATC MODULE C228B FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  EATC Module C228b.
+</li><li>Inspect the EATC module C228b for damage.
+</li><li><b>Is the EATC module C228b OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the EATC module C228b as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK THE UBP NETWORK CIRCUIT BETWEEN THE DLC AND THE EATC MODULE FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the EATC module C228b-12, circuit 1906 (VT), harness side and the DLC C251-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0075383.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK FOR CORRECT EATC MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the EATC module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the EATC module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new climate control assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sc10l.htm&rightside=s62sc10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 412-01
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: The Anti-Lock Brake System (ABS) Module Does Not Respond To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>Check the CAN circuits between data link connector (DLC) C251 and the ABS module C135. The total resistance values must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 1827 (WH/LG) and 1828 (PK/LG),
+damage to the DLC C251, damage to the ABS module C135, or a problem with the in-line connector.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>CAN data plus circuit 1827 (WH/LG) open
+</li><li>CAN data minus circuit 1828 (PK/LG) open
+</li><li>ABS module C135
+</li><li>ABS module
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: THE ANTI-LOCK BRAKE SYSTEM (ABS) MODULE DOES NOT RESPOND TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK THE ABS MODULE C135 FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  ABS Module C135.
+</li><li>Inspect the ABS C135 for damage.
+</li><li><b>Is the ABS C135 OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the ABS module C135 as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK THE CAN CIRCUITS BETWEEN THE DLC AND THE ABS MODULE FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the ABS module C135-18, circuit 1827 (WH/LG), harness side and the DLC C251-6, circuit 1827 (WH/LG), harness side.
+</li><br><IMG src="a0072684.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the ABS module C135-28, circuit 1828 (PK/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="a0072685.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the ABS module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the ABS module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-I">&nbsp;
+</a><p><b>Pinpoint Test I: No High Speed Controller Area Network (HS-CAN) Communication
+</b></p><h5>Normal Operation
+</h5><p>The anti-lock brake system (ABS) module, the instrument cluster and the powertrain control module (PCM) communicate with the diagnostic tool through CAN circuits 1827 (WH/LG) and 1828 (PK/LG).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>CAN data plus circuit 1827 (WH/LG) short to voltage, short to ground, or open
+</li><li>CAN data minus circuit 1828 (PK/LG) short to voltage, short to ground, or open
+</li><li>PCM
+</li><li>ABS module
+</li><li>instrument cluster
+</li></ul><a name="I">&nbsp;
+</a><h5>PINPOINT TEST I: NO HIGH SPEED CONTROLLER AREA NETWORK (HS-CAN) COMMUNICATION
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adapter(s) when making measurements. Failure to use the correct probe adapter(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="I1">&nbsp;
+</a><b>I1 CHECK THE DATA LINK CONNECTOR (DLC) PINS FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  Most faults are due to connector and/or wiring concerns. Carry out a thorough inspection and verification before proceeding with the pinpoint test.
+
+<li>Key in OFF position.
+</li><li>Disconnect the scan tool cable from the DLC.
+</li><li>Inspect DLC pins 6 and 14 for damage.
+</li><br><IMG src="a0093867.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are DLC pins 6 and 14 OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I2"                                                                                                                                                                                                                                                       >I2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the DLC as necessary. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr><tr><td><a name="I2">&nbsp;
+</a><b>I2 CHECK THE HS-CAN TERMINATION RESISTANCE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li><b>NOTE:
+</b>  Failure to disconnect the battery will result in false resistance readings.
+</li><li>Disconnect the battery ground cable.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="n0026427.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance between 54 and 66 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I5"                                                                                                                                                                                                                                                       >I5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I3"                                                                                                                                                                                                                                                       >I3
+</a>.
+</td></tr><tr><td><a name="I3">&nbsp;
+</a><b>I3 CHECK THE HS-CAN TERMINATION RESISTOR
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="n0026427.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance between 108 and 132 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I7"                                                                                                                                                                                                                                                       >I7
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I4"                                                                                                                                                                                                                                                       >I4
+</a>.
+</td></tr><tr><td><a name="I4">&nbsp;
+</a><b>I4 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TOGETHER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="n0026427.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I9"                                                                                                                                                                                                                                                       >I9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I7"                                                                                                                                                                                                                                                       >I7
+</a>.
+</td></tr><tr><td><a name="I5">&nbsp;
+</a><b>I5 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and ground; and between the DLC C251-14, circuit 1828 (PK/LG), harness side and ground.
+</li><br><IMG src="n0002963.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 5,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I6"                                                                                                                                                                                                                                                       >I6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I12"                                                                                                                                                                                                                                                       >I12
+</a>.
+</td></tr><tr><td><a name="I6">&nbsp;
+</a><b>I6 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the battery ground cable.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the DLC C251-6, circuit 1827 (WH/LG), harness side and ground; and between the DLC C251-14, circuit 1828 (PK/LG), harness side and ground.
+</li><br><IMG src="n0002964.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 6 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the network test with the scan tool.
+
+<br><br><b>No
+</b><br>The CAN network has tested within specifications. VERIFY the scan tool operation on a substitute vehicle, and REPEAT the network test.
+</td></tr><tr><td><a name="I7">&nbsp;
+</a><b>I7 CHECK THE CAN CIRCUITS BETWEEN THE DLC AND THE PCM FOR AN OPEN 
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between the PCM C175b-2, circuit 1827 (WH/LG), harness side and the DLC C251-6, circuit 1827 (WH/LG), harness side.
+</li><br><IMG src="a0079247.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the PCM C175b-3, circuit 1828 (PK/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="a0079248.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I8"                                                                                                                                                                                                                                                       >I8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr><tr><td><a name="I8">&nbsp;
+</a><b>I8 CHECK THE HIGH SPEED CAN CIRCUITS BETWEEN THE DLC AND THE INSTRUMENT CLUSTER FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the instrument cluster C220a-31, circuit 1827 (WH/LG), harness side.
+</li><br><IMG src="a0078553.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the DLC C251-14, circuit 1828 (PK/LG), harness side and the instrument cluster C220a-32, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="a0078554.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>The CAN network has tested within specifications. VERIFY the scan tool operation on a substitute vehicle, and REPEAT the network test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr><tr><td><a name="I9">&nbsp;
+</a><b>I9 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TOGETHER WITH THE PCM DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="n0026427.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I10"                                                                                                                                                                                                                                                       >I10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I15"                                                                                                                                                                                                                                                       >I15
+</a>.
+</td></tr><tr><td><a name="I10">&nbsp;
+</a><b>I10 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TOGETHER WITH THE ABS MODULE DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  ABS Module C135.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="n0026427.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I11"                                                                                                                                                                                                                                                       >I11
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I16"                                                                                                                                                                                                                                                       >I16
+</a>.
+</td></tr><tr><td><a name="I11">&nbsp;
+</a><b>I11 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TOGETHER WITH THE INSTRUMENT CLUSTER DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and the DLC C251-14, circuit 1828 (PK/LG), harness side.
+</li><br><IMG src="n0026427.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I12"                                                                                                                                                                                                                                                       >I12
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I17"                                                                                                                                                                                                                                                       >I17
+</a>.
+</td></tr><tr><td><a name="I12">&nbsp;
+</a><b>I12 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TO GROUND WITH THE PCM DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM C175b.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and ground; and between the DLC C251-14, circuit 1828 (PK/LG), harness side and ground.
+</li><br><IMG src="n0002963.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 5,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I15"                                                                                                                                                                                                                                                       >I15
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I13"                                                                                                                                                                                                                                                       >I13
+</a>.
+</td></tr><tr><td><a name="I13">&nbsp;
+</a><b>I13 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TO GROUND WITH THE ABS MODULE DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  ABS Module C135.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and ground; and between the DLC C251-14, circuit 1828 (PK/LG), harness side and ground.
+</li><br><IMG src="n0002963.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 5,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I16"                                                                                                                                                                                                                                                       >I16
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#I14"                                                                                                                                                                                                                                                       >I14
+</a>.
+</td></tr><tr><td><a name="I14">&nbsp;
+</a><b>I14 CHECK THE HS-CAN (+) AND HS-CAN (-) CIRCUITS FOR A SHORT TO GROUND WITH THE INSTRUMENT CLUSTER DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220.
+</li><li>Measure the resistance between the DLC C251-6, circuit 1827 (WH/LG), harness side and ground; and between the DLC C251-14, circuit 1828 (PK/LG), harness side and ground.
+</li><br><IMG src="n0002963.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances greater than 5,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#I17"                                                                                                                                                                                                                                                       >I17
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CONNECT all modules. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr><tr><td><a name="I15">&nbsp;
+</a><b>I15 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the PCM connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. CONNECT all modules. CONNECT the battery ground cable. CLEAR the DTCs. REPEAT the network test with the scan tool.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CONNECT the battery ground cable. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr><tr><td><a name="I16">&nbsp;
+</a><b>I16 CHECK FOR CORRECT ABS MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the ABS module connector.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the ABS module connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new ABS module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s690l.htm&rightside=s62s690r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 206-09
+</a>. CONNECT all modules. CONNECT the battery ground cable. CLEAR the DTCs. REPEAT the network test with the scan tool.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CONNECT the battery ground cable. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr><tr><td><a name="I17">&nbsp;
+</a><b>I17 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the instrument cluster connector.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>damaged pins
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect the instrument cluster connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. CONNECT all modules. CONNECT the battery ground cable. CLEAR the DTCs. REPEAT the network test with the scan tool.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CONNECT the battery ground cable. CLEAR the DTCs. REPEAT the network test with the scan tool.
+</td></tr></table><a name="PS2-J">&nbsp;
+</a><p><b>Pinpoint Test J: No International Standards Organization (ISO) 9141 Communications Network Communication
+</b></p><h5>Normal Operation
+</h5><p>The reverse parking aid module and the restraint control module (RCM) communicate with the diagnostic tool through the ISO 9141 communications network circuit 70 (LB/WH). If circuit 70 (LB/WH) becomes open or shorted to ground, communications
+to that module are not possible.
+</p><p>Check circuit 70 (LB/WH) between the parking aid module, RCM and the data link connector (DLC) C251. The total resistance value must not be more than 5 ohms. If the resistance is more than 5 ohms there is an open in circuit 70 (LB/WH), damage
+to the DLC C251, damage to the parking aid module, RCM or a problem in one of the in-line connectors.
+</p><p>If, after individual checks of each circuit leading to a module show resistance values less than 5 ohms and no in-line connector issues present, the data link diagnostics test must be ran with the module in question disconnected. If the data
+link diagnostics test passes with the module in question disconnected it is the source of the concern and should be removed and a new module installed.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>ISO 9141 circuit 70 (LB/WH) short to voltage, short to ground, or open
+</li><li>DLC C251
+</li><li>parking aid module C2023
+</li><li>parking aid module
+</li><li>RCM C310a
+</li><li>RCM
+</li></ul><a name="J">&nbsp;
+</a><h5>PINPOINT TEST J: NO INTERNATIONAL STANDARDS ORGANIZATION (ISO) 9141 COMMUNICATIONS NETWORK COMMUNICATION
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="J1">&nbsp;
+</a><b>J1 CHECK THE DLC C251 FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  The ISO 9141 diagnostics requires depower of the supplemental restraint system (SRS) when disconnecting the RCM C310a. When Key ON occurs to carry out the data link diagnostic test, diagnostic trouble codes (DTCs) may be stored in the RCM.
+These DTCs should be cleared when network diagnostics are completed.
+
+<li>Key in OFF position.
+</li><li>Inspect the DLC C251 for damage.
+</li><li><b>Is the DLC C251 OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#J2"                                                                                                                                                                                                                                                       >J2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the DLC C251 as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="J2">&nbsp;
+</a><b>J2 CHECK THE ISO 9141 CIRCUIT BETWEEN THE DLC AND THE RCM FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Depower the air bag system. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Disconnect:  RCM C310a.
+</li><li>Measure the resistance between the RCM C310a-11, circuit 70 (LB/WH), harness side and the DLC C251-7, circuit 70 (LB/WH), harness side.
+</li><br><IMG src="a0058237.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#J3"                                                                                                                                                                                                                                                       >J3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CONNECT the RCM C310a. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="J3">&nbsp;
+</a><b>J3 CHECK THE ISO 9141 COMMUNICATIONS NETWORK WITH THE RCM C310A DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Data Link Diagnostics Test.
+</li><li><b>Is system passed obtained?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#J6"                                                                                                                                                                                                                                                       >J6
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#J4"                                                                                                                                                                                                                                                       >J4
+</a>.
+</td></tr><tr><td><a name="J4">&nbsp;
+</a><b>J4 CHECK THE ISO 9141 CIRCUIT 70 (LB/WH) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Parking Aid Module C2023.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between the DLC C251-7, circuit 70 (LB/WH), harness side and ground.
+</li><br><IMG src="a0060880.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CONNECT the RCM C310a. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#J5"                                                                                                                                                                                                                                                       >J5
+</a>.
+</td></tr><tr><td><a name="J5">&nbsp;
+</a><b>J5 CHECK CIRCUIT 70 (LB/WH) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the DLC C251-7, circuit 70 (LB/WH), harness side and ground.
+</li><br><IMG src="a0060879.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#J7"                                                                                                                                                                                                                                                       >J7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CONNECT the RCM C310a. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="J6">&nbsp;
+</a><b>J6 CHECK FOR CORRECT RCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the RCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the RCM connectors and make sure they seat correctly.
+</li><li>Repower the air bag system. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new RCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="J7">&nbsp;
+</a><b>J7 CHECK FOR CORRECT PARKING AID MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the parking aid module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the parking aid module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new parking aid module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sdd0l.htm&rightside=s62sdd0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-13
+</a>. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>.
+CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. REPOWER the air bag system. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1kbl.htm&rightside=s62s1kbr.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-20B
+</a>. CLEAR the
+DTCs. REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-K">&nbsp;
+</a><p><b>Pinpoint Test K: No Universal Asynchronous Receiver Transmitter (UART)-Based Protocol (UBP) Communications Network Communication
+</b></p><h5>Normal Operation
+</h5><p>The driver seat module (DSM), the electronic automatic temperature control (EATC) module, the instrument cluster and the vehicle security module all communicate with the diagnostic tool through the UBP communications network circuit 1906 (VT).
+If circuit 1906 (VT) becomes open or shorted to ground, communications to that module are not possible.
+</p><p>Check circuit 1906 (VT) between the DSM, the EATC module, the instrument cluster, the vehicle security module and the data link connector (DLC) C251. The total resistance values must not be more than 5 ohms. If the resistance is more than 5
+ohms there is an open in circuit 1906 (VT), damage to the DLC C251, damage to the DSM, the EATC module, the instrument cluster, the vehicle security module or a problem in one of the in-line connectors.
+</p><p>If, after individual checks of each circuit leading to a module show resistance values less than 5 ohms and no in-line connector issues present, the data link diagnostics test must be ran with the module in question disconnected. If the data
+link diagnostics test passes with the module in question disconnected, it is the source of the concern and should be removed and a new module installed.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>UBP circuit 1906 (VT) short to voltage, short to ground, or open
+</li><li>DLC C251
+</li><li>DSM C341c
+</li><li>DSM
+</li><li>EATC module C228b
+</li><li>EATC module
+</li><li>instrument cluster C220a
+</li><li>instrument cluster
+</li><li>vehicle security module C3008b
+</li><li>vehicle security module
+</li></ul><a name="K">&nbsp;
+</a><h5>PINPOINT TEST K: NO UNIVERSAL ASYNCHRONOUS RECEIVER TRANSMITTER (UART)-BASED PROTOCOL (UBP) COMMUNICATIONS NETWORK COMMUNICATION
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="K1">&nbsp;
+</a><b>K1 CHECK THE DLC C251 FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Inspect the DLC C251 for damage.
+</li><li><b>Is the DLC C251 OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K2"                                                                                                                                                                                                                                                       >K2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the DLC C251 as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K2">&nbsp;
+</a><b>K2 CHECK ALL THE UBP COMMUNICATIONS NETWORK MODULE CONNECTORS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  DSM C341c.
+</li><li>Disconnect:  EATC Module C228b.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Inspect the connectors for damage.
+</li><li><b>Are the connectors OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K3"                                                                                                                                                                                                                                                       >K3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the module connector in question as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K3">&nbsp;
+</a><b>K3 CHECK THE UBP COMMUNICATIONS NETWORK CIRCUIT 1906 (VT) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-3, circuit 1906 (VT), harness side and ground.
+</li><br><IMG src="a0075385.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K4"                                                                                                                                                                                                                                                       >K4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K4">&nbsp;
+</a><b>K4 CHECK THE UBP COMMUNICATIONS NETWORK CIRCUIT 1906 (VT) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the DLC C251-3, circuit 1906 (VT), harness side and ground.
+</li><br><IMG src="a0075386.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is any voltage present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#K5"                                                                                                                                                                                                                                                       >K5
+</a>.
+</td></tr><tr><td><a name="K5">&nbsp;
+</a><b>K5 CHECK CIRCUIT 1906 (VT) BETWEEN ALL UBP COMMUNICATIONS NETWORK MODULES AND THE DLC C251 FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the EATC module C228b-12, circuit 1906 (VT), harness side and the DLC C251-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0075383.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the vehicle security module C3008b-3, circuit 1906 (VT), harness side and the DLC C251-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0075387.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the DSM C341c-2, circuit 1906 (VT), harness side and the DLC C251-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0078550.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li>Measure the resistance between the instrument cluster C220a-29, circuit 1906 (VT), harness side and the DLC C251-3, circuit 1906 (VT), harness side.
+</li><br><IMG src="a0078555.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K6"                                                                                                                                                                                                                                                       >K6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K6">&nbsp;
+</a><b>K6 CHECK THE UBP COMMUNICATIONS NETWORK CIRCUIT WITH THE EATC MODULE DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  DSM C341c.
+</li><li>Connect:  Instrument Cluster C220a.
+</li><li>Connect:  Vehicle Security Module C3008b.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Data Link Diagnostics Test.
+</li><li><b>Is system passed obtained?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K9"                                                                                                                                                                                                                                                       >K9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#K7"                                                                                                                                                                                                                                                       >K7
+</a>.
+</td></tr><tr><td><a name="K7">&nbsp;
+</a><b>K7 CHECK THE UBP COMMUNICATIONS NETWORK CIRCUIT WITH THE VEHICLE SECURITY MODULE DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect:  EATC Module C228b.
+</li><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Data Link Diagnostics Test.
+</li><li><b>Is system passed obtained?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K10"                                                                                                                                                                                                                                                       >K10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#K8"                                                                                                                                                                                                                                                       >K8
+</a>.
+</td></tr><tr><td><a name="K8">&nbsp;
+</a><b>K8 CHECK THE UBP COMMUNICATIONS NETWORK CIRCUIT WITH THE DSM DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  DSM C341c.
+</li><li>Connect:  Vehicle Security Module C3008b.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Data Link Diagnostics Test.
+</li><li><b>Is system passed obtained?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#K11"                                                                                                                                                                                                                                                       >K11
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62i0002.htm#K12"                                                                                                                                                                                                                                                       >K12
+</a>.
+</td></tr><tr><td><a name="K9">&nbsp;
+</a><b>K9 CHECK FOR CORRECT EATC MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the EATC module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the EATC module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new climate control assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sc10l.htm&rightside=s62sc10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 412-01
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the diagnostic trouble codes (DTCs). REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K10">&nbsp;
+</a><b>K10 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K11">&nbsp;
+</a><b>K11 CHECK FOR CORRECT DSM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the DSM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the DSM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new DSM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="K12">&nbsp;
+</a><b>K12 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>push-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. CARRY OUT the data link diagnostics test.
+</td></tr></table><a name="PS2-L">&nbsp;
+</a><p><b>Pinpoint Test L: No Module/Network Communication &#8212; No Power To The Diagnostic Tool
+</b></p><h5>Normal Operation
+</h5><p>The diagnostic tool is connected to the data link connector (DLC) C251 to communicate with the controller area network (CAN), universal asynchronous receiver transmitter (UART)-based protocol (UBP) communications network, and the international
+standards organization (ISO) 9141 communications network.
+</p><p>If communication cannot be established, the diagnostic tool and the DLC C251 must be checked for damage. If the diagnostic tool and the DLC C251 are OK check voltage circuit 40 (LB/WH), for an open or short to ground. Ground circuits 57 (BK)
+and 567 (LB/YE) must be checked for an open condition.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>fuse
+</li><li>DLC C251
+</li><li>diagnostic tool
+</li><li>circuit 40 (LB/WH) open or short to ground
+</li><li>circuit 57 (BK) open circuit
+</li><li>circuit 567 (LB/YE) open circuit
+</li></ul><a name="L">&nbsp;
+</a><h5>PINPOINT TEST L: NO MODULE/NETWORK COMMUNICATION &#8212; NO POWER TO THE DIAGNOSTIC TOOL
+</h5>
+
+<p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Use the correct probe adaptor(s) when making measurements. Failure to use the correct probe adaptor(s) may damage the connector.
+</b></p><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="L1">&nbsp;
+</a><b>L1 CHECK THE DIAGNOSTIC TOOL CONNECTOR FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the diagnostic tool pins for damage.
+</li><li><b>Are the pins OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#L2"                                                                                                                                                                                                                                                       >L2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the diagnostic tool connector as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="L2">&nbsp;
+</a><b>L2 CHECK THE DLC C251 FOR DAMAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the DLC C251 pins for damage.
+</li><li><b>Are the pins OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#L3"                                                                                                                                                                                                                                                       >L3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the DLC C251 as necessary. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="L3">&nbsp;
+</a><b>L3 CHECK CIRCUIT 40 (LB/WH) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Measure the voltage between the DLC C251-16, circuit 40 (LB/WH), harness side and ground.
+</li><br><IMG src="a0057467.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62i0002.htm#L4"                                                                                                                                                                                                                                                       >L4
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 41 (20A) is OK. If OK, REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr><tr><td><a name="L4">&nbsp;
+</a><b>L4 CHECK CIRCUITS 57 (BK) AND 567 (LB/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the DLC C251-4, circuit 57 (BK), harness side and ground; and between the DLC C251-5, circuit 567 (LB/YE), harness side and ground.
+</li><br><IMG src="a0060571.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the diagnostic tool. CARRY OUT the data link diagnostics test.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CARRY OUT the data link diagnostics test.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

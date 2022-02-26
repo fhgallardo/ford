@@ -1,0 +1,118 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="18"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Module Configuration"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P7239Q0"><meta name="tps_procsgmlid" content="n859395"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 418-01:  Module Configuration
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Module Configuration
+</h4><meta name="tps_proctitle" content="Module Configuration">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr></table><div><a name="extract_382">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>Some modules must be programmed as part of the repair procedure. If this procedure is not followed, the module does not function correctly and may set a number of diagnostic trouble codes (DTCs), including B2477 or P1639, which indicate that
+necessary data has not been programmed into the module.
+</p><p><b>NOTE:
+</b>  The vehicle must be stationary and level, with all accessories off, while configuring modules.
+</p><p>Modules that need programming should not be exchanged between vehicles. In most cases the parameter values or settings are unique to that vehicle, and if not set correctly, cause concerns or faults.
+</p><p>The diagnostic tool automatically attempts to retrieve the module configuration information from all modules and from a backup location in the powertrain control module (PCM) when vehicle ID is carried out. If the module and the PCM do not
+contain correct information, the diagnostic tool either requests As-Built data or displays a list of items that are needed to manually configure. The diagnostic tool programs the module based on the data entered.
+</p><p>For additional diagnostic tool programming procedures, refer to 
+<a href="s62i1002.htm"                                                                                                                                                                                                                                                       >Programmable Module Installation
+</a> in this section.
+</p><p>There are 3 different methods that are used for module programming:
+</p><ul type="disc"><li>programmable module installation (PMI)
+</li><li>calibration update
+</li><li>programmable parameters
+</li></ul><p>Some modules do not support all 3 methods.
+</p><p><b>Definition of Terms
+</b></p><h5>Programmable Module Installation (PMI)
+</h5><p>The PMI method is used when a new programmable module is installed on the vehicle. It is no longer necessary to command the diagnostic tool to gather module option content from the old module. The diagnostic tool automatically obtains any
+available module option content information from the old module during the vehicle ID routine that runs when the diagnostic tool is initially connected to the vehicle. It is important that the diagnostic tool is connected to the vehicle and allowed
+to identify the vehicle and obtain configuration data prior to any module removal.
+</p><p>If a module that has been modified using programmable parameters needs to be installed, the PMI procedure maintains the parameters in their altered state if diagnostic tool is able to communicate with the old module during vehicle ID.
+Otherwise, you may need to use programmable parameters to return parameters to the altered state.
+</p><h5>Calibration Update
+</h5><p>Some modules are designed to be flashed or reflashed with completely new software packages. This process of reflashing the module is a calibration update.
+</p><p>A calibration update should be carried out only upon notification (such as a Technical Service Bulletin [TSB]). Also, if a module sets DTC U2050, this indicates no application is present and reflashing of the software application is
+required. If a module sets DTC U2051, this indicates no calibration is present and reflashing of calibration is required.
+</p><p><b>NOTE:
+</b>  If calibration fails when calibrating the DSM, disconnect the vehicle battery, wait 1 minute, connect the battery and complete the calibration update.
+</p><h5>Programmable Parameters
+</h5><p>These are options contained within the existing software. These include items such as tire size, customer preference items, and anti-theft options. The current settings are downloaded from an existing module then uploaded to a new module. They
+can also be configured using the diagnostic tool. Programming parameters is different from updating calibrations as no software is changed, only the options already contained in the software.
+</p><h5>Vehicle Identification (VID) Block
+</h5><p>Some PCMs contain a memory area called a VID block.
+</p><p>The PCM VID block may contain the factory settings for the configurable modules unless the PCM is flashed with a new calibration, in which case some PCM parameters may be modified.
+</p><h5>As-Built Data Center
+</h5><p>The As-Built Data Center maintains a record of the vehicle configuration in a database. The vehicle identification number (VIN) is necessary to obtain this information. The As-Built Data Center records the applicable module configurations
+stored in each module before the vehicle leaves the factory. The As-Built Data Center data always reflects the original build of the vehicle as it left the factory. Contact the As-Built Data Center only when directed to do so by the diagnostic tool.
+</p><div><a name="extract_383">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of electrical damage.
+
+<br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Wiring harness
+</LI><LI>Connectors
+</LI></UL></TD></TR></TABLE><br></li></ol><h5>Configurable Modules
+</h5><p>The vehicle contains the following modules that are configurable:
+</p><ul type="disc"><li>anti-lock brake system (ABS) module
+</li><li>driver seat module (DSM)
+</li><li>instrument cluster
+</li><li>PCM
+</li><li>vehicle security module
+</li></ul><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Programmable Parameters Index
+
+
+<P><B>NOTE:
+</B>  When programming the vehicle security module, make sure to unlock all the doors and set the autolamps switch (if equipped) to the OFF position. If programming fails, exit the module programming application and restart the programming.
+</P></CAPTION><TR><TH valign="bottom" align="CENTER">Module
+</TH><TH valign="bottom" align="CENTER">Calibration Updatable
+</TH><TH valign="bottom" align="CENTER">Configurable
+</TH><TH valign="bottom" align="CENTER">Programmable Parameter
+</TH></TR><TR><TD valign="top" align="LEFT">ABS Module
+</TD><TD valign="top" align="CENTER">No
+</TD><TD valign="top" align="CENTER">Yes
+</TD><TD valign="top" align="LEFT">&#8212;
+</TD></TR><TR><TD valign="top" align="LEFT">DSM
+</TD><TD valign="top" align="CENTER">No
+</TD><TD valign="top" align="CENTER">Yes
+</TD><TD valign="top" align="LEFT">&#8212;
+</TD></TR><TR><TD valign="top" align="LEFT">Instrument Cluster
+</TD><TD valign="top" align="CENTER">No
+</TD><TD valign="top" align="CENTER">Yes
+</TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Metric/English
+</LI></UL></TD></TR><TR><TD valign="top" align="LEFT">PCM
+</TD><TD valign="top" align="CENTER">Yes
+</TD><TD valign="top" align="CENTER">Yes
+</TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Axle Ratio
+</LI><LI>Fuel Octane
+</LI><LI>Tire/Wheel Size
+</LI><LI>Transmission Type
+</LI></UL></TD></TR><TR><TD valign="top" align="LEFT">Vehicle Security Module
+</TD><TD valign="top" align="CENTER">No
+</TD><TD valign="top" align="CENTER">Yes
+</TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Auto locking
+</LI></UL></TD></TR></TABLE><br><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

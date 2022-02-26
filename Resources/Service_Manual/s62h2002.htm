@@ -1,0 +1,1275 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="17"><meta name="tps_section" content="02"><meta name="tps_section_title" content="Interior Lighting"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P2155Q0"><meta name="tps_procsgmlid" content="n928493"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 417-02:  Interior Lighting
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Interior Lighting
+</h4><meta name="tps_proctitle" content="Interior Lighting"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=089&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >89
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr></table><div><a name="extract_370">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>Vehicles equipped with remote keyless entry (RKE) have an illuminated entry feature, which enables the instrument cluster to illuminate the interior lamps (and if equipped, the puddle lamps in the exterior mirrors) when an unlock signal is
+received from the vehicle security module through the UBP network, or when any of the doors are opened. The instrument cluster controls the interior lamps illuminated entry feature by activating the battery saver relay. When active, the illuminated
+entry feature will be canceled when any of the following conditions are met:
+</p><ul type="disc"><li>25 seconds have elapsed since the illuminated entry feature was activated and the interior lamp control is not activated (door ajar or dimmer control switch ON).
+</li><li>On vehicles equipped with RKE, the instrument cluster received a request from the vehicle security module (remote transmitter lock button pressed) and the interior lamp control is not activated.
+</li><li>The ignition is in the RUN or START position and the interior lamp control is not activated.
+</li></ul><p>For vehicles equipped with RKE, the instrument cluster illuminates the interior lamps when any door is open. The interior lamps shut off when the doors are closed and the illuminated entry feature is not active or when the vehicle speed is
+greater than 15 km/h (6 mph). The interior lamps are not reactivated until the vehicle speed is less than 15 km/h (6 mph) and a new door open signal is received.
+</p><p>For vehicles without RKE, the instrument cluster illuminates the interior lamps and puddle lamps (if equipped) when any door is open. The instrument cluster will turn the interior lamps and puddle lamps (if equipped) OFF when the doors are
+closed.
+</p><p>Power to the on-demand lamps, illuminated vanity mirrors and map lamps are controlled by the battery saver relay.
+</p><div><a name="extract_371">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect the following for obvious signs of electrical damage:
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Bulbs
+</LI><LI>Central junction box (CJB) fuse 24 (15A)
+</LI><LI>Circuitry
+</LI><LI>Vehicle security module (if equipped with RKE)
+</LI><LI>Instrument cluster
+</LI><LI>Door ajar switches
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC) and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not communicate with the vehicle:
+
+<ul type="disc"><li>check that the program card is correctly installed.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="5"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="6"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>CAN, ISO or UBP circuits fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for instrument cluster, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for vehicle security module, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the instrument cluster.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the vehicle security module.
+</li></ul></li></ol><ol start="7"><li>If the DTCs retrieved are related to the concern, go to the Instrument Cluster Diagnostic Trouble Code (DTC) Index or the Vehicle Security Module Diagnostic Trouble Code (DTC) Index.
+</li></ol><ol start="8"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s62h2002.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Instrument Cluster Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="LEFT">ECU is Defective
+</TD><TD valign="top" align="CENTER">Instrument Cluster Module
+</TD><TD valign="top" align="LEFT">INSTALL a new instrument cluster. REFER to 
+<A href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 413-01
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2499
+</TD><TD valign="top" align="LEFT">Courtesy Lamp Output Failure
+</TD><TD valign="top" align="CENTER">Instrument Cluster Module
+</TD><TD valign="top" align="LEFT"><A href="s62h2002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B2659
+</TD><TD valign="top" align="LEFT">Courtesy Switch Fault
+</TD><TD valign="top" align="CENTER">Instrument Cluster Module
+</TD><TD valign="top" align="LEFT"><A href="s62h2002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All Other DTCs
+</TD><TD valign="top" align="LEFT">&#8212;
+</TD><TD valign="top" align="CENTER">Instrument Cluster Module
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR></TABLE><br><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Vehicle Security Module Diagnostic Trouble Code (DTC) Index
+
+
+<P><B>NOTE:
+</B>  Only vehicles equipped with RKE will have a vehicle security module.
+</P></CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1322
+</TD><TD valign="top" align="LEFT">Driver Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 501-14
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1330
+</TD><TD valign="top" align="LEFT">Passenger Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 501-14
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1338
+</TD><TD valign="top" align="LEFT">RH Rear Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 501-14
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1342
+</TD><TD valign="top" align="LEFT">ECU is Defective
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="LEFT">INSTALL a new vehicle security module. REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1574
+</TD><TD valign="top" align="LEFT">LH Rear Door Ajar Circuit Short to Ground
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 501-14
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All Other DTCs
+</TD><TD valign="top" align="LEFT">&#8212;
+</TD><TD valign="top" align="CENTER">Vehicle Security Module
+</TD><TD valign="top" align="LEFT">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR></TABLE><br><div><a name="extract_372">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><p><b>NOTE:
+</b>  Only vehicles equipped with RKE will have a vehicle security module.
+</p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The interior lamps are inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>Instrument cluster
+</li><li>Dimmer control switch
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>An individual interior lamp is inoperative
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Interior lamp
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The interior lamps stay on continuously
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Instrument cluster
+</li><li>Door ajar switch
+</li><li>Dimmer control switch
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The illuminated entry is inoperative from one/both door handles
+</li></ul></td><td><ul type="disc"><li>Vehicle security module
+</li><li>Door ajar switches
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The illuminated entry is inoperative when using the remote transmitter/keypad
+</li></ul></td><td><ul type="disc"><li>Vehicle security module
+</li><li>Circuitry
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-14
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The demand lighting is inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>Central junction box (CJB)
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>All battery saver components do not operate
+</li></ul></td><td><ul type="disc"><li>Fuse
+</li><li>Circuitry
+</li><li>CJB
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>An individual demand lamp is inoperative
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Interior lamp
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The battery saver does not deactivate after time-out
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>CJB
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The interior lamps do not turn on with one door open
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Door ajar switch
+</li><li>Vehicle security module
+</li><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>An individual puddle lamp is inoperative
+</li></ul></td><td><ul type="disc"><li>Circuitry
+</li><li>Exterior mirror
+</li></ul></td><td><ul type="disc"><li><a href="s62h2002.htm#PS2-H"                                                                                                                                                                                                                                                       >Go To Pinpoint Test H
+</a>.
+</li></ul></td></tr></table><div><a name="extract_373">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Interior Lamps Are Inoperative
+</b></p><h5>Normal Operation
+</h5><p>On vehicles equipped with remote keyless entry (RKE), the door ajar switches are hardwired to the vehicle security module. The vehicle security module monitors the status of all door ajar switches, and when a door is opened, transmits a dome
+lamp ON signal to the instrument cluster through UART based protocol (UBP) circuit 1906 (PK), indicating a door has been opened. When the instrument cluster receives the dome lamp ON signal from the vehicle security module, the instrument cluster
+energizes the interior lamp circuits, which illuminates the interior lamps and, if equipped, the puddle lamps in the exterior mirrors.
+</p><p>On vehicles without RKE, the door ajar switches are hardwired to the instrument cluster. When the driver or passenger door is opened, the instrument cluster receives a ground signal from the driver door ajar switch through circuit 344 (BK/YE),
+or from the passenger door ajar switch through circuit 345 (BK/PK), and the instrument cluster energizes the interior lamp circuits, causing the interior lamps to illuminate.
+</p><p>The dimmer control switch can be used to turn the interior lamps ON or OFF when the doors are closed. The interior lamp defeat switch can be used to turn the interior lamps OFF when the doors are open.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit 53 (BK/LB) open or short to ground
+</li><li>Circuit 57 (BK) open
+</li><li>Circuit 402 (OG/LG) open
+</li><li>Circuit 1405 (LB/BK) short to ground
+</li><li>Circuit 3049 (BK/LG) open
+</li><li>Dimmer control switch
+</li><li>Instrument cluster
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE INTERIOR LAMPS ARE INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE INTERIOR LAMP OPERATION AT THE DIMMER CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Close all doors.
+</li><li>Operate the interior lamps with the instrument panel dimmer control switch.
+</li><li><b>Do any interior lamps illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For vehicles without RKE, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+
+<br><br>For vehicles with RKE, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK FOR INSTRUMENT CLUSTER OR VEHICLE SECURITY MODULE DIAGNOSTIC TROUBLE CODES (DTCs)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Carry out the instrument cluster On-Demand Self Test.
+</li><li>For vehicles equipped with remote keyless entry (RKE), carry out the vehicle security module On-Demand Self Test.
+</li><li><b>Were instrument cluster DTCs B2499 or B2659, or if equipped with RKE, vehicle security module DTC U1950 present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For instrument cluster DTC B2499, GO to 
+<a href="s62h2002.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br>For instrument cluster DTC B2659, GO to 
+<a href="s62h2002.htm#A9"                                                                                                                                                                                                                                                       >A9
+</a>.
+
+<br><br>If equipped with RKE and vehicle security module and DTC U1950 is present, REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose the UBP network concern before attempting to diagnose the interior
+lighting concern.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK CIRCUIT 3049 (BK/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220b.
+</li><li>Measure the voltage between the instrument cluster C220b-9, circuit 3049 (BK/LG), harness side and ground.
+</li><br><IMG src="a0077477.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuse 21 (15A) is OK. If OK, REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK INSTRUMENT CLUSTER CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the resistance between the instrument cluster C220a-17, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="a0077478.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK CIRCUIT 53 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  If the fuse fails, repair circuit 53 (BK/LB) for a short to ground.
+</li><li>Connect a fused (15A) jumper wire between the instrument cluster C220b-9, circuit 3049 (BK/LG), harness side and the instrument cluster C220b-8, circuit 53 (BK/LB), harness side.
+</li><br><IMG src="n0010583.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Do the interior lamps illuminate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REMOVE the jumper wire. GO to 
+<a href="s62h2002.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE DIMMER CONTROL SWITCH OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect:  Instrument Cluster C220a.
+</li><li>Disconnect:  Dimmer Control Switch C205b.
+</li><li>Connect a fused (15A) jumper wire between the dimmer control switch C205b-4, circuit 57 (BK) and the dimmer control switch C205b-2, circuit 402 (OG/LG).
+</li><br><IMG src="n0023508.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Do the interior lamps operate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new dimmer control switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK CIRCUIT 402 (OG/LG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the resistance between the instrument cluster C220a-12, circuit 402 (OG/LG), harness side and the dimmer control switch C205b-2, circuit 402 (OG/LG), harness side.
+</li><br><IMG src="n0023509.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#A8"                                                                                                                                                                                                                                                       >A8
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A8">&nbsp;
+</a><b>A8 CHECK DIMMER CONTROL SWITCH CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the dimmer control switch C205b-4, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="n0035187.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#A11"                                                                                                                                                                                                                                                       >A11
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A9">&nbsp;
+</a><b>A9 CHECK CIRCUIT 1405 (LB/BK) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Disconnect:  Dimmer Control Switch C205b.
+</li><li>Measure the resistance between the instrument cluster C220a-11, circuit 1405 (LB/BK), harness side and ground.
+</li><br><IMG src="n0010587.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#A10"                                                                                                                                                                                                                                                       >A10
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A10">&nbsp;
+</a><b>A10 CHECK THE DIMMER CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the dimmer control switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Is the dimmer control switch OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#A11"                                                                                                                                                                                                                                                       >A11
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new dimmer control switch. TEST the system for normal operation.
+</td></tr><tr><td><a name="A11">&nbsp;
+</a><b>A11 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all instrument cluster connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: An Individual Interior Lamp Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster energizes circuit 53 (BK/LB) providing power to the interior lamps. The interior lamps are grounded through circuit 57 (BK). The interior lamps remain illuminated until the instrument cluster removes voltage from circuit
+53 (BK/LB).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 53 (BK/LB) open
+</li><li>Circuit 57 (BK) open
+</li><li>Interior lamp
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: AN INDIVIDUAL INTERIOR LAMP IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK CIRCUIT 53 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Operate the interior lamps.
+</li><li>Disconnect the inoperative interior lamp connector.
+</li><li>Measure the voltage between the inoperative interior lamp connector circuit 53 (BK/LB), harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH></TR><TR><TD valign="top" align="CENTER">Front dome lamp
+</TD><TD valign="top" align="CENTER">C929-2
+</TD></TR><TR><TD valign="top" align="CENTER">Rear dome lamp (with roof opening panel)
+</TD><TD valign="top" align="CENTER">C901-1
+</TD></TR><TR><TD valign="top" align="CENTER">Rear dome lamp (without roof opening panel)
+</TD><TD valign="top" align="CENTER">C932-2
+</TD></TR><TR><TD valign="top" align="CENTER">Cargo lamp
+</TD><TD valign="top" align="CENTER">C904-2
+</TD></TR></TABLE><br>
+
+<li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the inoperative interior lamp connector circuit 57 (BK), harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH></TR><TR><TD valign="top" align="CENTER">Front dome lamp
+</TD><TD valign="top" align="CENTER">C929-3/C929-1
+</TD></TR><TR><TD valign="top" align="CENTER">Rear dome lamp (with roof opening panel)
+</TD><TD valign="top" align="CENTER">C901-2
+</TD></TR><TR><TD valign="top" align="CENTER">Rear dome lamp (without roof opening panel)
+</TD><TD valign="top" align="CENTER">C932-3/C932-1
+</TD></TR><TR><TD valign="top" align="CENTER">Cargo lamp
+</TD><TD valign="top" align="CENTER">C904-1
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new interior lamp. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Interior Lamps Stay On Continuously
+</b></p><h5>Normal Operation
+</h5><p>For vehicles equipped with RKE, the vehicle security module sends an interior lamps ON request to the instrument cluster through UART based protocol (UBP) network circuit 1906 (PK) whenever a door has been opened, the unlock button has been
+pressed on the remote transmitter, or when an unlock request has been entered with the keyless keypad (if equipped). The interior lamps can also be turned ON or OFF with the dimmer control switch, which provides a ground signal to the instrument
+cluster through circuit 402 (OG/LG) when the dimmer control switch is turned ON. When the instrument cluster receives the interior lamps ON request from the vehicle security module or the dimmer control switch, the instrument cluster energizes
+circuit 53 (BK/LB), which provides power to the interior lamps. The interior lamps are grounded through circuit 57 (BK). The interior lamps remain illuminated until the instrument cluster removes voltage from circuit 53 (BK/LB).
+</p><p>For non-RKE vehicles, the instrument cluster energizes circuit 53 (BK/LB) when a door has been opened, which provides power to the interior lamps. The interior lamps can also be turned ON or OFF with the dimmer control switch. The interior
+lamps are grounded through circuit 57 (BK), and will remain illuminated until the instrument cluster removes voltage from circuit 53 (BK/LB).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 53 (BK/LB) short to voltage
+</li><li>Circuit 402 (OG/LG) short to ground
+</li><li>Circuit 344 (BK/YE) short to ground
+</li><li>Circuit 345 (PK/BK) short to ground
+</li><li>Circuit 346 (BK/WH) short to ground
+</li><li>Circuit 363 (BK/LB) short to ground
+</li><li>Door ajar switch
+</li><li>Dimmer control switch
+</li><li>Instrument cluster
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE INTERIOR LAMPS STAY ON CONTINUOUSLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE DOOR AJAR PIDs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in ON position.
+</li><li>Check the door ajar PIDs while opening and closing the doors.
+</li><li><b>Do the door ajar PID values agree with the door positions?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK CIRCUITS 344 (BK/YE), 345 (BK/PK), 363 (BK/LB) AND 346 (BK/WH) FOR GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220a (Non-RKE Vehicles).
+</li><li>Disconnect:  Vehicle Security Module C3008b (RKE Vehicles).
+</li><li>For vehicles without RKE, close both the doors and measure the resistance between the suspect door ajar circuit at the instrument cluster, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Door Ajar Switch
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH door
+</TD><TD valign="top" align="CENTER">C220a-23
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH door
+</TD><TD valign="top" align="CENTER">C220a-19
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR></TABLE><br>
+
+<br><IMG src="n0010588.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>For vehicles with RKE, close all the doors and measure the resistance between the suspect door ajar circuit at the vehicle security module, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Door Ajar Switch
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front door
+</TD><TD valign="top" align="CENTER">C3008b-4
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front door
+</TD><TD valign="top" align="CENTER">C3008b-5
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear door
+</TD><TD valign="top" align="CENTER">C3008b-12
+</TD><TD valign="top" align="CENTER">363 (BK/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear door
+</TD><TD valign="top" align="CENTER">C3008b-13
+</TD><TD valign="top" align="CENTER">346 (BK/WH)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0071842.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Are all resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>For vehicles without RKE, GO to 
+<a href="s62h2002.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+
+<br><br>For vehicles with RKE, GO to 
+<a href="s62h2002.htm#C8"                                                                                                                                                                                                                                                       >C8
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK CIRCUITS 344 (BK/YE), 345 (BK/PK), 363 (BK/LB) AND 346 (BK/WH) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Suspect Door Ajar Switch (Non-RKE equipped) C526 (LH Front) or C602 (RH Front).
+</li><li>Disconnect:  Suspect Door Ajar Switch (RKE equipped) C715 (LH Rear) or C820 (RH Rear).
+</li><li>For vehicles without RKE, measure the resistance between the suspect door ajar circuit at the instrument cluster, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Door Ajar Switch
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH door
+</TD><TD valign="top" align="CENTER">C220a-23
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH door
+</TD><TD valign="top" align="CENTER">C220a-19
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR></TABLE><br>
+
+<br><IMG src="n0010588.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>For vehicles with RKE, measure the resistance between the suspect door ajar circuit at the vehicle security module, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Suspect Door Ajar Switch
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front door
+</TD><TD valign="top" align="CENTER">C3008b-4
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front door
+</TD><TD valign="top" align="CENTER">C3008b-5
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear door
+</TD><TD valign="top" align="CENTER">C3008b-12
+</TD><TD valign="top" align="CENTER">363 (BK/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear door
+</TD><TD valign="top" align="CENTER">C3008b-13
+</TD><TD valign="top" align="CENTER">346 (BK/WH)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0071842.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new door ajar switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s1e0l.htm&rightside=s62s1e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK CIRCUIT 53 (BK/LB) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220b.
+</li><li><b>Are the interior lamps still illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK CIRCUIT 402 (OG/LG) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Dimmer Control Switch C205b.
+</li><li>Measure the resistance between the dimmer control switch C205b-2, circuit 402 (OG/LG), harness side and ground.
+</li><br><IMG src="n0040858.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK THE DIMMER CONTROL SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the dimmer control switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Is the dimmer control switch OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#C7"                                                                                                                                                                                                                                                       >C7
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new dimmer control switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sh10l.htm&rightside=s62sh10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 417-01
+</a>.
+</td></tr><tr><td><a name="C7">&nbsp;
+</a><b>C7 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr><tr><td><a name="C8">&nbsp;
+</a><b>C8 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Demand Lighting Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster energizes the battery saver relay located in the central junction box (CJB) through circuit 1005 (VT/OG) when the ignition switch is in the START/RUN position. The battery saver relay provides power to circuit 705
+(LG/OG). Circuit 705 (LG/OG) provides power to each demand lamp switch which when activated provides power to the selected demand lamp. The demand lamps are grounded through circuit 57 (BK). The battery saver deactivates the power circuit when the
+instrument cluster releases the ground from the relay on circuit 1005 (VT/OG) after time-out. The battery saver relay is integral to the CJB.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse
+</li><li>Circuit 705 (LG/OG) open
+</li><li>Circuit 1005 (VT/OG) open or short to voltage
+</li><li>Instrument cluster
+</li><li>CJB
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE DEMAND LIGHTING IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK CIRCUIT 1005 (VT/OG) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220b.
+</li><li>Measure the voltage between the instrument cluster C220b-7, circuit 1005 (VT/OG), harness side and ground.
+</li><br><IMG src="n0040861.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the CJB fuse 24 (15A) is OK. If OK, GO to 
+<a href="s62h2002.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  If the fuse fails, repair circuit 1005 (VT/OG) for a short to voltage.
+</li><li>Connect a fused (10A) jumper wire between the instrument cluster C220b-7, circuit 1005 (VT/OG) and ground.
+</li><br><IMG src="n0040862.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Do the demand lamps operate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK CIRCUIT 705 (LG/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  CJB C270j.
+</li><li>Connect a fused (10A) jumper wire between the CJB C270j-15, circuit 705 (LG/OG) and the CJB C270j-11, circuit 720 (RD/YE).
+</li><br><IMG src="n0040863.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Do the demand lamps operate?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK CIRCUIT 1005 (VT/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  CJB C270e.
+</li><li>Measure the resistance between the instrument cluster C220b-7, circuit 1005 (VT/OG), harness side and the CJB C270e-10, circuit 1005 (VT/OG), harness side.
+</li><br><IMG src="n0040864.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#D6"                                                                                                                                                                                                                                                       >D6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr><tr><td><a name="D6">&nbsp;
+</a><b>D6 CHECK FOR CORRECT CJB OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the CJB connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the CJB connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new CJB. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: An Individual Demand Lamp Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster energizes the battery saver relay located in the central junction box (CJB) through circuit 1005 (VT/OG) when the ignition switch is in the START/RUN position. The battery saver relay provides power to circuit 705
+(LG/OG). Circuit 705 (LG/OG) provides power to all demand lamps. The demand lamps are grounded through circuit 57 (BK). The battery saver deactivates the power circuit when the instrument cluster releases the ground from the relay on circuit 1005
+(VT/OG) after time-out.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 57 (BK) open
+</li><li>Circuit 705 (LG/OG) open
+</li><li>Interior lamp
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: AN INDIVIDUAL DEMAND LAMP IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK CIRCUIT 705 (LG/OG) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Inoperative Demand Lamp.
+</li><li>Measure the voltage between the inoperative demand lamp connector, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH vanity mirror lamp
+</TD><TD valign="top" align="CENTER">C907-2
+</TD><TD valign="top" align="CENTER">705 (LG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">RH vanity mirror lamp
+</TD><TD valign="top" align="CENTER">C906-2
+</TD><TD valign="top" align="CENTER">705 (LG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">Front map lamp
+</TD><TD valign="top" align="CENTER">C929-4
+</TD><TD valign="top" align="CENTER">705 (LG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">Rear map lamp (without roof opening panel)
+</TD><TD valign="top" align="CENTER">C932-4
+</TD><TD valign="top" align="CENTER">705 (LG/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">Rear map lamp (with roof opening panel)
+</TD><TD valign="top" align="CENTER">C901-3
+</TD><TD valign="top" align="CENTER">705 (LG/OG)
+</TD></TR></TABLE><br>
+
+<li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the inoperative demand lamp connector, circuit 57 (BK), harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH></TR><TR><TD valign="top" align="CENTER">LH vanity mirror lamp
+</TD><TD valign="top" align="CENTER">C907-1
+</TD></TR><TR><TD valign="top" align="CENTER">RH vanity mirror lamp
+</TD><TD valign="top" align="CENTER">C906-1
+</TD></TR><TR><TD valign="top" align="CENTER">Front map lamp
+</TD><TD valign="top" align="CENTER">C929-3/C929-1
+</TD></TR><TR><TD valign="top" align="CENTER">Rear map lamp (without roof opening panel)
+</TD><TD valign="top" align="CENTER">C932-3/C932-1
+</TD></TR><TR><TD valign="top" align="CENTER">Rear map lamp (with roof opening panel)
+</TD><TD valign="top" align="CENTER">C901-3/C901-1
+</TD></TR></TABLE><br>
+
+<li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new interior lamp. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The Battery Saver Does Not Deactivate After Time-Out
+</b></p><h5>Normal Operation
+</h5><p>The instrument cluster energizes the battery saver relay located in the central junction box (CJB) through circuit 1005 (VT/OG) when the ignition switch is in the START/RUN position. The battery saver relay provides power to circuit 705
+(LG/OG). Circuit 705 (LG/OG) provides power to all demand lamps. The demand lamps are grounded through circuit 57 (BK). The battery saver deactivates the power circuit when the instrument cluster releases the ground from the relay on circuit 1005
+(VT/OG) after time-out. The battery saver relay is integral to the CJB.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 705 (LG/OG) short to voltage
+</li><li>Circuit 1005 (VT/OG) short to ground
+</li><li>Instrument cluster
+</li><li>CJB
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE BATTERY SAVER DOES NOT DEACTIVATE AFTER TIME-OUT
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK THE INSTRUMENT CLUSTER
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Instrument Cluster C220b.
+</li><li><b>Are the demand lamps still illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK CIRCUIT 1005 (VT/OG) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  CJB C270e.
+</li><li><b>Are the demand lamps still illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK CIRCUIT 705 (LG/OG) FOR A SHORT TO VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  CJB C270j.
+</li><li><b>Are the demand lamps still illuminated?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 CHECK FOR CORRECT CJB OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the CJB connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the CJB connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new CJB. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: The Interior Lamps Do Not Turn On With One Door Open
+</b></p><h5>Normal Operation
+</h5><p>For vehicles equipped with remote keyless entry (RKE), the vehicle security module monitors the door ajar switch status on circuits 344 (BK/YE), 345 (BK/PK), 346 (BK/WH) and 363 (BK/LB) for a ground supplied through the ajar switches, by
+circuit 57 (BK) indicating a door has been opened. The vehicle security module transmits information over the network to indicate door ajar status. The instrument cluster then energizes the interior lamp circuits, lighting the interior lamps. On
+vehicles without RKE, the 2 front door ajar circuits 344 (BK/YE) and 345 (BK/PK) are monitored directly by the instrument cluster.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 57 (BK) open
+</li><li>Circuit 344 (BK/YE) open
+</li><li>Circuit 345 (BK/PK) open
+</li><li>Circuit 346 (BK/WH) open
+</li><li>Circuit 363 (BK/LB) open
+</li><li>Door ajar switch
+</li><li>Vehicle security module (if equipped)
+</li><li>Instrument cluster
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: THE INTERIOR LAMPS DO NOT TURN ON WITH ONE DOOR OPEN
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK FOR RKE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Check for RKE.
+</li><li><b>Is the vehicle equipped with RKE?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#G5"                                                                                                                                                                                                                                                       >G5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK THE DOOR AJAR SWITCH CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Instrument Cluster C220a.
+</li><li>Measure the resistance between the instrument cluster C220a-19, circuit 345 (BK/PK), harness side and ground and between the instrument cluster C220a-23, circuit 344 (BK/YE), harness
+side and ground while opening and closing the LH and RH doors.
+</li><br><IMG src="a0077481.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms with the doors closed and less than 5 ohms with the doors open?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#G9"                                                                                                                                                                                                                                                       >G9
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK CIRCUIT 344 (BK/YE) OR CIRCUIT 345 (BK/PK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Inoperative Door Ajar Switch.
+</li><li>Measure the resistance between the inoperative door ajar switch, harness side and the instrument cluster, harness side as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Door Ajar Switch Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Instrument Cluster Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH
+</TD><TD valign="top" align="CENTER">C526-2
+</TD><TD valign="top" align="CENTER">C220a-23
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH
+</TD><TD valign="top" align="CENTER">C602-2
+</TD><TD valign="top" align="CENTER">C220a-19
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#G4"                                                                                                                                                                                                                                                       >G4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="G4">&nbsp;
+</a><b>G4 CHECK THE DOOR AJAR SWITCHES
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the inoperative door ajar switch, harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH
+</TD><TD valign="top" align="CENTER">C526-1
+</TD><TD valign="top" align="CENTER">57 (BK)
+</TD></TR><TR><TD valign="top" align="CENTER">RH
+</TD><TD valign="top" align="CENTER">C602-1
+</TD><TD valign="top" align="CENTER">57 (BK)
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new door ajar switch in question. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="G5">&nbsp;
+</a><b>G5 CHECK THE DOOR AJAR SWITCH CIRCUITS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Vehicle Security Module C3008b.
+</li><li>Measure the resistance between the vehicle security module C3008b, harness side and ground while opening and closing the door with the inoperative door ajar switch as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C3008b-4
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C3008b-5
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C3008b-12
+</TD><TD valign="top" align="CENTER">363 (BK/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C3008b-13
+</TD><TD valign="top" align="CENTER">346 (BK/WH)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0071842.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms with the door closed and less than 5 ohms with the door open?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#G8"                                                                                                                                                                                                                                                       >G8
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#G6"                                                                                                                                                                                                                                                       >G6
+</a>.
+</td></tr><tr><td><a name="G6">&nbsp;
+</a><b>G6 CHECK CIRCUITS 344 (BK/YE), 345 (BK/PK), 346 (BK/WH) AND 363 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Inoperative Door Ajar Switch.
+</li><li>Measure the resistance between the inoperative door ajar switch, harness side and the vehicle security module C3008b, harness side follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Door Ajar Switch Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Vehicle Security Module Connector-Pin
+</TH><TH valign="bottom" align="CENTER">Circuit
+</TH></TR><TR><TD valign="top" align="CENTER">LH front
+</TD><TD valign="top" align="CENTER">C526-2
+</TD><TD valign="top" align="CENTER">C3008b-4
+</TD><TD valign="top" align="CENTER">344 (BK/YE)
+</TD></TR><TR><TD valign="top" align="CENTER">RH front
+</TD><TD valign="top" align="CENTER">C602-2
+</TD><TD valign="top" align="CENTER">C3008b-5
+</TD><TD valign="top" align="CENTER">345 (BK/PK)
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear
+</TD><TD valign="top" align="CENTER">C715-2
+</TD><TD valign="top" align="CENTER">C3008b-12
+</TD><TD valign="top" align="CENTER">363 (BK/LB)
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear
+</TD><TD valign="top" align="CENTER">C820-2
+</TD><TD valign="top" align="CENTER">C3008b-13
+</TD><TD valign="top" align="CENTER">346 (BK/WH)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0071841.gif"                                                                                                                                                                                                                                                        height="171" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#G7"                                                                                                                                                                                                                                                       >G7
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="G7">&nbsp;
+</a><b>G7 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between the inoperative door ajar switch connector, circuit 57 (BK), harness side and ground as follows:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Location
+</TH><TH valign="bottom" align="CENTER">Connector-Pin
+</TH></TR><TR><TD valign="top" align="CENTER">LH front door ajar switch
+</TD><TD valign="top" align="CENTER">C526-1
+</TD></TR><TR><TD valign="top" align="CENTER">RH front door ajar switch
+</TD><TD valign="top" align="CENTER">C602-1
+</TD></TR><TR><TD valign="top" align="CENTER">LH rear door ajar switch
+</TD><TD valign="top" align="CENTER">C715-1
+</TD></TR><TR><TD valign="top" align="CENTER">RH rear door ajar switch
+</TD><TD valign="top" align="CENTER">C820-1
+</TD></TR></TABLE><br>
+
+<li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new door ajar switch for the switch in question. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REPAIR the circuit in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="G8">&nbsp;
+</a><b>G8 CHECK FOR CORRECT VEHICLE SECURITY MODULE OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the vehicle security module connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the vehicle security module connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new vehicle security module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr><tr><td><a name="G9">&nbsp;
+</a><b>G9 CHECK FOR CORRECT INSTRUMENT CLUSTER OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all the instrument cluster connectors.
+</li><li>Check for:
+</li><ul type="square"><li>corrosion
+</li></ul><ul type="square"><li>pushed-out pins
+</li></ul><li>Connect all the instrument cluster connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-H">&nbsp;
+</a><p><b>Pinpoint Test H: An Individual Puddle Lamp Is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>On vehicles equipped with remote keyless entry (RKE), when any door is opened, the vehicle security module sends an interior lamps ON signal to the instrument cluster through UART based protocol (UBP) circuit 1906 (PK). When the instrument
+cluster receives the interior lamps ON request from the vehicle security module, the instrument cluster will illuminate the puddle lamps by sending voltage to the puddle lamps through circuit 53 (BK/LB). Ground for the puddle lamps is provided
+through circuit 57 (BK).
+</p><p>On vehicles without RKE, the instrument cluster illuminates the puddle lamps when any door has been opened.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Circuit 53 (BK/LB) open
+</li><li>Circuit 57 (BK) open
+</li><li>Exterior mirror
+</li></ul><a name="H">&nbsp;
+</a><h5>PINPOINT TEST H: AN INDIVIDUAL PUDDLE LAMP IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="H1">&nbsp;
+</a><b>H1 CHECK FOR CORRECT INTERIOR LAMP OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Open and close the doors while observing the interior lamps. If equipped with RKE, lock and unlock the doors with the remote transmitter and verify that the interior lamps illuminate when the unlock button is pressed.
+</li><li><b>Do the interior lamps operate correctly?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#H2"                                                                                                                                                                                                                                                       >H2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62h2002.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a> to diagnose the interior lamp concern before attempting to diagnose the puddle lamps.
+</td></tr><tr><td><a name="H2">&nbsp;
+</a><b>H2 CHECK CIRCUIT 53 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  LH Exterior Mirror C521 or RH Exterior Mirror C615.
+</li><li><b>NOTE:
+</b>  Open any door, and make sure the interior lamps are ON.
+</li><li>Measure the voltage between the LH exterior mirror C521-8, circuit 53 (BK/LB), harness side and ground; or between RH exterior mirror C615-8, circuit 53 (BK/LB), harness side and
+ground.
+</li><br><IMG src="n0011746.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62h2002.htm#H3"                                                                                                                                                                                                                                                       >H3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="H3">&nbsp;
+</a><b>H3 CHECK CIRCUIT 57 (BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between LH exterior mirror C521-11, circuit 57 (BK), harness side and ground; or between RH exterior mirror C615-11, circuit 57 (BK), harness side and ground.
+</li><br><IMG src="n0011751.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>VERIFY the puddle lamp bulb is OK. If the bulb is OK, INSTALL a new exterior mirror. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s190l.htm&rightside=s62s190r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 501-09
+</a>. TEST the system for normal operation
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

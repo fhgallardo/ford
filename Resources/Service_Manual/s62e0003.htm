@@ -1,0 +1,866 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="4"><meta name="tps_group" content="14"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Charging System &#8212; General Information"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P459Q0"><meta name="tps_procsgmlid" content="n874181"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 414-00:  Charging System &#8212; General Information
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Charging System
+</h4><meta name="tps_proctitle" content="Charging System"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=012&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >12
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R0057 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2173a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">SABRE Premium Battery and Electrical System Tester
+
+<br>010-00736 or equivalent
+
+</td></tr><tr valign="top"><td><IMG src="st2332a.gif"                                                                                                                                                                                                                                                        height="97" width="99" border="0"></td><td valign="top">Worldwide Diagnostic System (WDS)
+
+<br><br><br>Vehicle Communication Module (VCM) with appropriate adapters, or equivalent diagnostic tool
+
+<br></td></tr></table><div><a name="extract_319">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p>The powertrain control module (PCM) controlled charging system determines the optimal voltage setpoint for the charging system and communicates this information to the voltage regulator. This system is unique in that it has 2 unidirectional
+communication lines between the PCM and the generator/regulator. Both of these communication lines are pulse-width modulated (PWM). The generator communication (GEN COM) line communicates the desired setpoint from the PCM to the voltage regulator.
+The generator monitor (GEN MON) line communicates the generator load and error conditions to the PCM. The third pin on the voltage regulator, the A circuit pin, is a dedicated battery voltage sense line.
+</p><p>The charging system voltage is controlled by the PCM. The generator charges the battery, and at the same time supplies power for all of the electrical loads that are required. The battery is more effectively charged with a higher voltage when
+the battery is cold and a lower voltage when the battery is warm. The PCM is able to adjust the charging voltage according to the battery temperature by using a signal from the intake air temperature (IAT) sensor. This means the voltage setpoint is
+calculated by the PCM and communicated to the regulator by a communication link.
+</p><p>The PCM simultaneously controls and monitors the output of the generator. When the current consumption is high or the battery is discharged, the system is able to increase the idle speed.
+</p><p>To minimize the engine drag when starting the engine, the PCM controls the generator. The generator does not produce any output until the engine has started. The PCM then progressively increases the output of the generator.
+</p><p>The PCM controls the operation of the charging system warning indicator in the instrument cluster. The PCM is responsible for turning the charging system warning indicator off after the engine is started and illuminating it under fault
+conditions (when the generator is not generating the correct amount of current with the engine running). The charging system warning indicator is also illuminated by the PCM at key ON engine OFF, and stall condition.
+</p><p>This is a System 4 charging system, which uses the GEN MON and GEN COM lines to control and monitor the charging system through the PCM. System 4 charging systems are virtually identical in design and therefore, share the same diagnostics. The
+circuit numbers and colors may be different, but the functions are the same. System 4 charging systems may use any type of generator, as the generator type usually depends on the engine packaging and/or output requirements versus cost.
+</p><p><b>Circuit Description
+</b></p><p><b>Battery Positive Output (B+) Terminal Circuit 38 (BK/OG)
+</b></p><p>The generator output voltage is supplied through the battery positive output (B+) terminal circuit 38 (BK/OG) on the rear of the generator to the battery and electrical system.
+</p><p><b>A Circuit 35 (OG/LB)
+</b></p><p>The A circuit or battery sense circuit is used to sense battery voltage. This voltage is used by the regulator to determine generator output. This circuit is also used to supply current to the generator field (rotor). The amount of current
+supplied to the rotor determines generator output.
+</p><p><b>Circuit 3204 (LG/OG)
+</b></p><p>The GEN MON circuit communicates the generator load and error conditions to the PCM.
+</p><p><b>Circuit 904 (LG/RD)
+</b></p><p>This is the GEN COM circuit. The PCM determines the optimal voltage setpoint for the charging system and communicates this information to the voltage regulator on the GEN COM circuit.
+</p><div><a name="extract_320">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Batteries contain sulfuric acid. Avoid contact with skin, eyes, or clothing. Also, shield your eyes when working near batteries to protect against possible splashing of the acid solution. In case of acid contact with skin or eyes, flush
+immediately with water for a minimum of 15 minutes and get prompt medical attention. If acid is swallowed, call a physician immediately. Failure to follow these instructions may result in personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Batteries normally produce explosive gases. Therefore, do not allow flames, sparks or lighted substances to come near the battery. When charging or working near a battery, always shield your face and protect your eyes. Always provide
+ventilation. Failure to follow these instructions may result in personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  When lifting a battery, excessive pressure on the end walls could cause acid to spew through the vent caps, resulting in personal injury, damage to the vehicle or battery. Lift with a battery carrier or with your hands on opposite corners.
+Failure to follow these instructions may result in personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not make jumper connections except as directed. Incorrect connections may damage the voltage regulator test terminals, fuses, or fusible links.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not allow any metal object to come in contact with the generator housing and internal diode cooling fins. A short circuit may result and burn out the diodes.
+</b></p><p><b>NOTE:
+</b>  While carrying out any pinpoint test, disregard the diagnostic trouble codes (DTCs) set while following a specific pinpoint test. After the completion of any test, be sure to clear all DTCs in the PCM.
+</p><p><b>NOTE:
+</b>  All voltage measurements are referenced to the negative (-) battery post unless otherwise specified.
+</p><ol start="1"><li>Verify the customer concern.
+</li></ol><ol start="2"><li>Visually inspect for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Battery
+</LI><LI>Generator drive belt
+</LI><LI>Generator pulley
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>Circuitry
+</LI><LI>Cables
+</LI><LI>Fusible links
+</LI><LI>Charging system warning indicator
+</LI><LI>Generator
+</LI><LI>PCM
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li>Verify the battery condition. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62se10l.htm&rightside=s62se10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li></ol><ol start="5"><li>Check the operation of the charging system warning indicator (in the instrument cluster). Normal operation is as follows:
+
+<ul type="disc"><li>With the key in the OFF position, the charging system warning indicator is off.
+</li></ul><ul type="disc"><li>With the key in the ON position and the engine OFF, the charging system warning indicator is on.
+</li></ul><ul type="disc"><li>With the engine running, the charging system warning indicator is off.
+</li></ul></li></ol><ol start="6"><li>Turn off the headlamps and the A/C system (if equipped). Turn the climate control blower to low/off. Check the battery voltage before and after starting the engine to determine if the battery voltage increases.
+</li></ol><ol start="7"><li>If the cause is not visually evident, connect the diagnostic tool to the data link connector (DLC), located under the instrument panel, and select the vehicle to be tested from the diagnostic tool menu. If the diagnostic tool does not
+communicate with the vehicle:
+
+<ul type="disc"><li>check that the diagnostic card is correctly installed.
+</li></ul><ul type="disc"><li>check the connections to the vehicle.
+</li></ul><ul type="disc"><li>check the ignition switch position.
+</li></ul></li></ol><ol start="8"><li>If the diagnostic tool still does not communicate with the vehicle, refer to the diagnostic tool operating manual.
+</li></ol><ol start="9"><li>Carry out the diagnostic tool data link test. If the diagnostic tool responds with:
+
+<ul type="disc"><li>controller area network (CAN) circuit fault; all electronic control units no response/not equipped, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>No response/not equipped for PCM, refer to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</li></ul><ul type="disc"><li>System passed, retrieve and record the continuous diagnostic trouble codes (DTCs), erase the continuous DTCs, and carry out the self-test diagnostics for the PCM.
+</li></ul></li></ol><ol start="10"><li>If the DTCs retrieved are related to the concern, go to the Powertrain Control Module (PCM) Diagnostic Trouble Code (DTC) Index or the Diagnostic Trouble Code (DTC) Index.
+</li></ol><ol start="11"><li>If no DTCs related to the charging system are retrieved, GO to 
+<a href="s62e0003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><p><b>NOTE:
+</b>  DTC P0622 can be set by the loss of the communication lines between the generator and the PCM. The charging system warning indicator then illuminates until the engine is operated at greater than 4,500 rpm (approximately wide open throttle
+[WOT]) for a minimum of 3 seconds. At this time, the generator self-excites. The charging system warning indicator remains illuminated, and the generator operates in a default mode (approximately 13.5 volts) until the engine is turned off.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Powertrain Control Module (PCM) Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">P0622
+</TD><TD valign="top" align="CENTER">Generator Field Term Cir
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="CENTER">GO to 
+<A href="s62e0003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All Other DTCs
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER">PCM
+</TD><TD valign="top" align="CENTER">REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</TD></TR></TABLE><br><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Diagnostic Trouble Code (DTC) Index
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Source
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">B1317
+</TD><TD valign="top" align="CENTER">Battery Voltage High
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER"><A href="s62e0003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">B1318
+</TD><TD valign="top" align="CENTER">Battery Voltage Low
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER"><A href="s62e0003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">All Other DTCs
+</TD><TD valign="top" align="CENTER">&#8212;
+</TD><TD valign="top" align="CENTER">Instrument Cluster
+</TD><TD valign="top" align="CENTER">REFER to 
+<A href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                                target="leftside">Section 419-10
+</A>.
+</TD></TR></TABLE><br><p></p><div><a name="extract_321">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The battery is discharged or battery voltage is low
+</li></ul></td><td><ul type="disc"><li>Engine, battery and generator grounds
+</li><li>Positive battery cable
+</li><li>Circuitry
+</li><li>High key-off current drain(s)
+</li><li>Battery
+</li><li>Generator
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The charging system warning indicator is on with the engine running (the charging system voltage does not increase)
+</li></ul></td><td><ul type="disc"><li>Generator
+</li><li>Fusible links
+</li><li>Circuitry
+</li><li>Powertrain control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The charging system overcharges (battery voltage is greater than 15.5 volts)
+</li></ul></td><td><ul type="disc"><li>Generator
+</li><li>Circuitry
+</li><li>Powertrain control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The charging system warning indicator is on with the engine running and the battery increases voltage
+</li></ul></td><td><ul type="disc"><li>Generator
+</li><li>Instrument cluster
+</li><li>Powertrain control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The charging system warning indicator is off with the ignition switch in the RUN position and the engine off
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li><li>Powertrain control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The charging system warning indicator flickers or is intermittent
+</li></ul></td><td><ul type="disc"><li>Instrument cluster
+</li></ul></td><td><ul type="disc"><li>INSTALL a new instrument cluster. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The generator is noisy
+</li></ul></td><td><ul type="disc"><li>Loose bolts/brackets
+</li><li>Drive belt
+</li><li>Generator/pulley
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>Radio interference
+</li></ul></td><td><ul type="disc"><li>Generator
+</li><li>Wiring/routing
+</li><li>In-vehicle entertainment system
+</li></ul></td><td><ul type="disc"><li><a href="s62e0003.htm#PS2-G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+</li></ul></td></tr></table><div><a name="extract_322">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: The Battery is Discharged or Battery Voltage is Low
+</b></p><h5>Normal Operation
+</h5><p>The generator output is supplied through the positive battery output (B+) circuit 38 (BK/OG) terminal on the rear of the generator to the battery and electrical system. During normal operation the charging system warning indicator is off with
+the key in the ON position and the engine running. The charging system warning indicator is on with the key in the ON position and the engine off.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>engine, generator and battery grounds
+</li><li>positive battery cable
+</li><li>generator B+ circuit 38 (BK/OG) high resistance
+</li><li>high key-off current drain(s)
+</li><li>battery
+</li><li>generator
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE BATTERY IS DISCHARGED OR BATTERY VOLTAGE IS LOW
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK THE BATTERY CONDITION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the Battery Condition Test to determine if the battery can hold a charge and is OK for use. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62se10l.htm&rightside=s62se10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-01
+</a>.
+</li><li><b>Does the battery pass the condition test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new battery. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se10l.htm&rightside=s62se10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-01
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE GENERATOR OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the Generator On-Vehicle Load Test and No Load Test. Refer to the Component Tests in this section.
+</li><li><b>Does the generator pass the component tests?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK FOR CURRENT DRAINS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out the Battery Drain Testing. Refer to the Component Tests in this section.
+</li><li><b>Are any circuits causing excessive current drains?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR as necessary. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK THE VEHICLE GROUNDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in START position.
+</li><li>Measure the voltage drop between the generator housing and the negative battery terminal.
+</li><br><IMG src="a0075053.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage drop less than 0.1 volt?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>CHECK the engine ground, generator ground and the battery ground for corrosion. REPAIR as necessary. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE VOLTAGE DROP IN THE CIRCUIT 38 (BK/OG)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the voltage drop between the generator B+
+C102b, circuit 38 (BK/OG) and the positive battery terminal.
+</li><br><IMG src="n0012379.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage drop less than 0.1 volt?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CHECK if the customer left any component(s) on or if there is an intermittent excessive battery draw. REPAIR as necessary. CLEAR the DTCs. REPEAT the self-test.
+
+<br><br><b>No
+</b><br>CHECK for any corrosion in the circuit 38 (BK/OG), positive battery cable and/or connections. REPAIR as necessary. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-B">&nbsp;
+</a><p><b>Pinpoint Test B: The Charging System Warning Indicator is On With the Engine Running (The Charging System Voltage Does Not Increase)
+</b></p><h5>Normal Operation
+</h5><p>With the engine running, the charging system warning indicator is off. The sense A circuit 35 (OG/LB) to the generator field coil is 13-15 volts. The S (stator) circuit (internal to the generator) is used to feed back a voltage signal from the
+generator to the voltage regulator. This voltage is used by the powertrain control module (PCM) to turn off the charging system warning indicator. The positive battery output (B+) circuit 38 (BK/OG) is the generator output supplied to the battery
+and the electrical system.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>generator
+</li><li>fusible links
+</li><li>circuit 38 (BK/OG) open or high resistance
+</li><li>circuit 904 (LG/RD) open or short to ground
+</li><li>circuit 3204 (LG/OG) open or short to ground
+</li><li>PCM
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE CHARGING SYSTEM WARNING INDICATOR IS ON WITH THE ENGINE RUNNING (THE CHARGING SYSTEM VOLTAGE DOES NOT INCREASE)
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE DIAGNOSTIC TROUBLE CODES (DTCS) IN THE PCM
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Retrieve PCM DTCs.
+</li><li>Check the recorded PCM DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any PCM DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. If referred here by the Powertrain Control/Emissions Diagnosis (PC/ED) manual, GO to 
+<a href="s62e0003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK THE GENERATOR CIRCUIT 38 (BK/OG) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the voltage between the generator
+C102b, circuit 38 (BK/OG) and ground.
+</li><br><IMG src="a0075054.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the voltage equal to battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK THE GENERATOR INTEGRITY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Generator C102a.
+</li><li>Key in ON position, engine OFF.
+</li><li>Measure and record the battery voltage.
+</li><br><IMG src="aj0210a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Key in START position.
+</li><li><b>NOTE:
+</b>  If the generator communication lines are disconnected (DTC P0622 may set), the generator self-excites if it is operated at greater than 4,500 rpm (approximately wide open throttle [WOT]) for a minimum of 3 seconds. It then operates in a
+default mode of approximately 13.5 volts until the engine is turned off.
+</li><li>With the engine running (after the brief WOT is carried out), measure the battery voltage.
+</li><li><b>Does the battery voltage increase a minimum of 0.5 volt from the key ON, engine off measurement to the key ON, engine running measurement (after the brief WOT or snap acceleration is carried out)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#B4"                                                                                                                                                                                                                                                       >B4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="B4">&nbsp;
+</a><b>B4 CHECK CIRCUIT 904 (LG/RD) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  PCM C175b .
+</li><li>Measure the resistance between the generator
+C102a-2, circuit 904 (LG/RD), harness side and the PCM
+C175b-22, circuit 904 (LG/RD), harness side; and between the generator
+C102a-2, circuit 904 (LG/RD) harness side and ground.
+</li><br><IMG src="a0075055.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the generator and the PCM, and greater than 10,000 ohms between the generator and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#B5"                                                                                                                                                                                                                                                       >B5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B5">&nbsp;
+</a><b>B5 CHECK CIRCUIT 3204 (LG/OG) FOR AN OPEN OR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between the generator
+C102a-1, circuit 3204 (LG/OG), harness side and the PCM
+C175b-23, circuit 3204 (LG/OG), harness side; and between the generator
+C102a-1, circuit 3204 (LG/OG), harness side and ground.
+</li><br><IMG src="n0002609.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="0"><li><b>Is the resistance less than 5 ohms between the generator and the PCM, and greater than 10,000 ohms between the generator and ground?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#B6"                                                                                                                                                                                                                                                       >B6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="B6">&nbsp;
+</a><b>B6 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all of the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all of the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector.
+</td></tr></table><a name="PS2-C">&nbsp;
+</a><p><b>Pinpoint Test C: The Charging System Overcharges (Battery Voltage Is Greater Than 15.5 Volts)
+</b></p><h5>Normal Operation
+</h5><p>The generator output is determined by the voltage of the A circuit 35 (OG/LB). The A circuit voltage is compared to a set voltage internal to the regulator and the regulator controls the generator field current to maintain the correct generator
+output. The set voltage varies with temperature and is typically higher in cold temperatures and lower in warm temperatures.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>generator
+</li><li>circuit 35 (OG/LB)
+</li><li>powertrain control module (PCM)
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE CHARGING SYSTEM OVERCHARGES (BATTERY VOLTAGE IS GREATER THAN 15.5 VOLTS)
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE DIAGNOSTIC TROUBLE CODES (DTCS) IN THE PCM
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Retrieve PCM DTCs.
+</li><li>Check the recorded PCM DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any PCM DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. If referred here by the Powertrain Control/Emissions Diagnosis (PC/ED) manual, GO to 
+<a href="s62e0003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK THE BATTERY VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start and run the engine.
+</li><li>Disconnect the diagnostic tool.
+</li><li>Key in START position.
+</li><li>With the engine running and all of the accessories turned off, measure the voltage at the battery while varying the engine rpm.
+</li><br><IMG src="aj0210a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 15.5 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK FOR A VOLTAGE DROP IN CIRCUIT 35 (OG/LB)
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Generator C102a.
+</li><li>Measure the voltage between the generator
+C102a-3, circuit 35 (OG/LB), harness side and ground.
+</li><br><IMG src="a0041084.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage within 0.5 volt of battery voltage?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>CONNECT the generator C102a. GO to 
+<a href="s62e0003.htm#C4"                                                                                                                                                                                                                                                       >C4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit for high resistance. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C4">&nbsp;
+</a><b>C4 CHECK THE GENERATOR PIDs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the diagnostic tool.
+</li><li>Key in START position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Monitor PCM PIDs.
+</li><li>With the engine running, monitor the generator output fault PID in the PCM.
+</li><li><b>Does the PID read YES?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#C5"                                                                                                                                                                                                                                                       >C5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+</td></tr><tr><td><a name="C5">&nbsp;
+</a><b>C5 CHECK THE GENERATOR INTEGRITY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Generator C102a.
+</li><li>Key in ON position, engine OFF.
+</li><li>Measure and record the battery voltage.
+</li><br><IMG src="aj0210a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li>Key in START position.
+</li><li><b>NOTE:
+</b>  If the generator communication lines are disconnected (DTC P0622 may be set), the generator self-excites if it is operated at greater than 4,500 rpm (wide open throttle [WOT]) for a minimum of 3 seconds. It then operates in a default mode
+of approximately 13.5 volts until the engine is turned off.
+</li><li>With the engine running (after the brief WOT is carried out), measure the battery voltage.
+</li><li><b>Does the battery voltage increase a minimum of 0.5 volt from the key ON, engine off measurement to the key ON, engine running measurement (after the brief WOT or snap acceleration is carried out)?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#C6"                                                                                                                                                                                                                                                       >C6
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. CLEAR the DTCs. REPEAT the self-test.
+</td></tr><tr><td><a name="C6">&nbsp;
+</a><b>C6 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all of the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all of the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test.
+</td></tr></table><a name="PS2-D">&nbsp;
+</a><p><b>Pinpoint Test D: The Charging System Warning Indicator is On with the Engine Running and the Battery Increases Voltage
+</b></p><h5>Normal Operation
+</h5><p>With the engine running, the charging system warning indicator is off. The sense A circuit 35 (OG/LB) to the generator field coil is 13-15 volts. The S (stator) circuit (internal to the generator) is used to feed back a voltage signal from the
+generator to the voltage regulator. This voltage is monitored by the powertrain control module (PCM) to turn off the charging system warning indicator. The positive battery output (B+) circuit 38 (BK/OG) is the generator output supplied to the
+battery and the electrical system.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>generator
+</li><li>instrument cluster
+</li><li>PCM
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE CHARGING SYSTEM WARNING INDICATOR IS ON WITH THE ENGINE RUNNING AND THE BATTERY INCREASES VOLTAGE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE DIAGNOSTIC TROUBLE CODES (DTCS) IN THE PCM
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Retrieve PCM DTCs.
+</li><li>Check the recorded PCM DTCs from the continuous and on-demand self-tests.
+</li><li><b>Are any PCM DTCs recorded?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. If referred here by the Powertrain Control/Emissions Diagnosis (PC/ED) manual, GO to 
+<a href="s62e0003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK THE SYSTEM FOR OVERCHARGING
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Start and run the engine.
+</li><li>With the engine running and all the accessories off, measure the voltage at the battery terminals while varying the engine rpm.
+</li><br><IMG src="aj0210a.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 15.5 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s62e0003.htm#C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62e0003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK THE PCM PIDS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Enter the following diagnostic mode on the diagnostic tool:  Monitor PCM PIDs.
+</li><li>With the engine running, monitor the generator output fault PID in the PCM.
+</li><li><b>Does the PID read YES?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#D4"                                                                                                                                                                                                                                                       >D4
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to diagnose the charging system warning indicator.
+</td></tr><tr><td><a name="D4">&nbsp;
+</a><b>D4 CHECK THE GENERATOR OUTPUT
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Verify the generator output. Refer to the Component Tests, Generator On-Vehicle Tests in this section.
+</li><li><b>Does the generator pass the component tests?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#D5"                                                                                                                                                                                                                                                       >D5
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="D5">&nbsp;
+</a><b>D5 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect all of the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all of the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><a name="PS2-E">&nbsp;
+</a><p><b>Pinpoint Test E: The Charging System Warning Indicator is Off With the Ignition Switch in the RUN Position and the Engine Off
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the charging system warning indicator is on with the key ON and the engine off.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>instrument cluster
+</li><li>powertrain control module (PCM)
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE CHARGING SYSTEM WARNING INDICATOR IS OFF WITH THE IGNITION SWITCH IN THE RUN POSITION AND THE ENGINE OFF
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE CHARGING SYSTEM WARNING INDICATOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect the diagnostic tool.
+</li><li>Key in ON position.
+</li><li>Enter the following diagnostic mode on the diagnostic tool:  Active Commands.
+</li><li>Using Active Commands, turn on the charging system warning indicator in the instrument cluster.
+</li><li><b>Is the charging system warning indicator on?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sd10l.htm&rightside=s62sd10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 413-01
+</a> to diagnose the charging system warning indicator.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK FOR CORRECT PCM OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect all of the PCM connectors.
+</li><li>Check for:
+</li>
+
+<ul type="disc"><li>corrosion
+</li><li>pushed-out pins
+</li></ul><li>Connect all of the PCM connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new PCM. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s3e0l.htm&rightside=s62s3e0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-14
+</a>. REPEAT the self-test. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. The concern may have been caused by a loose or corroded connector. CLEAR the DTCs. REPEAT the self-test. TEST the system for normal operation.
+</td></tr></table><a name="PS2-F">&nbsp;
+</a><p><b>Pinpoint Test F: The Generator is Noisy
+</b></p><h5>Normal Operation
+</h5><p>The generator is belt-driven by the engine accessory drive system.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>accessory drive belt
+</li><li>loose bolts/brackets
+</li><li>generator/pulley
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE GENERATOR IS NOISY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK FOR ACCESSORY DRIVE NOISE AND MOUNTING BRACKETS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Check the accessory drive belt for damage and correct installation. Refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62s350l.htm&rightside=s62s350r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-05
+</a>.
+</li><li>Check the accessory mounting brackets and the generator pulley for looseness or misalignment.
+</li><li><b>Is the accessory drive OK?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR as necessary. TEST the system for normal operation.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE GENERATOR FOR EXCESSIVE ELECTRICAL NOISE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Generator C102b.
+</li><li>Start and run the engine.
+</li><li>With the engine running, determine if the generator is still noisy.
+</li><li><b>Is the noise still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62e0003.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK THE GENERATOR FOR MECHANICAL NOISE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Turn all of the accessories off. With the engine running, use a stethoscope or equivalent listening device to probe the generator for unusual mechanical noise.
+</li><li><b>Is the generator the noise source?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62s300l.htm&rightside=s62s300r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 303-00
+</a> to diagnose the source of the engine noise.
+</td></tr></table><a name="PS2-G">&nbsp;
+</a><p><b>Pinpoint Test G: Radio Interference
+</b></p><h5>Normal Operation
+</h5><p>The generator radio suppression equipment reduces interference transmitted through the speakers by the vehicle electrical system.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>generator
+</li><li>wiring/routing
+</li><li>in-vehicle entertainment system
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: RADIO INTERFERENCE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 VERIFY THE GENERATOR IS THE SOURCE OF THE RADIO INTERFERENCE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><b>NOTE:
+</b>  If the original equipment manufactured (OEM) audio unit has been replaced with an aftermarket unit, the vehicle may not pass this test. Return the vehicle to OEM condition before following this pinpoint test.
+
+<li>Start and run the engine.
+</li><li>Tune the audio unit to a station where the interference is present.
+</li><li>Key in OFF position.
+</li><li>Disconnect:  Generator C102b.
+</li><li>With the engine running, determine if the interference is still present.
+</li><li><b>Is the interference present with the generator disconnected?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sf00l.htm&rightside=s62sf00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 415-00
+</a> for diagnosis and testing of the in-vehicle entertainment system.
+
+<br><br><b>No
+</b><br>INSTALL a new generator. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62se20l.htm&rightside=s62se20r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 414-02
+</a>. TEST the system for normal operation.
+</td></tr></table><div><a name="extract_323">&nbsp;
+</a></div>
+
+<p><b>Component Tests
+</b></p><p><b>Battery &#8212; Drain Testing
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Do not attempt this test on a lead-acid battery that has recently been recharged. Explosive gases may cause personal injury. Failure to follow these instructions may result in personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  To prevent damage to the meter, do not crank the engine or operate accessories that draw more than 10A.
+</b></p><p><b>NOTE:
+</b>  No factory-equipped vehicle should have more than a 50 milliamps (mA) or 0.050 amp draw.
+</p><p><b>NOTE:
+</b>  Many electronic modules draw 10 mA (0.010 amp) or more continuously.
+</p><p><b>NOTE:
+</b>  Use an in-line ammeter between the negative battery post and its respective cable.
+</p><p><b>NOTE:
+</b>  Typically, a drain of approximately 1 amp can be attributed to an engine compartment lamp, glove compartment lamp, or an interior lamp staying on continually. Other component failures or wiring shorts are located by selectively pulling fuses to
+pinpoint the location of the current drain. When the current drain is found, the meter reading falls to an acceptable level. If the drain is still not located after checking all of the fuses, it is due to the generator.
+</p><p><b>NOTE:
+</b>  To accurately test the drain on a battery, an in-line ammeter must be used. Use of a test lamp or voltmeter is not an accurate method due to the number of electronic modules.
+</p><p>Check for current drains on the battery in excess of 50 mA (0.050 amp) with all of the electrical accessories off and the vehicle at rest for at least 40 minutes. Current drains can be tested with the following procedure:
+</p><ol start="1"><li>Make sure the central junction box (CJB) is accessible without turning on the interior or the underhood lights.
+</li></ol><ol start="2"><li>Drive the vehicle at least 5 minutes and over 48 km/h (30 mph) to turn on and activate the vehicle systems.
+</li></ol><ol start="3"><li>Allow the vehicle to sit with the key OFF for at least 40 minutes to allow the modules to time out/power down.
+</li></ol><ol start="4"><li>Connect a fused (10A) jumper wire between the negative battery cable and the negative battery post to prevent modules from resetting and to catch capacitive drains.
+</li></ol><ol start="5"><li>Disconnect the negative battery cable from the negative battery post without breaking the connection of the jumper wire.
+</li></ol><ol start="6"><li><p><b>NOTE:
+</b>  It is very important that continuity is not broken between the negative battery cable and the negative battery post when connecting the meter. If this happens, the entire procedure must be repeated.
+</p>Connect the battery tester between the negative battery cable and the post. The meter must be capable of reading milliamps and should have a 10 amp capability.
+</li></ol><ol start="7"><li><p><b>NOTE:
+</b>  If the meter settings need to be switched or the test leads need to be moved to another jack, the jumper wire must be reinstalled to avoid breaking continuity.
+</p>Remove the jumper wire.
+</li></ol><ol start="8"><li><p><b>NOTE:
+</b>  Amperage draw varies from vehicle to vehicle depending on the equipment package. Compare to a similar vehicle for reference.
+</p><p><b>NOTE:
+</b>  No factory-equipped vehicle should have more than a 50 mA (0.050 amp) draw.
+</p>Note the amperage draw.
+</li></ol><ol start="9"><li>If the draw is found to be excessive, remove the fuses from the CJB 1 at a time and note the current reading. Do not reinstall the fuses until you have finished testing. To properly isolate each of the circuits, all of the fuses may need to be
+removed and install 1 fuse, note the amperage draw, then remove the fuse and install the next fuse, until all of the circuits are checked. When the current level drops to an acceptable level after removing a fuse, the circuit containing the
+excessive draw has been located.
+</li></ol><ol start="10"><li>Check the wiring diagrams for any circuits that run from the battery without passing through the CJB. If the current draw is still excessive, disconnect these circuits until the draw is found. Also, disconnect the generator electrical
+connections if the draw can not be located. The generator may be internally shorted, causing the current drain.
+</li></ol><p><b>Generator On-Vehicle Tests
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  To prevent damage to the generator, do not make the jumper wire connections except as directed.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;CAUTION:  Do not allow any metal object to come in contact with the housing and the internal diode cooling fins with the key in the ON or OFF positions. A short circuit may result and burn out the diodes.
+</b></p><p><b>NOTE:
+</b>  Battery posts and cable clamps must be clean and tight for accurate meter indications.
+</p><p><b>NOTE:
+</b>  Refer to the battery tester manual for complete directions for testing the charging system.
+</p><ol start="1"><li>Turn off all of the lamps and the electrical components.
+</li></ol><ol start="2"><li>Place the transmission in NEUTRAL and apply the parking brake.
+</li></ol><ol start="3"><li>Carry out the Load Test and No Load Test according to the following component tests:
+</li></ol><p><b>Generator On-Vehicle Tests &#8212; Load Test
+</b></p><ol start="1"><li>Switch the tester to the ammeter function.
+</li></ol><ol start="2"><li>Connect the positive and negative leads of the tester to the corresponding battery terminals.
+</li></ol><ol start="3"><li>Connect the current probe to the generator B+ circuit 38 (BK/OG).
+</li></ol><ol start="4"><li>With the engine running at approximately 2,000 rpm, adjust the tester load bank to determine the output of the generator. The generator output should be greater than the graph shown below. If not, refer back to the pinpoint test or
+GO to 
+<a href="s62e0003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><IMG src="a0052065.gif"                                                                                                                                                                                                                                                        height="169" width="269" border="1"><p><b>Generator On-Vehicle Tests &#8212; No Load Test
+</b></p><ol start="1"><li>Switch the tester to the voltmeter function.
+</li></ol><ol start="2"><li>Connect the voltmeter positive lead to the generator B+ circuit 38 (BK/OG) and the negative lead to ground.
+</li></ol><ol start="3"><li>Turn all of the electrical accessories off.
+</li></ol><ol start="4"><li>With the engine running at approximately 2,000 rpm, check the generator output voltage. The voltage should be between 13.2 and 15.5 volts. If not, refer to the pinpoint test or GO to 
+<a href="s62e0003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

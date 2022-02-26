@@ -1,0 +1,732 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="5"><meta name="tps_group" content="01"><meta name="tps_section" content="16"><meta name="tps_section_title" content="Wipers and Washers"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P7439Q0"><meta name="tps_procsgmlid" content="n929142"><meta name="tps_packetinfo" content="460154"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 501-16:  Wipers and Washers
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  11/03/2005
+</div></TD></TR></TABLE><hr><h4>Wipers and Washers
+</h4><meta name="tps_proctitle" content="Wipers and Washers"><p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=081&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >81
+</a> for schematic and connector information.
+</p><br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st1137a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">73III Automotive Meter
+
+<br>105-R00057 or equivalent
+</td></tr></table><p><b>Principles of Operation
+</b></p><p>The wiper system has 5 different operating modes: OFF mode, LOW SPEED mode, HIGH SPEED mode, INTERVAL mode and SOFTWARE SAFE mode.
+</p><p>HIGH SPEED is activated when the multi-function switch supplies ground to the windshield wiper motor module inputs. The windshield wiper motor module then supplies ground to the run/park sense and high/low relay coil, activating the relay with
+voltage supplied from the battery through the central junction box (CJB). When the windshield wiper motor module receives voltage from the run/park sensor, it removes ground from the run/park sensor, deactivating it. The windshield wiper motor
+continues to operate from voltage connected through the run/park sensor until the Hall-effect sensor senses magnetism in the motor. When the Hall-effect sensor senses magnetism in the motor, the windshield wiper motor returns to the PARK position,
+the internal run/park sensor grounds the windshield wiper motor module input and the windshield wiper motor module removes ground from the windshield wiper high/low relay coil, deactivating the high/low relay and windshield wiper motor. The
+windshield wiper motor module continues to cycle the windshield wipers until the inputs from the multi-function switch are changed from the HIGH SPEED position.
+</p><p>LOW SPEED is activated when the multi-function switch supplies a specific ground to the speed inputs of the windshield wiper motor module. The windshield wiper motor module then supplies ground to only the windshield wiper run/park relay coil,
+activating it. When the windshield wiper run/park relay is activated, the deactivated windshield high/low relay connects voltage to the windshield wiper motor low input, activating the wiper motor. The windshield wiper motor module continues to
+operate the windshield wiper motor in the same manner as in high speed, but in LOW SPEED with the wiper motor connected to the low speed input.
+</p><p>The INTERVAL wiper speed is activated with grounds controlled by the multi-function switch inputs to the windshield wiper motor module. The windshield wiper motor module then activates the windshield wiper run/park relay coil and switches
+voltage through the windshield wiper high/low relay. The high/low relay remains deactivated supplying the voltage to the wiper motor low speed input and activates the windshield wiper motor. When the windshield wiper motor module receives the
+grounded input, the motor continues to operate until the Hall-effect sensor senses magnetism, which turns off the run/park sense output to the windshield wiper run/park software, deactivating the relay and disconnecting voltage to the wiper motor.
+The windshield wipers remain parked until the windshield wiper motor module completes a time-out and then repeats the intermittent windshield wiper cycle.
+</p><p>The windshield wiper motor module responds to the windshield wiper control commands by interpreting inputs from the PCM system. The speed dependent wipers will compensate for the extra moisture that accumulates on the windshield at higher
+speeds, except when the multi-function switch is in the INT 1 position. At higher speeds, the speed dependent feature shortens the delay between wipes when using the variable interval wipers. Delays will automatically adjust at speeds between 16 and
+105 km/h (10 and 65 mph).
+</p><p>The windshield washer is activated by the internal wiper motor modules when they receive a ground from the multi-function switch between the washer inputs. Depending on the correct ground, the internal wiper motor module activates the
+windshield washer relays (internal) by grounding the relay coil. When the relay is activated, it connects voltage to the washer pump, which is grounded through the harness.
+</p><p>The windshield wiper motor defaults to its SOFTWARE SAFE mode when the run/park sensor does not sense the Hall-effect sensor magnet inside the wiper motor. This can be caused by obstruction of windshield wipers or binding linkage. The
+windshield wiper motor will continue to operate in a HI/LO speed condition for a period of 60 seconds.
+</p><div><a name="extract_58">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><ol start="1"><li>Verify the customer concern by operating the system.
+</li></ol><ol start="2"><li>Visually inspect the following for obvious signs of mechanical or electrical damage.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH><TH valign="bottom" align="CENTER">Electrical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Windshield washer hoses
+</LI><LI>Wiper linkage
+</LI><LI>Multi-function switch
+</LI></UL></TD><TD valign="top" align="LEFT"><UL type="disc"><LI>CJB fuses:
+
+<UL type="square"><LI>1 (10A)
+</LI><LI>113 (30A)
+</LI></UL></LI><LI>Circuitry
+</LI><LI>Windshield wiper motor
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the Symptom Chart. GO to 
+<a href="s621g003.htm#SC4"                                                                                                                                                                                                                                                       >Symptom Chart - Wipers and Washers
+</a>.
+</li></ol><div><a name="extract_59">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC4">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>Symptom Chart &#8212; Wipers and Washers
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>The wipers are inoperative
+</li></ul></td><td><ul type="disc"><li>Fuse(s)
+</li><li>Multi-function switch
+</li><li>Circuitry
+</li><li>Ignition switch
+</li><li>Windshield wiper motor
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The wipers operate only in HIGH SPEED regardless of the speed selected with the multi-function switch
+</li></ul></td><td><ul type="disc"><li>Windshield wiper motor
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The wipers stay ON continuously
+</li></ul></td><td><ul type="disc"><li>Windshield wiper motor
+</li><li>Multi-function switch
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#B"                                                                                                                                                                                                                                                       >Go To Pinpoint Test B
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The HIGH/LOW wiper speeds do not operate correctly (INTERVAL wiper mode OK)
+</li></ul></td><td><ul type="disc"><li>Multi-function switch
+</li><li>Circuitry
+</li><li>Windshield wiper motor
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#C"                                                                                                                                                                                                                                                       >Go To Pinpoint Test C
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The INTERVAL wiper speed does not operate correctly (HIGH/LOW speeds OK)
+</li></ul></td><td><ul type="disc"><li>Multi-function switch
+</li><li>Circuitry
+</li><li>Windshield wiper motor
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#D"                                                                                                                                                                                                                                                       >Go To Pinpoint Test D
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The wipers do not operate correctly in the MIST position
+</li></ul></td><td><ul type="disc"><li>Multi-function switch
+</li><li>Circuitry
+</li><li>Washer pump
+</li><li>Windshield wiper motor
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#E"                                                                                                                                                                                                                                                       >Go To Pinpoint Test E
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The washer pump is inoperative
+</li></ul></td><td><ul type="disc"><li>Washer pump
+</li><li>Multi-function switch
+</li><li>Windshield wiper motor
+</li><li>Circuitry
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The speed dependent INTERVAL mode does not operate correctly
+</li></ul></td><td><ul type="disc"><li>Windshield wiper motor
+</li><li>Circuitry
+</li><li>Powertrain control module (PCM)
+</li></ul></td><td><ul type="disc"><li><a href="s621g003.htm#G"                                                                                                                                                                                                                                                       >Go To Pinpoint Test G
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>The wipers will not park at correct position
+</li></ul></td><td><ul type="disc"><li>Windshield wiper motor
+</li><li>Pivot arm adjustment
+</li><li>Linkage
+</li></ul></td><td><ul type="disc"><li>ADJUST the windshield wiper blade and pivot arm.
+</li></ul></td></tr></table><div><a name="extract_60">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Tests
+</b></p><p><b>Pinpoint Test A: The Wipers Are Inoperative
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the front wiper motor receives power through circuit 1671 (RD) and circuit 65 (DG). The front wiper motor is grounded through circuits 875 (BK/LB) and 57 (BK). The front wiper motor receives open and ground inputs from
+the multi-function switch through circuits 485 (PK/BK), 680 (LB/OG), 1300 (PK), and 1301 (YE) to activate the wipers to the appropriate speeds.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuse(s)
+</li><li>Open in circuits circuit 65 (DG), 485 (PK/BK), 680 (LB/OG), 1300 (PK), 1301 (YE) or 1671 (RD)
+</li><li>Inoperative multi-function switch
+</li><li>Inoperative wiper motor
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: THE WIPERS ARE INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CHECK CIRCUITS 65 (DG) AND 1671 (RD) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between windshield wiper C125-5, circuit 1671 (RD), harness side and ground; and between windshield wiper motor C125-8, circuit 65 (DG), harness side and ground.
+</li><br><IMG src="a0039065.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the voltages greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+
+<br><br><b>No
+</b><br>VERIFY the central junction box (CJB) fuses 1 (10A) and 113 (30A) are OK. If OK, REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK CIRCUITS 57 (BK) AND 875 (BK/LB) FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Measure the resistance between windshield wiper C125-6, circuit 57 (BK), harness side and ground; and between windshield wiper motor C125-3, circuit 875 (BK/LB), harness side and
+ground.
+</li><br><IMG src="a0037610.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 CHECK THE MULTI-FUNCTION SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:   Multi-Function Switch C202a.
+</li><li>Carry out the multi-function switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Did the multi-function switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new multi-function switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 CHECK CIRCUIT 875 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between C202a-4, circuit 875 (BK/LB), harness side and ground.
+</li><br><IMG src="a0073193.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK CIRCUITS 680 (LB/OG), 1300 (PK), 485 (PK/BK) AND 1301 (YE) FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Using the following table, measure the resistance between the multi-function switch C202a harness side and the windshield wiper motor C125 harness side:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Multi-Function Switch C202a
+</TH><TH valign="bottom" align="CENTER">Windshield Wiper Motor C125
+</TH></TR><TR><TD valign="top" align="CENTER">C202a-2, circuit 680 (LB/OG)
+</TD><TD valign="top" align="CENTER">C125-10, circuit 680 (LB/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-3, circuit 1300 (PK)
+</TD><TD valign="top" align="CENTER">C125-11, circuit 1300 (PK)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-5, 485 (PK/BK)
+</TD><TD valign="top" align="CENTER">C125-1, circuit 485 (PK/BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-1, circuit 1301 (YE)
+</TD><TD valign="top" align="CENTER">C125-9, circuit 1301 (YE)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0073192.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK FOR CORRECT WIPER MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the wiper motor connector.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect the wiper motor connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new windshield wiper motor. REFER to 
+<a href="s621g006.htm"                                                                                                                                                                                                                                                       >Windshield Wiper Motor
+</a> in this section.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><p><b>Pinpoint Test B: The Wipers Stay On Continuously
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the front wiper motor receives open and ground inputs from the multi-function switch through circuits 1301 (YE), 1300 (PK), 680 (LB/OG) and 485 (PK/BK) to activate the wipers to the appropriate speeds.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Short to ground in circuits 680 (LB/OG), 1300 (PK), 485 (PK/BK) or 1301 (YE)
+</li><li>Inoperative front wiper motor
+</li><li>Inoperative multi-function switch
+</li></ul><a name="B">&nbsp;
+</a><h5>PINPOINT TEST B: THE WIPERS STAY ON CONTINUOUSLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="B1">&nbsp;
+</a><b>B1 CHECK THE MULTI-FUNCTION SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:   Multi-Function Switch C202a.
+</li><li>Carry out the multi-function switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Did the multi-function switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#B2"                                                                                                                                                                                                                                                       >B2
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new multi-function switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</td></tr><tr><td><a name="B2">&nbsp;
+</a><b>B2 CHECK CIRCUITS 680 (LB/OG), 1300 (PK), 485 (PK/BK) AND 1301 (YE) FOR SHORTS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Using the following table, measure the resistance between windshield wiper motor C125 harness side and ground:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Windshield Wiper Motor C125
+</TH><TH valign="bottom" align="CENTER">Ground
+</TH></TR><TR><TD valign="top" align="CENTER">C125-10, circuit 680 (LB/OG)
+</TD><TD valign="top" align="CENTER">ground
+</TD></TR><TR><TD valign="top" align="CENTER">C125-11, circuit 1300 (PK)
+</TD><TD valign="top" align="CENTER">ground
+</TD></TR><TR><TD valign="top" align="CENTER">C125-1, circuit 485 (PK/BK)
+</TD><TD valign="top" align="CENTER">ground
+</TD></TR><TR><TD valign="top" align="CENTER">C125-9, circuit 1301 (YE)
+</TD><TD valign="top" align="CENTER">ground
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0045224.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#B3"                                                                                                                                                                                                                                                       >B3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="B3">&nbsp;
+</a><b>B3 CHECK FOR CORRECT WIPER MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the wiper motor connector.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect the wiper motor connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new windshield wiper motor. REFER to 
+<a href="s621g006.htm"                                                                                                                                                                                                                                                       >Windshield Wiper Motor
+</a> in this section.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><p><b>Pinpoint Test C: The HIGH/LOW Wiper Speeds Do Not Operate Correctly (INTERVAL wiper mode OK)
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the front wiper motor receives open and ground inputs from the multi-function switch through circuits 1301 (YE), 1300 (PK), 680 (LB/OG) and 485 (PK/BK) to activate the wipers to the appropriate speeds.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Open in circuits 680 (LB/OG), 1300 (PK), 485 (PK/BK) or 1301 (YE)
+</li><li>Inoperative front wiper motor
+</li><li>Inoperative multi-function switch
+</li></ul><a name="C">&nbsp;
+</a><h5>PINPOINT TEST C: THE HIGH/LOW WIPER SPEEDS DO NOT OPERATE CORRECTLY (INTERVAL WIPER MODE OK)
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="C1">&nbsp;
+</a><b>C1 CHECK THE MULTI-FUNCTION SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:   Multi-Function Switch C202a.
+</li><li>Carry out the multi-function switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Did the multi-function switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#C2"                                                                                                                                                                                                                                                       >C2
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new multi-function switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="C2">&nbsp;
+</a><b>C2 CHECK CIRCUITS 680 (LB/OG), 485 (PK/BK) AND 1301 (YE) FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Using the following table, measure the resistance between multi-function switch C202a harness side and windshield wiper motor C125 harness side:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Multi-Function Switch C202a
+</TH><TH valign="bottom" align="CENTER">Windshield Wiper Motor C125
+</TH></TR><TR><TD valign="top" align="CENTER">C202a-2, circuit 680 (LB/OG)
+</TD><TD valign="top" align="CENTER">C125-10, circuit 680 (LB/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-5, circuit 485 (PK/BK)
+</TD><TD valign="top" align="CENTER">C125-1, circuit 485 (PK/BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-1, circuit 1301 (YE)
+</TD><TD valign="top" align="CENTER">C125-9, circuit 1301 (YE)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0073195.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#C3"                                                                                                                                                                                                                                                       >C3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="C3">&nbsp;
+</a><b>C3 CHECK FOR CORRECT WIPER MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all wiper motor connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all wiper motor connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new windshield wiper motor. REFER to 
+<a href="s621g006.htm"                                                                                                                                                                                                                                                       >Windshield Wiper Motor
+</a> in this section.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><p><b>Pinpoint Test D: The INTERVAL Wiper Speed Does Not Operate Correctly (HIGH/LOW speeds OK)
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the front wiper motor receives open and ground inputs from the multi-function switch through circuits 1301 (YE), 1300 (PK), 680 (LB/OG) and 485 (PK/BK) to activate the wipers to the appropriate speeds.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Open in circuits 680 (LB/OG), 1300 (PK), 485 (PK/BK) or 1301 (YE)
+</li><li>Inoperative front wiper motor
+</li><li>Inoperative multi-function switch
+</li></ul><a name="D">&nbsp;
+</a><h5>PINPOINT TEST D: THE INTERVAL WIPER SPEED DOES NOT OPERATE CORRECTLY (HIGH/LOW SPEEDS OK)
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="D1">&nbsp;
+</a><b>D1 CHECK THE MULTI-FUNCTION SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:   Multi-Function Switch C202a.
+</li><li>Carry out the multi-function switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Did the multi-function switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#D2"                                                                                                                                                                                                                                                       >D2
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new multi-function switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>. TEST the system for normal operation.
+</td></tr><tr><td><a name="D2">&nbsp;
+</a><b>D2 CHECK CIRCUITS 680 (LB/OG), 485 (PK/BK) AND 1301 (YE) FOR OPENS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Using the following table, measure the resistance between multi-function switch C202a harness side and windshield wiper motor C125 harness side:
+</li><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">Multi-Function Switch C202a
+</TH><TH valign="bottom" align="CENTER">Windshield Wiper Motor C125
+</TH></TR><TR><TD valign="top" align="CENTER">C202a-2, circuit 680 (LB/OG)
+</TD><TD valign="top" align="CENTER">C125-10, circuit 680 (LB/OG)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-5, circuit 485 (PK/BK)
+</TD><TD valign="top" align="CENTER">C125-1, circuit 485 (PK/BK)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-1, circuit 1301 (YE)
+</TD><TD valign="top" align="CENTER">C125-9, circuit 1301 (YE)
+</TD></TR><TR><TD valign="top" align="CENTER">C202a-3, circuit 1300 (PK)
+</TD><TD valign="top" align="CENTER">C125-11, circuit 1300 (PK)
+</TD></TR></TABLE><br>
+
+<br><IMG src="a0073194.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Are the resistances less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#D3"                                                                                                                                                                                                                                                       >D3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit(s) in question. TEST the system for normal operation.
+</td></tr><tr><td><a name="D3">&nbsp;
+</a><b>D3 CHECK FOR CORRECT WIPER MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all wiper motor connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all wiper motor connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new windshield wiper motor. REFER to 
+<a href="s621g006.htm"                                                                                                                                                                                                                                                       >Windshield Wiper Motor
+</a> in this section.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><p><b>Pinpoint Test E: The Wipers Do Not Operate Correctly In The MIST Position
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the multi-function switch receives ground through 875 (BK/LB). The front wiper motor receives input from the multi-function switch through circuit 684 (PK/YE) to operate the MIST wiper function.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Open in circuits 684 (PK/YE) or 875 (BK/LB)
+</li><li>Inoperative multi-function switch
+</li><li>Inoperative wiper motor
+</li></ul><a name="E">&nbsp;
+</a><h5>PINPOINT TEST E: THE WIPERS DO NOT OPERATE CORRECTLY IN THE MIST POSITION
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="E1">&nbsp;
+</a><b>E1 CHECK THE MULTI-FUNCTION SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:   Multi-Function Switch C202a.
+</li><li>Carry out the multi-function switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Did the multi-function switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#E2"                                                                                                                                                                                                                                                       >E2
+</a>.
+
+<br><br><b>No
+</b><br>INSTALL a new multi-function switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</td></tr><tr><td><a name="E2">&nbsp;
+</a><b>E2 CHECK CIRCUIT 875 (BK/LB) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between C202a-4, circuit 875 (BK/LB), harness side and ground.
+</li><br><IMG src="a0073193.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#E3"                                                                                                                                                                                                                                                       >E3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="E3">&nbsp;
+</a><b>E3 CHECK CIRCUIT 684 (PK/YE) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Measure the resistance between C202a-6, circuit 684 (PK/YE), harness side and C125-12, circuit 684 (PK/YE), harness side.
+</li><br><IMG src="a0073196.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br><a href="s621g003.htm#F"                                                                                                                                                                                                                                                       >Go To Pinpoint Test F
+</a> to diagnose the washer circuit.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr></table><p><b>Pinpoint Test F: The Washer Pump is Inoperative
+</b></p><h5>Normal Operation
+</h5><p>During normal operation, the washer pump motor is powered through an internal relay in the wiper motor using circuit 941 (BK/WH). The multi-function switch provides input to the windshield wiper motor through circuit 684 (PK/YE) to activate the
+washer. The windshield wiper motor activates the internal relay and then provides power through circuit 941 (BK/WH).
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Open in circuit 941 (BK/WH) or 684 (PK/YE)
+</li><li>Inoperative multi-function switch
+</li><li>Inoperative washer pump motor
+</li><li>Inoperative wiper motor
+</li></ul><a name="F">&nbsp;
+</a><h5>PINPOINT TEST F: THE WASHER PUMP IS INOPERATIVE
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="F1">&nbsp;
+</a><b>F1 CHECK CIRCUIT 684 (PK/YE) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Key in ON position.
+</li><li>Measure the resistance between C125-12, circuit 684 (PK/YE), harness side and ground while depressing the multi-function switch to the windshield wiper wash position.
+</li><br><IMG src="a0045232.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#F3"                                                                                                                                                                                                                                                       >F3
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621g003.htm#F2"                                                                                                                                                                                                                                                       >F2
+</a>.
+</td></tr><tr><td><a name="F2">&nbsp;
+</a><b>F2 CHECK THE MULTI-FUNCTION SWITCH
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Multi-Function Switch C202a.
+</li><li>Carry out the multi-function switch component test.
+
+<p>Refer to Wiring Diagrams Cell 
+<a target="leftside" href="s62~tr~en~book=E62&cell=149&page=&year=&vehicle=2006 F-150&slash;Mark LT&market=TR&lang=EN&RTYPE=DIAGRAM&legacy=N~gen~emain.htm                                "                                                                                                                                                                                                                                                               >149
+</a> for schematic and connector information.
+</p></li><li><b>Did the multi-function switch pass the component test?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR circuit 685 (PK/YE) for an open. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new multi-function switch. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sb50l.htm&rightside=s62sb50r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 211-05
+</a>.
+</td></tr><tr><td><a name="F3">&nbsp;
+</a><b>F3 CHECK CIRCUIT 941 (BK/WH) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect:  Windshield Wiper Motor C125.
+</li><li>Disconnect:  Washer Pump Motor C137.
+</li><li>Measure the resistance between C137-1, circuit 941 (BK/WH) harness side and ground.
+</li><br><IMG src="a0045230.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#F4"                                                                                                                                                                                                                                                       >F4
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621g003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+</td></tr><tr><td><a name="F4">&nbsp;
+</a><b>F4 CHECK CIRCUIT 941 (BK/WH) FOR VOLTAGE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Connect:  Windshield Wiper Motor C125.
+</li><li>Disconnect:  Washer Pump Motor C137.
+</li><li>Key in ON position.
+</li><li>Measure the voltage between C137 pin 1, circuit 941 (BK/WH) harness side and ground while depressing the multi-function switch to the windshield wiper wash position.
+</li><br><IMG src="a0074580.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the voltage greater than 10 volts?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new washer pump motor. REFER to 
+<a href="s621g007.htm"                                                                                                                                                                                                                                                       >Windshield Washer Pump and Reservoir
+</a> in this section. TEST the system for normal operation.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s621g003.htm#F5"                                                                                                                                                                                                                                                       >F5
+</a>.
+</td></tr><tr><td><a name="F5">&nbsp;
+</a><b>F5 CHECK CIRCUIT 941 (BK/WH) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Key in OFF position.
+</li><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Measure the resistance between C125-7, circuit 941 (BK/WH), harness side and C137-1, circuit 941 (BK/WH), harness side.
+</li><br><IMG src="a0073197.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#F6"                                                                                                                                                                                                                                                       >F6
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit. TEST the system for normal operation.
+</td></tr><tr><td><a name="F6">&nbsp;
+</a><b>F6 CHECK FOR CORRECT WIPER MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the wiper motor connector.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect the wiper motor connector and make sure it seats correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new windshield wiper motor. REFER to 
+<a href="s621g006.htm"                                                                                                                                                                                                                                                       >Windshield Wiper Motor
+</a> in this section.
+
+<br><br><b>No
+</b><br>The system is working correctly at this time. The concern might have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><p><b>Pinpoint Test G: The Speed Dependent INTERVAL Mode Does Not Operate Correctly
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, the wiper motor receives input from the PCM through circuit 679 (GY/BK) with vehicle speed information. The wiper motor internal electronics then determines the speed of the wiper motor.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Open or short to ground in circuit 679 (GY/BK)
+</li><li>Inoperative vehicle speed sensor (VSS)
+</li><li>Inoperative wiper motor
+</li></ul><a name="G">&nbsp;
+</a><h5>PINPOINT TEST G: THE SPEED DEPENDENT INTERVAL MODE DOES NOT OPERATE CORRECTLY
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="G1">&nbsp;
+</a><b>G1 CHECK THE PCM &#8212; MONITOR THE VSS
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the VSS while driving the vehicle from 0 to 88.5 kph (55 mph).
+</li><li><b>Does the VSS agree with the PCM PIDs?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#G2"                                                                                                                                                                                                                                                       >G2
+</a>.
+
+<br><br><b>No
+</b><br>REFER to the PCED manual to diagnose the VSS.
+</td></tr><tr><td><a name="G2">&nbsp;
+</a><b>G2 CHECK CIRCUIT 679 (GY/BK) FOR AN OPEN
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect:  PCM C175a.
+</li><li>Disconnect:  Windshield Wiper Motor C125.
+</li><li>Measure the resistance between PCM C175b-63, circuit 679 (GY/BK), harness side and windshield wiper motor C125-4, circuit 679 (GY/BK), harness side.
+</li><br><IMG src="a0073198.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance less than 5 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#G3"                                                                                                                                                                                                                                                       >G3
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit.
+</td></tr><tr><td><a name="G3">&nbsp;
+</a><b>G3 CHECK CIRCUIT 679 (GY/BK) FOR A SHORT TO GROUND
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Measure the resistance between PCM C175b-63, circuit 679 (GY/BK), harness side and ground.
+</li><br><IMG src="a0073199.gif"                                                                                                                                                                                                                                                        height="174" width="269" border="0"><li><b>Is the resistance greater than 10,000 ohms?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s621g003.htm#G4"                                                                                                                                                                                                                                                       >G4
+</a>.
+
+<br><br><b>No
+</b><br>REPAIR the circuit.
+</td></tr><tr><td><a name="G4">&nbsp;
+</a><b>G4 CHECK FOR CORRECT WIPER MOTOR OPERATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect all wiper motor connectors.
+</li><li>Check for:
+</li>
+
+<ul type="square"><li>corrosion.
+</li><li>pushed-out pins.
+</li></ul><li>Connect all wiper motor connectors and make sure they seat correctly.
+</li><li>Operate the system and verify the concern is still present.
+</li><li><b>Is the concern still present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSTALL a new windshield wiper motor. REFER to 
+<a href="s621g006.htm"                                                                                                                                                                                                                                                       >Windshield Wiper Motor
+</a> in this section.
+
+<br><br><b>No
+</b><br>The system is operating correctly at this time. Concern may have been caused by a loose or corroded connector. TEST the system for normal operation.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

@@ -1,0 +1,157 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="07"><meta name="tps_section" content="01"><meta name="tps_section_title" content="Automatic Transmission &#8212; 4R70E/4R75E"><meta name="tps_ss_title" content="DESCRIPTION AND OPERATION"><meta name="tps_procid" content="S1P258Q0"><meta name="tps_procsgmlid" content="n729529"><meta name="tps_packetinfo" content="444742"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 307-01:  Automatic Transmission &#8212; 4R70E/4R75E
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DESCRIPTION AND OPERATION
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  06/29/2005
+</div></TD></TR></TABLE><hr><h4>Transmission Electronic Control System
+</h4><meta name="tps_proctitle" content="Transmission Electronic Control System">
+
+<p><b>Electronic System Description
+</b></p><p>The powertrain control module (PCM) and its input/output network control the following transmission operations:
+</p><ul type="disc"><li>Shift timing
+</li><li>Line pressure (shift feel)
+</li><li>Torque converter clutch
+</li></ul><p>The transmission control is separate from the engine control strategy in the PCM, although some of the input signals are shared. When determining the best operating strategy for transmission operation, the PCM uses input information from
+certain engine-related and driver-demand related sensors and switches.
+</p><p>In addition, the PCM receives input signals from certain transmission-related sensors and switches. The PCM also uses these signals when determining transmission operating strategy.
+</p><p>Using all of these input signals, the PCM can determine when the time and conditions are right for a shift or when to apply or release the torque converter clutch. It will also determine the best line pressure needed to optimize shift feel. To
+accomplish this the PCM uses hydraulic solenoids to control transmission operation.
+</p><p>The following provides a brief description of each of the sensors and actuators used to control transmission operation.
+</p><p><b>Mass Air Flow (MAF) Sensor
+</b></p><p>The mass air flow (MAF) sensor measures the mass of air flowing into the engine. The MAF sensor output signal is used by the PCM to calculate injector pulse width. For transmission strategies the MAF sensor is used to regulate electronic
+pressure control (EPC), shift and torque converter clutch scheduling.
+</p><p><b>Powertrain Control Module (PCM)
+</b></p><p>The operation of the transmission is controlled by the powertrain control module (PCM). Many input sensors provide information to the PCM. The PCM then controls actuators which determine transmission operation.
+</p><p><b>Transmission Control (TC) Switch and Transmission Control Indicator Lamp (TCIL)
+</b></p><p>The transmission control (TC) switch is a momentary contact switch. When the switch is pressed, a signal is sent to the PCM to allow automatic shifts from 1st through 4th gears or 1st through 3rd gears only. The PCM energizes the transmission
+control indicator lamp (TCIL) when the switch is off. The TCIL indicates overdrive cancel mode activated (lamp on) and EPC circuit shorted (lamp flashing) or a monitored sensor failure.
+</p><p><b>Output Shaft Speed (OSS) Sensor
+</b></p><p>The output shaft speed (OSS) sensor is a magnetic pickup, located at the output shaft ring gear, that sends a signal to the powertrain control module to indicate transmission output shaft speed. The OSS is used for torque converter clutch
+control, shift scheduling and to determine electronic pressure control.
+</p><p><b>Turbine Shaft Speed (TSS) Sensor
+</b></p><p>The turbine shaft speed (TSS) sensor is a magnetic pickup, that sends a signal to the powertrain control module to indicate transmission turbine shaft speed. The TSS is mounted externally on the case. The PCM uses the TSS signal to help
+determine appropriate operating pressure and torque converter clutch (TCC) operation.
+</p><p><b>Digital Transmission Range (TR) Sensor
+</b></p><p>The digital transmission range (TR) sensor is located on the outside of the transmission at the manual lever. The digital TR sensor completes the start circuit in PARK and NEUTRAL, the back-up lamp circuit in REVERSE and the neutral sense
+circuit (four wheel drive [4WD] only) in NEUTRAL. The digital TR sensor also opens and closes a set of 4 switches that are monitored by the PCM to determine the position of the manual lever (P, R, N, D, 2, 1).
+</p><p><b>Transmission Fluid Temperature (TFT) Sensor
+</b></p><p>The transmission fluid temperature (TFT) sensor is located on the lead frame assembly near the shift solenoids on the main control valve body. It is a temperature sensitive device called a thermistor. It sends a voltage signal to the PCM. The
+voltage signal varies with transmission fluid temperature. The PCM uses this signal to determine whether a cold start shift schedule is necessary. The shift schedule is compensated when the transmission fluid temperature is cold. The PCM also
+inhibits TCC operation at low transmission fluid temperatures and corrects electronic pressure control.
+</p><p><b>Electronic Pressure Control (EPC) Solenoid
+</b></p><p>The electronic pressure control (EPC) solenoid regulates transmission pressure. EPC valve pressure is used to control line pressure.
+</p><p><b>Shift Solenoid &#8212; SSA, SSB
+</b></p><p>Two on/off shift solenoids provide gear selection of 1st through 4th gears by controlling the pressure to the 3 shift valves. One unit containing the 2 shift solenoids is located in the main control valve body. The shift solenoids are 2-way
+normally open style.
+</p><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Solenoid Operation Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER" rowspan="2">Gear Lever Position
+</TH><TH valign="bottom" align="CENTER" rowspan="2">PCM Commanded Gear
+</TH><TH valign="bottom" align="CENTER" colspan="3">Solenoids
+</TH></TR><TR><TH valign="bottom" align="CENTER">SSA
+</TH><TH valign="bottom" align="CENTER">SSB
+</TH><TH valign="bottom" align="CENTER">TCC
+</TH></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">P/R/N
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">(D)
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">4
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE"><B>w/OD OFF
+</B></TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD><TD valign="top" align="LEFT" style="BORDER-BOTTOM:NONE">&nbsp;
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">3
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">EC
+</TD></TR><TR><TD valign="top" align="CENTER">Manual 2
+</TD><TD valign="top" align="CENTER">2
+</TD><TD valign="top" align="CENTER">OFF
+</TD><TD valign="top" align="CENTER">OFF
+</TD><TD valign="top" align="CENTER">EC
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">Manual 1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">1
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">ON
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-BOTTOM:NONE">HD
+</TD></TR><TR><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">1
+<SUP>a
+</SUP></TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">2
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">OFF
+</TD><TD valign="top" align="CENTER" style="BORDER-TOP:NONE">EC
+</TD></TR></TABLE><DIV><SUP>a
+</SUP>  When a manual pull-in occurs above a calibrated speed, the transmission will not downshift from the higher gear until the vehicle speed drops below this calibrated speed.
+
+
+
+<P>EC = Electronically Controlled.
+</P><P>HD = Hydraulically Disabled.
+</P><br><p><b>Torque Converter Clutch (TCC) Solenoid
+</b></p><p>The torque converter clutch (TCC) solenoid is used to control the apply and release of the TCC.
+</p><p><b>Four Wheel Drive Low (4WDL) Range Switch
+</b></p><p>The four wheel drive low (4WDL) range switch is located on the transfer case cover. It provides an indication of when the four wheel drive (4WD) transfer case gear system is in the low range. The PCM then modifies shift schedule for 4WDL
+operation.
+</p><p><b>Brake Pedal Position (BPP) Switch
+</b></p><p>The brake pedal position (BPP) switch tells the PCM when the brakes are applied. The torque converter clutch disengages when the brakes are applied. The BPP switch closes when the brakes are applied and opens when they are released.
+</p><p><b>Electronic Ignition (EI) System
+</b></p><p>The electronic ignition (EI) system consists of a crankshaft position sensor, two 4-tower ignition coils and the PCM. The ignition control module operates by sending crankshaft position information from the crankshaft position sensor to the
+ignition control module. The ignition control module generates a profile ignition pickup (PIP) signal (engine rpm) and sends it to the PCM. The PCM uses PIP signal in the transmission strategy, wide-open throttle (WOT) shift control, torque
+converter clutch control and EPC pressure.
+</p><p><b>Air Conditioning (A/C) Clutch
+</b></p><p>An electromagnetic clutch is energized when the clutch cycling pressure switch closes. The switch is located on the suction accumulator/drier. The closing of the switch completes the circuit to the clutch and draws it into engagement with the
+compressor driveshaft. When the A/C clutch is engaged, EPC is adjusted by the PCM to compensate for additional load on the engine.
+</p><p><b>Intake Air Temperature (IAT) Sensor
+</b></p><p>The intake air temperature (IAT) sensor provides the sequential fuel injection (SFI) system mixture temperature information. The IAT sensor is used both as a density corrector for air flow calculation and to proportion cold enrichment fuel
+flow. The IAT sensor is installed in the air cleaner outlet tube. The IAT sensor is also used in determining EPC pressures.
+</p><p><b>Engine Coolant Temperature (ECT) Sensor
+</b></p><p>The engine coolant temperature (ECT) sensor detects temperature of engine coolant and supplies the information to the PCM. The ECT sensor is used to control TCC operation. The ECT is installed in the heater outlet fitting or cooling passage on
+the engine. For engine control applications, the ECT signal is used to modify ignition timing, EGR flow and air-to-fuel ratio as a function of engine coolant temperature.
+</p><p><b>Throttle Position (TP) Sensor
+</b></p><p>The throttle position (TP) sensor is a potentiometer mounted on the throttle body. The TP sensor detects the position of the throttle plate and sends this information to the PCM. The TP sensor is used for shift scheduling, electronic pressure
+control and TCC control.
+</p><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>

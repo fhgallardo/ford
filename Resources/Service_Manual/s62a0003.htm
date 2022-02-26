@@ -1,0 +1,279 @@
+<html><head><title>2006 F-150/Mark LT Workshop Manual
+
+</title><LINK rel="stylesheet" type="text/css" href="s62style.css"                                                                                                                                                                                                                                                       ><meta name="tps_translationdatetime" content="1/27/2007 5:30:36 AM"><meta name="tps_type" content="workshop"><meta name="tps_bookcode" content="S62"><meta name="tps_year" content="2006"><meta name="tps_modelname" content="F-150/Mark LT"><meta name="tps_system" content="3"><meta name="tps_group" content="10"><meta name="tps_section" content="00"><meta name="tps_section_title" content="Fuel System &#8212; General Information"><meta name="tps_ss_title" content="DIAGNOSIS AND TESTING"><meta name="tps_procid" content="S4P42Q0"><meta name="tps_procsgmlid" content="n1019376"><meta name="tps_packetinfo" content="503009"></head><body><TABLE width="95%"><TR><TD><div class="bookinfo">SECTION 310-00:  Fuel System &#8212; General Information
+</DIV></TD><TD align="RIGHT"><div class="bookinfo">2006 F-150/Mark LT Workshop Manual
+</DIV></TD></TR><TR><TD><div class="bookinfo">DIAGNOSIS AND TESTING
+</div></TD><TD align="RIGHT"><div class="bookinfosmall">Procedure revision date:  10/18/2006
+</div></TD></TR></TABLE><hr><h4>Fuel System
+</h4><meta name="tps_proctitle" content="Fuel System">
+
+<br><table border="1" cellpadding="3" cellspacing="0" width="50%"><caption>Special Tool(s)
+</caption><tr valign="top"><td><IMG src="st2834a.gif"                                                                                                                                                                                                                                                        height="99" width="99" border="0"></td><td valign="top">Vehicle Communication Module (VCM) and Integrated Diagnostic System (IDS)
+
+<br><br><br>software with appropriate hardware, or equivalent scan tool
+
+<br></td></tr></table><div><a name="extract_262">&nbsp;
+</a></div>
+
+<p><b>Principles of Operation
+</b></p><p><b>NOTE:
+</b>  The following procedure diagnoses a slow to fill concern only. For all other concerns, refer to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</p><p>The fuel tank filler pipe assembly is used to refuel the vehicle. The fuel tank inlet check valve prevents spitback of fuel during and after refueling. The fuel tank stores the fuel. The fuel tank contains a fuel pump (FP) module. The FP module
+consists of a fuel level sensor and a FP. The fuel level sensor sends a signal to the fuel gauge informing the driver of how much fuel is in the fuel tank. The FP provides fuel to the fuel tubes which supply the fuel rail.
+</p><p>During refueling, the fuel tank vents to the atmosphere through the vent and filler pipes, on vehicles without on-board refueling vapor recovery (ORVR) systems. In vehicles equipped with ORVR the fuel tank and filler pipe are designed so that
+when the vehicle is being refueled, fuel vapors in the fuel tank travel to the evaporative emission (EVAP) canister, which absorbs the fuel vapors and vents the pressure from the fuel tank during refueling.
+</p><div><a name="extract_263">&nbsp;
+</a></div>
+
+<p><b>Inspection and Verification
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Do not smoke, carry lighted tobacco or an open flame of any type when working on or near any fuel-related component. Highly flammable mixtures are always present and can be ignited. Failure to follow these instructions may result in serious
+personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  Do not carry personal electronic devices such as cell phones, pagers or audio equipment of any type when working on or near any fuel-related components. Highly flammable mixtures are always present and can be ignited. Failure to follow these
+instructions may result in serious personal injury.
+</b></p><p><b><IMG src="ani_caut.gif"                                                                                                                                                                                                                                                        border="0">&nbsp;WARNING:  This procedure involves fuel handling. Be prepared for fuel spillage at all times and always observe fuel handling precautions. Spilled fuel can be ignited by hot vehicle components or other ignition sources. Failure to follow these
+instructions may result in serious personal injury.
+</b></p><ol start="1"><li>Verify the customer's concern by refueling the vehicle and observe the fuel fill rate.
+</li></ol><ol start="2"><li>Inspect to determine if any of the following mechanical concerns apply.
+</li></ol><br><br><TABLE cellspacing="0" cellpadding="3" border="1"><CAPTION>Visual Inspection Chart
+
+</CAPTION><TR><TH valign="bottom" align="CENTER">Mechanical
+</TH></TR><TR><TD valign="top" align="LEFT"><UL type="disc"><LI>Bent, kinked or damaged fuel tank filler pipe
+</LI><LI>Bent, kinked or damaged fuel tank filler pipe vent tube (if equipped)
+</LI><LI>Incorrect routing of the fuel tank filler pipe
+</LI><LI>Incorrect routing of the fuel tank filler pipe vent tube (if equipped)
+</LI><LI>Incorrect position of fuel tank filler pipe clamps
+</LI><LI>Incorrect position of fuel tank filler pipe vent tube clamps (if equipped)
+</LI><LI>Fuel tank mounted vapor tubes bent or damaged
+</LI><LI>Evaporative emission (EVAP) system tubes or hoses bent or damaged
+</LI><LI>Accident damage to the fuel tank
+</LI><LI>Accident damage to the vehicle effecting the fuel tank filler pipe-to-body connection
+</LI><LI>Unauthorized modifications and/or alterations to the vehicle
+</LI><LI>EVAP system fresh air tube plugged (dirt, spider webbing)
+</LI></UL></TD></TR></TABLE><br><ol start="3"><li>If an obvious cause for an observed or reported concern is found, correct the cause (if possible) before proceeding to the next step.
+</li></ol><ol start="4"><li><p><b>NOTE:
+</b>  Make sure to use the latest scan tool software release.
+</p>If the cause is not visually evident, connect the scan tool to the data link connector (DLC).
+</li></ol><ol start="5"><li><p><b>NOTE:
+</b>  The vehicle communication module (VCM) LED prove out confirms power and ground from the DLC are provided to the VCM.
+</p>If the scan tool does not communicate with the VCM:
+
+<ul type="disc"><li>check the VCM connection to the vehicle.
+</li></ul><ul type="disc"><li>check the scan tool connection to the VCM.
+</li></ul><ul type="disc"><li>refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>, No Power To The Scan Tool, to diagnose no communication with the scan tool.
+</li></ul></li></ol><ol start="6"><li>If the scan tool does not communicate with the vehicle:
+
+<ul type="disc"><li>verify the ignition key is in the ON position.
+</li></ul><ul type="disc"><li>verify the scan tool operation with a known good vehicle.
+</li></ul><ul type="disc"><li>refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a> to diagnose no response from the powertrain control module (PCM).
+</li></ul></li></ol><ol start="7"><li>Carry out the network test.
+
+<ul type="disc"><li>If the scan tool responds with no communication for one or more modules, refer to 
+<a target="leftside" href="s62~tr~en~leftside=s62si00l.htm&rightside=s62si00r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 418-00
+</a>.
+</li></ul><ul type="disc"><li>If the network test passes, retrieve and record continuous memory diagnostic trouble codes (DTCs).
+</li></ul></li></ol><ol start="8"><li>Clear the continuous DTCs and carry out the self-test diagnostics for the evaporative emission (EVAP) system.
+</li></ol><ol start="9"><li>If the DTCs retrieved are related to the concern, go to Evaporative Emission System Diagnostic Trouble Code Chart. For PCM related DTCs, refer to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. For all other DTCs, refer to
+
+<a target="leftside" href="s62~tr~en~leftside=s62sja0l.htm&rightside=s62sja0r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 419-10
+</a>.
+</li></ol><ol start="10"><li>If no DTCs related to the concern are retrieved, GO to 
+<a href="s62a0003.htm#SC1"                                                                                                                                                                                                                                                       >Symptom Chart
+</a>.
+</li></ol><p><b>Evaporative Emission System Diagnostic Trouble Code Chart
+</b></p><TABLE cellspacing="0" cellpadding="3" border="1"><TR><TH valign="bottom" align="CENTER">DTC
+</TH><TH valign="bottom" align="CENTER">Description
+</TH><TH valign="bottom" align="CENTER">Action
+</TH></TR><TR><TD valign="top" align="CENTER">P0446
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Vent Control Circuit
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0451
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Pressure Sensor/Switch Range/Performance
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0452
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Pressure Sensor/Switch Low
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0453
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Pressure Sensor/Switch High
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P0454
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Pressure Sensor/Switch Intermittent
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1443
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Control Valve (Low/No Flow)
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1450
+</TD><TD valign="top" align="CENTER">Unable to Bleed up Fuel Tank Vacuum
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P1451
+</TD><TD valign="top" align="CENTER">Evaporative Emission System Vent Control Circuit
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR><TR><TD valign="top" align="CENTER">P260F
+</TD><TD valign="top" align="CENTER">Emission System Monitoring Processor Performance
+</TD><TD valign="top" align="CENTER"><A href="s62a0003.htm#A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</A>.
+</TD></TR></TABLE><br><div><a name="extract_264">&nbsp;
+</a></div>
+
+<p><b>Symptom Chart
+</b></p><a name="SC1">&nbsp;
+</a><table width="90%" cellpadding="3" cellspacing="0" rules="groups" border="1">
+
+<caption>SYMPTOM CHART
+</caption><colgroup><colgroup><colgroup><tr><th>Condition
+</th><th>Possible Sources
+</th><th>Action
+</th></tr>
+
+<tbody></tbody><tr valign="top"><td><ul type="disc"><li>Slow to fill
+</li></ul></td><td><ul type="disc"><li>Fuel tank filler pipe
+</li><li>Fuel tank filler pipe vent tube, if equipped
+</li><li>Evaporative emission (EVAP) system
+</li><li>Fuel tank inlet check valve (part of the fuel tank)
+</li><li>Fuel level vent valve, if equipped (part of the fuel pump [FP] module)
+</li></ul></td><td><ul type="disc"><li><a href="s62a0003.htm#PS2-A"                                                                                                                                                                                                                                                       >Go To Pinpoint Test A
+</a>.
+</li></ul></td></tr><tbody></tbody><tr valign="top"><td><ul type="disc"><li>All other fuel system concerns
+</li></ul></td><td><ul type="disc"><li>Fuel system components
+</li></ul></td><td><ul type="disc"><li>REFER to the Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</li></ul></td></tr></table><div><a name="extract_265">&nbsp;
+</a></div>
+
+<p><b>Pinpoint Test
+</b></p><a name="PS2-A">&nbsp;
+</a><p><b>Pinpoint Test A: Slow to Fill
+</b></p><h5>Normal Operation
+</h5><p>Under normal operation, fuel should flow at a steady rate through the fuel tank filler pipe into the fuel tank. As fuel enters the fuel tank air is vented through the filler pipe or the on-board refueling vapor recovery (ORVR) system.
+</p><ul type="disc"><b>Possible Causes
+</b>
+
+<li>Fuel tank filler pipe vent tube, if equipped
+</li><li>Fuel tank filler pipe
+</li><li>Evaporative emission (EVAP) system
+</li><li>Fuel tank inlet check valve (part of the fuel tank)
+</li><li>Fuel level vent valve, if equipped (part of the fuel pump [FP] module)
+</li></ul><a name="A">&nbsp;
+</a><h5>PINPOINT TEST A: SLOW TO FILL
+</h5><table width="96%" cellpadding="3" cellspacing="0" border="1"><tr><th>Test Step
+</th><th>Result / Action to Take
+</th></tr><tr><td><a name="A1">&nbsp;
+</a><b>A1 CARRY OUT INSPECTION AND VERIFICATION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Carry out inspection and verification.
+</li><li><b>Was the cause of the concern found?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REPAIR or INSTALL new components to correct the concern.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a0003.htm#A2"                                                                                                                                                                                                                                                       >A2
+</a>.
+</td></tr><tr><td><a name="A2">&nbsp;
+</a><b>A2 CHECK THE SYSTEM FOR ANY EVAPORATIVE EMISSION (EVAP) DTCs
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Connect the scan tool.
+</li><li>Check the system for any of the following EVAP DTCs: P0446, P0451, P0452, P0453, P0454, P1443, P1450, P1451 and P260F.
+</li><li><b>Are any of these DTCs present?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual to diagnosis the EVAP system.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a0003.htm#A3"                                                                                                                                                                                                                                                       >A3
+</a>.
+</td></tr><tr><td><a name="A3">&nbsp;
+</a><b>A3 MONITOR THE FUEL TANK PRESSURE (FTP) WHILE FILLING THE FUEL TANK
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Monitor the fuel tank pressure (FTP) reference value while filling the fuel tank. REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</li><li><b>Is FTP within specification?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>GO to 
+<a href="s62a0003.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a0003.htm#A4"                                                                                                                                                                                                                                                       >A4
+</a>.
+</td></tr><tr><td><a name="A4">&nbsp;
+</a><b>A4 MONITOR THE FTP WHILE FILLING THE FUEL TANK WITH THE EVAP SYSTEM DISCONNECTED
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Disconnect the fuel tank-to-EVAP canister quick connect coupling at the EVAP canister.
+</li><li>Monitor the FTP reference value while filling the fuel tank. REFER to Powertrain Control/Emissions Diagnosis (PC/ED) manual.
+</li><li><b>Is FTP within specification?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>INSPECT the EVAP system for blockage or restrictions. REPAIR the blockage or restriction. If the blockage or restriction cannot be repaired, INSTALL new EVAP system components.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a0003.htm#A5"                                                                                                                                                                                                                                                       >A5
+</a>.
+</td></tr><tr><td><a name="A5">&nbsp;
+</a><b>A5 CHECK THE FUEL TANK FILLER PIPE ASSEMBLY FOR BLOCKAGE OR RESTRICTION
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Remove the fuel tank filler pipe assembly. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sa10l.htm&rightside=s62sa10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 310-01
+</a>.
+</li><li>Inspect the fuel tank filler pipe and fuel tank filler pipe vent tube (if equipped) for a blockage or restriction.
+</li><li><b>Is the fuel tank filler pipe or fuel tank filler pipe vent tube (if equipped) blocked or restricted?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If possible, REPAIR the blockage or restriction. If the blockage or restriction cannot be repaired, INSTALL a new fuel tank filler pipe or fuel tank filler pipe vent tube.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a0003.htm#A6"                                                                                                                                                                                                                                                       >A6
+</a>.
+</td></tr><tr><td><a name="A6">&nbsp;
+</a><b>A6 CHECK THE FUEL TANK INLET CHECK VALVE
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li>Inspect the fuel tank inlet check valve for restriction or sticking.
+</li><li><b>Is the fuel tank inlet check valve restricted or sticking?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>If possible, REPAIR the restrictions. If the restriction cannot be repaired, INSTALL a new fuel tank. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sa10l.htm&rightside=s62sa10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 310-01
+</a>.
+
+<br><br><b>No
+</b><br>GO to 
+<a href="s62a0003.htm#A7"                                                                                                                                                                                                                                                       >A7
+</a>.
+</td></tr><tr><td><a name="A7">&nbsp;
+</a><b>A7 CHECK TO MAKE SURE THAT THE FUEL LEVEL VENT VALVE IS FUNCTIONING CORRECTLY
+</b></td><td style="BORDER-BOTTOM:NONE">&nbsp;
+</td></tr><tr valign="top"><td><ul><li><b>NOTE:
+</b>  The fuel level vent valve, if equipped, is part of the fuel pump (FP) module.
+</li><li>Remove the FP module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sa10l.htm&rightside=s62sa10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 310-01
+</a>.
+</li><li>Invert the FP module. Watch for a movement and a click noise.
+</li><li><b>Was a movement/click noise witnessed?
+</b></li></ul></td><td style="BORDER-TOP:NONE"><b>Yes
+</b><br>Fuel level vent valve is OK. Retest the system for normal operation.
+
+<br><br><b>No
+</b><br>INSTALL a new FP module. REFER to 
+<a target="leftside" href="s62~tr~en~leftside=s62sa10l.htm&rightside=s62sa10r.htm&market=tr&lang=en~gen~2col.htm        "                                                                                                                                                                                                                                                               >Section 310-01
+</a>.
+</td></tr></table><br><hr><P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+</body></html>
